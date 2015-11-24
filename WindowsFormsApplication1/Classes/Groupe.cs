@@ -26,6 +26,12 @@ namespace JRPG.Classes
         #endregion
 
         #region Accesseurs et mutateurs
+        public List<Aventuriers> Membres
+        {
+            get { return this.membres; }
+            set { this.membres = value; }
+        }
+
         public int NbPiecesOr
         {
             get { return this.nbPiecesOr; }
@@ -34,9 +40,12 @@ namespace JRPG.Classes
         #endregion
 
         #region Fonctions
-        public void AjouterAventurier()
+        public void AjouterAventurier(Aventuriers nouveauAventurier)
         {
-
+            if (membres.Count() < 3)
+            {
+                membres.Add(nouveauAventurier);
+            }
         }
 
         public void RetirerAventurier()

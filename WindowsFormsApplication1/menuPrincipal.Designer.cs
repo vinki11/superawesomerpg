@@ -52,7 +52,7 @@
             this.btnChargerPartie.TabIndex = 1;
             this.btnChargerPartie.Text = "Charger partie";
             this.btnChargerPartie.UseVisualStyleBackColor = true;
-            this.btnChargerPartie.Click += new System.EventHandler(this.button1_Click);
+            this.btnChargerPartie.Click += new System.EventHandler(this.btnChargerPartie_Click);
             // 
             // btnNouvellePartie
             // 
@@ -62,7 +62,7 @@
             this.btnNouvellePartie.TabIndex = 2;
             this.btnNouvellePartie.Text = "Nouvelle partie";
             this.btnNouvellePartie.UseVisualStyleBackColor = true;
-            this.btnNouvellePartie.Click += new System.EventHandler(this.button2_Click);
+            this.btnNouvellePartie.Click += new System.EventHandler(this.btnNouvellePartie_Click);
             // 
             // MenuPrincipal
             // 

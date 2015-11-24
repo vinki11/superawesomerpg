@@ -20,7 +20,7 @@ namespace JRPG
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnNouvellePartie_Click(object sender, EventArgs e)
         {
             Hide();
             CreationAventurier creatAventurier = new CreationAventurier();
@@ -29,7 +29,7 @@ namespace JRPG
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnChargerPartie_Click(object sender, EventArgs e)
         {
            
         }

@@ -39,14 +39,26 @@
             this.btnChapelle = new System.Windows.Forms.Button();
             this.btnForge = new System.Windows.Forms.Button();
             this.btnTaverne = new System.Windows.Forms.Button();
-            this.lblLvl2 = new System.Windows.Forms.Label();
-            this.lblXP2 = new System.Windows.Forms.Label();
-            this.lblNom2 = new System.Windows.Forms.Label();
-            this.lblLvl3 = new System.Windows.Forms.Label();
-            this.lblXP3 = new System.Windows.Forms.Label();
-            this.lblNom3 = new System.Windows.Forms.Label();
+            this.txtLvl2 = new System.Windows.Forms.Label();
+            this.txtXP2 = new System.Windows.Forms.Label();
+            this.txtNom2 = new System.Windows.Forms.Label();
+            this.txtLvl3 = new System.Windows.Forms.Label();
+            this.txtXP3 = new System.Windows.Forms.Label();
+            this.txtNom3 = new System.Windows.Forms.Label();
             this.lblPiecesOr = new System.Windows.Forms.Label();
             this.gboxInformations = new System.Windows.Forms.GroupBox();
+            this.txtEsquive = new System.Windows.Forms.Label();
+            this.txtPrecision = new System.Windows.Forms.Label();
+            this.txtDefense = new System.Windows.Forms.Label();
+            this.txtForce = new System.Windows.Forms.Label();
+            this.txtInitiative = new System.Windows.Forms.Label();
+            this.txtEnrgMana = new System.Windows.Forms.Label();
+            this.txtPV = new System.Windows.Forms.Label();
+            this.txtEtat = new System.Windows.Forms.Label();
+            this.txtClasse = new System.Windows.Forms.Label();
+            this.txtXP = new System.Windows.Forms.Label();
+            this.txtNiv = new System.Windows.Forms.Label();
+            this.txtNom = new System.Windows.Forms.Label();
             this.cboArmure = new System.Windows.Forms.ComboBox();
             this.cboBouclier = new System.Windows.Forms.ComboBox();
             this.cboArme = new System.Windows.Forms.ComboBox();
@@ -66,22 +78,16 @@
             this.lblNiv = new System.Windows.Forms.Label();
             this.lblXP = new System.Windows.Forms.Label();
             this.lblNom = new System.Windows.Forms.Label();
-            this.lblNom1 = new System.Windows.Forms.Label();
+            this.txtNom1 = new System.Windows.Forms.Label();
+            this.txtXP1 = new System.Windows.Forms.Label();
+            this.txtLvl1 = new System.Windows.Forms.Label();
+            this.txtPiecesOr = new System.Windows.Forms.Label();
             this.lblXP1 = new System.Windows.Forms.Label();
             this.lblLvl1 = new System.Windows.Forms.Label();
-            this.txtNom = new System.Windows.Forms.Label();
-            this.txtNiv = new System.Windows.Forms.Label();
-            this.txtXP = new System.Windows.Forms.Label();
-            this.txtClasse = new System.Windows.Forms.Label();
-            this.txtEtat = new System.Windows.Forms.Label();
-            this.txtPV = new System.Windows.Forms.Label();
-            this.txtEnrgMana = new System.Windows.Forms.Label();
-            this.txtInitiative = new System.Windows.Forms.Label();
-            this.txtForce = new System.Windows.Forms.Label();
-            this.txtDefense = new System.Windows.Forms.Label();
-            this.txtPrecision = new System.Windows.Forms.Label();
-            this.txtEsquive = new System.Windows.Forms.Label();
-            this.txtPiecesOr = new System.Windows.Forms.Label();
+            this.lblLvl2 = new System.Windows.Forms.Label();
+            this.lblXP2 = new System.Windows.Forms.Label();
+            this.lblLvl3 = new System.Windows.Forms.Label();
+            this.lblXP3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).BeginInit();
@@ -91,34 +97,38 @@
             // 
             // pboxAventurier1
             // 
-            this.pboxAventurier1.Location = new System.Drawing.Point(22, 48);
+            this.pboxAventurier1.Location = new System.Drawing.Point(16, 39);
+            this.pboxAventurier1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pboxAventurier1.Name = "pboxAventurier1";
-            this.pboxAventurier1.Size = new System.Drawing.Size(87, 79);
+            this.pboxAventurier1.Size = new System.Drawing.Size(65, 64);
             this.pboxAventurier1.TabIndex = 0;
             this.pboxAventurier1.TabStop = false;
             // 
             // pboxAventurier2
             // 
-            this.pboxAventurier2.Location = new System.Drawing.Point(129, 48);
+            this.pboxAventurier2.Location = new System.Drawing.Point(97, 39);
+            this.pboxAventurier2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pboxAventurier2.Name = "pboxAventurier2";
-            this.pboxAventurier2.Size = new System.Drawing.Size(87, 79);
+            this.pboxAventurier2.Size = new System.Drawing.Size(65, 64);
             this.pboxAventurier2.TabIndex = 1;
             this.pboxAventurier2.TabStop = false;
             // 
             // pboxAventurier3
             // 
-            this.pboxAventurier3.Location = new System.Drawing.Point(238, 48);
+            this.pboxAventurier3.Location = new System.Drawing.Point(178, 39);
+            this.pboxAventurier3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pboxAventurier3.Name = "pboxAventurier3";
-            this.pboxAventurier3.Size = new System.Drawing.Size(87, 79);
+            this.pboxAventurier3.Size = new System.Drawing.Size(65, 64);
             this.pboxAventurier3.TabIndex = 2;
             this.pboxAventurier3.TabStop = false;
             // 
             // lblGroupeAventurier
             // 
             this.lblGroupeAventurier.AutoSize = true;
-            this.lblGroupeAventurier.Location = new System.Drawing.Point(21, 24);
+            this.lblGroupeAventurier.Location = new System.Drawing.Point(16, 20);
+            this.lblGroupeAventurier.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGroupeAventurier.Name = "lblGroupeAventurier";
-            this.lblGroupeAventurier.Size = new System.Drawing.Size(133, 16);
+            this.lblGroupeAventurier.Size = new System.Drawing.Size(105, 13);
             this.lblGroupeAventurier.TabIndex = 3;
             this.lblGroupeAventurier.Text = "Groupe d\'aventuriers";
             // 
@@ -127,127 +137,143 @@
             this.dgvInventaire.AllowUserToAddRows = false;
             this.dgvInventaire.AllowUserToDeleteRows = false;
             this.dgvInventaire.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInventaire.Location = new System.Drawing.Point(22, 288);
+            this.dgvInventaire.Location = new System.Drawing.Point(16, 234);
+            this.dgvInventaire.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvInventaire.Name = "dgvInventaire";
             this.dgvInventaire.ReadOnly = true;
             this.dgvInventaire.RowTemplate.Height = 24;
-            this.dgvInventaire.Size = new System.Drawing.Size(240, 355);
+            this.dgvInventaire.Size = new System.Drawing.Size(180, 288);
             this.dgvInventaire.TabIndex = 7;
             // 
             // lblInventaire
             // 
             this.lblInventaire.AutoSize = true;
-            this.lblInventaire.Location = new System.Drawing.Point(22, 269);
+            this.lblInventaire.Location = new System.Drawing.Point(16, 219);
+            this.lblInventaire.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInventaire.Name = "lblInventaire";
-            this.lblInventaire.Size = new System.Drawing.Size(66, 16);
+            this.lblInventaire.Size = new System.Drawing.Size(54, 13);
             this.lblInventaire.TabIndex = 8;
             this.lblInventaire.Text = "Inventaire";
             // 
             // btnAventure
             // 
-            this.btnAventure.Location = new System.Drawing.Point(495, 482);
+            this.btnAventure.Location = new System.Drawing.Point(371, 392);
+            this.btnAventure.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAventure.Name = "btnAventure";
-            this.btnAventure.Size = new System.Drawing.Size(133, 23);
+            this.btnAventure.Size = new System.Drawing.Size(100, 19);
             this.btnAventure.TabIndex = 10;
             this.btnAventure.Text = "Partir à l\'aventure";
             this.btnAventure.UseVisualStyleBackColor = true;
             // 
             // btnSauvegarder
             // 
-            this.btnSauvegarder.Location = new System.Drawing.Point(495, 598);
+            this.btnSauvegarder.Location = new System.Drawing.Point(371, 486);
+            this.btnSauvegarder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSauvegarder.Name = "btnSauvegarder";
-            this.btnSauvegarder.Size = new System.Drawing.Size(133, 23);
+            this.btnSauvegarder.Size = new System.Drawing.Size(100, 19);
             this.btnSauvegarder.TabIndex = 11;
             this.btnSauvegarder.Text = "Sauvegarder";
             this.btnSauvegarder.UseVisualStyleBackColor = true;
             // 
             // btnChapelle
             // 
-            this.btnChapelle.Location = new System.Drawing.Point(495, 540);
+            this.btnChapelle.Location = new System.Drawing.Point(371, 439);
+            this.btnChapelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnChapelle.Name = "btnChapelle";
-            this.btnChapelle.Size = new System.Drawing.Size(133, 23);
+            this.btnChapelle.Size = new System.Drawing.Size(100, 19);
             this.btnChapelle.TabIndex = 12;
             this.btnChapelle.Text = "Visiter la chapelle";
             this.btnChapelle.UseVisualStyleBackColor = true;
             // 
             // btnForge
             // 
-            this.btnForge.Location = new System.Drawing.Point(495, 511);
+            this.btnForge.Location = new System.Drawing.Point(371, 415);
+            this.btnForge.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnForge.Name = "btnForge";
-            this.btnForge.Size = new System.Drawing.Size(133, 23);
+            this.btnForge.Size = new System.Drawing.Size(100, 19);
             this.btnForge.TabIndex = 13;
             this.btnForge.Text = "Aller à la forge";
             this.btnForge.UseVisualStyleBackColor = true;
             // 
             // btnTaverne
             // 
-            this.btnTaverne.Location = new System.Drawing.Point(495, 569);
+            this.btnTaverne.Location = new System.Drawing.Point(371, 462);
+            this.btnTaverne.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnTaverne.Name = "btnTaverne";
-            this.btnTaverne.Size = new System.Drawing.Size(133, 23);
+            this.btnTaverne.Size = new System.Drawing.Size(100, 19);
             this.btnTaverne.TabIndex = 14;
             this.btnTaverne.Text = "Visiter la taverne";
             this.btnTaverne.UseVisualStyleBackColor = true;
             // 
-            // lblLvl2
+            // txtLvl2
             // 
-            this.lblLvl2.AutoSize = true;
-            this.lblLvl2.Location = new System.Drawing.Point(160, 146);
-            this.lblLvl2.Name = "lblLvl2";
-            this.lblLvl2.Size = new System.Drawing.Size(21, 16);
-            this.lblLvl2.TabIndex = 19;
-            this.lblLvl2.Text = "lvl";
+            this.txtLvl2.AutoSize = true;
+            this.txtLvl2.Location = new System.Drawing.Point(141, 119);
+            this.txtLvl2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtLvl2.Name = "txtLvl2";
+            this.txtLvl2.Size = new System.Drawing.Size(23, 13);
+            this.txtLvl2.TabIndex = 19;
+            this.txtLvl2.Text = "lvl2";
             // 
-            // lblXP2
+            // txtXP2
             // 
-            this.lblXP2.AutoSize = true;
-            this.lblXP2.Location = new System.Drawing.Point(131, 162);
-            this.lblXP2.Name = "lblXP2";
-            this.lblXP2.Size = new System.Drawing.Size(75, 16);
-            this.lblXP2.TabIndex = 18;
-            this.lblXP2.Text = "expérience";
+            this.txtXP2.AutoSize = true;
+            this.txtXP2.Location = new System.Drawing.Point(142, 132);
+            this.txtXP2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtXP2.Name = "txtXP2";
+            this.txtXP2.Size = new System.Drawing.Size(24, 13);
+            this.txtXP2.TabIndex = 18;
+            this.txtXP2.Text = "xp2";
             // 
-            // lblNom2
+            // txtNom2
             // 
-            this.lblNom2.AutoSize = true;
-            this.lblNom2.Location = new System.Drawing.Point(151, 130);
-            this.lblNom2.Name = "lblNom2";
-            this.lblNom2.Size = new System.Drawing.Size(37, 16);
-            this.lblNom2.TabIndex = 17;
-            this.lblNom2.Text = "Nom";
+            this.txtNom2.AutoSize = true;
+            this.txtNom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNom2.Location = new System.Drawing.Point(113, 106);
+            this.txtNom2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtNom2.Name = "txtNom2";
+            this.txtNom2.Size = new System.Drawing.Size(32, 13);
+            this.txtNom2.TabIndex = 17;
+            this.txtNom2.Text = "Nom";
             // 
-            // lblLvl3
+            // txtLvl3
             // 
-            this.lblLvl3.AutoSize = true;
-            this.lblLvl3.Location = new System.Drawing.Point(276, 146);
-            this.lblLvl3.Name = "lblLvl3";
-            this.lblLvl3.Size = new System.Drawing.Size(21, 16);
-            this.lblLvl3.TabIndex = 22;
-            this.lblLvl3.Text = "lvl";
+            this.txtLvl3.AutoSize = true;
+            this.txtLvl3.Location = new System.Drawing.Point(220, 119);
+            this.txtLvl3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtLvl3.Name = "txtLvl3";
+            this.txtLvl3.Size = new System.Drawing.Size(23, 13);
+            this.txtLvl3.TabIndex = 22;
+            this.txtLvl3.Text = "lvl3";
             // 
-            // lblXP3
+            // txtXP3
             // 
-            this.lblXP3.AutoSize = true;
-            this.lblXP3.Location = new System.Drawing.Point(247, 162);
-            this.lblXP3.Name = "lblXP3";
-            this.lblXP3.Size = new System.Drawing.Size(75, 16);
-            this.lblXP3.TabIndex = 21;
-            this.lblXP3.Text = "expérience";
+            this.txtXP3.AutoSize = true;
+            this.txtXP3.Location = new System.Drawing.Point(219, 132);
+            this.txtXP3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtXP3.Name = "txtXP3";
+            this.txtXP3.Size = new System.Drawing.Size(24, 13);
+            this.txtXP3.TabIndex = 21;
+            this.txtXP3.Text = "xp3";
             // 
-            // lblNom3
+            // txtNom3
             // 
-            this.lblNom3.AutoSize = true;
-            this.lblNom3.Location = new System.Drawing.Point(267, 130);
-            this.lblNom3.Name = "lblNom3";
-            this.lblNom3.Size = new System.Drawing.Size(37, 16);
-            this.lblNom3.TabIndex = 20;
-            this.lblNom3.Text = "Nom";
+            this.txtNom3.AutoSize = true;
+            this.txtNom3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNom3.Location = new System.Drawing.Point(200, 106);
+            this.txtNom3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtNom3.Name = "txtNom3";
+            this.txtNom3.Size = new System.Drawing.Size(32, 13);
+            this.txtNom3.TabIndex = 20;
+            this.txtNom3.Text = "Nom";
             // 
             // lblPiecesOr
             // 
             this.lblPiecesOr.AutoSize = true;
-            this.lblPiecesOr.Location = new System.Drawing.Point(22, 208);
+            this.lblPiecesOr.Location = new System.Drawing.Point(16, 169);
+            this.lblPiecesOr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPiecesOr.Name = "lblPiecesOr";
-            this.lblPiecesOr.Size = new System.Drawing.Size(79, 16);
+            this.lblPiecesOr.Size = new System.Drawing.Size(62, 13);
             this.lblPiecesOr.TabIndex = 23;
             this.lblPiecesOr.Text = "Pièces d\'or:";
             // 
@@ -285,41 +311,155 @@
             this.gboxInformations.Controls.Add(this.lblXP);
             this.gboxInformations.Controls.Add(this.lblNom);
             this.gboxInformations.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gboxInformations.Location = new System.Drawing.Point(351, 48);
+            this.gboxInformations.Location = new System.Drawing.Point(263, 39);
+            this.gboxInformations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gboxInformations.Name = "gboxInformations";
-            this.gboxInformations.Size = new System.Drawing.Size(345, 387);
+            this.gboxInformations.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gboxInformations.Size = new System.Drawing.Size(259, 314);
             this.gboxInformations.TabIndex = 24;
             this.gboxInformations.TabStop = false;
             this.gboxInformations.Text = "Informations";
             // 
+            // txtEsquive
+            // 
+            this.txtEsquive.AutoSize = true;
+            this.txtEsquive.Location = new System.Drawing.Point(106, 191);
+            this.txtEsquive.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtEsquive.Name = "txtEsquive";
+            this.txtEsquive.Size = new System.Drawing.Size(0, 16);
+            this.txtEsquive.TabIndex = 42;
+            // 
+            // txtPrecision
+            // 
+            this.txtPrecision.AutoSize = true;
+            this.txtPrecision.Location = new System.Drawing.Point(106, 177);
+            this.txtPrecision.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtPrecision.Name = "txtPrecision";
+            this.txtPrecision.Size = new System.Drawing.Size(0, 16);
+            this.txtPrecision.TabIndex = 42;
+            // 
+            // txtDefense
+            // 
+            this.txtDefense.AutoSize = true;
+            this.txtDefense.Location = new System.Drawing.Point(106, 163);
+            this.txtDefense.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtDefense.Name = "txtDefense";
+            this.txtDefense.Size = new System.Drawing.Size(0, 16);
+            this.txtDefense.TabIndex = 42;
+            // 
+            // txtForce
+            // 
+            this.txtForce.AutoSize = true;
+            this.txtForce.Location = new System.Drawing.Point(106, 150);
+            this.txtForce.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtForce.Name = "txtForce";
+            this.txtForce.Size = new System.Drawing.Size(0, 16);
+            this.txtForce.TabIndex = 42;
+            // 
+            // txtInitiative
+            // 
+            this.txtInitiative.AutoSize = true;
+            this.txtInitiative.Location = new System.Drawing.Point(106, 130);
+            this.txtInitiative.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtInitiative.Name = "txtInitiative";
+            this.txtInitiative.Size = new System.Drawing.Size(0, 16);
+            this.txtInitiative.TabIndex = 42;
+            // 
+            // txtEnrgMana
+            // 
+            this.txtEnrgMana.AutoSize = true;
+            this.txtEnrgMana.Location = new System.Drawing.Point(106, 115);
+            this.txtEnrgMana.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtEnrgMana.Name = "txtEnrgMana";
+            this.txtEnrgMana.Size = new System.Drawing.Size(0, 16);
+            this.txtEnrgMana.TabIndex = 42;
+            // 
+            // txtPV
+            // 
+            this.txtPV.AutoSize = true;
+            this.txtPV.Location = new System.Drawing.Point(106, 93);
+            this.txtPV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtPV.Name = "txtPV";
+            this.txtPV.Size = new System.Drawing.Size(0, 16);
+            this.txtPV.TabIndex = 42;
+            // 
+            // txtEtat
+            // 
+            this.txtEtat.AutoSize = true;
+            this.txtEtat.Location = new System.Drawing.Point(106, 80);
+            this.txtEtat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtEtat.Name = "txtEtat";
+            this.txtEtat.Size = new System.Drawing.Size(0, 16);
+            this.txtEtat.TabIndex = 42;
+            // 
+            // txtClasse
+            // 
+            this.txtClasse.AutoSize = true;
+            this.txtClasse.Location = new System.Drawing.Point(106, 66);
+            this.txtClasse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtClasse.Name = "txtClasse";
+            this.txtClasse.Size = new System.Drawing.Size(0, 16);
+            this.txtClasse.TabIndex = 44;
+            // 
+            // txtXP
+            // 
+            this.txtXP.AutoSize = true;
+            this.txtXP.Location = new System.Drawing.Point(106, 46);
+            this.txtXP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtXP.Name = "txtXP";
+            this.txtXP.Size = new System.Drawing.Size(0, 16);
+            this.txtXP.TabIndex = 43;
+            // 
+            // txtNiv
+            // 
+            this.txtNiv.AutoSize = true;
+            this.txtNiv.Location = new System.Drawing.Point(106, 33);
+            this.txtNiv.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtNiv.Name = "txtNiv";
+            this.txtNiv.Size = new System.Drawing.Size(0, 16);
+            this.txtNiv.TabIndex = 42;
+            // 
+            // txtNom
+            // 
+            this.txtNom.AutoSize = true;
+            this.txtNom.Location = new System.Drawing.Point(106, 20);
+            this.txtNom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(0, 16);
+            this.txtNom.TabIndex = 41;
+            // 
             // cboArmure
             // 
             this.cboArmure.FormattingEnabled = true;
-            this.cboArmure.Location = new System.Drawing.Point(100, 310);
+            this.cboArmure.Location = new System.Drawing.Point(75, 252);
+            this.cboArmure.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboArmure.Name = "cboArmure";
-            this.cboArmure.Size = new System.Drawing.Size(121, 24);
+            this.cboArmure.Size = new System.Drawing.Size(92, 24);
             this.cboArmure.TabIndex = 40;
             // 
             // cboBouclier
             // 
             this.cboBouclier.FormattingEnabled = true;
-            this.cboBouclier.Location = new System.Drawing.Point(100, 337);
+            this.cboBouclier.Location = new System.Drawing.Point(75, 274);
+            this.cboBouclier.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboBouclier.Name = "cboBouclier";
-            this.cboBouclier.Size = new System.Drawing.Size(121, 24);
+            this.cboBouclier.Size = new System.Drawing.Size(92, 24);
             this.cboBouclier.TabIndex = 39;
             // 
             // cboArme
             // 
             this.cboArme.FormattingEnabled = true;
-            this.cboArme.Location = new System.Drawing.Point(100, 283);
+            this.cboArme.Location = new System.Drawing.Point(75, 230);
+            this.cboArme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cboArme.Name = "cboArme";
-            this.cboArme.Size = new System.Drawing.Size(121, 24);
+            this.cboArme.Size = new System.Drawing.Size(92, 24);
             this.cboArme.TabIndex = 38;
             // 
             // lblBouclier
             // 
             this.lblBouclier.AutoSize = true;
-            this.lblBouclier.Location = new System.Drawing.Point(16, 341);
+            this.lblBouclier.Location = new System.Drawing.Point(12, 277);
+            this.lblBouclier.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBouclier.Name = "lblBouclier";
             this.lblBouclier.Size = new System.Drawing.Size(60, 16);
             this.lblBouclier.TabIndex = 37;
@@ -328,7 +468,8 @@
             // lblArmure
             // 
             this.lblArmure.AutoSize = true;
-            this.lblArmure.Location = new System.Drawing.Point(16, 314);
+            this.lblArmure.Location = new System.Drawing.Point(12, 255);
+            this.lblArmure.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblArmure.Name = "lblArmure";
             this.lblArmure.Size = new System.Drawing.Size(54, 16);
             this.lblArmure.TabIndex = 36;
@@ -337,7 +478,8 @@
             // lblArme
             // 
             this.lblArme.AutoSize = true;
-            this.lblArme.Location = new System.Drawing.Point(16, 288);
+            this.lblArme.Location = new System.Drawing.Point(12, 234);
+            this.lblArme.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblArme.Name = "lblArme";
             this.lblArme.Size = new System.Drawing.Size(43, 16);
             this.lblArme.TabIndex = 35;
@@ -347,7 +489,8 @@
             // 
             this.lblEquipement.AutoSize = true;
             this.lblEquipement.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEquipement.Location = new System.Drawing.Point(16, 261);
+            this.lblEquipement.Location = new System.Drawing.Point(12, 212);
+            this.lblEquipement.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEquipement.Name = "lblEquipement";
             this.lblEquipement.Size = new System.Drawing.Size(90, 16);
             this.lblEquipement.TabIndex = 34;
@@ -356,7 +499,8 @@
             // lblEsquive
             // 
             this.lblEsquive.AutoSize = true;
-            this.lblEsquive.Location = new System.Drawing.Point(16, 235);
+            this.lblEsquive.Location = new System.Drawing.Point(12, 191);
+            this.lblEsquive.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEsquive.Name = "lblEsquive";
             this.lblEsquive.Size = new System.Drawing.Size(60, 16);
             this.lblEsquive.TabIndex = 27;
@@ -365,7 +509,8 @@
             // lblDefense
             // 
             this.lblDefense.AutoSize = true;
-            this.lblDefense.Location = new System.Drawing.Point(16, 201);
+            this.lblDefense.Location = new System.Drawing.Point(12, 163);
+            this.lblDefense.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDefense.Name = "lblDefense";
             this.lblDefense.Size = new System.Drawing.Size(62, 16);
             this.lblDefense.TabIndex = 27;
@@ -374,7 +519,8 @@
             // lblForce
             // 
             this.lblForce.AutoSize = true;
-            this.lblForce.Location = new System.Drawing.Point(16, 184);
+            this.lblForce.Location = new System.Drawing.Point(12, 150);
+            this.lblForce.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblForce.Name = "lblForce";
             this.lblForce.Size = new System.Drawing.Size(46, 16);
             this.lblForce.TabIndex = 27;
@@ -383,7 +529,8 @@
             // lblPrecision
             // 
             this.lblPrecision.AutoSize = true;
-            this.lblPrecision.Location = new System.Drawing.Point(16, 218);
+            this.lblPrecision.Location = new System.Drawing.Point(12, 177);
+            this.lblPrecision.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecision.Name = "lblPrecision";
             this.lblPrecision.Size = new System.Drawing.Size(67, 16);
             this.lblPrecision.TabIndex = 33;
@@ -392,7 +539,8 @@
             // lblInitiative
             // 
             this.lblInitiative.AutoSize = true;
-            this.lblInitiative.Location = new System.Drawing.Point(17, 160);
+            this.lblInitiative.Location = new System.Drawing.Point(13, 130);
+            this.lblInitiative.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInitiative.Name = "lblInitiative";
             this.lblInitiative.Size = new System.Drawing.Size(59, 16);
             this.lblInitiative.TabIndex = 32;
@@ -401,7 +549,8 @@
             // lblEnrgMana
             // 
             this.lblEnrgMana.AutoSize = true;
-            this.lblEnrgMana.Location = new System.Drawing.Point(16, 142);
+            this.lblEnrgMana.Location = new System.Drawing.Point(12, 115);
+            this.lblEnrgMana.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEnrgMana.Name = "lblEnrgMana";
             this.lblEnrgMana.Size = new System.Drawing.Size(96, 16);
             this.lblEnrgMana.TabIndex = 31;
@@ -410,7 +559,8 @@
             // lblPV
             // 
             this.lblPV.AutoSize = true;
-            this.lblPV.Location = new System.Drawing.Point(16, 116);
+            this.lblPV.Location = new System.Drawing.Point(12, 94);
+            this.lblPV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPV.Name = "lblPV";
             this.lblPV.Size = new System.Drawing.Size(29, 16);
             this.lblPV.TabIndex = 30;
@@ -419,7 +569,8 @@
             // lblEtat
             // 
             this.lblEtat.AutoSize = true;
-            this.lblEtat.Location = new System.Drawing.Point(17, 99);
+            this.lblEtat.Location = new System.Drawing.Point(13, 80);
+            this.lblEtat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEtat.Name = "lblEtat";
             this.lblEtat.Size = new System.Drawing.Size(34, 16);
             this.lblEtat.TabIndex = 29;
@@ -428,7 +579,8 @@
             // lblClasse
             // 
             this.lblClasse.AutoSize = true;
-            this.lblClasse.Location = new System.Drawing.Point(17, 81);
+            this.lblClasse.Location = new System.Drawing.Point(13, 66);
+            this.lblClasse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClasse.Name = "lblClasse";
             this.lblClasse.Size = new System.Drawing.Size(53, 16);
             this.lblClasse.TabIndex = 28;
@@ -437,7 +589,8 @@
             // lblNiv
             // 
             this.lblNiv.AutoSize = true;
-            this.lblNiv.Location = new System.Drawing.Point(18, 41);
+            this.lblNiv.Location = new System.Drawing.Point(14, 33);
+            this.lblNiv.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNiv.Name = "lblNiv";
             this.lblNiv.Size = new System.Drawing.Size(31, 16);
             this.lblNiv.TabIndex = 27;
@@ -446,7 +599,8 @@
             // lblXP
             // 
             this.lblXP.AutoSize = true;
-            this.lblXP.Location = new System.Drawing.Point(19, 57);
+            this.lblXP.Location = new System.Drawing.Point(14, 46);
+            this.lblXP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblXP.Name = "lblXP";
             this.lblXP.Size = new System.Drawing.Size(28, 16);
             this.lblXP.TabIndex = 26;
@@ -455,159 +609,129 @@
             // lblNom
             // 
             this.lblNom.AutoSize = true;
-            this.lblNom.Location = new System.Drawing.Point(17, 25);
+            this.lblNom.Location = new System.Drawing.Point(13, 20);
+            this.lblNom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNom.Name = "lblNom";
             this.lblNom.Size = new System.Drawing.Size(40, 16);
             this.lblNom.TabIndex = 25;
             this.lblNom.Text = "Nom:";
             // 
-            // lblNom1
+            // txtNom1
             // 
-            this.lblNom1.AutoSize = true;
-            this.lblNom1.Location = new System.Drawing.Point(48, 130);
-            this.lblNom1.Name = "lblNom1";
-            this.lblNom1.Size = new System.Drawing.Size(37, 16);
-            this.lblNom1.TabIndex = 4;
-            this.lblNom1.Text = "Nom";
+            this.txtNom1.AutoSize = true;
+            this.txtNom1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNom1.Location = new System.Drawing.Point(36, 106);
+            this.txtNom1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtNom1.Name = "txtNom1";
+            this.txtNom1.Size = new System.Drawing.Size(32, 13);
+            this.txtNom1.TabIndex = 4;
+            this.txtNom1.Text = "Nom";
             // 
-            // lblXP1
+            // txtXP1
             // 
-            this.lblXP1.AutoSize = true;
-            this.lblXP1.Location = new System.Drawing.Point(28, 162);
-            this.lblXP1.Name = "lblXP1";
-            this.lblXP1.Size = new System.Drawing.Size(75, 16);
-            this.lblXP1.TabIndex = 15;
-            this.lblXP1.Text = "expérience";
+            this.txtXP1.AutoSize = true;
+            this.txtXP1.Location = new System.Drawing.Point(63, 131);
+            this.txtXP1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtXP1.Name = "txtXP1";
+            this.txtXP1.Size = new System.Drawing.Size(24, 13);
+            this.txtXP1.TabIndex = 15;
+            this.txtXP1.Text = "xp1";
             // 
-            // lblLvl1
+            // txtLvl1
             // 
-            this.lblLvl1.AutoSize = true;
-            this.lblLvl1.Location = new System.Drawing.Point(57, 146);
-            this.lblLvl1.Name = "lblLvl1";
-            this.lblLvl1.Size = new System.Drawing.Size(21, 16);
-            this.lblLvl1.TabIndex = 16;
-            this.lblLvl1.Text = "lvl";
-            // 
-            // txtNom
-            // 
-            this.txtNom.AutoSize = true;
-            this.txtNom.Location = new System.Drawing.Point(141, 25);
-            this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(0, 16);
-            this.txtNom.TabIndex = 41;
-            // 
-            // txtNiv
-            // 
-            this.txtNiv.AutoSize = true;
-            this.txtNiv.Location = new System.Drawing.Point(141, 41);
-            this.txtNiv.Name = "txtNiv";
-            this.txtNiv.Size = new System.Drawing.Size(0, 16);
-            this.txtNiv.TabIndex = 42;
-            // 
-            // txtXP
-            // 
-            this.txtXP.AutoSize = true;
-            this.txtXP.Location = new System.Drawing.Point(141, 57);
-            this.txtXP.Name = "txtXP";
-            this.txtXP.Size = new System.Drawing.Size(0, 16);
-            this.txtXP.TabIndex = 43;
-            // 
-            // txtClasse
-            // 
-            this.txtClasse.AutoSize = true;
-            this.txtClasse.Location = new System.Drawing.Point(141, 81);
-            this.txtClasse.Name = "txtClasse";
-            this.txtClasse.Size = new System.Drawing.Size(0, 16);
-            this.txtClasse.TabIndex = 44;
-            // 
-            // txtEtat
-            // 
-            this.txtEtat.AutoSize = true;
-            this.txtEtat.Location = new System.Drawing.Point(141, 99);
-            this.txtEtat.Name = "txtEtat";
-            this.txtEtat.Size = new System.Drawing.Size(0, 16);
-            this.txtEtat.TabIndex = 42;
-            // 
-            // txtPV
-            // 
-            this.txtPV.AutoSize = true;
-            this.txtPV.Location = new System.Drawing.Point(141, 114);
-            this.txtPV.Name = "txtPV";
-            this.txtPV.Size = new System.Drawing.Size(0, 16);
-            this.txtPV.TabIndex = 42;
-            // 
-            // txtEnrgMana
-            // 
-            this.txtEnrgMana.AutoSize = true;
-            this.txtEnrgMana.Location = new System.Drawing.Point(141, 142);
-            this.txtEnrgMana.Name = "txtEnrgMana";
-            this.txtEnrgMana.Size = new System.Drawing.Size(0, 16);
-            this.txtEnrgMana.TabIndex = 42;
-            // 
-            // txtInitiative
-            // 
-            this.txtInitiative.AutoSize = true;
-            this.txtInitiative.Location = new System.Drawing.Point(141, 160);
-            this.txtInitiative.Name = "txtInitiative";
-            this.txtInitiative.Size = new System.Drawing.Size(0, 16);
-            this.txtInitiative.TabIndex = 42;
-            // 
-            // txtForce
-            // 
-            this.txtForce.AutoSize = true;
-            this.txtForce.Location = new System.Drawing.Point(141, 184);
-            this.txtForce.Name = "txtForce";
-            this.txtForce.Size = new System.Drawing.Size(0, 16);
-            this.txtForce.TabIndex = 42;
-            // 
-            // txtDefense
-            // 
-            this.txtDefense.AutoSize = true;
-            this.txtDefense.Location = new System.Drawing.Point(141, 201);
-            this.txtDefense.Name = "txtDefense";
-            this.txtDefense.Size = new System.Drawing.Size(0, 16);
-            this.txtDefense.TabIndex = 42;
-            // 
-            // txtPrecision
-            // 
-            this.txtPrecision.AutoSize = true;
-            this.txtPrecision.Location = new System.Drawing.Point(141, 218);
-            this.txtPrecision.Name = "txtPrecision";
-            this.txtPrecision.Size = new System.Drawing.Size(0, 16);
-            this.txtPrecision.TabIndex = 42;
-            // 
-            // txtEsquive
-            // 
-            this.txtEsquive.AutoSize = true;
-            this.txtEsquive.Location = new System.Drawing.Point(141, 235);
-            this.txtEsquive.Name = "txtEsquive";
-            this.txtEsquive.Size = new System.Drawing.Size(0, 16);
-            this.txtEsquive.TabIndex = 42;
+            this.txtLvl1.AutoSize = true;
+            this.txtLvl1.Location = new System.Drawing.Point(63, 119);
+            this.txtLvl1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtLvl1.Name = "txtLvl1";
+            this.txtLvl1.Size = new System.Drawing.Size(23, 13);
+            this.txtLvl1.TabIndex = 16;
+            this.txtLvl1.Text = "lvl1";
             // 
             // txtPiecesOr
             // 
             this.txtPiecesOr.AutoSize = true;
-            this.txtPiecesOr.Location = new System.Drawing.Point(109, 208);
+            this.txtPiecesOr.Location = new System.Drawing.Point(82, 169);
+            this.txtPiecesOr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtPiecesOr.Name = "txtPiecesOr";
-            this.txtPiecesOr.Size = new System.Drawing.Size(0, 16);
+            this.txtPiecesOr.Size = new System.Drawing.Size(0, 13);
             this.txtPiecesOr.TabIndex = 42;
+            // 
+            // lblXP1
+            // 
+            this.lblXP1.AutoSize = true;
+            this.lblXP1.Location = new System.Drawing.Point(34, 131);
+            this.lblXP1.Name = "lblXP1";
+            this.lblXP1.Size = new System.Drawing.Size(24, 13);
+            this.lblXP1.TabIndex = 43;
+            this.lblXP1.Text = "XP:";
+            // 
+            // lblLvl1
+            // 
+            this.lblLvl1.AutoSize = true;
+            this.lblLvl1.Location = new System.Drawing.Point(19, 118);
+            this.lblLvl1.Name = "lblLvl1";
+            this.lblLvl1.Size = new System.Drawing.Size(44, 13);
+            this.lblLvl1.TabIndex = 44;
+            this.lblLvl1.Text = "Niveau:";
+            // 
+            // lblLvl2
+            // 
+            this.lblLvl2.AutoSize = true;
+            this.lblLvl2.Location = new System.Drawing.Point(98, 119);
+            this.lblLvl2.Name = "lblLvl2";
+            this.lblLvl2.Size = new System.Drawing.Size(44, 13);
+            this.lblLvl2.TabIndex = 46;
+            this.lblLvl2.Text = "Niveau:";
+            // 
+            // lblXP2
+            // 
+            this.lblXP2.AutoSize = true;
+            this.lblXP2.Location = new System.Drawing.Point(116, 132);
+            this.lblXP2.Name = "lblXP2";
+            this.lblXP2.Size = new System.Drawing.Size(24, 13);
+            this.lblXP2.TabIndex = 45;
+            this.lblXP2.Text = "XP:";
+            // 
+            // lblLvl3
+            // 
+            this.lblLvl3.AutoSize = true;
+            this.lblLvl3.Location = new System.Drawing.Point(175, 119);
+            this.lblLvl3.Name = "lblLvl3";
+            this.lblLvl3.Size = new System.Drawing.Size(44, 13);
+            this.lblLvl3.TabIndex = 48;
+            this.lblLvl3.Text = "Niveau:";
+            // 
+            // lblXP3
+            // 
+            this.lblXP3.AutoSize = true;
+            this.lblXP3.Location = new System.Drawing.Point(193, 132);
+            this.lblXP3.Name = "lblXP3";
+            this.lblXP3.Size = new System.Drawing.Size(24, 13);
+            this.lblXP3.TabIndex = 47;
+            this.lblXP3.Text = "XP:";
             // 
             // MenuJeu
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(708, 669);
+            this.ClientSize = new System.Drawing.Size(531, 544);
+            this.Controls.Add(this.lblLvl3);
+            this.Controls.Add(this.lblXP3);
+            this.Controls.Add(this.lblLvl2);
+            this.Controls.Add(this.lblXP2);
+            this.Controls.Add(this.lblLvl1);
+            this.Controls.Add(this.lblXP1);
             this.Controls.Add(this.txtPiecesOr);
             this.Controls.Add(this.gboxInformations);
             this.Controls.Add(this.lblPiecesOr);
-            this.Controls.Add(this.lblLvl3);
-            this.Controls.Add(this.lblXP3);
-            this.Controls.Add(this.lblNom3);
-            this.Controls.Add(this.lblLvl2);
-            this.Controls.Add(this.lblXP2);
-            this.Controls.Add(this.lblNom2);
-            this.Controls.Add(this.lblLvl1);
-            this.Controls.Add(this.lblXP1);
+            this.Controls.Add(this.txtLvl3);
+            this.Controls.Add(this.txtXP3);
+            this.Controls.Add(this.txtNom3);
+            this.Controls.Add(this.txtLvl2);
+            this.Controls.Add(this.txtXP2);
+            this.Controls.Add(this.txtNom2);
+            this.Controls.Add(this.txtLvl1);
+            this.Controls.Add(this.txtXP1);
             this.Controls.Add(this.btnTaverne);
             this.Controls.Add(this.btnForge);
             this.Controls.Add(this.btnChapelle);
@@ -615,11 +739,12 @@
             this.Controls.Add(this.btnAventure);
             this.Controls.Add(this.lblInventaire);
             this.Controls.Add(this.dgvInventaire);
-            this.Controls.Add(this.lblNom1);
+            this.Controls.Add(this.txtNom1);
             this.Controls.Add(this.lblGroupeAventurier);
             this.Controls.Add(this.pboxAventurier3);
             this.Controls.Add(this.pboxAventurier2);
             this.Controls.Add(this.pboxAventurier1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MenuJeu";
             this.Text = "Menu jeu";
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).EndInit();
@@ -646,12 +771,12 @@
         private System.Windows.Forms.Button btnChapelle;
         private System.Windows.Forms.Button btnForge;
         private System.Windows.Forms.Button btnTaverne;
-        private System.Windows.Forms.Label lblLvl2;
-        private System.Windows.Forms.Label lblXP2;
-        private System.Windows.Forms.Label lblNom2;
-        private System.Windows.Forms.Label lblLvl3;
-        private System.Windows.Forms.Label lblXP3;
-        private System.Windows.Forms.Label lblNom3;
+        private System.Windows.Forms.Label txtLvl2;
+        private System.Windows.Forms.Label txtXP2;
+        private System.Windows.Forms.Label txtNom2;
+        private System.Windows.Forms.Label txtLvl3;
+        private System.Windows.Forms.Label txtXP3;
+        private System.Windows.Forms.Label txtNom3;
         private System.Windows.Forms.Label lblPiecesOr;
         private System.Windows.Forms.GroupBox gboxInformations;
         private System.Windows.Forms.Label lblEsquive;
@@ -666,9 +791,9 @@
         private System.Windows.Forms.Label lblNiv;
         private System.Windows.Forms.Label lblXP;
         private System.Windows.Forms.Label lblNom;
-        private System.Windows.Forms.Label lblNom1;
-        private System.Windows.Forms.Label lblXP1;
-        private System.Windows.Forms.Label lblLvl1;
+        private System.Windows.Forms.Label txtNom1;
+        private System.Windows.Forms.Label txtXP1;
+        private System.Windows.Forms.Label txtLvl1;
         private System.Windows.Forms.ComboBox cboArmure;
         private System.Windows.Forms.ComboBox cboBouclier;
         private System.Windows.Forms.ComboBox cboArme;
@@ -689,6 +814,12 @@
         private System.Windows.Forms.Label txtNiv;
         private System.Windows.Forms.Label txtNom;
         private System.Windows.Forms.Label txtPiecesOr;
+        private System.Windows.Forms.Label lblXP1;
+        private System.Windows.Forms.Label lblLvl1;
+        private System.Windows.Forms.Label lblLvl2;
+        private System.Windows.Forms.Label lblXP2;
+        private System.Windows.Forms.Label lblLvl3;
+        private System.Windows.Forms.Label lblXP3;
     }
 }
 

@@ -15,9 +15,16 @@ namespace JRPG
         public MenuJeu()
         {
             InitializeComponent();
-
+            afficherGroupeAventurier();
            
 
+        }
+
+        private void afficherGroupeAventurier()
+        {
+           txtNom1.Text = Program.groupeAventurier.Membres[0].NomAventurier;
+           txtLvl1.Text = Program.groupeAventurier.Membres[0].Niveau.ToString();
+           txtXP1.Text = Program.groupeAventurier.Membres[0].Experience.ToString();
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)

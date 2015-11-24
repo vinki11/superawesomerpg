@@ -370,7 +370,7 @@
             this.btnAccepter.TabIndex = 61;
             this.btnAccepter.Text = "Accepter";
             this.btnAccepter.UseVisualStyleBackColor = true;
-            this.btnAccepter.Click += new System.EventHandler(this.button1_Click);
+            this.btnAccepter.Click += new System.EventHandler(this.btnAccepter_Click);
             // 
             // txtClasse
             // 
