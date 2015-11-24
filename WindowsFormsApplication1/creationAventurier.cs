@@ -10,17 +10,28 @@ using System.Windows.Forms;
 
 namespace JRPG
 {
-    public partial class creationAventurier : Form
+    public partial class CreationAventurier : Form
     {
-        public creationAventurier()
+        public CreationAventurier()
         {
             InitializeComponent();
+
             
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+
+            Hide();
+            MenuJeu menuJeu = new MenuJeu();
+            menuJeu.ShowDialog();
+
         }
     }
 }

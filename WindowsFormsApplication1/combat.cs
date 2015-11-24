@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace JRPG
 {
-    public partial class combat : Form
+    public partial class Combat : Form
     {
-        public combat()
+        public Combat()
         {
             InitializeComponent();
         }

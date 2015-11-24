@@ -10,18 +10,28 @@ using System.Windows.Forms;
 
 namespace JRPG
 {
-    public partial class menuPrincipal : Form
+    public partial class MenuPrincipal : Form
     {
-        public menuPrincipal()
+        
+
+        public MenuPrincipal()
         {
             InitializeComponent();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             Hide();
-            creationAventurier creatAventurier = new creationAventurier();
+            CreationAventurier creatAventurier = new CreationAventurier();
             creatAventurier.ShowDialog();
+          
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }

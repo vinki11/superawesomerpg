@@ -1,6 +1,6 @@
 ﻿namespace JRPG
 {
-    partial class combat
+    partial class Combat
     {
         /// <summary>
         /// Required designer variable.

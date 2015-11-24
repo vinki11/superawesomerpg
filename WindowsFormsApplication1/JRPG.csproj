@@ -60,54 +60,54 @@
     <Compile Include="Classes\Item\Bouclier.cs" />
     <Compile Include="Classes\Item\Consommable.cs" />
     <Compile Include="Classes\Item\Items.cs" />
-    <Compile Include="creationAventurier.cs">
+    <Compile Include="CreationAventurier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="creationAventurier.Designer.cs">
-      <DependentUpon>creationAventurier.cs</DependentUpon>
+    <Compile Include="CreationAventurier.Designer.cs">
+      <DependentUpon>CreationAventurier.cs</DependentUpon>
     </Compile>
-    <Compile Include="aventure.cs">
+    <Compile Include="Aventure.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="aventure.Designer.cs">
-      <DependentUpon>aventure.cs</DependentUpon>
+    <Compile Include="Aventure.Designer.cs">
+      <DependentUpon>Aventure.cs</DependentUpon>
     </Compile>
-    <Compile Include="combat.cs">
+    <Compile Include="Combat.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="combat.Designer.cs">
-      <DependentUpon>combat.cs</DependentUpon>
+    <Compile Include="Combat.Designer.cs">
+      <DependentUpon>Combat.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Groupe.cs" />
     <Compile Include="Classes\GroupeEnnemi.cs" />
-    <Compile Include="menuPrincipal.cs">
+    <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="menuPrincipal.Designer.cs">
-      <DependentUpon>menuPrincipal.cs</DependentUpon>
+    <Compile Include="MenuPrincipal.Designer.cs">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="menuJeu.cs">
+    <Compile Include="MenuJeu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="menuJeu.Designer.cs">
-      <DependentUpon>menuJeu.cs</DependentUpon>
+    <Compile Include="MenuJeu.Designer.cs">
+      <DependentUpon>MenuJeu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="creationAventurier.resx">
-      <DependentUpon>creationAventurier.cs</DependentUpon>
+    <EmbeddedResource Include="CreationAventurier.resx">
+      <DependentUpon>CreationAventurier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="aventure.resx">
-      <DependentUpon>aventure.cs</DependentUpon>
+    <EmbeddedResource Include="Aventure.resx">
+      <DependentUpon>Aventure.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="combat.resx">
-      <DependentUpon>combat.cs</DependentUpon>
+    <EmbeddedResource Include="Combat.resx">
+      <DependentUpon>Combat.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="menuPrincipal.resx">
-      <DependentUpon>menuPrincipal.cs</DependentUpon>
+    <EmbeddedResource Include="MenuPrincipal.resx">
+      <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="menuJeu.resx">
-      <DependentUpon>menuJeu.cs</DependentUpon>
+    <EmbeddedResource Include="MenuJeu.resx">
+      <DependentUpon>MenuJeu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -10,12 +10,13 @@ using System.Windows.Forms;
 
 namespace JRPG
 {
-    public partial class menuJeu : Form
+    public partial class MenuJeu : Form
     {
-        public menuJeu()
+        public MenuJeu()
         {
             InitializeComponent();
 
+           
 
         }
 

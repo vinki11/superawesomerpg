@@ -1,6 +1,6 @@
 ﻿namespace JRPG
 {
-    partial class aventure
+    partial class Aventure
     {
         /// <summary>
         /// Required designer variable.

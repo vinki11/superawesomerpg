@@ -1,6 +1,6 @@
 ﻿namespace JRPG
 {
-    partial class menuPrincipal
+    partial class MenuPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -52,6 +52,7 @@
             this.button1.TabIndex = 1;
             this.button1.Text = "Charger partie";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 

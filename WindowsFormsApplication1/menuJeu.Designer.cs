@@ -1,6 +1,6 @@
 ﻿namespace JRPG
 {
-    partial class menuJeu
+    partial class MenuJeu
     {
         /// <summary>
         /// Required designer variable.
