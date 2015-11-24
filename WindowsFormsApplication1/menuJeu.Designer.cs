@@ -69,6 +69,19 @@
             this.lblNom1 = new System.Windows.Forms.Label();
             this.lblXP1 = new System.Windows.Forms.Label();
             this.lblLvl1 = new System.Windows.Forms.Label();
+            this.txtNom = new System.Windows.Forms.Label();
+            this.txtNiv = new System.Windows.Forms.Label();
+            this.txtXP = new System.Windows.Forms.Label();
+            this.txtClasse = new System.Windows.Forms.Label();
+            this.txtEtat = new System.Windows.Forms.Label();
+            this.txtPV = new System.Windows.Forms.Label();
+            this.txtEnrgMana = new System.Windows.Forms.Label();
+            this.txtInitiative = new System.Windows.Forms.Label();
+            this.txtForce = new System.Windows.Forms.Label();
+            this.txtDefense = new System.Windows.Forms.Label();
+            this.txtPrecision = new System.Windows.Forms.Label();
+            this.txtEsquive = new System.Windows.Forms.Label();
+            this.txtPiecesOr = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).BeginInit();
@@ -240,6 +253,18 @@
             // 
             // gboxInformations
             // 
+            this.gboxInformations.Controls.Add(this.txtEsquive);
+            this.gboxInformations.Controls.Add(this.txtPrecision);
+            this.gboxInformations.Controls.Add(this.txtDefense);
+            this.gboxInformations.Controls.Add(this.txtForce);
+            this.gboxInformations.Controls.Add(this.txtInitiative);
+            this.gboxInformations.Controls.Add(this.txtEnrgMana);
+            this.gboxInformations.Controls.Add(this.txtPV);
+            this.gboxInformations.Controls.Add(this.txtEtat);
+            this.gboxInformations.Controls.Add(this.txtClasse);
+            this.gboxInformations.Controls.Add(this.txtXP);
+            this.gboxInformations.Controls.Add(this.txtNiv);
+            this.gboxInformations.Controls.Add(this.txtNom);
             this.gboxInformations.Controls.Add(this.cboArmure);
             this.gboxInformations.Controls.Add(this.cboBouclier);
             this.gboxInformations.Controls.Add(this.cboArme);
@@ -463,11 +488,116 @@
             this.lblLvl1.TabIndex = 16;
             this.lblLvl1.Text = "lvl";
             // 
+            // txtNom
+            // 
+            this.txtNom.AutoSize = true;
+            this.txtNom.Location = new System.Drawing.Point(141, 25);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(0, 16);
+            this.txtNom.TabIndex = 41;
+            // 
+            // txtNiv
+            // 
+            this.txtNiv.AutoSize = true;
+            this.txtNiv.Location = new System.Drawing.Point(141, 41);
+            this.txtNiv.Name = "txtNiv";
+            this.txtNiv.Size = new System.Drawing.Size(0, 16);
+            this.txtNiv.TabIndex = 42;
+            // 
+            // txtXP
+            // 
+            this.txtXP.AutoSize = true;
+            this.txtXP.Location = new System.Drawing.Point(141, 57);
+            this.txtXP.Name = "txtXP";
+            this.txtXP.Size = new System.Drawing.Size(0, 16);
+            this.txtXP.TabIndex = 43;
+            // 
+            // txtClasse
+            // 
+            this.txtClasse.AutoSize = true;
+            this.txtClasse.Location = new System.Drawing.Point(141, 81);
+            this.txtClasse.Name = "txtClasse";
+            this.txtClasse.Size = new System.Drawing.Size(0, 16);
+            this.txtClasse.TabIndex = 44;
+            // 
+            // txtEtat
+            // 
+            this.txtEtat.AutoSize = true;
+            this.txtEtat.Location = new System.Drawing.Point(141, 99);
+            this.txtEtat.Name = "txtEtat";
+            this.txtEtat.Size = new System.Drawing.Size(0, 16);
+            this.txtEtat.TabIndex = 42;
+            // 
+            // txtPV
+            // 
+            this.txtPV.AutoSize = true;
+            this.txtPV.Location = new System.Drawing.Point(141, 114);
+            this.txtPV.Name = "txtPV";
+            this.txtPV.Size = new System.Drawing.Size(0, 16);
+            this.txtPV.TabIndex = 42;
+            // 
+            // txtEnrgMana
+            // 
+            this.txtEnrgMana.AutoSize = true;
+            this.txtEnrgMana.Location = new System.Drawing.Point(141, 142);
+            this.txtEnrgMana.Name = "txtEnrgMana";
+            this.txtEnrgMana.Size = new System.Drawing.Size(0, 16);
+            this.txtEnrgMana.TabIndex = 42;
+            // 
+            // txtInitiative
+            // 
+            this.txtInitiative.AutoSize = true;
+            this.txtInitiative.Location = new System.Drawing.Point(141, 160);
+            this.txtInitiative.Name = "txtInitiative";
+            this.txtInitiative.Size = new System.Drawing.Size(0, 16);
+            this.txtInitiative.TabIndex = 42;
+            // 
+            // txtForce
+            // 
+            this.txtForce.AutoSize = true;
+            this.txtForce.Location = new System.Drawing.Point(141, 184);
+            this.txtForce.Name = "txtForce";
+            this.txtForce.Size = new System.Drawing.Size(0, 16);
+            this.txtForce.TabIndex = 42;
+            // 
+            // txtDefense
+            // 
+            this.txtDefense.AutoSize = true;
+            this.txtDefense.Location = new System.Drawing.Point(141, 201);
+            this.txtDefense.Name = "txtDefense";
+            this.txtDefense.Size = new System.Drawing.Size(0, 16);
+            this.txtDefense.TabIndex = 42;
+            // 
+            // txtPrecision
+            // 
+            this.txtPrecision.AutoSize = true;
+            this.txtPrecision.Location = new System.Drawing.Point(141, 218);
+            this.txtPrecision.Name = "txtPrecision";
+            this.txtPrecision.Size = new System.Drawing.Size(0, 16);
+            this.txtPrecision.TabIndex = 42;
+            // 
+            // txtEsquive
+            // 
+            this.txtEsquive.AutoSize = true;
+            this.txtEsquive.Location = new System.Drawing.Point(141, 235);
+            this.txtEsquive.Name = "txtEsquive";
+            this.txtEsquive.Size = new System.Drawing.Size(0, 16);
+            this.txtEsquive.TabIndex = 42;
+            // 
+            // txtPiecesOr
+            // 
+            this.txtPiecesOr.AutoSize = true;
+            this.txtPiecesOr.Location = new System.Drawing.Point(109, 208);
+            this.txtPiecesOr.Name = "txtPiecesOr";
+            this.txtPiecesOr.Size = new System.Drawing.Size(0, 16);
+            this.txtPiecesOr.TabIndex = 42;
+            // 
             // MenuJeu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 669);
+            this.Controls.Add(this.txtPiecesOr);
             this.Controls.Add(this.gboxInformations);
             this.Controls.Add(this.lblPiecesOr);
             this.Controls.Add(this.lblLvl3);
@@ -546,6 +676,19 @@
         private System.Windows.Forms.Label lblArmure;
         private System.Windows.Forms.Label lblArme;
         private System.Windows.Forms.Label lblEquipement;
+        private System.Windows.Forms.Label txtEsquive;
+        private System.Windows.Forms.Label txtPrecision;
+        private System.Windows.Forms.Label txtDefense;
+        private System.Windows.Forms.Label txtForce;
+        private System.Windows.Forms.Label txtInitiative;
+        private System.Windows.Forms.Label txtEnrgMana;
+        private System.Windows.Forms.Label txtPV;
+        private System.Windows.Forms.Label txtEtat;
+        private System.Windows.Forms.Label txtClasse;
+        private System.Windows.Forms.Label txtXP;
+        private System.Windows.Forms.Label txtNiv;
+        private System.Windows.Forms.Label txtNom;
+        private System.Windows.Forms.Label txtPiecesOr;
     }
 }
 
