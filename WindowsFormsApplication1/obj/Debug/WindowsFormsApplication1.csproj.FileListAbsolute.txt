@@ -1,0 +1,26 @@
+C:\Users\Pierluc\Documents\Visual Studio 2015\Projects\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe.config
+C:\Users\Pierluc\Documents\Visual Studio 2015\Projects\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.exe
+C:\Users\Pierluc\Documents\Visual Studio 2015\Projects\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\WindowsFormsApplication1.pdb
+C:\Users\Pierluc\Documents\Visual Studio 2015\Projects\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Pierluc\Documents\Visual Studio 2015\Projects\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form2.resources
+C:\Users\Pierluc\Documents\Visual Studio 2015\Projects\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.aventure.resources
+C:\Users\Pierluc\Documents\Visual Studio 2015\Projects\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.combat.resources
+C:\Users\Pierluc\Documents\Visual Studio 2015\Projects\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form3.resources
+C:\Users\Pierluc\Documents\Visual Studio 2015\Projects\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\Pierluc\Documents\Visual Studio 2015\Projects\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\Pierluc\Documents\Visual Studio 2015\Projects\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\Pierluc\Documents\Visual Studio 2015\Projects\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.exe
+C:\Users\Pierluc\Documents\Visual Studio 2015\Projects\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.pdb
+C:\Users\Vincent\Documents\INF1035\TP2\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\JRPG.exe.config
+C:\Users\Vincent\Documents\INF1035\TP2\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\JRPG.exe
+C:\Users\Vincent\Documents\INF1035\TP2\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\bin\Debug\JRPG.pdb
+C:\Users\Vincent\Documents\INF1035\TP2\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csprojResolveAssemblyReference.cache
+C:\Users\Vincent\Documents\INF1035\TP2\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\JRPG.Form2.resources
+C:\Users\Vincent\Documents\INF1035\TP2\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\JRPG.aventure.resources
+C:\Users\Vincent\Documents\INF1035\TP2\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\JRPG.combat.resources
+C:\Users\Vincent\Documents\INF1035\TP2\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\JRPG.Form3.resources
+C:\Users\Vincent\Documents\INF1035\TP2\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\JRPG.Form1.resources
+C:\Users\Vincent\Documents\INF1035\TP2\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\JRPG.Properties.Resources.resources
+C:\Users\Vincent\Documents\INF1035\TP2\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\WindowsFormsApplication1.csproj.GenerateResource.Cache
+C:\Users\Vincent\Documents\INF1035\TP2\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\JRPG.exe
+C:\Users\Vincent\Documents\INF1035\TP2\SuperPeebeeAdventure\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\JRPG.pdb
