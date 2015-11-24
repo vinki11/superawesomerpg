@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace JRPG
 {
-    public partial class Form1 : Form
+    public partial class menuJeu : Form
     {
-        public Form1()
+        public menuJeu()
         {
             InitializeComponent();
         }

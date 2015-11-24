@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace JRPG
 {
-    public partial class Form3 : Form
+    public partial class menuPrincipal : Form
     {
-        public Form3()
+        public menuPrincipal()
         {
             InitializeComponent();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

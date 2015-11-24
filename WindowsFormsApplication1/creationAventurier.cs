@@ -10,11 +10,14 @@ using System.Windows.Forms;
 
 namespace JRPG
 {
-    public partial class Form2 : Form
+    public partial class creationAventurier : Form
     {
-        public Form2()
+        public creationAventurier()
         {
             InitializeComponent();
+
+
+
         }
     }
 }

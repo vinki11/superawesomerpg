@@ -1,6 +1,6 @@
 ﻿namespace JRPG
 {
-    partial class Form2
+    partial class creationAventurier
     {
         /// <summary>
         /// Required designer variable.
@@ -337,7 +337,7 @@
             this.button1.Text = "Accepter";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // Form2
+            // creationAventurier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -359,7 +359,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
+            this.Name = "creationAventurier";
             this.Text = "Création du personnage";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
