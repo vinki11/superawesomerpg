@@ -28,476 +28,476 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.pboxAventurier1 = new System.Windows.Forms.PictureBox();
+            this.pboxAventurier2 = new System.Windows.Forms.PictureBox();
+            this.pboxAventurier3 = new System.Windows.Forms.PictureBox();
+            this.lblGroupeAventurier = new System.Windows.Forms.Label();
+            this.dgvInventaire = new System.Windows.Forms.DataGridView();
+            this.lblInventaire = new System.Windows.Forms.Label();
+            this.btnAventure = new System.Windows.Forms.Button();
+            this.btnSauvegarder = new System.Windows.Forms.Button();
+            this.btnChapelle = new System.Windows.Forms.Button();
+            this.btnForge = new System.Windows.Forms.Button();
+            this.btnTaverne = new System.Windows.Forms.Button();
+            this.lblLvl2 = new System.Windows.Forms.Label();
+            this.lblXP2 = new System.Windows.Forms.Label();
+            this.lblNom2 = new System.Windows.Forms.Label();
+            this.lblLvl3 = new System.Windows.Forms.Label();
+            this.lblXP3 = new System.Windows.Forms.Label();
+            this.lblNom3 = new System.Windows.Forms.Label();
+            this.lblPiecesOr = new System.Windows.Forms.Label();
+            this.gboxInformations = new System.Windows.Forms.GroupBox();
+            this.cboArmure = new System.Windows.Forms.ComboBox();
+            this.cboBouclier = new System.Windows.Forms.ComboBox();
+            this.cboArme = new System.Windows.Forms.ComboBox();
+            this.lblBouclier = new System.Windows.Forms.Label();
+            this.lblArmure = new System.Windows.Forms.Label();
+            this.lblArme = new System.Windows.Forms.Label();
+            this.lblEquipement = new System.Windows.Forms.Label();
+            this.lblEsquive = new System.Windows.Forms.Label();
+            this.lblDefense = new System.Windows.Forms.Label();
+            this.lblForce = new System.Windows.Forms.Label();
+            this.lblPrecision = new System.Windows.Forms.Label();
+            this.lblInitiative = new System.Windows.Forms.Label();
+            this.lblEnrgMana = new System.Windows.Forms.Label();
+            this.lblPV = new System.Windows.Forms.Label();
+            this.lblEtat = new System.Windows.Forms.Label();
+            this.lblClasse = new System.Windows.Forms.Label();
+            this.lblNiv = new System.Windows.Forms.Label();
+            this.lblXP = new System.Windows.Forms.Label();
+            this.lblNom = new System.Windows.Forms.Label();
+            this.lblNom1 = new System.Windows.Forms.Label();
+            this.lblXP1 = new System.Windows.Forms.Label();
+            this.lblLvl1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventaire)).BeginInit();
+            this.gboxInformations.SuspendLayout();
             this.SuspendLayout();
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(22, 48);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(87, 79);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Location = new System.Drawing.Point(129, 48);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(87, 79);
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Location = new System.Drawing.Point(238, 48);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(87, 79);
-            this.pictureBox3.TabIndex = 2;
-            this.pictureBox3.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(133, 16);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Groupe d\'aventuriers";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(22, 288);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 355);
-            this.dataGridView1.TabIndex = 7;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(22, 269);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(66, 16);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Inventaire";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(495, 482);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 23);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Partir à l\'aventure";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(495, 598);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(133, 23);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Sauvegarder";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(495, 540);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(133, 23);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Visiter la chapelle";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(495, 511);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(133, 23);
-            this.button4.TabIndex = 13;
-            this.button4.Text = "Aller à la forge";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(495, 569);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(133, 23);
-            this.button5.TabIndex = 14;
-            this.button5.Text = "Visiter la taverne";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(160, 146);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(21, 16);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "lvl";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(131, 162);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 16);
-            this.label4.TabIndex = 18;
-            this.label4.Text = "expérience";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(151, 130);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(37, 16);
-            this.label8.TabIndex = 17;
-            this.label8.Text = "Nom";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(276, 146);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(21, 16);
-            this.label9.TabIndex = 22;
-            this.label9.Text = "lvl";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(247, 162);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(75, 16);
-            this.label10.TabIndex = 21;
-            this.label10.Text = "expérience";
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(267, 130);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(37, 16);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Nom";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(22, 208);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 16);
-            this.label12.TabIndex = 23;
-            this.label12.Text = "Pièces d\'or:";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.comboBox3);
-            this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Controls.Add(this.comboBox1);
-            this.groupBox1.Controls.Add(this.label28);
-            this.groupBox1.Controls.Add(this.label27);
-            this.groupBox1.Controls.Add(this.label26);
-            this.groupBox1.Controls.Add(this.label25);
-            this.groupBox1.Controls.Add(this.label24);
-            this.groupBox1.Controls.Add(this.label23);
-            this.groupBox1.Controls.Add(this.label22);
-            this.groupBox1.Controls.Add(this.label21);
-            this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.label17);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.label13);
-            this.groupBox1.Controls.Add(this.label14);
-            this.groupBox1.Controls.Add(this.label15);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(351, 48);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(345, 387);
-            this.groupBox1.TabIndex = 24;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Informations";
-            // 
-            // comboBox3
-            // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(100, 310);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(121, 24);
-            this.comboBox3.TabIndex = 40;
-            // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(100, 337);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(121, 24);
-            this.comboBox2.TabIndex = 39;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(100, 283);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 24);
-            this.comboBox1.TabIndex = 38;
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(16, 341);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(60, 16);
-            this.label28.TabIndex = 37;
-            this.label28.Text = "Bouclier:";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(16, 314);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(54, 16);
-            this.label27.TabIndex = 36;
-            this.label27.Text = "Armure:";
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(16, 288);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(43, 16);
-            this.label26.TabIndex = 35;
-            this.label26.Text = "Arme:";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(16, 261);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(90, 16);
-            this.label25.TabIndex = 34;
-            this.label25.Text = "Équipement";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(16, 235);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(60, 16);
-            this.label24.TabIndex = 27;
-            this.label24.Text = "Esquive:";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(16, 201);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(62, 16);
-            this.label23.TabIndex = 27;
-            this.label23.Text = "Defense:";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(16, 184);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(46, 16);
-            this.label22.TabIndex = 27;
-            this.label22.Text = "Force:";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(16, 218);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(67, 16);
-            this.label21.TabIndex = 33;
-            this.label21.Text = "Précision:";
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(17, 160);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(59, 16);
-            this.label20.TabIndex = 32;
-            this.label20.Text = "Initiative:";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(16, 142);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(96, 16);
-            this.label19.TabIndex = 31;
-            this.label19.Text = "Energie/Mana:";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(16, 116);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(29, 16);
-            this.label18.TabIndex = 30;
-            this.label18.Text = "PV:";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(17, 99);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(34, 16);
-            this.label17.TabIndex = 29;
-            this.label17.Text = "État:";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(17, 81);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(53, 16);
-            this.label16.TabIndex = 28;
-            this.label16.Text = "Classe:";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(18, 41);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(31, 16);
-            this.label13.TabIndex = 27;
-            this.label13.Text = "Niv:";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(19, 57);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(28, 16);
-            this.label14.TabIndex = 26;
-            this.label14.Text = "XP:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(17, 25);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(40, 16);
-            this.label15.TabIndex = 25;
-            this.label15.Text = "Nom:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(48, 130);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(37, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Nom";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 162);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(75, 16);
-            this.label6.TabIndex = 15;
-            this.label6.Text = "expérience";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(57, 146);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(21, 16);
-            this.label7.TabIndex = 16;
-            this.label7.Text = "lvl";
-            // 
-            // menuJeu
+            // pboxAventurier1
+            // 
+            this.pboxAventurier1.Location = new System.Drawing.Point(22, 48);
+            this.pboxAventurier1.Name = "pboxAventurier1";
+            this.pboxAventurier1.Size = new System.Drawing.Size(87, 79);
+            this.pboxAventurier1.TabIndex = 0;
+            this.pboxAventurier1.TabStop = false;
+            // 
+            // pboxAventurier2
+            // 
+            this.pboxAventurier2.Location = new System.Drawing.Point(129, 48);
+            this.pboxAventurier2.Name = "pboxAventurier2";
+            this.pboxAventurier2.Size = new System.Drawing.Size(87, 79);
+            this.pboxAventurier2.TabIndex = 1;
+            this.pboxAventurier2.TabStop = false;
+            // 
+            // pboxAventurier3
+            // 
+            this.pboxAventurier3.Location = new System.Drawing.Point(238, 48);
+            this.pboxAventurier3.Name = "pboxAventurier3";
+            this.pboxAventurier3.Size = new System.Drawing.Size(87, 79);
+            this.pboxAventurier3.TabIndex = 2;
+            this.pboxAventurier3.TabStop = false;
+            // 
+            // lblGroupeAventurier
+            // 
+            this.lblGroupeAventurier.AutoSize = true;
+            this.lblGroupeAventurier.Location = new System.Drawing.Point(21, 24);
+            this.lblGroupeAventurier.Name = "lblGroupeAventurier";
+            this.lblGroupeAventurier.Size = new System.Drawing.Size(133, 16);
+            this.lblGroupeAventurier.TabIndex = 3;
+            this.lblGroupeAventurier.Text = "Groupe d\'aventuriers";
+            // 
+            // dgvInventaire
+            // 
+            this.dgvInventaire.AllowUserToAddRows = false;
+            this.dgvInventaire.AllowUserToDeleteRows = false;
+            this.dgvInventaire.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvInventaire.Location = new System.Drawing.Point(22, 288);
+            this.dgvInventaire.Name = "dgvInventaire";
+            this.dgvInventaire.ReadOnly = true;
+            this.dgvInventaire.RowTemplate.Height = 24;
+            this.dgvInventaire.Size = new System.Drawing.Size(240, 355);
+            this.dgvInventaire.TabIndex = 7;
+            // 
+            // lblInventaire
+            // 
+            this.lblInventaire.AutoSize = true;
+            this.lblInventaire.Location = new System.Drawing.Point(22, 269);
+            this.lblInventaire.Name = "lblInventaire";
+            this.lblInventaire.Size = new System.Drawing.Size(66, 16);
+            this.lblInventaire.TabIndex = 8;
+            this.lblInventaire.Text = "Inventaire";
+            // 
+            // btnAventure
+            // 
+            this.btnAventure.Location = new System.Drawing.Point(495, 482);
+            this.btnAventure.Name = "btnAventure";
+            this.btnAventure.Size = new System.Drawing.Size(133, 23);
+            this.btnAventure.TabIndex = 10;
+            this.btnAventure.Text = "Partir à l\'aventure";
+            this.btnAventure.UseVisualStyleBackColor = true;
+            // 
+            // btnSauvegarder
+            // 
+            this.btnSauvegarder.Location = new System.Drawing.Point(495, 598);
+            this.btnSauvegarder.Name = "btnSauvegarder";
+            this.btnSauvegarder.Size = new System.Drawing.Size(133, 23);
+            this.btnSauvegarder.TabIndex = 11;
+            this.btnSauvegarder.Text = "Sauvegarder";
+            this.btnSauvegarder.UseVisualStyleBackColor = true;
+            // 
+            // btnChapelle
+            // 
+            this.btnChapelle.Location = new System.Drawing.Point(495, 540);
+            this.btnChapelle.Name = "btnChapelle";
+            this.btnChapelle.Size = new System.Drawing.Size(133, 23);
+            this.btnChapelle.TabIndex = 12;
+            this.btnChapelle.Text = "Visiter la chapelle";
+            this.btnChapelle.UseVisualStyleBackColor = true;
+            // 
+            // btnForge
+            // 
+            this.btnForge.Location = new System.Drawing.Point(495, 511);
+            this.btnForge.Name = "btnForge";
+            this.btnForge.Size = new System.Drawing.Size(133, 23);
+            this.btnForge.TabIndex = 13;
+            this.btnForge.Text = "Aller à la forge";
+            this.btnForge.UseVisualStyleBackColor = true;
+            // 
+            // btnTaverne
+            // 
+            this.btnTaverne.Location = new System.Drawing.Point(495, 569);
+            this.btnTaverne.Name = "btnTaverne";
+            this.btnTaverne.Size = new System.Drawing.Size(133, 23);
+            this.btnTaverne.TabIndex = 14;
+            this.btnTaverne.Text = "Visiter la taverne";
+            this.btnTaverne.UseVisualStyleBackColor = true;
+            // 
+            // lblLvl2
+            // 
+            this.lblLvl2.AutoSize = true;
+            this.lblLvl2.Location = new System.Drawing.Point(160, 146);
+            this.lblLvl2.Name = "lblLvl2";
+            this.lblLvl2.Size = new System.Drawing.Size(21, 16);
+            this.lblLvl2.TabIndex = 19;
+            this.lblLvl2.Text = "lvl";
+            // 
+            // lblXP2
+            // 
+            this.lblXP2.AutoSize = true;
+            this.lblXP2.Location = new System.Drawing.Point(131, 162);
+            this.lblXP2.Name = "lblXP2";
+            this.lblXP2.Size = new System.Drawing.Size(75, 16);
+            this.lblXP2.TabIndex = 18;
+            this.lblXP2.Text = "expérience";
+            // 
+            // lblNom2
+            // 
+            this.lblNom2.AutoSize = true;
+            this.lblNom2.Location = new System.Drawing.Point(151, 130);
+            this.lblNom2.Name = "lblNom2";
+            this.lblNom2.Size = new System.Drawing.Size(37, 16);
+            this.lblNom2.TabIndex = 17;
+            this.lblNom2.Text = "Nom";
+            // 
+            // lblLvl3
+            // 
+            this.lblLvl3.AutoSize = true;
+            this.lblLvl3.Location = new System.Drawing.Point(276, 146);
+            this.lblLvl3.Name = "lblLvl3";
+            this.lblLvl3.Size = new System.Drawing.Size(21, 16);
+            this.lblLvl3.TabIndex = 22;
+            this.lblLvl3.Text = "lvl";
+            // 
+            // lblXP3
+            // 
+            this.lblXP3.AutoSize = true;
+            this.lblXP3.Location = new System.Drawing.Point(247, 162);
+            this.lblXP3.Name = "lblXP3";
+            this.lblXP3.Size = new System.Drawing.Size(75, 16);
+            this.lblXP3.TabIndex = 21;
+            this.lblXP3.Text = "expérience";
+            // 
+            // lblNom3
+            // 
+            this.lblNom3.AutoSize = true;
+            this.lblNom3.Location = new System.Drawing.Point(267, 130);
+            this.lblNom3.Name = "lblNom3";
+            this.lblNom3.Size = new System.Drawing.Size(37, 16);
+            this.lblNom3.TabIndex = 20;
+            this.lblNom3.Text = "Nom";
+            // 
+            // lblPiecesOr
+            // 
+            this.lblPiecesOr.AutoSize = true;
+            this.lblPiecesOr.Location = new System.Drawing.Point(22, 208);
+            this.lblPiecesOr.Name = "lblPiecesOr";
+            this.lblPiecesOr.Size = new System.Drawing.Size(79, 16);
+            this.lblPiecesOr.TabIndex = 23;
+            this.lblPiecesOr.Text = "Pièces d\'or:";
+            // 
+            // gboxInformations
+            // 
+            this.gboxInformations.Controls.Add(this.cboArmure);
+            this.gboxInformations.Controls.Add(this.cboBouclier);
+            this.gboxInformations.Controls.Add(this.cboArme);
+            this.gboxInformations.Controls.Add(this.lblBouclier);
+            this.gboxInformations.Controls.Add(this.lblArmure);
+            this.gboxInformations.Controls.Add(this.lblArme);
+            this.gboxInformations.Controls.Add(this.lblEquipement);
+            this.gboxInformations.Controls.Add(this.lblEsquive);
+            this.gboxInformations.Controls.Add(this.lblDefense);
+            this.gboxInformations.Controls.Add(this.lblForce);
+            this.gboxInformations.Controls.Add(this.lblPrecision);
+            this.gboxInformations.Controls.Add(this.lblInitiative);
+            this.gboxInformations.Controls.Add(this.lblEnrgMana);
+            this.gboxInformations.Controls.Add(this.lblPV);
+            this.gboxInformations.Controls.Add(this.lblEtat);
+            this.gboxInformations.Controls.Add(this.lblClasse);
+            this.gboxInformations.Controls.Add(this.lblNiv);
+            this.gboxInformations.Controls.Add(this.lblXP);
+            this.gboxInformations.Controls.Add(this.lblNom);
+            this.gboxInformations.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gboxInformations.Location = new System.Drawing.Point(351, 48);
+            this.gboxInformations.Name = "gboxInformations";
+            this.gboxInformations.Size = new System.Drawing.Size(345, 387);
+            this.gboxInformations.TabIndex = 24;
+            this.gboxInformations.TabStop = false;
+            this.gboxInformations.Text = "Informations";
+            // 
+            // cboArmure
+            // 
+            this.cboArmure.FormattingEnabled = true;
+            this.cboArmure.Location = new System.Drawing.Point(100, 310);
+            this.cboArmure.Name = "cboArmure";
+            this.cboArmure.Size = new System.Drawing.Size(121, 24);
+            this.cboArmure.TabIndex = 40;
+            // 
+            // cboBouclier
+            // 
+            this.cboBouclier.FormattingEnabled = true;
+            this.cboBouclier.Location = new System.Drawing.Point(100, 337);
+            this.cboBouclier.Name = "cboBouclier";
+            this.cboBouclier.Size = new System.Drawing.Size(121, 24);
+            this.cboBouclier.TabIndex = 39;
+            // 
+            // cboArme
+            // 
+            this.cboArme.FormattingEnabled = true;
+            this.cboArme.Location = new System.Drawing.Point(100, 283);
+            this.cboArme.Name = "cboArme";
+            this.cboArme.Size = new System.Drawing.Size(121, 24);
+            this.cboArme.TabIndex = 38;
+            // 
+            // lblBouclier
+            // 
+            this.lblBouclier.AutoSize = true;
+            this.lblBouclier.Location = new System.Drawing.Point(16, 341);
+            this.lblBouclier.Name = "lblBouclier";
+            this.lblBouclier.Size = new System.Drawing.Size(60, 16);
+            this.lblBouclier.TabIndex = 37;
+            this.lblBouclier.Text = "Bouclier:";
+            // 
+            // lblArmure
+            // 
+            this.lblArmure.AutoSize = true;
+            this.lblArmure.Location = new System.Drawing.Point(16, 314);
+            this.lblArmure.Name = "lblArmure";
+            this.lblArmure.Size = new System.Drawing.Size(54, 16);
+            this.lblArmure.TabIndex = 36;
+            this.lblArmure.Text = "Armure:";
+            // 
+            // lblArme
+            // 
+            this.lblArme.AutoSize = true;
+            this.lblArme.Location = new System.Drawing.Point(16, 288);
+            this.lblArme.Name = "lblArme";
+            this.lblArme.Size = new System.Drawing.Size(43, 16);
+            this.lblArme.TabIndex = 35;
+            this.lblArme.Text = "Arme:";
+            // 
+            // lblEquipement
+            // 
+            this.lblEquipement.AutoSize = true;
+            this.lblEquipement.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEquipement.Location = new System.Drawing.Point(16, 261);
+            this.lblEquipement.Name = "lblEquipement";
+            this.lblEquipement.Size = new System.Drawing.Size(90, 16);
+            this.lblEquipement.TabIndex = 34;
+            this.lblEquipement.Text = "Équipement";
+            // 
+            // lblEsquive
+            // 
+            this.lblEsquive.AutoSize = true;
+            this.lblEsquive.Location = new System.Drawing.Point(16, 235);
+            this.lblEsquive.Name = "lblEsquive";
+            this.lblEsquive.Size = new System.Drawing.Size(60, 16);
+            this.lblEsquive.TabIndex = 27;
+            this.lblEsquive.Text = "Esquive:";
+            // 
+            // lblDefense
+            // 
+            this.lblDefense.AutoSize = true;
+            this.lblDefense.Location = new System.Drawing.Point(16, 201);
+            this.lblDefense.Name = "lblDefense";
+            this.lblDefense.Size = new System.Drawing.Size(62, 16);
+            this.lblDefense.TabIndex = 27;
+            this.lblDefense.Text = "Defense:";
+            // 
+            // lblForce
+            // 
+            this.lblForce.AutoSize = true;
+            this.lblForce.Location = new System.Drawing.Point(16, 184);
+            this.lblForce.Name = "lblForce";
+            this.lblForce.Size = new System.Drawing.Size(46, 16);
+            this.lblForce.TabIndex = 27;
+            this.lblForce.Text = "Force:";
+            // 
+            // lblPrecision
+            // 
+            this.lblPrecision.AutoSize = true;
+            this.lblPrecision.Location = new System.Drawing.Point(16, 218);
+            this.lblPrecision.Name = "lblPrecision";
+            this.lblPrecision.Size = new System.Drawing.Size(67, 16);
+            this.lblPrecision.TabIndex = 33;
+            this.lblPrecision.Text = "Précision:";
+            // 
+            // lblInitiative
+            // 
+            this.lblInitiative.AutoSize = true;
+            this.lblInitiative.Location = new System.Drawing.Point(17, 160);
+            this.lblInitiative.Name = "lblInitiative";
+            this.lblInitiative.Size = new System.Drawing.Size(59, 16);
+            this.lblInitiative.TabIndex = 32;
+            this.lblInitiative.Text = "Initiative:";
+            // 
+            // lblEnrgMana
+            // 
+            this.lblEnrgMana.AutoSize = true;
+            this.lblEnrgMana.Location = new System.Drawing.Point(16, 142);
+            this.lblEnrgMana.Name = "lblEnrgMana";
+            this.lblEnrgMana.Size = new System.Drawing.Size(96, 16);
+            this.lblEnrgMana.TabIndex = 31;
+            this.lblEnrgMana.Text = "Energie/Mana:";
+            // 
+            // lblPV
+            // 
+            this.lblPV.AutoSize = true;
+            this.lblPV.Location = new System.Drawing.Point(16, 116);
+            this.lblPV.Name = "lblPV";
+            this.lblPV.Size = new System.Drawing.Size(29, 16);
+            this.lblPV.TabIndex = 30;
+            this.lblPV.Text = "PV:";
+            // 
+            // lblEtat
+            // 
+            this.lblEtat.AutoSize = true;
+            this.lblEtat.Location = new System.Drawing.Point(17, 99);
+            this.lblEtat.Name = "lblEtat";
+            this.lblEtat.Size = new System.Drawing.Size(34, 16);
+            this.lblEtat.TabIndex = 29;
+            this.lblEtat.Text = "État:";
+            // 
+            // lblClasse
+            // 
+            this.lblClasse.AutoSize = true;
+            this.lblClasse.Location = new System.Drawing.Point(17, 81);
+            this.lblClasse.Name = "lblClasse";
+            this.lblClasse.Size = new System.Drawing.Size(53, 16);
+            this.lblClasse.TabIndex = 28;
+            this.lblClasse.Text = "Classe:";
+            // 
+            // lblNiv
+            // 
+            this.lblNiv.AutoSize = true;
+            this.lblNiv.Location = new System.Drawing.Point(18, 41);
+            this.lblNiv.Name = "lblNiv";
+            this.lblNiv.Size = new System.Drawing.Size(31, 16);
+            this.lblNiv.TabIndex = 27;
+            this.lblNiv.Text = "Niv:";
+            // 
+            // lblXP
+            // 
+            this.lblXP.AutoSize = true;
+            this.lblXP.Location = new System.Drawing.Point(19, 57);
+            this.lblXP.Name = "lblXP";
+            this.lblXP.Size = new System.Drawing.Size(28, 16);
+            this.lblXP.TabIndex = 26;
+            this.lblXP.Text = "XP:";
+            // 
+            // lblNom
+            // 
+            this.lblNom.AutoSize = true;
+            this.lblNom.Location = new System.Drawing.Point(17, 25);
+            this.lblNom.Name = "lblNom";
+            this.lblNom.Size = new System.Drawing.Size(40, 16);
+            this.lblNom.TabIndex = 25;
+            this.lblNom.Text = "Nom:";
+            // 
+            // lblNom1
+            // 
+            this.lblNom1.AutoSize = true;
+            this.lblNom1.Location = new System.Drawing.Point(48, 130);
+            this.lblNom1.Name = "lblNom1";
+            this.lblNom1.Size = new System.Drawing.Size(37, 16);
+            this.lblNom1.TabIndex = 4;
+            this.lblNom1.Text = "Nom";
+            // 
+            // lblXP1
+            // 
+            this.lblXP1.AutoSize = true;
+            this.lblXP1.Location = new System.Drawing.Point(28, 162);
+            this.lblXP1.Name = "lblXP1";
+            this.lblXP1.Size = new System.Drawing.Size(75, 16);
+            this.lblXP1.TabIndex = 15;
+            this.lblXP1.Text = "expérience";
+            // 
+            // lblLvl1
+            // 
+            this.lblLvl1.AutoSize = true;
+            this.lblLvl1.Location = new System.Drawing.Point(57, 146);
+            this.lblLvl1.Name = "lblLvl1";
+            this.lblLvl1.Size = new System.Drawing.Size(21, 16);
+            this.lblLvl1.TabIndex = 16;
+            this.lblLvl1.Text = "lvl";
+            // 
+            // MenuJeu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(708, 669);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Name = "menuJeu";
+            this.Controls.Add(this.gboxInformations);
+            this.Controls.Add(this.lblPiecesOr);
+            this.Controls.Add(this.lblLvl3);
+            this.Controls.Add(this.lblXP3);
+            this.Controls.Add(this.lblNom3);
+            this.Controls.Add(this.lblLvl2);
+            this.Controls.Add(this.lblXP2);
+            this.Controls.Add(this.lblNom2);
+            this.Controls.Add(this.lblLvl1);
+            this.Controls.Add(this.lblXP1);
+            this.Controls.Add(this.btnTaverne);
+            this.Controls.Add(this.btnForge);
+            this.Controls.Add(this.btnChapelle);
+            this.Controls.Add(this.btnSauvegarder);
+            this.Controls.Add(this.btnAventure);
+            this.Controls.Add(this.lblInventaire);
+            this.Controls.Add(this.dgvInventaire);
+            this.Controls.Add(this.lblNom1);
+            this.Controls.Add(this.lblGroupeAventurier);
+            this.Controls.Add(this.pboxAventurier3);
+            this.Controls.Add(this.pboxAventurier2);
+            this.Controls.Add(this.pboxAventurier1);
+            this.Name = "MenuJeu";
             this.Text = "Menu jeu";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventaire)).EndInit();
+            this.gboxInformations.ResumeLayout(false);
+            this.gboxInformations.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -505,47 +505,47 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.PictureBox pboxAventurier1;
+        private System.Windows.Forms.PictureBox pboxAventurier2;
+        private System.Windows.Forms.PictureBox pboxAventurier3;
+        private System.Windows.Forms.Label lblGroupeAventurier;
+        private System.Windows.Forms.DataGridView dgvInventaire;
+        private System.Windows.Forms.Label lblInventaire;
+        private System.Windows.Forms.Button btnAventure;
+        private System.Windows.Forms.Button btnSauvegarder;
+        private System.Windows.Forms.Button btnChapelle;
+        private System.Windows.Forms.Button btnForge;
+        private System.Windows.Forms.Button btnTaverne;
+        private System.Windows.Forms.Label lblLvl2;
+        private System.Windows.Forms.Label lblXP2;
+        private System.Windows.Forms.Label lblNom2;
+        private System.Windows.Forms.Label lblLvl3;
+        private System.Windows.Forms.Label lblXP3;
+        private System.Windows.Forms.Label lblNom3;
+        private System.Windows.Forms.Label lblPiecesOr;
+        private System.Windows.Forms.GroupBox gboxInformations;
+        private System.Windows.Forms.Label lblEsquive;
+        private System.Windows.Forms.Label lblDefense;
+        private System.Windows.Forms.Label lblForce;
+        private System.Windows.Forms.Label lblPrecision;
+        private System.Windows.Forms.Label lblInitiative;
+        private System.Windows.Forms.Label lblEnrgMana;
+        private System.Windows.Forms.Label lblPV;
+        private System.Windows.Forms.Label lblEtat;
+        private System.Windows.Forms.Label lblClasse;
+        private System.Windows.Forms.Label lblNiv;
+        private System.Windows.Forms.Label lblXP;
+        private System.Windows.Forms.Label lblNom;
+        private System.Windows.Forms.Label lblNom1;
+        private System.Windows.Forms.Label lblXP1;
+        private System.Windows.Forms.Label lblLvl1;
+        private System.Windows.Forms.ComboBox cboArmure;
+        private System.Windows.Forms.ComboBox cboBouclier;
+        private System.Windows.Forms.ComboBox cboArme;
+        private System.Windows.Forms.Label lblBouclier;
+        private System.Windows.Forms.Label lblArmure;
+        private System.Windows.Forms.Label lblArme;
+        private System.Windows.Forms.Label lblEquipement;
     }
 }
 

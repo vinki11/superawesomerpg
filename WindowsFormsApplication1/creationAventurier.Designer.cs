@@ -28,387 +28,359 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.lblNomPerso = new System.Windows.Forms.Label();
+            this.tboxNomPerso = new System.Windows.Forms.TextBox();
+            this.lblClasses = new System.Windows.Forms.Label();
+            this.pboxGuerrier = new System.Windows.Forms.PictureBox();
+            this.pboxPretre = new System.Windows.Forms.PictureBox();
+            this.pboxVoleur = new System.Windows.Forms.PictureBox();
+            this.pboxMage = new System.Windows.Forms.PictureBox();
+            this.lblGuerrier = new System.Windows.Forms.Label();
+            this.lblMage = new System.Windows.Forms.Label();
+            this.lblPretre = new System.Windows.Forms.Label();
+            this.lblVoleur = new System.Windows.Forms.Label();
+            this.rboMage = new System.Windows.Forms.RadioButton();
+            this.rboGuerrier = new System.Windows.Forms.RadioButton();
+            this.rboVoleur = new System.Windows.Forms.RadioButton();
+            this.rboPretre = new System.Windows.Forms.RadioButton();
+            this.lblBouclier = new System.Windows.Forms.Label();
+            this.lblArmure = new System.Windows.Forms.Label();
+            this.lblArme = new System.Windows.Forms.Label();
+            this.lblEquipement = new System.Windows.Forms.Label();
+            this.lblEsquive = new System.Windows.Forms.Label();
+            this.lblDefense = new System.Windows.Forms.Label();
+            this.lblForce = new System.Windows.Forms.Label();
+            this.lblPrecision = new System.Windows.Forms.Label();
+            this.lblInitiative = new System.Windows.Forms.Label();
+            this.lblEnrgMana = new System.Windows.Forms.Label();
+            this.lblPV = new System.Windows.Forms.Label();
+            this.lblClasse = new System.Windows.Forms.Label();
+            this.gboxInformations = new System.Windows.Forms.GroupBox();
+            this.btnAccepter = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxGuerrier)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxPretre)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxVoleur)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxMage)).BeginInit();
+            this.gboxInformations.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // lblNomPerso
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(20, 39);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(106, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nom du personnage:";
+            this.lblNomPerso.AutoSize = true;
+            this.lblNomPerso.Location = new System.Drawing.Point(27, 48);
+            this.lblNomPerso.Name = "lblNomPerso";
+            this.lblNomPerso.Size = new System.Drawing.Size(134, 16);
+            this.lblNomPerso.TabIndex = 0;
+            this.lblNomPerso.Text = "Nom du personnage:";
             // 
-            // textBox1
+            // tboxNomPerso
             // 
-            this.textBox1.Location = new System.Drawing.Point(125, 37);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(76, 20);
-            this.textBox1.TabIndex = 1;
+            this.tboxNomPerso.Location = new System.Drawing.Point(167, 46);
+            this.tboxNomPerso.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tboxNomPerso.Name = "tboxNomPerso";
+            this.tboxNomPerso.Size = new System.Drawing.Size(100, 22);
+            this.tboxNomPerso.TabIndex = 1;
             // 
-            // label2
+            // lblClasses
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(254, 39);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(64, 16);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Classes";
+            this.lblClasses.AutoSize = true;
+            this.lblClasses.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblClasses.Location = new System.Drawing.Point(339, 48);
+            this.lblClasses.Name = "lblClasses";
+            this.lblClasses.Size = new System.Drawing.Size(64, 16);
+            this.lblClasses.TabIndex = 2;
+            this.lblClasses.Text = "Classes";
             // 
-            // pictureBox1
+            // pboxGuerrier
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(256, 88);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(78, 79);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.pboxGuerrier.Location = new System.Drawing.Point(341, 108);
+            this.pboxGuerrier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pboxGuerrier.Name = "pboxGuerrier";
+            this.pboxGuerrier.Size = new System.Drawing.Size(104, 97);
+            this.pboxGuerrier.TabIndex = 3;
+            this.pboxGuerrier.TabStop = false;
             // 
-            // pictureBox2
+            // pboxPretre
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(363, 208);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(78, 79);
-            this.pictureBox2.TabIndex = 4;
-            this.pictureBox2.TabStop = false;
+            this.pboxPretre.Location = new System.Drawing.Point(484, 256);
+            this.pboxPretre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pboxPretre.Name = "pboxPretre";
+            this.pboxPretre.Size = new System.Drawing.Size(104, 97);
+            this.pboxPretre.TabIndex = 4;
+            this.pboxPretre.TabStop = false;
             // 
-            // pictureBox3
+            // pboxVoleur
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(256, 208);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(78, 79);
-            this.pictureBox3.TabIndex = 5;
-            this.pictureBox3.TabStop = false;
+            this.pboxVoleur.Location = new System.Drawing.Point(341, 256);
+            this.pboxVoleur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pboxVoleur.Name = "pboxVoleur";
+            this.pboxVoleur.Size = new System.Drawing.Size(104, 97);
+            this.pboxVoleur.TabIndex = 5;
+            this.pboxVoleur.TabStop = false;
             // 
-            // pictureBox4
+            // pboxMage
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(363, 88);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(78, 79);
-            this.pictureBox4.TabIndex = 6;
-            this.pictureBox4.TabStop = false;
+            this.pboxMage.Location = new System.Drawing.Point(484, 108);
+            this.pboxMage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pboxMage.Name = "pboxMage";
+            this.pboxMage.Size = new System.Drawing.Size(104, 97);
+            this.pboxMage.TabIndex = 6;
+            this.pboxMage.TabStop = false;
             // 
-            // label3
+            // lblGuerrier
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(256, 68);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Guerrier";
+            this.lblGuerrier.AutoSize = true;
+            this.lblGuerrier.Location = new System.Drawing.Point(341, 84);
+            this.lblGuerrier.Name = "lblGuerrier";
+            this.lblGuerrier.Size = new System.Drawing.Size(56, 16);
+            this.lblGuerrier.TabIndex = 7;
+            this.lblGuerrier.Text = "Guerrier";
             // 
-            // label4
+            // lblMage
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(361, 68);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(34, 13);
-            this.label4.TabIndex = 8;
-            this.label4.Text = "Mage";
+            this.lblMage.AutoSize = true;
+            this.lblMage.Location = new System.Drawing.Point(481, 84);
+            this.lblMage.Name = "lblMage";
+            this.lblMage.Size = new System.Drawing.Size(43, 16);
+            this.lblMage.TabIndex = 8;
+            this.lblMage.Text = "Mage";
             // 
-            // label5
+            // lblPretre
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(361, 193);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "Prêtre";
+            this.lblPretre.AutoSize = true;
+            this.lblPretre.Location = new System.Drawing.Point(481, 238);
+            this.lblPretre.Name = "lblPretre";
+            this.lblPretre.Size = new System.Drawing.Size(44, 16);
+            this.lblPretre.TabIndex = 9;
+            this.lblPretre.Text = "Prêtre";
             // 
-            // label6
+            // lblVoleur
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(256, 193);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Voleur";
+            this.lblVoleur.AutoSize = true;
+            this.lblVoleur.Location = new System.Drawing.Point(341, 238);
+            this.lblVoleur.Name = "lblVoleur";
+            this.lblVoleur.Size = new System.Drawing.Size(47, 16);
+            this.lblVoleur.TabIndex = 10;
+            this.lblVoleur.Text = "Voleur";
             // 
-            // radioButton1
+            // rboMage
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(398, 171);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(14, 13);
-            this.radioButton1.TabIndex = 11;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.rboMage.AutoSize = true;
+            this.rboMage.Location = new System.Drawing.Point(531, 210);
+            this.rboMage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rboMage.Name = "rboMage";
+            this.rboMage.Size = new System.Drawing.Size(14, 13);
+            this.rboMage.TabIndex = 11;
+            this.rboMage.TabStop = true;
+            this.rboMage.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rboGuerrier
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(292, 171);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(14, 13);
-            this.radioButton2.TabIndex = 12;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.rboGuerrier.AutoSize = true;
+            this.rboGuerrier.Location = new System.Drawing.Point(389, 210);
+            this.rboGuerrier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rboGuerrier.Name = "rboGuerrier";
+            this.rboGuerrier.Size = new System.Drawing.Size(14, 13);
+            this.rboGuerrier.TabIndex = 12;
+            this.rboGuerrier.TabStop = true;
+            this.rboGuerrier.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // rboVoleur
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(292, 292);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(14, 13);
-            this.radioButton3.TabIndex = 13;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.rboVoleur.AutoSize = true;
+            this.rboVoleur.Location = new System.Drawing.Point(389, 359);
+            this.rboVoleur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rboVoleur.Name = "rboVoleur";
+            this.rboVoleur.Size = new System.Drawing.Size(14, 13);
+            this.rboVoleur.TabIndex = 13;
+            this.rboVoleur.TabStop = true;
+            this.rboVoleur.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rboPretre
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(398, 292);
-            this.radioButton4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(14, 13);
-            this.radioButton4.TabIndex = 14;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.rboPretre.AutoSize = true;
+            this.rboPretre.Location = new System.Drawing.Point(531, 359);
+            this.rboPretre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rboPretre.Name = "rboPretre";
+            this.rboPretre.Size = new System.Drawing.Size(14, 13);
+            this.rboPretre.TabIndex = 14;
+            this.rboPretre.TabStop = true;
+            this.rboPretre.UseVisualStyleBackColor = true;
             // 
-            // label28
+            // lblBouclier
             // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(9, 219);
-            this.label28.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(48, 13);
-            this.label28.TabIndex = 56;
-            this.label28.Text = "Bouclier:";
+            this.lblBouclier.AutoSize = true;
+            this.lblBouclier.Location = new System.Drawing.Point(12, 270);
+            this.lblBouclier.Name = "lblBouclier";
+            this.lblBouclier.Size = new System.Drawing.Size(60, 16);
+            this.lblBouclier.TabIndex = 56;
+            this.lblBouclier.Text = "Bouclier:";
             // 
-            // label27
+            // lblArmure
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(9, 197);
-            this.label27.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(43, 13);
-            this.label27.TabIndex = 55;
-            this.label27.Text = "Armure:";
+            this.lblArmure.AutoSize = true;
+            this.lblArmure.Location = new System.Drawing.Point(12, 242);
+            this.lblArmure.Name = "lblArmure";
+            this.lblArmure.Size = new System.Drawing.Size(54, 16);
+            this.lblArmure.TabIndex = 55;
+            this.lblArmure.Text = "Armure:";
             // 
-            // label26
+            // lblArme
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(9, 176);
-            this.label26.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(34, 13);
-            this.label26.TabIndex = 54;
-            this.label26.Text = "Arme:";
+            this.lblArme.AutoSize = true;
+            this.lblArme.Location = new System.Drawing.Point(12, 217);
+            this.lblArme.Name = "lblArme";
+            this.lblArme.Size = new System.Drawing.Size(43, 16);
+            this.lblArme.TabIndex = 54;
+            this.lblArme.Text = "Arme:";
             // 
-            // label25
+            // lblEquipement
             // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(9, 154);
-            this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(90, 16);
-            this.label25.TabIndex = 53;
-            this.label25.Text = "Équipement";
+            this.lblEquipement.AutoSize = true;
+            this.lblEquipement.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEquipement.Location = new System.Drawing.Point(12, 190);
+            this.lblEquipement.Name = "lblEquipement";
+            this.lblEquipement.Size = new System.Drawing.Size(90, 16);
+            this.lblEquipement.TabIndex = 53;
+            this.lblEquipement.Text = "Équipement";
             // 
-            // label24
+            // lblEsquive
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(9, 132);
-            this.label24.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(48, 13);
-            this.label24.TabIndex = 45;
-            this.label24.Text = "Esquive:";
+            this.lblEsquive.AutoSize = true;
+            this.lblEsquive.Location = new System.Drawing.Point(12, 162);
+            this.lblEsquive.Name = "lblEsquive";
+            this.lblEsquive.Size = new System.Drawing.Size(60, 16);
+            this.lblEsquive.TabIndex = 45;
+            this.lblEsquive.Text = "Esquive:";
             // 
-            // label23
+            // lblDefense
             // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(9, 105);
-            this.label23.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(50, 13);
-            this.label23.TabIndex = 44;
-            this.label23.Text = "Defense:";
+            this.lblDefense.AutoSize = true;
+            this.lblDefense.Location = new System.Drawing.Point(12, 129);
+            this.lblDefense.Name = "lblDefense";
+            this.lblDefense.Size = new System.Drawing.Size(62, 16);
+            this.lblDefense.TabIndex = 44;
+            this.lblDefense.Text = "Defense:";
             // 
-            // label22
+            // lblForce
             // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(9, 91);
-            this.label22.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(37, 13);
-            this.label22.TabIndex = 46;
-            this.label22.Text = "Force:";
+            this.lblForce.AutoSize = true;
+            this.lblForce.Location = new System.Drawing.Point(12, 112);
+            this.lblForce.Name = "lblForce";
+            this.lblForce.Size = new System.Drawing.Size(46, 16);
+            this.lblForce.TabIndex = 46;
+            this.lblForce.Text = "Force:";
             // 
-            // label21
+            // lblPrecision
             // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(9, 119);
-            this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(53, 13);
-            this.label21.TabIndex = 52;
-            this.label21.Text = "Précision:";
+            this.lblPrecision.AutoSize = true;
+            this.lblPrecision.Location = new System.Drawing.Point(12, 146);
+            this.lblPrecision.Name = "lblPrecision";
+            this.lblPrecision.Size = new System.Drawing.Size(67, 16);
+            this.lblPrecision.TabIndex = 52;
+            this.lblPrecision.Text = "Précision:";
             // 
-            // label20
+            // lblInitiative
             // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(10, 72);
-            this.label20.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(49, 13);
-            this.label20.TabIndex = 51;
-            this.label20.Text = "Initiative:";
+            this.lblInitiative.AutoSize = true;
+            this.lblInitiative.Location = new System.Drawing.Point(13, 89);
+            this.lblInitiative.Name = "lblInitiative";
+            this.lblInitiative.Size = new System.Drawing.Size(59, 16);
+            this.lblInitiative.TabIndex = 51;
+            this.lblInitiative.Text = "Initiative:";
             // 
-            // label19
+            // lblEnrgMana
             // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(9, 57);
-            this.label19.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(78, 13);
-            this.label19.TabIndex = 50;
-            this.label19.Text = "Energie/Mana:";
+            this.lblEnrgMana.AutoSize = true;
+            this.lblEnrgMana.Location = new System.Drawing.Point(12, 70);
+            this.lblEnrgMana.Name = "lblEnrgMana";
+            this.lblEnrgMana.Size = new System.Drawing.Size(96, 16);
+            this.lblEnrgMana.TabIndex = 50;
+            this.lblEnrgMana.Text = "Energie/Mana:";
             // 
-            // label18
+            // lblPV
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(9, 36);
-            this.label18.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(24, 13);
-            this.label18.TabIndex = 49;
-            this.label18.Text = "PV:";
+            this.lblPV.AutoSize = true;
+            this.lblPV.Location = new System.Drawing.Point(12, 44);
+            this.lblPV.Name = "lblPV";
+            this.lblPV.Size = new System.Drawing.Size(29, 16);
+            this.lblPV.TabIndex = 49;
+            this.lblPV.Text = "PV:";
             // 
-            // label16
+            // lblClasse
             // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(8, 21);
-            this.label16.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(41, 13);
-            this.label16.TabIndex = 47;
-            this.label16.Text = "Classe:";
+            this.lblClasse.AutoSize = true;
+            this.lblClasse.Location = new System.Drawing.Point(11, 26);
+            this.lblClasse.Name = "lblClasse";
+            this.lblClasse.Size = new System.Drawing.Size(53, 16);
+            this.lblClasse.TabIndex = 47;
+            this.lblClasse.Text = "Classe:";
             // 
-            // groupBox1
+            // gboxInformations
             // 
-            this.groupBox1.Controls.Add(this.label19);
-            this.groupBox1.Controls.Add(this.label28);
-            this.groupBox1.Controls.Add(this.label16);
-            this.groupBox1.Controls.Add(this.label27);
-            this.groupBox1.Controls.Add(this.label26);
-            this.groupBox1.Controls.Add(this.label18);
-            this.groupBox1.Controls.Add(this.label25);
-            this.groupBox1.Controls.Add(this.label20);
-            this.groupBox1.Controls.Add(this.label24);
-            this.groupBox1.Controls.Add(this.label21);
-            this.groupBox1.Controls.Add(this.label23);
-            this.groupBox1.Controls.Add(this.label22);
-            this.groupBox1.Location = new System.Drawing.Point(22, 86);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.groupBox1.Size = new System.Drawing.Size(186, 252);
-            this.groupBox1.TabIndex = 60;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Informations";
+            this.gboxInformations.Controls.Add(this.lblEnrgMana);
+            this.gboxInformations.Controls.Add(this.lblBouclier);
+            this.gboxInformations.Controls.Add(this.lblClasse);
+            this.gboxInformations.Controls.Add(this.lblArmure);
+            this.gboxInformations.Controls.Add(this.lblArme);
+            this.gboxInformations.Controls.Add(this.lblPV);
+            this.gboxInformations.Controls.Add(this.lblEquipement);
+            this.gboxInformations.Controls.Add(this.lblInitiative);
+            this.gboxInformations.Controls.Add(this.lblEsquive);
+            this.gboxInformations.Controls.Add(this.lblPrecision);
+            this.gboxInformations.Controls.Add(this.lblDefense);
+            this.gboxInformations.Controls.Add(this.lblForce);
+            this.gboxInformations.Location = new System.Drawing.Point(29, 106);
+            this.gboxInformations.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gboxInformations.Name = "gboxInformations";
+            this.gboxInformations.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.gboxInformations.Size = new System.Drawing.Size(248, 310);
+            this.gboxInformations.TabIndex = 60;
+            this.gboxInformations.TabStop = false;
+            this.gboxInformations.Text = "Informations";
             // 
-            // button1
+            // btnAccepter
             // 
-<<<<<<< HEAD
-            this.button1.Location = new System.Drawing.Point(551, 443);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(90, 31);
-=======
-            this.button1.Location = new System.Drawing.Point(431, 366);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(56, 19);
->>>>>>> origin/master
-            this.button1.TabIndex = 61;
-            this.button1.Text = "Accepter";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAccepter.Location = new System.Drawing.Point(548, 446);
+            this.btnAccepter.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAccepter.Name = "btnAccepter";
+            this.btnAccepter.Size = new System.Drawing.Size(83, 27);
+            this.btnAccepter.TabIndex = 61;
+            this.btnAccepter.Text = "Accepter";
+            this.btnAccepter.UseVisualStyleBackColor = true;
+            this.btnAccepter.Click += new System.EventHandler(this.button1_Click);
             // 
-            // creationAventurier
+            // CreationAventurier
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 405);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.radioButton4);
-            this.Controls.Add(this.radioButton3);
-            this.Controls.Add(this.radioButton2);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
-<<<<<<< HEAD
-            this.Name = "creationAventurier";
-=======
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Form2";
->>>>>>> origin/master
+            this.ClientSize = new System.Drawing.Size(677, 498);
+            this.Controls.Add(this.btnAccepter);
+            this.Controls.Add(this.gboxInformations);
+            this.Controls.Add(this.rboPretre);
+            this.Controls.Add(this.rboVoleur);
+            this.Controls.Add(this.rboGuerrier);
+            this.Controls.Add(this.rboMage);
+            this.Controls.Add(this.lblVoleur);
+            this.Controls.Add(this.lblPretre);
+            this.Controls.Add(this.lblMage);
+            this.Controls.Add(this.lblGuerrier);
+            this.Controls.Add(this.pboxMage);
+            this.Controls.Add(this.pboxVoleur);
+            this.Controls.Add(this.pboxPretre);
+            this.Controls.Add(this.pboxGuerrier);
+            this.Controls.Add(this.lblClasses);
+            this.Controls.Add(this.tboxNomPerso);
+            this.Controls.Add(this.lblNomPerso);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "CreationAventurier";
             this.Text = "Création du personnage";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxGuerrier)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxPretre)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxVoleur)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxMage)).EndInit();
+            this.gboxInformations.ResumeLayout(false);
+            this.gboxInformations.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -416,34 +388,34 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
-        private System.Windows.Forms.Label label28;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblNomPerso;
+        private System.Windows.Forms.TextBox tboxNomPerso;
+        private System.Windows.Forms.Label lblClasses;
+        private System.Windows.Forms.PictureBox pboxGuerrier;
+        private System.Windows.Forms.PictureBox pboxPretre;
+        private System.Windows.Forms.PictureBox pboxVoleur;
+        private System.Windows.Forms.PictureBox pboxMage;
+        private System.Windows.Forms.Label lblGuerrier;
+        private System.Windows.Forms.Label lblMage;
+        private System.Windows.Forms.Label lblPretre;
+        private System.Windows.Forms.Label lblVoleur;
+        private System.Windows.Forms.RadioButton rboMage;
+        private System.Windows.Forms.RadioButton rboGuerrier;
+        private System.Windows.Forms.RadioButton rboVoleur;
+        private System.Windows.Forms.RadioButton rboPretre;
+        private System.Windows.Forms.Label lblBouclier;
+        private System.Windows.Forms.Label lblArmure;
+        private System.Windows.Forms.Label lblArme;
+        private System.Windows.Forms.Label lblEquipement;
+        private System.Windows.Forms.Label lblEsquive;
+        private System.Windows.Forms.Label lblDefense;
+        private System.Windows.Forms.Label lblForce;
+        private System.Windows.Forms.Label lblPrecision;
+        private System.Windows.Forms.Label lblInitiative;
+        private System.Windows.Forms.Label lblEnrgMana;
+        private System.Windows.Forms.Label lblPV;
+        private System.Windows.Forms.Label lblClasse;
+        private System.Windows.Forms.GroupBox gboxInformations;
+        private System.Windows.Forms.Button btnAccepter;
     }
 }

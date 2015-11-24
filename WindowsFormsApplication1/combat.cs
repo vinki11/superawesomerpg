@@ -16,6 +16,10 @@ namespace JRPG
         {
             InitializeComponent();
         }
-        
+
+        private void Combat_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

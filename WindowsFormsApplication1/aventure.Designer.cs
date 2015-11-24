@@ -28,74 +28,73 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lblChoisirAventure = new System.Windows.Forms.Label();
+            this.cboChoisirAventure = new System.Windows.Forms.ComboBox();
+            this.rtbInformationsAventure = new System.Windows.Forms.RichTextBox();
+            this.btnRetourVillage = new System.Windows.Forms.Button();
+            this.btnAventure = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // lblChoisirAventure
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(31, 46);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Choisir une aventure";
+            this.lblChoisirAventure.AutoSize = true;
+            this.lblChoisirAventure.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblChoisirAventure.Location = new System.Drawing.Point(41, 57);
+            this.lblChoisirAventure.Name = "lblChoisirAventure";
+            this.lblChoisirAventure.Size = new System.Drawing.Size(149, 16);
+            this.lblChoisirAventure.TabIndex = 0;
+            this.lblChoisirAventure.Text = "Choisir une aventure";
             // 
-            // comboBox1
+            // cboChoisirAventure
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(32, 67);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(178, 21);
-            this.comboBox1.TabIndex = 1;
+            this.cboChoisirAventure.FormattingEnabled = true;
+            this.cboChoisirAventure.Location = new System.Drawing.Point(43, 82);
+            this.cboChoisirAventure.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cboChoisirAventure.Name = "cboChoisirAventure";
+            this.cboChoisirAventure.Size = new System.Drawing.Size(236, 24);
+            this.cboChoisirAventure.TabIndex = 1;
             // 
-            // richTextBox1
+            // rtbInformationsAventure
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(32, 108);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(302, 197);
-            this.richTextBox1.TabIndex = 2;
-            this.richTextBox1.Text = "";
+            this.rtbInformationsAventure.Location = new System.Drawing.Point(43, 133);
+            this.rtbInformationsAventure.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.rtbInformationsAventure.Name = "rtbInformationsAventure";
+            this.rtbInformationsAventure.Size = new System.Drawing.Size(401, 242);
+            this.rtbInformationsAventure.TabIndex = 2;
+            this.rtbInformationsAventure.Text = "";
             // 
-            // button3
+            // btnRetourVillage
             // 
-            this.button3.Location = new System.Drawing.Point(140, 336);
-            this.button3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(92, 25);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Retour au village";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnRetourVillage.Location = new System.Drawing.Point(187, 414);
+            this.btnRetourVillage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnRetourVillage.Name = "btnRetourVillage";
+            this.btnRetourVillage.Size = new System.Drawing.Size(123, 31);
+            this.btnRetourVillage.TabIndex = 5;
+            this.btnRetourVillage.Text = "Retour au village";
+            this.btnRetourVillage.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnAventure
             // 
-            this.button2.Location = new System.Drawing.Point(244, 336);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(92, 25);
-            this.button2.TabIndex = 6;
-            this.button2.Text = "À l\'aventure!";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnAventure.Location = new System.Drawing.Point(325, 414);
+            this.btnAventure.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAventure.Name = "btnAventure";
+            this.btnAventure.Size = new System.Drawing.Size(123, 31);
+            this.btnAventure.TabIndex = 6;
+            this.btnAventure.Text = "À l\'aventure!";
+            this.btnAventure.UseVisualStyleBackColor = true;
             // 
-            // aventure
+            // Aventure
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 384);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.richTextBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "aventure";
+            this.ClientSize = new System.Drawing.Size(507, 473);
+            this.Controls.Add(this.btnAventure);
+            this.Controls.Add(this.btnRetourVillage);
+            this.Controls.Add(this.rtbInformationsAventure);
+            this.Controls.Add(this.cboChoisirAventure);
+            this.Controls.Add(this.lblChoisirAventure);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Name = "Aventure";
             this.Text = "JRPG";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -104,10 +103,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblChoisirAventure;
+        private System.Windows.Forms.ComboBox cboChoisirAventure;
+        private System.Windows.Forms.RichTextBox rtbInformationsAventure;
+        private System.Windows.Forms.Button btnRetourVillage;
+        private System.Windows.Forms.Button btnAventure;
     }
 }
