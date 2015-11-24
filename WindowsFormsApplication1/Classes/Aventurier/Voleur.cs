@@ -4,13 +4,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//Classe qui a une bonne précision et esquive. Utilise de l'énergie
+
 namespace JRPG.Classes.Aventurier
 {
+    //Classe qui a une bonne précision et esquive. Utilise de l'énergie
     class Voleur : Aventuriers
     {
-        public Voleur()
+        #region Constructeurs
+        public Voleur(string pNomAventurier, int pExperience, int pNiveau)
         {
+            nomAventurier = pNomAventurier;
+            niveau = pNiveau;
+            experience = pExperience;
             etat = Etat.Normal;
             pvactuel = pvbase = pvmax = 60;
             energieactuel = energiebase = energiemax = 100;
@@ -22,16 +27,10 @@ namespace JRPG.Classes.Aventurier
             nomClasse = "Voleur";
             ressource = Ressource.Energie;
         }
-
-        public Voleur(string pNomAventurier, int pExperience, int pNiveau)
-        {
-            nomAventurier = pNomAventurier;
-            niveau = pNiveau;
-            experience = pExperience;
-        }
+        #endregion
 
 
-
+        #region Fonctions
         public new void UtiliserCompetenceA()
         {
 
@@ -46,6 +45,6 @@ namespace JRPG.Classes.Aventurier
         {
 
         }
-
+        #endregion
     }
 }
