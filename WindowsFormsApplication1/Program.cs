@@ -16,7 +16,8 @@ namespace JRPG
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new menuPrincipal());
+            menuPrincipal menuPrinc = new menuPrincipal();
+            Application.Run(menuPrinc);
         }
     }
 }

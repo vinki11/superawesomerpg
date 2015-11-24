@@ -19,7 +19,9 @@ namespace JRPG
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
+            Hide();
+            creationAventurier creatAventurier = new creationAventurier();
+            creatAventurier.ShowDialog();
         }
     }
 }

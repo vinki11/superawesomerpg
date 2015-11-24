@@ -15,9 +15,12 @@ namespace JRPG
         public creationAventurier()
         {
             InitializeComponent();
+            
+        }
 
-
-
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
