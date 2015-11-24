@@ -11,8 +11,12 @@ namespace JRPG.Classes.Aventurier
     class Guerrier : Aventuriers
     {
 
-        public Guerrier()
+        #region Constructeurs
+        public Guerrier(string pNomAventurier, int pExperience, int pNiveau)
         {
+            nomAventurier = pNomAventurier;
+            niveau = pNiveau;
+            experience = pExperience;
             etat = Etat.Normal;
             pvactuel = pvbase = pvmax = 75;
             energieactuel = energiebase = energiemax = 100;
@@ -23,17 +27,11 @@ namespace JRPG.Classes.Aventurier
             defenseactuel = defensebase = 15;
             nomClasse = "Guérrier";
             ressource = Ressource.Energie;
-        }
-        
-        public Guerrier(string pNomAventurier, int pExperience, int pNiveau)
-        {
-            nomAventurier = pNomAventurier;
-            niveau = pNiveau;
-            experience = pExperience;
-        }
 
-        
+        }
+        #endregion
 
+        #region Fonctions
         public new void UtiliserCompetenceA()
         {
 
@@ -48,7 +46,7 @@ namespace JRPG.Classes.Aventurier
         {
 
         }
-
+        #endregion
     }
 
 

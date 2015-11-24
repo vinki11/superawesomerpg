@@ -10,8 +10,12 @@ namespace JRPG.Classes.Aventurier
     //Classe qui buff et heal ses alliés principalement. Utilise de la mana.
     class Pretre : Aventuriers
     {
-        public Pretre()
+        #region Constructeurs
+        public Pretre(string pNomAventurier, int pExperience, int pNiveau)
         {
+            nomAventurier = pNomAventurier;
+            niveau = pNiveau;
+            experience = pExperience;
             etat = Etat.Normal;
             pvactuel = pvbase = pvmax = 65;
             manaactuel = manabase = manamax = 150;
@@ -23,16 +27,10 @@ namespace JRPG.Classes.Aventurier
             nomClasse = "Prêtre";
             ressource = Ressource.Mana;
         }
-
-        public Pretre(string pNomAventurier, int pExperience, int pNiveau)
-        {
-            nomAventurier = pNomAventurier;
-            niveau = pNiveau;
-            experience = pExperience;
-        }
+        #endregion
 
 
-
+        #region Fonctions
         public new void UtiliserCompetenceA()
         {
 
@@ -47,6 +45,7 @@ namespace JRPG.Classes.Aventurier
         {
 
         }
+        #endregion
 
     }
 }

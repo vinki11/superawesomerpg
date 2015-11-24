@@ -9,8 +9,12 @@ namespace JRPG.Classes.Aventurier
     //Classe avec des mauvaises statistique mais des sorts puissants. Utilise de la mana.
     class Mage : Aventuriers
     {
-        public Mage()
+        #region Constructeurs
+        public Mage(string pNomAventurier, int pExperience, int pNiveau)
         {
+            nomAventurier = pNomAventurier;
+            niveau = pNiveau;
+            experience = pExperience;
             etat = Etat.Normal;
             pvactuel = pvbase = pvmax = 50;
             manaactuel = manabase = manamax = 150;
@@ -22,16 +26,9 @@ namespace JRPG.Classes.Aventurier
             nomClasse = "Mage";
             ressource = Ressource.Mana;
         }
+        #endregion
 
-        public Mage(string pNomAventurier, int pExperience, int pNiveau)
-        {
-            nomAventurier = pNomAventurier;
-            niveau = pNiveau;
-            experience = pExperience;
-        }
-
-
-
+        #region Fonctions
         public new void UtiliserCompetenceA()
         {
 
@@ -46,5 +43,6 @@ namespace JRPG.Classes.Aventurier
         {
 
         }
+        #endregion
     }
 }
