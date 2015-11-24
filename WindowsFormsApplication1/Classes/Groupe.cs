@@ -37,6 +37,12 @@ namespace JRPG.Classes
             get { return this.nbPiecesOr; }
             set { this.nbPiecesOr = value; }
         }
+
+        public List<Items> Inventaire
+        {
+            get { return this.inventaire; }
+            set { this.inventaire = value; }
+        }
         #endregion
 
         #region Fonctions
