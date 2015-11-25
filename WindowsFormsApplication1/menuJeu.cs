@@ -80,6 +80,12 @@ namespace JRPG
         {
             Application.Exit();
         }
-        
+
+        private void btnAventure_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Aventure choixAventure = new Aventure();
+            choixAventure.ShowDialog();
+        }
     }
 }
