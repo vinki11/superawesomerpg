@@ -17,8 +17,8 @@ namespace JRPG
         {
             InitializeComponent();
             afficherGroupeAventurier();
-           
 
+            //pboxAventurier1.Image = Program.groupeAventurier.Membres[1].Imageclasse;
         }
 
         private void afficherGroupeAventurier()

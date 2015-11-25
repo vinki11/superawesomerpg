@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using JRPG.Classes.Aventurier;
+using System.Drawing;
 
 namespace JRPG.Classes.Aventurier
 {
@@ -27,6 +28,7 @@ namespace JRPG.Classes.Aventurier
             defenseactuel = defensebase = 15;
             nomClasse = "Guérrier";
             ressource = Ressource.Energie;
+            imageclasse = Properties.Resources.guerrier;
 
         }
         #endregion

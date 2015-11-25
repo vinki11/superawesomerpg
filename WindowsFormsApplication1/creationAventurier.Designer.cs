@@ -56,18 +56,18 @@
             this.lblPV = new System.Windows.Forms.Label();
             this.lblClasse = new System.Windows.Forms.Label();
             this.gboxInformations = new System.Windows.Forms.GroupBox();
-            this.btnAccepter = new System.Windows.Forms.Button();
-            this.txtClasse = new System.Windows.Forms.Label();
-            this.txtPV = new System.Windows.Forms.Label();
-            this.txtEnrgMana = new System.Windows.Forms.Label();
-            this.txtInitiative = new System.Windows.Forms.Label();
-            this.txtForce = new System.Windows.Forms.Label();
-            this.txtDefense = new System.Windows.Forms.Label();
-            this.txtPrecision = new System.Windows.Forms.Label();
-            this.txtEsquive = new System.Windows.Forms.Label();
-            this.txtArme = new System.Windows.Forms.Label();
-            this.txtArmure = new System.Windows.Forms.Label();
             this.txtBouclier = new System.Windows.Forms.Label();
+            this.txtArmure = new System.Windows.Forms.Label();
+            this.txtArme = new System.Windows.Forms.Label();
+            this.txtEsquive = new System.Windows.Forms.Label();
+            this.txtPrecision = new System.Windows.Forms.Label();
+            this.txtDefense = new System.Windows.Forms.Label();
+            this.txtForce = new System.Windows.Forms.Label();
+            this.txtInitiative = new System.Windows.Forms.Label();
+            this.txtEnrgMana = new System.Windows.Forms.Label();
+            this.txtPV = new System.Windows.Forms.Label();
+            this.txtClasse = new System.Windows.Forms.Label();
+            this.btnAccepter = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pboxGuerrier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxPretre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxVoleur)).BeginInit();
@@ -108,6 +108,7 @@
             this.pboxGuerrier.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pboxGuerrier.Name = "pboxGuerrier";
             this.pboxGuerrier.Size = new System.Drawing.Size(104, 97);
+            this.pboxGuerrier.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxGuerrier.TabIndex = 3;
             this.pboxGuerrier.TabStop = false;
             // 
@@ -117,6 +118,7 @@
             this.pboxPretre.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pboxPretre.Name = "pboxPretre";
             this.pboxPretre.Size = new System.Drawing.Size(104, 97);
+            this.pboxPretre.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxPretre.TabIndex = 4;
             this.pboxPretre.TabStop = false;
             // 
@@ -126,6 +128,7 @@
             this.pboxVoleur.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pboxVoleur.Name = "pboxVoleur";
             this.pboxVoleur.Size = new System.Drawing.Size(104, 97);
+            this.pboxVoleur.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxVoleur.TabIndex = 5;
             this.pboxVoleur.TabStop = false;
             // 
@@ -135,6 +138,7 @@
             this.pboxMage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pboxMage.Name = "pboxMage";
             this.pboxMage.Size = new System.Drawing.Size(104, 97);
+            this.pboxMage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxMage.TabIndex = 6;
             this.pboxMage.TabStop = false;
             // 
@@ -361,6 +365,94 @@
             this.gboxInformations.TabStop = false;
             this.gboxInformations.Text = "Informations";
             // 
+            // txtBouclier
+            // 
+            this.txtBouclier.AutoSize = true;
+            this.txtBouclier.Location = new System.Drawing.Point(154, 270);
+            this.txtBouclier.Name = "txtBouclier";
+            this.txtBouclier.Size = new System.Drawing.Size(0, 16);
+            this.txtBouclier.TabIndex = 62;
+            // 
+            // txtArmure
+            // 
+            this.txtArmure.AutoSize = true;
+            this.txtArmure.Location = new System.Drawing.Point(154, 242);
+            this.txtArmure.Name = "txtArmure";
+            this.txtArmure.Size = new System.Drawing.Size(0, 16);
+            this.txtArmure.TabIndex = 62;
+            // 
+            // txtArme
+            // 
+            this.txtArme.AutoSize = true;
+            this.txtArme.Location = new System.Drawing.Point(154, 217);
+            this.txtArme.Name = "txtArme";
+            this.txtArme.Size = new System.Drawing.Size(0, 16);
+            this.txtArme.TabIndex = 62;
+            // 
+            // txtEsquive
+            // 
+            this.txtEsquive.AutoSize = true;
+            this.txtEsquive.Location = new System.Drawing.Point(154, 162);
+            this.txtEsquive.Name = "txtEsquive";
+            this.txtEsquive.Size = new System.Drawing.Size(0, 16);
+            this.txtEsquive.TabIndex = 62;
+            // 
+            // txtPrecision
+            // 
+            this.txtPrecision.AutoSize = true;
+            this.txtPrecision.Location = new System.Drawing.Point(154, 146);
+            this.txtPrecision.Name = "txtPrecision";
+            this.txtPrecision.Size = new System.Drawing.Size(0, 16);
+            this.txtPrecision.TabIndex = 62;
+            // 
+            // txtDefense
+            // 
+            this.txtDefense.AutoSize = true;
+            this.txtDefense.Location = new System.Drawing.Point(154, 129);
+            this.txtDefense.Name = "txtDefense";
+            this.txtDefense.Size = new System.Drawing.Size(0, 16);
+            this.txtDefense.TabIndex = 62;
+            // 
+            // txtForce
+            // 
+            this.txtForce.AutoSize = true;
+            this.txtForce.Location = new System.Drawing.Point(154, 112);
+            this.txtForce.Name = "txtForce";
+            this.txtForce.Size = new System.Drawing.Size(0, 16);
+            this.txtForce.TabIndex = 62;
+            // 
+            // txtInitiative
+            // 
+            this.txtInitiative.AutoSize = true;
+            this.txtInitiative.Location = new System.Drawing.Point(154, 89);
+            this.txtInitiative.Name = "txtInitiative";
+            this.txtInitiative.Size = new System.Drawing.Size(0, 16);
+            this.txtInitiative.TabIndex = 62;
+            // 
+            // txtEnrgMana
+            // 
+            this.txtEnrgMana.AutoSize = true;
+            this.txtEnrgMana.Location = new System.Drawing.Point(154, 70);
+            this.txtEnrgMana.Name = "txtEnrgMana";
+            this.txtEnrgMana.Size = new System.Drawing.Size(0, 16);
+            this.txtEnrgMana.TabIndex = 62;
+            // 
+            // txtPV
+            // 
+            this.txtPV.AutoSize = true;
+            this.txtPV.Location = new System.Drawing.Point(154, 44);
+            this.txtPV.Name = "txtPV";
+            this.txtPV.Size = new System.Drawing.Size(0, 16);
+            this.txtPV.TabIndex = 62;
+            // 
+            // txtClasse
+            // 
+            this.txtClasse.AutoSize = true;
+            this.txtClasse.Location = new System.Drawing.Point(154, 26);
+            this.txtClasse.Name = "txtClasse";
+            this.txtClasse.Size = new System.Drawing.Size(0, 16);
+            this.txtClasse.TabIndex = 62;
+            // 
             // btnAccepter
             // 
             this.btnAccepter.Location = new System.Drawing.Point(548, 446);
@@ -371,94 +463,6 @@
             this.btnAccepter.Text = "Accepter";
             this.btnAccepter.UseVisualStyleBackColor = true;
             this.btnAccepter.Click += new System.EventHandler(this.btnAccepter_Click);
-            // 
-            // txtClasse
-            // 
-            this.txtClasse.AutoSize = true;
-            this.txtClasse.Location = new System.Drawing.Point(154, 26);
-            this.txtClasse.Name = "txtClasse";
-            this.txtClasse.Size = new System.Drawing.Size(0, 16);
-            this.txtClasse.TabIndex = 62;
-            // 
-            // txtPV
-            // 
-            this.txtPV.AutoSize = true;
-            this.txtPV.Location = new System.Drawing.Point(154, 44);
-            this.txtPV.Name = "txtPV";
-            this.txtPV.Size = new System.Drawing.Size(0, 16);
-            this.txtPV.TabIndex = 62;
-            // 
-            // txtEnrgMana
-            // 
-            this.txtEnrgMana.AutoSize = true;
-            this.txtEnrgMana.Location = new System.Drawing.Point(154, 70);
-            this.txtEnrgMana.Name = "txtEnrgMana";
-            this.txtEnrgMana.Size = new System.Drawing.Size(0, 16);
-            this.txtEnrgMana.TabIndex = 62;
-            // 
-            // txtInitiative
-            // 
-            this.txtInitiative.AutoSize = true;
-            this.txtInitiative.Location = new System.Drawing.Point(154, 89);
-            this.txtInitiative.Name = "txtInitiative";
-            this.txtInitiative.Size = new System.Drawing.Size(0, 16);
-            this.txtInitiative.TabIndex = 62;
-            // 
-            // txtForce
-            // 
-            this.txtForce.AutoSize = true;
-            this.txtForce.Location = new System.Drawing.Point(154, 112);
-            this.txtForce.Name = "txtForce";
-            this.txtForce.Size = new System.Drawing.Size(0, 16);
-            this.txtForce.TabIndex = 62;
-            // 
-            // txtDefense
-            // 
-            this.txtDefense.AutoSize = true;
-            this.txtDefense.Location = new System.Drawing.Point(154, 129);
-            this.txtDefense.Name = "txtDefense";
-            this.txtDefense.Size = new System.Drawing.Size(0, 16);
-            this.txtDefense.TabIndex = 62;
-            // 
-            // txtPrecision
-            // 
-            this.txtPrecision.AutoSize = true;
-            this.txtPrecision.Location = new System.Drawing.Point(154, 146);
-            this.txtPrecision.Name = "txtPrecision";
-            this.txtPrecision.Size = new System.Drawing.Size(0, 16);
-            this.txtPrecision.TabIndex = 62;
-            // 
-            // txtEsquive
-            // 
-            this.txtEsquive.AutoSize = true;
-            this.txtEsquive.Location = new System.Drawing.Point(154, 162);
-            this.txtEsquive.Name = "txtEsquive";
-            this.txtEsquive.Size = new System.Drawing.Size(0, 16);
-            this.txtEsquive.TabIndex = 62;
-            // 
-            // txtArme
-            // 
-            this.txtArme.AutoSize = true;
-            this.txtArme.Location = new System.Drawing.Point(154, 217);
-            this.txtArme.Name = "txtArme";
-            this.txtArme.Size = new System.Drawing.Size(0, 16);
-            this.txtArme.TabIndex = 62;
-            // 
-            // txtArmure
-            // 
-            this.txtArmure.AutoSize = true;
-            this.txtArmure.Location = new System.Drawing.Point(154, 242);
-            this.txtArmure.Name = "txtArmure";
-            this.txtArmure.Size = new System.Drawing.Size(0, 16);
-            this.txtArmure.TabIndex = 62;
-            // 
-            // txtBouclier
-            // 
-            this.txtBouclier.AutoSize = true;
-            this.txtBouclier.Location = new System.Drawing.Point(154, 270);
-            this.txtBouclier.Name = "txtBouclier";
-            this.txtBouclier.Size = new System.Drawing.Size(0, 16);
-            this.txtBouclier.TabIndex = 62;
             // 
             // CreationAventurier
             // 

@@ -26,6 +26,7 @@ namespace JRPG.Classes.Aventurier
             defenseactuel = defensebase = 12;
             nomClasse = "Prêtre";
             ressource = Ressource.Mana;
+            imageclasse = Properties.Resources.pretre;
         }
         #endregion
 

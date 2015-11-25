@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using JRPG.Classes.Ennemi;
 using JRPG.Classes.Item;
+using System.Drawing;
 
 namespace JRPG.Classes.Aventurier
 {
@@ -36,6 +37,7 @@ namespace JRPG.Classes.Aventurier
         protected int forceactuel;
         protected int defensebase;
         protected int defenseactuel;
+        protected Image imageclasse;
 
 
 
@@ -194,6 +196,12 @@ namespace JRPG.Classes.Aventurier
         {
             get { return this.defenseactuel; }
             set { this.defenseactuel = value; }
+        }
+
+        public Image Imageclasse
+        {
+            get { return this.imageclasse; }
+            set { this.imageclasse = value; }
         }
         #endregion
 

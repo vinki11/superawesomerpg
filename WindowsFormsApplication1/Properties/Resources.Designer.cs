@@ -63,6 +63,26 @@ namespace JRPG.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap guerrier {
+            get {
+                object obj = ResourceManager.GetObject("guerrier", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mage {
+            get {
+                object obj = ResourceManager.GetObject("mage", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap PixelTitle {
             get {
                 object obj = ResourceManager.GetObject("PixelTitle", resourceCulture);
@@ -73,9 +93,29 @@ namespace JRPG.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap pretre {
+            get {
+                object obj = ResourceManager.GetObject("pretre", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap spectre {
             get {
                 object obj = ResourceManager.GetObject("spectre", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap voleur {
+            get {
+                object obj = ResourceManager.GetObject("voleur", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

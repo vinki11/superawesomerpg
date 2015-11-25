@@ -25,6 +25,7 @@ namespace JRPG.Classes.Aventurier
             defenseactuel = defensebase = 8;
             nomClasse = "Mage";
             ressource = Ressource.Mana;
+            imageclasse = Properties.Resources.mage;
         }
         #endregion
 

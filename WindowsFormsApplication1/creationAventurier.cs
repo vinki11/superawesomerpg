@@ -20,6 +20,11 @@ namespace JRPG
             InitializeComponent();
             rboGuerrier.Checked = true;
 
+            //Les images pour les classes
+            pboxGuerrier.Image = Properties.Resources.guerrier;
+            pboxMage.Image = Properties.Resources.mage;
+            pboxPretre.Image = Properties.Resources.pretre;
+            pboxVoleur.Image = Properties.Resources.voleur;
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)

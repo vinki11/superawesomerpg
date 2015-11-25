@@ -26,6 +26,7 @@ namespace JRPG.Classes.Aventurier
             defenseactuel = defensebase = 10;
             nomClasse = "Voleur";
             ressource = Ressource.Energie;
+            imageclasse = Properties.Resources.voleur;
         }
         #endregion
 
