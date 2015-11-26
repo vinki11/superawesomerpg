@@ -74,7 +74,7 @@ namespace JRPG
 
         private void btnAccepter_Click(object sender, EventArgs e)
         {
-            Aventuriers premierAventurier;
+            Aventurier premierAventurier;
 
             if (rboGuerrier.Checked)
             {
@@ -92,7 +92,7 @@ namespace JRPG
             {
                 premierAventurier = new Pretre(tboxNomPerso.Text, 0, 1);
             }
-            else //pas bin propre a revalidé
+            else //pas bin propre a revalidé (juste selectionner warrior par defaut au load)
             {
                 premierAventurier = new Guerrier(tboxNomPerso.Text, 0, 1);
             }

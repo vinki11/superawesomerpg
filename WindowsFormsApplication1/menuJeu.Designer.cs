@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.pboxAventurier1 = new System.Windows.Forms.PictureBox();
             this.pboxAventurier2 = new System.Windows.Forms.PictureBox();
             this.pboxAventurier3 = new System.Windows.Forms.PictureBox();
             this.lblGroupeAventurier = new System.Windows.Forms.Label();
@@ -78,32 +77,23 @@
             this.lblNiv = new System.Windows.Forms.Label();
             this.lblXP = new System.Windows.Forms.Label();
             this.lblNom = new System.Windows.Forms.Label();
-            this.txtNom1 = new System.Windows.Forms.Label();
-            this.txtXP1 = new System.Windows.Forms.Label();
-            this.txtLvl1 = new System.Windows.Forms.Label();
             this.txtPiecesOr = new System.Windows.Forms.Label();
-            this.lblXP1 = new System.Windows.Forms.Label();
-            this.lblLvl1 = new System.Windows.Forms.Label();
             this.lblLvl2 = new System.Windows.Forms.Label();
             this.lblXP2 = new System.Windows.Forms.Label();
             this.lblLvl3 = new System.Windows.Forms.Label();
             this.lblXP3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).BeginInit();
+            this.lblXP1 = new System.Windows.Forms.Label();
+            this.txtLvl1 = new System.Windows.Forms.Label();
+            this.txtXP1 = new System.Windows.Forms.Label();
+            this.txtNom1 = new System.Windows.Forms.Label();
+            this.lblLvl1 = new System.Windows.Forms.Label();
+            this.pboxAventurier1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventaire)).BeginInit();
             this.gboxInformations.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pboxAventurier1
-            // 
-            this.pboxAventurier1.Location = new System.Drawing.Point(16, 39);
-            this.pboxAventurier1.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxAventurier1.Name = "pboxAventurier1";
-            this.pboxAventurier1.Size = new System.Drawing.Size(65, 64);
-            this.pboxAventurier1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pboxAventurier1.TabIndex = 0;
-            this.pboxAventurier1.TabStop = false;
             // 
             // pboxAventurier2
             // 
@@ -618,37 +608,6 @@
             this.lblNom.TabIndex = 25;
             this.lblNom.Text = "Nom:";
             // 
-            // txtNom1
-            // 
-            this.txtNom1.AutoSize = true;
-            this.txtNom1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNom1.Location = new System.Drawing.Point(20, 106);
-            this.txtNom1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtNom1.Name = "txtNom1";
-            this.txtNom1.Size = new System.Drawing.Size(32, 13);
-            this.txtNom1.TabIndex = 4;
-            this.txtNom1.Text = "Nom";
-            // 
-            // txtXP1
-            // 
-            this.txtXP1.AutoSize = true;
-            this.txtXP1.Location = new System.Drawing.Point(63, 131);
-            this.txtXP1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtXP1.Name = "txtXP1";
-            this.txtXP1.Size = new System.Drawing.Size(24, 13);
-            this.txtXP1.TabIndex = 15;
-            this.txtXP1.Text = "xp1";
-            // 
-            // txtLvl1
-            // 
-            this.txtLvl1.AutoSize = true;
-            this.txtLvl1.Location = new System.Drawing.Point(63, 119);
-            this.txtLvl1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtLvl1.Name = "txtLvl1";
-            this.txtLvl1.Size = new System.Drawing.Size(23, 13);
-            this.txtLvl1.TabIndex = 16;
-            this.txtLvl1.Text = "lvl1";
-            // 
             // txtPiecesOr
             // 
             this.txtPiecesOr.AutoSize = true;
@@ -657,24 +616,6 @@
             this.txtPiecesOr.Name = "txtPiecesOr";
             this.txtPiecesOr.Size = new System.Drawing.Size(0, 13);
             this.txtPiecesOr.TabIndex = 42;
-            // 
-            // lblXP1
-            // 
-            this.lblXP1.AutoSize = true;
-            this.lblXP1.Location = new System.Drawing.Point(34, 131);
-            this.lblXP1.Name = "lblXP1";
-            this.lblXP1.Size = new System.Drawing.Size(24, 13);
-            this.lblXP1.TabIndex = 43;
-            this.lblXP1.Text = "XP:";
-            // 
-            // lblLvl1
-            // 
-            this.lblLvl1.AutoSize = true;
-            this.lblLvl1.Location = new System.Drawing.Point(19, 118);
-            this.lblLvl1.Name = "lblLvl1";
-            this.lblLvl1.Size = new System.Drawing.Size(44, 13);
-            this.lblLvl1.TabIndex = 44;
-            this.lblLvl1.Text = "Niveau:";
             // 
             // lblLvl2
             // 
@@ -712,17 +653,80 @@
             this.lblXP3.TabIndex = 47;
             this.lblXP3.Text = "XP:";
             // 
+            // lblXP1
+            // 
+            this.lblXP1.AutoSize = true;
+            this.lblXP1.Location = new System.Drawing.Point(35, 131);
+            this.lblXP1.Name = "lblXP1";
+            this.lblXP1.Size = new System.Drawing.Size(24, 13);
+            this.lblXP1.TabIndex = 43;
+            this.lblXP1.Text = "XP:";
+            // 
+            // txtLvl1
+            // 
+            this.txtLvl1.AutoSize = true;
+            this.txtLvl1.Location = new System.Drawing.Point(64, 119);
+            this.txtLvl1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtLvl1.Name = "txtLvl1";
+            this.txtLvl1.Size = new System.Drawing.Size(23, 13);
+            this.txtLvl1.TabIndex = 16;
+            this.txtLvl1.Text = "lvl1";
+            // 
+            // txtXP1
+            // 
+            this.txtXP1.AutoSize = true;
+            this.txtXP1.Location = new System.Drawing.Point(64, 131);
+            this.txtXP1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtXP1.Name = "txtXP1";
+            this.txtXP1.Size = new System.Drawing.Size(24, 13);
+            this.txtXP1.TabIndex = 15;
+            this.txtXP1.Text = "xp1";
+            // 
+            // txtNom1
+            // 
+            this.txtNom1.AutoSize = true;
+            this.txtNom1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNom1.Location = new System.Drawing.Point(37, 106);
+            this.txtNom1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtNom1.Name = "txtNom1";
+            this.txtNom1.Size = new System.Drawing.Size(32, 13);
+            this.txtNom1.TabIndex = 4;
+            this.txtNom1.Text = "Nom";
+            // 
+            // lblLvl1
+            // 
+            this.lblLvl1.AutoSize = true;
+            this.lblLvl1.Location = new System.Drawing.Point(20, 118);
+            this.lblLvl1.Name = "lblLvl1";
+            this.lblLvl1.Size = new System.Drawing.Size(44, 13);
+            this.lblLvl1.TabIndex = 44;
+            this.lblLvl1.Text = "Niveau:";
+            // 
+            // pboxAventurier1
+            // 
+            this.pboxAventurier1.Location = new System.Drawing.Point(19, 39);
+            this.pboxAventurier1.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxAventurier1.Name = "pboxAventurier1";
+            this.pboxAventurier1.Size = new System.Drawing.Size(65, 64);
+            this.pboxAventurier1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxAventurier1.TabIndex = 0;
+            this.pboxAventurier1.TabStop = false;
+            // 
             // MenuJeu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 544);
-            this.Controls.Add(this.lblLvl3);
-            this.Controls.Add(this.lblXP3);
-            this.Controls.Add(this.lblLvl2);
-            this.Controls.Add(this.lblXP2);
+            this.Controls.Add(this.pboxAventurier1);
             this.Controls.Add(this.lblLvl1);
+            this.Controls.Add(this.txtNom1);
+            this.Controls.Add(this.lblLvl3);
+            this.Controls.Add(this.txtXP1);
+            this.Controls.Add(this.lblXP3);
+            this.Controls.Add(this.txtLvl1);
+            this.Controls.Add(this.lblLvl2);
             this.Controls.Add(this.lblXP1);
+            this.Controls.Add(this.lblXP2);
             this.Controls.Add(this.txtPiecesOr);
             this.Controls.Add(this.gboxInformations);
             this.Controls.Add(this.lblPiecesOr);
@@ -732,8 +736,6 @@
             this.Controls.Add(this.txtLvl2);
             this.Controls.Add(this.txtXP2);
             this.Controls.Add(this.txtNom2);
-            this.Controls.Add(this.txtLvl1);
-            this.Controls.Add(this.txtXP1);
             this.Controls.Add(this.btnTaverne);
             this.Controls.Add(this.btnForge);
             this.Controls.Add(this.btnChapelle);
@@ -741,28 +743,25 @@
             this.Controls.Add(this.btnAventure);
             this.Controls.Add(this.lblInventaire);
             this.Controls.Add(this.dgvInventaire);
-            this.Controls.Add(this.txtNom1);
             this.Controls.Add(this.lblGroupeAventurier);
             this.Controls.Add(this.pboxAventurier3);
             this.Controls.Add(this.pboxAventurier2);
-            this.Controls.Add(this.pboxAventurier1);
+            
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuJeu";
             this.Text = "Menu jeu";
-            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventaire)).EndInit();
             this.gboxInformations.ResumeLayout(false);
             this.gboxInformations.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pboxAventurier1;
         private System.Windows.Forms.PictureBox pboxAventurier2;
         private System.Windows.Forms.PictureBox pboxAventurier3;
         private System.Windows.Forms.Label lblGroupeAventurier;
@@ -793,9 +792,6 @@
         private System.Windows.Forms.Label lblNiv;
         private System.Windows.Forms.Label lblXP;
         private System.Windows.Forms.Label lblNom;
-        private System.Windows.Forms.Label txtNom1;
-        private System.Windows.Forms.Label txtXP1;
-        private System.Windows.Forms.Label txtLvl1;
         private System.Windows.Forms.ComboBox cboArmure;
         private System.Windows.Forms.ComboBox cboBouclier;
         private System.Windows.Forms.ComboBox cboArme;
@@ -816,12 +812,16 @@
         private System.Windows.Forms.Label txtNiv;
         private System.Windows.Forms.Label txtNom;
         private System.Windows.Forms.Label txtPiecesOr;
-        private System.Windows.Forms.Label lblXP1;
-        private System.Windows.Forms.Label lblLvl1;
         private System.Windows.Forms.Label lblLvl2;
         private System.Windows.Forms.Label lblXP2;
         private System.Windows.Forms.Label lblLvl3;
         private System.Windows.Forms.Label lblXP3;
+        private System.Windows.Forms.Label lblXP1;
+        private System.Windows.Forms.Label txtLvl1;
+        private System.Windows.Forms.Label txtXP1;
+        private System.Windows.Forms.Label txtNom1;
+        private System.Windows.Forms.Label lblLvl1;
+        private System.Windows.Forms.PictureBox pboxAventurier1;
     }
 }
 

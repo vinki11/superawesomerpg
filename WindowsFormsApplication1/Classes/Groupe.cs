@@ -8,10 +8,10 @@ using JRPG.Classes.Aventurier;
 
 namespace JRPG.Classes
 {
-    public class Groupe
+    class Groupe
     {
         #region Attributs
-        protected List<Aventuriers> membres;
+        protected List<Aventurier.Aventurier> membres;
         protected int nbPiecesOr;
         protected List<Items> inventaire;
         #endregion
@@ -19,14 +19,14 @@ namespace JRPG.Classes
         #region Constructeurs
         public Groupe()
         {
-            membres = new List<Aventuriers>();
+            membres = new List<Aventurier.Aventurier>();
             nbPiecesOr = 20;
             inventaire = new List<Items>();
         }
         #endregion
 
         #region Accesseurs et mutateurs
-        public List<Aventuriers> Membres
+        public List<Aventurier.Aventurier> Membres
         {
             get { return this.membres; }
             set { this.membres = value; }
@@ -46,7 +46,7 @@ namespace JRPG.Classes
         #endregion
 
         #region Fonctions
-        public void AjouterAventurier(Aventuriers nouveauAventurier)
+        public void AjouterAventurier(Aventurier.Aventurier nouveauAventurier)
         {
             if (membres.Count() < 3)
             {

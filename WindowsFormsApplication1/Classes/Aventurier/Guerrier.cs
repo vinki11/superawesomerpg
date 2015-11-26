@@ -11,7 +11,7 @@ namespace JRPG.Classes.Aventurier
 {
     using li = ListeItem;
     //Classe d'aventurier qui a une bonne attaque et defense(hp) de base. Utilise de l'energie
-    public class Guerrier : Aventuriers
+    class Guerrier : Aventurier
     {
 
         #region Constructeurs

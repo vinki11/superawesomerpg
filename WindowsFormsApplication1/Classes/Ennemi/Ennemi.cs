@@ -7,7 +7,7 @@ using JRPG.Classes.Aventurier;
 
 namespace JRPG.Classes.Ennemi
 {
-    public abstract class Ennemis
+    abstract class Ennemis
     {
         #region  Attributs
         protected int niveau;
@@ -110,7 +110,7 @@ namespace JRPG.Classes.Ennemi
 
         }
 
-        protected void Attaquer(Aventuriers cible)
+        protected void Attaquer(Aventurier.Aventurier cible)
         {
 
         }

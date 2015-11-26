@@ -8,7 +8,7 @@ using JRPG.Classes.Item;
 
 namespace JRPG.Classes
 {
-    public class GroupeEnnemi
+    class GroupeEnnemi
     {
         #region Attributs
         protected List<Ennemis> listeEnnemi;

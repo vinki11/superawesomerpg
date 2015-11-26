@@ -9,7 +9,7 @@ namespace JRPG.Classes.Aventurier
 {
     using li = ListeItem;
     //Classe avec des mauvaises statistique mais des sorts puissants. Utilise de la mana.
-    public class Mage : Aventuriers
+    class Mage : Aventurier
     {
         #region Constructeurs
         public Mage(string pNomAventurier, int pExperience, int pNiveau)

@@ -9,8 +9,9 @@ using System.Threading.Tasks;
 namespace JRPG.Classes.Aventurier
 {
     using li = ListeItem;
+
     //Classe qui a une bonne précision et esquive. Utilise de l'énergie
-    public class Voleur : Aventuriers
+    class Voleur : Aventurier
     {
         #region Constructeurs
         public Voleur(string pNomAventurier, int pExperience, int pNiveau)
