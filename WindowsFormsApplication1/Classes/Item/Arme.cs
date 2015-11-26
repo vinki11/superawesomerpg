@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JRPG.Classes.Item
 {
-    public class Arme : Items
+    public class Arme : Item
     {
         #region Attributs
         private int force;

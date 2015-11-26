@@ -53,6 +53,7 @@ namespace JRPG
         private void AfficherGroupeAventurier()
         { 
             CacherGroupeAventurier();
+            this.txtPiecesOr.Text = p.groupeAventurier.NbPiecesOr.ToString();
 
             var i = 1;
             foreach (var aventurier in p.groupeAventurier.Membres)
@@ -60,11 +61,12 @@ namespace JRPG
                 AfficherAventurier(aventurier, i);
                 i++;
             }
-        }
 
-        protected override void OnFormClosing(FormClosingEventArgs e)
-        {
-            Application.Exit();
+            /*listInventaire.Items.Add("Nom Item");
+            foreach (var item in p.groupeAventurier.Inventaire)
+            {
+                listInventaire.Items[0].SubItems.Add(item.NomItem);
+            }*/
         }
 
         private void btnAventure_Click(object sender, EventArgs e)
@@ -73,5 +75,11 @@ namespace JRPG
             Aventure choixAventure = new Aventure();
             choixAventure.ShowDialog();
         }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
     }
 }

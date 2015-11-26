@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JRPG.Classes.Item
 {
-    public abstract class Items
+    public abstract class Item
     {
         #region Attributs
         protected int idItem;

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JRPG.Classes.Item
 {
-    public class Bouclier : Items
+    public class Bouclier : Item
     {
         #region Attributs
         private int esquive;

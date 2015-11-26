@@ -14,7 +14,7 @@ namespace JRPG.Classes
         protected List<Ennemis> listeEnnemi;
         protected int totalPieces;
         protected int totalXp;
-        protected List<Items> listeItem;
+        protected List<Item.Item> listeItem;
         #endregion
 
         #region Constructeurs
@@ -25,7 +25,7 @@ namespace JRPG.Classes
             listeEnnemi = new List<Ennemis>();
             totalPieces = 0;
             totalXp = 0;
-            listeItem = new List<Items>();
+            listeItem = new List<Item.Item>();
         }
         #endregion
 
@@ -49,7 +49,7 @@ namespace JRPG.Classes
         }
 
 
-        public List<Items> ListeItem
+        public List<Item.Item> ListeItem
         {
             get { return this.listeItem; }
             set { this.listeItem = value; }

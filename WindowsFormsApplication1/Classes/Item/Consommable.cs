@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JRPG.Classes.Item
 {
-    public class Consommable : Items
+    public class Consommable : Item
     {
         #region Attributs
         private int pv;

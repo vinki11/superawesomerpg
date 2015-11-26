@@ -55,6 +55,8 @@
             this.lblEnrgMana = new System.Windows.Forms.Label();
             this.lblPV = new System.Windows.Forms.Label();
             this.gboxInformations = new System.Windows.Forms.GroupBox();
+            this.txtDescription = new System.Windows.Forms.RichTextBox();
+            this.lblAttributs = new System.Windows.Forms.Label();
             this.txtBouclier = new System.Windows.Forms.Label();
             this.txtArmure = new System.Windows.Forms.Label();
             this.txtArme = new System.Windows.Forms.Label();
@@ -67,8 +69,6 @@
             this.txtPV = new System.Windows.Forms.Label();
             this.txtClasse = new System.Windows.Forms.Label();
             this.btnAccepter = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtDescription = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pboxGuerrier)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxPretre)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxVoleur)).BeginInit();
@@ -343,7 +343,7 @@
             // gboxInformations
             // 
             this.gboxInformations.Controls.Add(this.txtDescription);
-            this.gboxInformations.Controls.Add(this.label1);
+            this.gboxInformations.Controls.Add(this.lblAttributs);
             this.gboxInformations.Controls.Add(this.txtBouclier);
             this.gboxInformations.Controls.Add(this.txtArmure);
             this.gboxInformations.Controls.Add(this.txtArme);
@@ -373,6 +373,27 @@
             this.gboxInformations.Size = new System.Drawing.Size(230, 298);
             this.gboxInformations.TabIndex = 60;
             this.gboxInformations.TabStop = false;
+            // 
+            // txtDescription
+            // 
+            this.txtDescription.BackColor = System.Drawing.SystemColors.Control;
+            this.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescription.Location = new System.Drawing.Point(13, 41);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(184, 41);
+            this.txtDescription.TabIndex = 64;
+            this.txtDescription.Text = "Description de la classe";
+            // 
+            // lblAttributs
+            // 
+            this.lblAttributs.AutoSize = true;
+            this.lblAttributs.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAttributs.Location = new System.Drawing.Point(9, 85);
+            this.lblAttributs.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblAttributs.Name = "lblAttributs";
+            this.lblAttributs.Size = new System.Drawing.Size(64, 16);
+            this.lblAttributs.TabIndex = 63;
+            this.lblAttributs.Text = "Attributs";
             // 
             // txtBouclier
             // 
@@ -496,27 +517,6 @@
             this.btnAccepter.UseVisualStyleBackColor = true;
             this.btnAccepter.Click += new System.EventHandler(this.btnAccepter_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 85);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 16);
-            this.label1.TabIndex = 63;
-            this.label1.Text = "Attributs";
-            // 
-            // txtDescription
-            // 
-            this.txtDescription.BackColor = System.Drawing.SystemColors.Control;
-            this.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtDescription.Location = new System.Drawing.Point(13, 41);
-            this.txtDescription.Name = "txtDescription";
-            this.txtDescription.Size = new System.Drawing.Size(184, 41);
-            this.txtDescription.TabIndex = 64;
-            this.txtDescription.Text = "Description de la classe";
-            // 
             // CreationAventurier
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -594,7 +594,7 @@
         private System.Windows.Forms.Label txtRessource;
         private System.Windows.Forms.Label txtPV;
         private System.Windows.Forms.Label txtClasse;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lblAttributs;
         private System.Windows.Forms.RichTextBox txtDescription;
     }
 }

@@ -13,7 +13,7 @@ namespace JRPG.Classes
         #region Attributs
         protected List<Aventurier.Aventurier> membres;
         protected int nbPiecesOr;
-        protected List<Items> inventaire;
+        protected List<Item.Item> inventaire;
         #endregion
 
         #region Constructeurs
@@ -21,7 +21,7 @@ namespace JRPG.Classes
         {
             membres = new List<Aventurier.Aventurier>();
             nbPiecesOr = 20;
-            inventaire = new List<Items>();
+            inventaire = new List<Item.Item>();
         }
         #endregion
 
@@ -38,7 +38,7 @@ namespace JRPG.Classes
             set { this.nbPiecesOr = value; }
         }
 
-        public List<Items> Inventaire
+        public List<Item.Item> Inventaire
         {
             get { return this.inventaire; }
             set { this.inventaire = value; }
@@ -59,9 +59,9 @@ namespace JRPG.Classes
 
         }
 
-        public void AjouterItem()
+        public void AjouterItem(Item.Item nouvelItem)
         {
-
+            inventaire.Add(nouvelItem);
         }
 
         public void UtiliserItem()

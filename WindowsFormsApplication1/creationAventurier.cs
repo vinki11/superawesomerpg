@@ -152,9 +152,19 @@ namespace JRPG
                 {
                     premierAventurier = new Pretre(txtNomPerso.Text, 0, 1);
                 }
-                    
-               
+
+
+                //Test pour afficher un full party
+                Aventurier deuxiemeAventurier = new Mage("Chose",0,1);
+                Aventurier troisiemeAventurier = new Voleur ("Binne",1000,2);
+
                 p.groupeAventurier.AjouterAventurier(premierAventurier);
+                p.groupeAventurier.AjouterAventurier(deuxiemeAventurier);
+                p.groupeAventurier.AjouterAventurier(troisiemeAventurier);
+                //Par defaut le groupe d'aventurier commence avec 2 potion de vie et 1 de mana (surtout un test pour l'affichage de l'inventaire)
+                p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_VIE_MINEURE_ID]);
+                p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_VIE_MINEURE_ID]);
+                p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_MANA_MINEURE_ID]);
 
                 Hide();
                 MenuJeu menuJeu = new MenuJeu();

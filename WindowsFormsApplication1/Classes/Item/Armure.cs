@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JRPG.Classes.Item
 {
-    public class Armure : Items
+    public class Armure : Item
     {
         #region Attributs
         private int defense;

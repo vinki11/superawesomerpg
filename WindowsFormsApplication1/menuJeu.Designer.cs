@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.pboxAventurier1 = new System.Windows.Forms.PictureBox();
             this.pboxAventurier2 = new System.Windows.Forms.PictureBox();
             this.pboxAventurier3 = new System.Windows.Forms.PictureBox();
             this.lblGroupeAventurier = new System.Windows.Forms.Label();
-            this.dgvInventaire = new System.Windows.Forms.DataGridView();
             this.lblInventaire = new System.Windows.Forms.Label();
             this.btnAventure = new System.Windows.Forms.Button();
             this.btnSauvegarder = new System.Windows.Forms.Button();
@@ -87,29 +87,30 @@
             this.txtXP1 = new System.Windows.Forms.Label();
             this.txtNom1 = new System.Windows.Forms.Label();
             this.lblLvl1 = new System.Windows.Forms.Label();
-            this.pboxAventurier1 = new System.Windows.Forms.PictureBox();
+            this.listInventaire = new System.Windows.Forms.ListView();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInventaire)).BeginInit();
             this.gboxInformations.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).BeginInit();
             this.SuspendLayout();
             // 
             // pboxAventurier2
             // 
-            this.pboxAventurier2.Location = new System.Drawing.Point(97, 39);
+            this.pboxAventurier2.Location = new System.Drawing.Point(102, 39);
             this.pboxAventurier2.Margin = new System.Windows.Forms.Padding(2);
             this.pboxAventurier2.Name = "pboxAventurier2";
             this.pboxAventurier2.Size = new System.Drawing.Size(65, 64);
+            this.pboxAventurier2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxAventurier2.TabIndex = 1;
             this.pboxAventurier2.TabStop = false;
             // 
             // pboxAventurier3
             // 
-            this.pboxAventurier3.Location = new System.Drawing.Point(178, 39);
+            this.pboxAventurier3.Location = new System.Drawing.Point(185, 39);
             this.pboxAventurier3.Margin = new System.Windows.Forms.Padding(2);
             this.pboxAventurier3.Name = "pboxAventurier3";
             this.pboxAventurier3.Size = new System.Drawing.Size(65, 64);
+            this.pboxAventurier3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxAventurier3.TabIndex = 2;
             this.pboxAventurier3.TabStop = false;
             // 
@@ -122,19 +123,6 @@
             this.lblGroupeAventurier.Size = new System.Drawing.Size(105, 13);
             this.lblGroupeAventurier.TabIndex = 3;
             this.lblGroupeAventurier.Text = "Groupe d\'aventuriers";
-            // 
-            // dgvInventaire
-            // 
-            this.dgvInventaire.AllowUserToAddRows = false;
-            this.dgvInventaire.AllowUserToDeleteRows = false;
-            this.dgvInventaire.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvInventaire.Location = new System.Drawing.Point(16, 234);
-            this.dgvInventaire.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvInventaire.Name = "dgvInventaire";
-            this.dgvInventaire.ReadOnly = true;
-            this.dgvInventaire.RowTemplate.Height = 24;
-            this.dgvInventaire.Size = new System.Drawing.Size(180, 288);
-            this.dgvInventaire.TabIndex = 7;
             // 
             // lblInventaire
             // 
@@ -200,7 +188,7 @@
             // txtLvl2
             // 
             this.txtLvl2.AutoSize = true;
-            this.txtLvl2.Location = new System.Drawing.Point(141, 119);
+            this.txtLvl2.Location = new System.Drawing.Point(146, 119);
             this.txtLvl2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtLvl2.Name = "txtLvl2";
             this.txtLvl2.Size = new System.Drawing.Size(23, 13);
@@ -210,7 +198,7 @@
             // txtXP2
             // 
             this.txtXP2.AutoSize = true;
-            this.txtXP2.Location = new System.Drawing.Point(142, 132);
+            this.txtXP2.Location = new System.Drawing.Point(147, 132);
             this.txtXP2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtXP2.Name = "txtXP2";
             this.txtXP2.Size = new System.Drawing.Size(24, 13);
@@ -221,7 +209,7 @@
             // 
             this.txtNom2.AutoSize = true;
             this.txtNom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNom2.Location = new System.Drawing.Point(99, 106);
+            this.txtNom2.Location = new System.Drawing.Point(104, 106);
             this.txtNom2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtNom2.Name = "txtNom2";
             this.txtNom2.Size = new System.Drawing.Size(32, 13);
@@ -231,7 +219,7 @@
             // txtLvl3
             // 
             this.txtLvl3.AutoSize = true;
-            this.txtLvl3.Location = new System.Drawing.Point(220, 119);
+            this.txtLvl3.Location = new System.Drawing.Point(227, 119);
             this.txtLvl3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtLvl3.Name = "txtLvl3";
             this.txtLvl3.Size = new System.Drawing.Size(23, 13);
@@ -241,7 +229,7 @@
             // txtXP3
             // 
             this.txtXP3.AutoSize = true;
-            this.txtXP3.Location = new System.Drawing.Point(219, 132);
+            this.txtXP3.Location = new System.Drawing.Point(226, 132);
             this.txtXP3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtXP3.Name = "txtXP3";
             this.txtXP3.Size = new System.Drawing.Size(24, 13);
@@ -252,7 +240,7 @@
             // 
             this.txtNom3.AutoSize = true;
             this.txtNom3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNom3.Location = new System.Drawing.Point(176, 106);
+            this.txtNom3.Location = new System.Drawing.Point(183, 106);
             this.txtNom3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtNom3.Name = "txtNom3";
             this.txtNom3.Size = new System.Drawing.Size(32, 13);
@@ -620,7 +608,7 @@
             // lblLvl2
             // 
             this.lblLvl2.AutoSize = true;
-            this.lblLvl2.Location = new System.Drawing.Point(98, 119);
+            this.lblLvl2.Location = new System.Drawing.Point(103, 119);
             this.lblLvl2.Name = "lblLvl2";
             this.lblLvl2.Size = new System.Drawing.Size(44, 13);
             this.lblLvl2.TabIndex = 46;
@@ -629,7 +617,7 @@
             // lblXP2
             // 
             this.lblXP2.AutoSize = true;
-            this.lblXP2.Location = new System.Drawing.Point(116, 132);
+            this.lblXP2.Location = new System.Drawing.Point(121, 132);
             this.lblXP2.Name = "lblXP2";
             this.lblXP2.Size = new System.Drawing.Size(24, 13);
             this.lblXP2.TabIndex = 45;
@@ -638,7 +626,7 @@
             // lblLvl3
             // 
             this.lblLvl3.AutoSize = true;
-            this.lblLvl3.Location = new System.Drawing.Point(175, 119);
+            this.lblLvl3.Location = new System.Drawing.Point(182, 119);
             this.lblLvl3.Name = "lblLvl3";
             this.lblLvl3.Size = new System.Drawing.Size(44, 13);
             this.lblLvl3.TabIndex = 48;
@@ -647,7 +635,7 @@
             // lblXP3
             // 
             this.lblXP3.AutoSize = true;
-            this.lblXP3.Location = new System.Drawing.Point(193, 132);
+            this.lblXP3.Location = new System.Drawing.Point(200, 132);
             this.lblXP3.Name = "lblXP3";
             this.lblXP3.Size = new System.Drawing.Size(24, 13);
             this.lblXP3.TabIndex = 47;
@@ -686,7 +674,7 @@
             // 
             this.txtNom1.AutoSize = true;
             this.txtNom1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNom1.Location = new System.Drawing.Point(37, 106);
+            this.txtNom1.Location = new System.Drawing.Point(20, 105);
             this.txtNom1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtNom1.Name = "txtNom1";
             this.txtNom1.Size = new System.Drawing.Size(32, 13);
@@ -712,11 +700,20 @@
             this.pboxAventurier1.TabIndex = 0;
             this.pboxAventurier1.TabStop = false;
             // 
+            // listInventaire
+            // 
+            this.listInventaire.Location = new System.Drawing.Point(12, 240);
+            this.listInventaire.Name = "listInventaire";
+            this.listInventaire.Size = new System.Drawing.Size(231, 292);
+            this.listInventaire.TabIndex = 49;
+            this.listInventaire.UseCompatibleStateImageBehavior = false;
+            // 
             // MenuJeu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 544);
+            this.Controls.Add(this.listInventaire);
             this.Controls.Add(this.pboxAventurier1);
             this.Controls.Add(this.lblLvl1);
             this.Controls.Add(this.txtNom1);
@@ -742,17 +739,14 @@
             this.Controls.Add(this.btnSauvegarder);
             this.Controls.Add(this.btnAventure);
             this.Controls.Add(this.lblInventaire);
-            this.Controls.Add(this.dgvInventaire);
             this.Controls.Add(this.lblGroupeAventurier);
             this.Controls.Add(this.pboxAventurier3);
             this.Controls.Add(this.pboxAventurier2);
-            
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuJeu";
             this.Text = "Menu jeu";
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInventaire)).EndInit();
             this.gboxInformations.ResumeLayout(false);
             this.gboxInformations.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).EndInit();
@@ -765,7 +759,6 @@
         private System.Windows.Forms.PictureBox pboxAventurier2;
         private System.Windows.Forms.PictureBox pboxAventurier3;
         private System.Windows.Forms.Label lblGroupeAventurier;
-        private System.Windows.Forms.DataGridView dgvInventaire;
         private System.Windows.Forms.Label lblInventaire;
         private System.Windows.Forms.Button btnAventure;
         private System.Windows.Forms.Button btnSauvegarder;
@@ -822,6 +815,7 @@
         private System.Windows.Forms.Label txtNom1;
         private System.Windows.Forms.Label lblLvl1;
         private System.Windows.Forms.PictureBox pboxAventurier1;
+        private System.Windows.Forms.ListView listInventaire;
     }
 }
 

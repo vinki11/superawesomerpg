@@ -60,7 +60,7 @@
     <Compile Include="Classes\Item\Armure.cs" />
     <Compile Include="Classes\Item\Bouclier.cs" />
     <Compile Include="Classes\Item\Consommable.cs" />
-    <Compile Include="Classes\Item\Items.cs" />
+    <Compile Include="Classes\Item\Item.cs" />
     <Compile Include="CreationAventurier.cs">
       <SubType>Form</SubType>
     </Compile>
