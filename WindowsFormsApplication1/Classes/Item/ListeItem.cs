@@ -16,18 +16,25 @@ namespace JRPG
         public static readonly List<Arme> ListeArmes = new List<Arme>();
         public static readonly List<Bouclier> ListeBoucliers = new List<Bouclier>();
         public static readonly List<Armure> ListeArmures = new List<Armure>();
+        public static readonly List<Consommable> ListeConsommables = new List<Consommable>();
 
         //Constante Armes
         public const int DAGUE_BRONZE_ID = 0;
         public const int EPEE_BRONZE_ID = 1;
         public const int BATON_ID = 2;
 
-
         //Constante Armure
         public const int ARMURE_CUIR_ID = 0;
         public const int ARMURE_BRONZE_ID = 1;
         public const int ROBE_ID = 2;
 
+        //Constante Bouclier
+        public const int BOUCLIER_BOIS_ID = 0;
+        public const int ECU_ACIER_ID = 1;
+
+        //Constante Consommable
+        public const int POTION_VIE_MINEURE_ID = 0;
+        public const int POTION_MANA_MINEURE_ID = 1;
 
         static ListeItem()
          {
@@ -37,14 +44,23 @@ namespace JRPG
         public static void creerItems()
         {
             //Armes
-            ListeArmes.Add(new Arme(DAGUE_BRONZE_ID, "Dague de bronze", 10, 5, 10, true, false, false, true));
-            ListeArmes.Add(new Arme(EPEE_BRONZE_ID, "Épée de bronze", 10, 10, 0, true, false, false, true));
+            ListeArmes.Add(new Arme(DAGUE_BRONZE_ID, "Dague de bronze", 10, 5, 10, pUtilisableGuerrier:true, pUtilisableVoleur:true));
+            ListeArmes.Add(new Arme(EPEE_BRONZE_ID, "Épée de bronze", 10, 10, 0, pUtilisableGuerrier:true));
             ListeArmes.Add(new Arme(BATON_ID, "Baton", 5, 2, 0, true, true, true, true));
 
             //Armure
-            ListeArmures.Add(new Armure(ARMURE_CUIR_ID, "Armure de cuir", 10, 5,  true, false, false, true));
-            ListeArmures.Add(new Armure(ARMURE_BRONZE_ID, "Armure de bronze", 20, 10, true, false, false, false));
-            ListeArmures.Add(new Armure(ROBE_ID, "Robe", 5, 2,  true, true, true, true));
+            ListeArmures.Add(new Armure(ARMURE_CUIR_ID, "Armure de cuir", 10, 5,  pUtilisableGuerrier:true, pUtilisableVoleur:true));
+            ListeArmures.Add(new Armure(ARMURE_BRONZE_ID, "Armure de bronze", 20, 10, pUtilisableGuerrier:true));
+            ListeArmures.Add(new Armure(ROBE_ID, "Robe", 5, 2, true, true, true, true));
+
+            //Bouclier
+            ListeBoucliers.Add(new Bouclier(BOUCLIER_BOIS_ID, "Bouclier en bois", 10, 5, pUtilisableGuerrier:true));
+            ListeBoucliers.Add(new Bouclier(ECU_ACIER_ID, "Écu en acier", 15, 8, pUtilisableGuerrier:true));
+
+            //
+            ListeConsommables.Add(new Consommable(POTION_VIE_MINEURE_ID, "Potion de vie mineure", 2, 25));
+            ListeConsommables.Add(new Consommable(POTION_MANA_MINEURE_ID, "Potion de mana mineure", 2, pMana:50, pUtilisableGuerrier:false, pUtilisableVoleur:false));
+
 
         }
         

@@ -13,7 +13,7 @@ namespace JRPG.Classes.Item
         #endregion
 
         #region Constructeurs
-        public Bouclier(int pIdItem, string pNomItem, int pPrixRevente, int pEsquive,  bool pUtilisableGuerrier, bool pUtilisablePretre, bool pUtilisableMage, bool pUtilisableVoleur)
+        public Bouclier(int pIdItem, string pNomItem, int pPrixRevente, int pEsquive,  bool pUtilisableGuerrier = false, bool pUtilisablePretre = false, bool pUtilisableMage = false, bool pUtilisableVoleur = false)
         {
             idItem = pIdItem;
             nomItem = pNomItem;

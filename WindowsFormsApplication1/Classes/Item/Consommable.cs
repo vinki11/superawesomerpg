@@ -20,7 +20,7 @@ namespace JRPG.Classes.Item
 
 
         #region Constructeurs
-        public Consommable(int pIdItem, string pNomItem, int pPrixRevente, int pPv, int pMana, int pDefense, int pEsquive, int pForce, int pPrecision, bool pUtilisableGuerrier, bool pUtilisablePretre, bool pUtilisableMage, bool pUtilisableVoleur)
+        public Consommable(int pIdItem, string pNomItem, int pPrixRevente, int pPv = 0, int pMana = 0, int pDefense = 0, int pEsquive = 0, int pForce = 0, int pPrecision = 0, bool pUtilisableGuerrier = true, bool pUtilisablePretre = true, bool pUtilisableMage = true, bool pUtilisableVoleur = true)
         {
             idItem = pIdItem;
             nomItem = pNomItem;

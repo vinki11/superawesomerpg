@@ -13,7 +13,7 @@ namespace JRPG.Classes.Item
         #endregion
 
         #region Constructeurs
-        public Armure(int pIdItem, string pNomItem, int pPrixRevente, int pDefense, bool pUtilisableGuerrier, bool pUtilisablePretre, bool pUtilisableMage, bool pUtilisableVoleur)
+        public Armure(int pIdItem, string pNomItem, int pPrixRevente, int pDefense, bool pUtilisableGuerrier = false, bool pUtilisablePretre = false, bool pUtilisableMage = false, bool pUtilisableVoleur = false)
         {
             idItem = pIdItem;
             nomItem = pNomItem;
