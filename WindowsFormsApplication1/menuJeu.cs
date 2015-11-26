@@ -60,6 +60,7 @@ namespace JRPG
                 txtNom2.Text = Program.groupeAventurier.Membres[1].NomAventurier;
                 txtLvl2.Text = Program.groupeAventurier.Membres[1].Niveau.ToString();
                 txtXP2.Text = Program.groupeAventurier.Membres[1].Experience.ToString();
+                pboxAventurier2.Image = Program.groupeAventurier.Membres[1].Imageclasse;
             }
 
             if (Program.groupeAventurier.Membres.Count >= 3)
@@ -72,6 +73,7 @@ namespace JRPG
                 txtNom3.Text = Program.groupeAventurier.Membres[2].NomAventurier;
                 txtLvl3.Text = Program.groupeAventurier.Membres[2].Niveau.ToString();
                 txtXP3.Text = Program.groupeAventurier.Membres[2].Experience.ToString();
+                pboxAventurier3.Image = Program.groupeAventurier.Membres[2].Imageclasse;
             }
 }
 
