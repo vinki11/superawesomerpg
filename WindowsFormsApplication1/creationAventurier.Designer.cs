@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.lblNomPerso = new System.Windows.Forms.Label();
-            this.tboxNomPerso = new System.Windows.Forms.TextBox();
+            this.txtNomPerso = new System.Windows.Forms.TextBox();
             this.lblClasses = new System.Windows.Forms.Label();
             this.pboxGuerrier = new System.Windows.Forms.PictureBox();
             this.pboxPretre = new System.Windows.Forms.PictureBox();
@@ -64,7 +64,7 @@
             this.txtDefense = new System.Windows.Forms.Label();
             this.txtForce = new System.Windows.Forms.Label();
             this.txtInitiative = new System.Windows.Forms.Label();
-            this.txtEnrgMana = new System.Windows.Forms.Label();
+            this.txtRessource = new System.Windows.Forms.Label();
             this.txtPV = new System.Windows.Forms.Label();
             this.txtClasse = new System.Windows.Forms.Label();
             this.btnAccepter = new System.Windows.Forms.Button();
@@ -85,13 +85,13 @@
             this.lblNomPerso.TabIndex = 0;
             this.lblNomPerso.Text = "Nom du personnage:";
             // 
-            // tboxNomPerso
+            // txtNomPerso
             // 
-            this.tboxNomPerso.Location = new System.Drawing.Point(125, 37);
-            this.tboxNomPerso.Margin = new System.Windows.Forms.Padding(2);
-            this.tboxNomPerso.Name = "tboxNomPerso";
-            this.tboxNomPerso.Size = new System.Drawing.Size(76, 20);
-            this.tboxNomPerso.TabIndex = 1;
+            this.txtNomPerso.Location = new System.Drawing.Point(125, 37);
+            this.txtNomPerso.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNomPerso.Name = "txtNomPerso";
+            this.txtNomPerso.Size = new System.Drawing.Size(76, 20);
+            this.txtNomPerso.TabIndex = 1;
             // 
             // lblClasses
             // 
@@ -359,7 +359,7 @@
             this.gboxInformations.Controls.Add(this.txtDefense);
             this.gboxInformations.Controls.Add(this.txtForce);
             this.gboxInformations.Controls.Add(this.txtInitiative);
-            this.gboxInformations.Controls.Add(this.txtEnrgMana);
+            this.gboxInformations.Controls.Add(this.txtRessource);
             this.gboxInformations.Controls.Add(this.txtPV);
             this.gboxInformations.Controls.Add(this.txtClasse);
             this.gboxInformations.Controls.Add(this.lblEnrgMana);
@@ -416,74 +416,82 @@
             // txtEsquive
             // 
             this.txtEsquive.AutoSize = true;
-            this.txtEsquive.Location = new System.Drawing.Point(116, 132);
+            this.txtEsquive.Location = new System.Drawing.Point(101, 132);
             this.txtEsquive.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtEsquive.Name = "txtEsquive";
-            this.txtEsquive.Size = new System.Drawing.Size(0, 13);
+            this.txtEsquive.Size = new System.Drawing.Size(56, 13);
             this.txtEsquive.TabIndex = 62;
+            this.txtEsquive.Text = "txtEsquive";
             // 
             // txtPrecision
             // 
             this.txtPrecision.AutoSize = true;
-            this.txtPrecision.Location = new System.Drawing.Point(116, 119);
+            this.txtPrecision.Location = new System.Drawing.Point(101, 119);
             this.txtPrecision.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtPrecision.Name = "txtPrecision";
-            this.txtPrecision.Size = new System.Drawing.Size(0, 13);
+            this.txtPrecision.Size = new System.Drawing.Size(61, 13);
             this.txtPrecision.TabIndex = 62;
+            this.txtPrecision.Text = "txtPrecision";
             // 
             // txtDefense
             // 
             this.txtDefense.AutoSize = true;
-            this.txtDefense.Location = new System.Drawing.Point(116, 105);
+            this.txtDefense.Location = new System.Drawing.Point(101, 105);
             this.txtDefense.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtDefense.Name = "txtDefense";
-            this.txtDefense.Size = new System.Drawing.Size(0, 13);
+            this.txtDefense.Size = new System.Drawing.Size(58, 13);
             this.txtDefense.TabIndex = 62;
+            this.txtDefense.Text = "txtDefense";
             // 
             // txtForce
             // 
             this.txtForce.AutoSize = true;
-            this.txtForce.Location = new System.Drawing.Point(116, 91);
+            this.txtForce.Location = new System.Drawing.Point(101, 91);
             this.txtForce.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtForce.Name = "txtForce";
-            this.txtForce.Size = new System.Drawing.Size(0, 13);
+            this.txtForce.Size = new System.Drawing.Size(45, 13);
             this.txtForce.TabIndex = 62;
+            this.txtForce.Text = "txtForce";
             // 
             // txtInitiative
             // 
             this.txtInitiative.AutoSize = true;
-            this.txtInitiative.Location = new System.Drawing.Point(116, 72);
+            this.txtInitiative.Location = new System.Drawing.Point(101, 72);
             this.txtInitiative.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtInitiative.Name = "txtInitiative";
-            this.txtInitiative.Size = new System.Drawing.Size(0, 13);
+            this.txtInitiative.Size = new System.Drawing.Size(57, 13);
             this.txtInitiative.TabIndex = 62;
+            this.txtInitiative.Text = "txtInitiative";
             // 
-            // txtEnrgMana
+            // txtRessource
             // 
-            this.txtEnrgMana.AutoSize = true;
-            this.txtEnrgMana.Location = new System.Drawing.Point(116, 57);
-            this.txtEnrgMana.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtEnrgMana.Name = "txtEnrgMana";
-            this.txtEnrgMana.Size = new System.Drawing.Size(0, 13);
-            this.txtEnrgMana.TabIndex = 62;
+            this.txtRessource.AutoSize = true;
+            this.txtRessource.Location = new System.Drawing.Point(101, 57);
+            this.txtRessource.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtRessource.Name = "txtRessource";
+            this.txtRessource.Size = new System.Drawing.Size(69, 13);
+            this.txtRessource.TabIndex = 62;
+            this.txtRessource.Text = "txtRessource";
             // 
             // txtPV
             // 
             this.txtPV.AutoSize = true;
-            this.txtPV.Location = new System.Drawing.Point(116, 36);
+            this.txtPV.Location = new System.Drawing.Point(101, 36);
             this.txtPV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtPV.Name = "txtPV";
-            this.txtPV.Size = new System.Drawing.Size(0, 13);
+            this.txtPV.Size = new System.Drawing.Size(32, 13);
             this.txtPV.TabIndex = 62;
+            this.txtPV.Text = "txtPV";
             // 
             // txtClasse
             // 
             this.txtClasse.AutoSize = true;
-            this.txtClasse.Location = new System.Drawing.Point(116, 21);
+            this.txtClasse.Location = new System.Drawing.Point(101, 21);
             this.txtClasse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtClasse.Name = "txtClasse";
-            this.txtClasse.Size = new System.Drawing.Size(0, 13);
+            this.txtClasse.Size = new System.Drawing.Size(49, 13);
             this.txtClasse.TabIndex = 62;
+            this.txtClasse.Text = "txtClasse";
             // 
             // btnAccepter
             // 
@@ -516,7 +524,7 @@
             this.Controls.Add(this.pboxPretre);
             this.Controls.Add(this.pboxGuerrier);
             this.Controls.Add(this.lblClasses);
-            this.Controls.Add(this.tboxNomPerso);
+            this.Controls.Add(this.txtNomPerso);
             this.Controls.Add(this.lblNomPerso);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CreationAventurier";
@@ -535,7 +543,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblNomPerso;
-        private System.Windows.Forms.TextBox tboxNomPerso;
+        private System.Windows.Forms.TextBox txtNomPerso;
         private System.Windows.Forms.Label lblClasses;
         private System.Windows.Forms.PictureBox pboxGuerrier;
         private System.Windows.Forms.PictureBox pboxPretre;
@@ -571,7 +579,7 @@
         private System.Windows.Forms.Label txtDefense;
         private System.Windows.Forms.Label txtForce;
         private System.Windows.Forms.Label txtInitiative;
-        private System.Windows.Forms.Label txtEnrgMana;
+        private System.Windows.Forms.Label txtRessource;
         private System.Windows.Forms.Label txtPV;
         private System.Windows.Forms.Label txtClasse;
     }

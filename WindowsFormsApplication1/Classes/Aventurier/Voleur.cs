@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace JRPG.Classes.Aventurier
 {
     using li = ListeItem;
-
+    using lc = ListeClasse;
     //Classe qui a une bonne précision et esquive. Utilise de l'énergie
     class Voleur : Aventurier
     {
@@ -30,6 +30,7 @@ namespace JRPG.Classes.Aventurier
             this.NomClasse = "Voleur";
             this.Ressource = Ressource.Energie;
             this.Imageclasse = Properties.Resources.voleur;
+            this.ClassId = lc.VOLEUR_ID;
             this.Arme = li.ListeArmes[li.DAGUE_BRONZE_ID];
             this.Armure = li.ListeArmures[li.ARMURE_CUIR_ID];
         }

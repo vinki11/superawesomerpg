@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Classes\Aventurier\Aventurier.cs" />
     <Compile Include="Classes\Aventurier\Guerrier.cs" />
+    <Compile Include="Classes\Aventurier\ListeClasse.cs" />
     <Compile Include="Classes\Aventurier\Mage.cs" />
     <Compile Include="Classes\Aventurier\Pretre.cs" />
     <Compile Include="Classes\Aventurier\Voleur.cs" />

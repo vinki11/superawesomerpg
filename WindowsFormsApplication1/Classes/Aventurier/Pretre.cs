@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace JRPG.Classes.Aventurier
 {
     using li = ListeItem;
+    using lc = ListeClasse;
     //Classe qui buff et heal ses alliés principalement. Utilise de la mana.
     class Pretre : Aventurier
     {
@@ -28,6 +29,7 @@ namespace JRPG.Classes.Aventurier
             this.NomClasse = "Prêtre";
             this.Ressource = Ressource.Mana;
             this.Imageclasse = Properties.Resources.pretre;
+            this.ClassId = lc.PRETRE_ID;
             this.Arme = li.ListeArmes[li.BATON_ID];
             this.Armure = li.ListeArmures[li.ROBE_ID];
         }

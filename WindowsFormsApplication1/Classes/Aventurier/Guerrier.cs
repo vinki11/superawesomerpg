@@ -10,6 +10,7 @@ using System.Drawing;
 namespace JRPG.Classes.Aventurier
 {
     using li = ListeItem;
+    using lc = ListeClasse;
     //Classe d'aventurier qui a une bonne attaque et defense(hp) de base. Utilise de l'energie
     class Guerrier : Aventurier
     {
@@ -31,6 +32,7 @@ namespace JRPG.Classes.Aventurier
             this.NomClasse = "Guérrier";
             this.Ressource = Ressource.Energie;
             this.Imageclasse = Properties.Resources.guerrier;
+            this.ClassId = lc.GUERRIER_ID;
             this.Arme = li.ListeArmes[li.EPEE_BRONZE_ID];
             this.Armure = li.ListeArmures[li.ARMURE_BRONZE_ID];
 

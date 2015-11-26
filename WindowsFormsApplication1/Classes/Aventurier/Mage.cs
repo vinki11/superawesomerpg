@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace JRPG.Classes.Aventurier
 {
     using li = ListeItem;
+    using lc = ListeClasse;
     //Classe avec des mauvaises statistique mais des sorts puissants. Utilise de la mana.
     class Mage : Aventurier
     {
@@ -28,6 +29,7 @@ namespace JRPG.Classes.Aventurier
             this.NomClasse = "Mage";
             this.Ressource = Ressource.Mana;
             this.Imageclasse = Properties.Resources.mage;
+            this.ClassId = lc.MAGE_ID;
             this.Arme = li.ListeArmes[li.BATON_ID];
             this.Armure = li.ListeArmures[li.ROBE_ID];
         }

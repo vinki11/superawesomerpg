@@ -11,17 +11,8 @@ namespace JRPG.Classes.Aventurier
 {
     abstract class Aventurier
     {
-        #region Attributs
 
-        //Verifier si je devrais pas mettre le reste dans un autre classe
-
-        //protected Arme arme;
-        protected Bouclier bouclier;
-        
-
-        #endregion
-
-        #region Accesseurs et mutateurs
+        #region Attributs, accesseurs et mutateurs
         public int Experience { get; set; }
 
         public int Niveau { get; set; }
@@ -74,9 +65,13 @@ namespace JRPG.Classes.Aventurier
 
         public Bitmap Imageclasse { get; set; }
 
+        public int ClassId { get; protected set; }
+
         public Arme Arme { get; set; }
 
         public Armure Armure { get; set; }
+
+        public Bouclier Bouclier { get; set; }
 
         #endregion
 
