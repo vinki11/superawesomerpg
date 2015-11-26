@@ -19,7 +19,13 @@ namespace JRPG.Classes.Aventurier
 
         public string NomAventurier { get; set; }
 
+        public int ClassId { get; protected set; }
+
         public string NomClasse { get; protected set; }
+
+        public string DescriptionClasse { get; protected set; }
+
+        public Bitmap Imageclasse { get; protected set; }
 
         public Ressource Ressource { get; protected set; }
 
@@ -62,10 +68,6 @@ namespace JRPG.Classes.Aventurier
         public int Defensebase { get; set; }
 
         public int Defenseactuel { get; set; }
-
-        public Bitmap Imageclasse { get; set; }
-
-        public int ClassId { get; protected set; }
 
         public Arme Arme { get; set; }
 

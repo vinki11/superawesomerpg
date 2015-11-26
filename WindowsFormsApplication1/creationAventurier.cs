@@ -40,11 +40,6 @@ namespace JRPG
             AfficherInfosClasse(lc.GUERRIER_ID);
         }
 
-        protected override void OnFormClosing(FormClosingEventArgs e)
-        {
-            Application.Exit();
-        }
-
         protected void RadioButtons_CheckedChanged(object sender, EventArgs e)
         {
             int selectedClass = 0;
@@ -94,8 +89,12 @@ namespace JRPG
                     break;
             }
 
+            //On assigne les valeurs par defaut au champs textes
             txtClasse.Text = aventurierTempo.NomClasse;
+            txtDescription.Text = aventurierTempo.DescriptionClasse;
+
             txtPV.Text = aventurierTempo.Pvmax.ToString();
+            lblEnrgMana.Text = aventurierTempo.Ressource == Ressource.Mana ? "Mana:" : "Énergie:";
             txtRessource.Text = aventurierTempo.Ressource == Ressource.Mana ? aventurierTempo.Manamax.ToString() : aventurierTempo.Energiemax.ToString();
             txtInitiative.Text = aventurierTempo.Initiativebase.ToString();
 
@@ -167,6 +166,11 @@ namespace JRPG
             }
             
 
+        }
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

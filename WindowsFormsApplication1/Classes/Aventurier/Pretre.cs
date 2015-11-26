@@ -27,6 +27,7 @@ namespace JRPG.Classes.Aventurier
             this.Forceactuel = Forcebase = 10;
             this.Defenseactuel = Defensebase = 12;
             this.NomClasse = "Prêtre";
+            this.DescriptionClasse = "Classe de support axé sur les soins des alliés";
             this.Ressource = Ressource.Mana;
             this.Imageclasse = Properties.Resources.pretre;
             this.ClassId = lc.PRETRE_ID;

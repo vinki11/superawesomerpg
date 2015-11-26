@@ -30,6 +30,7 @@ namespace JRPG.Classes.Aventurier
             this.Forceactuel = Forcebase = 15;
             this.Defenseactuel = Defensebase = 15;
             this.NomClasse = "Guérrier";
+            this.DescriptionClasse = "Combattant au corps à corps avec une bonne force et défense";
             this.Ressource = Ressource.Energie;
             this.Imageclasse = Properties.Resources.guerrier;
             this.ClassId = lc.GUERRIER_ID;

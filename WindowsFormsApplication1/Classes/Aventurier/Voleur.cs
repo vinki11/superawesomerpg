@@ -28,6 +28,7 @@ namespace JRPG.Classes.Aventurier
             this.Forceactuel = Forcebase = 10;
             this.Defenseactuel = Defensebase = 10;
             this.NomClasse = "Voleur";
+            this.DescriptionClasse = "Combattant agile et rapide. Ses forces sont la précision et l'esquive";
             this.Ressource = Ressource.Energie;
             this.Imageclasse = Properties.Resources.voleur;
             this.ClassId = lc.VOLEUR_ID;
