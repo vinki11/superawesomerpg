@@ -27,3 +27,16 @@ C:\Users\Pierluc\Documents\GitHub\superawesomerpg\WindowsFormsApplication1\obj\D
 C:\Users\Vincent\Documents\INF1035\TP2\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\JRPG.CreationAventurier.resources
 C:\Users\Vincent\Documents\INF1035\TP2\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\JRPG.MenuPrincipal.resources
 C:\Users\Vincent\Documents\INF1035\TP2\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\JRPG.MenuJeu.resources
+D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\bin\Debug\JRPG.exe.config
+D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.exe
+D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.pdb
+D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\bin\Debug\JRPG.exe
+D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\bin\Debug\JRPG.pdb
+D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.csprojResolveAssemblyReference.cache
+D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.CreationAventurier.resources
+D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.Aventure.resources
+D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.Combat.resources
+D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.MenuPrincipal.resources
+D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.MenuJeu.resources
+D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.Properties.Resources.resources
+D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.csproj.GenerateResource.Cache

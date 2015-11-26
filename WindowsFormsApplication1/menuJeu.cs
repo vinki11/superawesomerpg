@@ -17,8 +17,6 @@ namespace JRPG
         {
             InitializeComponent();
             afficherGroupeAventurier();
-
-            //pboxAventurier1.Image = Program.groupeAventurier.Membres[1].Imageclasse;
         }
 
         private void afficherGroupeAventurier()
@@ -49,6 +47,7 @@ namespace JRPG
                 txtNom1.Text = Program.groupeAventurier.Membres[0].NomAventurier;
                 txtLvl1.Text = Program.groupeAventurier.Membres[0].Niveau.ToString();
                 txtXP1.Text = Program.groupeAventurier.Membres[0].Experience.ToString();
+                pboxAventurier1.Image = Program.groupeAventurier.Membres[0].Imageclasse;
             }
 
             if (Program.groupeAventurier.Membres.Count >= 2)

@@ -15,20 +15,20 @@ namespace JRPG.Classes.Aventurier
         #region Constructeurs
         public Guerrier(string pNomAventurier, int pExperience, int pNiveau)
         {
-            nomAventurier = pNomAventurier;
-            niveau = pNiveau;
-            experience = pExperience;
-            etat = Etat.Normal;
-            pvactuel = pvbase = pvmax = 75;
-            energieactuel = energiebase = energiemax = 100;
-            initiativeactuel = initiativebase = 10;
-            precisionactuel = precisionbase = 10;
-            esquiveactuel = esquivebase = 8;
-            forceactuel = forcebase = 15;
-            defenseactuel = defensebase = 15;
-            nomClasse = "Guérrier";
-            ressource = Ressource.Energie;
-            imageclasse = Properties.Resources.guerrier;
+            this.NomAventurier = pNomAventurier;
+            this.Niveau = pNiveau;
+            this.Experience = pExperience;
+            this.Etat = Etat.Normal;
+            this.Pvactuel = Pvbase = Pvmax = 75;
+            this.Energieactuel = Energiebase = Energiemax = 100;
+            this.Initiativeactuel = Initiativebase = 10;
+            this.Precisionactuel = Precisionbase = 10;
+            this.Esquiveactuel = Esquivebase = 8;
+            this.Forceactuel = Forcebase = 15;
+            this.Defenseactuel = Defensebase = 15;
+            this.NomClasse = "Guérrier";
+            this.Ressource = Ressource.Energie;
+            this.Imageclasse = Properties.Resources.guerrier;
 
         }
         #endregion

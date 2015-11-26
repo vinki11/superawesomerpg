@@ -13,20 +13,20 @@ namespace JRPG.Classes.Aventurier
         #region Constructeurs
         public Pretre(string pNomAventurier, int pExperience, int pNiveau)
         {
-            nomAventurier = pNomAventurier;
-            niveau = pNiveau;
-            experience = pExperience;
-            etat = Etat.Normal;
-            pvactuel = pvbase = pvmax = 65;
-            manaactuel = manabase = manamax = 150;
-            initiativeactuel = initiativebase = 8;
-            precisionactuel = precisionbase = 8;
-            esquiveactuel = esquivebase = 8;
-            forceactuel = forcebase = 10;
-            defenseactuel = defensebase = 12;
-            nomClasse = "Prêtre";
-            ressource = Ressource.Mana;
-            imageclasse = Properties.Resources.pretre;
+            this.NomAventurier = pNomAventurier;
+            this.Niveau = pNiveau;
+            this.Experience = pExperience;
+            this.Etat = Etat.Normal;
+            this.Pvactuel = Pvbase = Pvmax = 65;
+            this.Manaactuel = Manabase = Manamax = 150;
+            this.Initiativeactuel = Initiativebase = 8;
+            this.Precisionactuel = Precisionbase = 8;
+            this.Esquiveactuel = Esquivebase = 8;
+            this.Forceactuel = Forcebase = 10;
+            this.Defenseactuel = Defensebase = 12;
+            this.NomClasse = "Prêtre";
+            this.Ressource = Ressource.Mana;
+            this.Imageclasse = Properties.Resources.pretre;
         }
         #endregion
 

@@ -12,34 +12,6 @@ namespace JRPG.Classes.Aventurier
     abstract class Aventuriers
     {
         #region Attributs
-        protected int experience;
-        protected int niveau;
-        protected string nomAventurier;
-        protected string nomClasse;
-        protected Ressource ressource;
-        protected Etat etat;
-        protected int pvbase; //Inutile juste max ?
-        protected int pvmax;
-        protected int pvactuel;
-        protected int manabase; //inutile juste max ?
-        protected int manamax;
-        protected int manaactuel;
-        protected int energiemax;
-        protected int energiebase; //inutile juste max ?
-        protected int energieactuel;
-        protected int initiativebase;
-        protected int initiativeactuel;
-        protected int precisionbase;
-        protected int precisionactuel;
-        protected int esquivebase;
-        protected int esquiveactuel;
-        protected int forcebase;
-        protected int forceactuel;
-        protected int defensebase;
-        protected int defenseactuel;
-        protected Image imageclasse;
-
-
 
         //Verifier si je devrais pas mettre le reste dans un autre classe
 
@@ -50,159 +22,58 @@ namespace JRPG.Classes.Aventurier
         #endregion
 
         #region Accesseurs et mutateurs
-        public int Experience
-        {
-            get { return this.experience; }
-            set { this.experience = value; }
-        }
+        public int Experience { get; set; }
 
-        public int Niveau
-        {
-            get { return this.niveau; }
-            set { this.niveau = value; }
-        }
+        public int Niveau { get; set; }
 
-        public string NomAventurier
-        {
-            get { return this.nomAventurier; }
-            set { this.nomAventurier = value; }
-        }
+        public string NomAventurier { get; set; }
 
-        public string NomClasse
-        {
-            get { return this.nomClasse; }
-        }
+        public string NomClasse { get; protected set; }
 
-        public Ressource Ressource
-        {
-            get { return this.ressource; }
-        }
+        public Ressource Ressource { get; protected set; }
 
-        public Etat Etat
-        {
-            get { return this.etat; }
-            set { this.etat = value; }
-        }
+        public Etat Etat { get; set; }
 
-        public int Pvbase
-        {
-            get { return this.pvbase; }
-            set { this.pvbase = value; }
-        }
+        public int Pvbase { get; set; }
 
-        public int Pvmax
-        {
-            get { return this.pvmax; }
-            set { this.pvmax = value; }
-        }
+        public int Pvmax { get; set; }
 
-        public int Pvactuel
-        {
-            get { return this.pvactuel; }
-            set { this.pvactuel = value; }
-        }
+        public int Pvactuel { get; set; }
 
-        public int Manabase
-        {
-            get { return this.manabase; }
-            set { this.manabase = value; }
-        }
+        public int Manabase { get; set; }
 
-        public int Manamax
-        {
-            get { return this.manamax; }
-            set { this.manamax = value; }
-        }
+        public int Manamax { get; set; }
 
-        public int Manaactuel
-        {
-            get { return this.manaactuel; }
-            set { this.manaactuel = value; }
-        }
+        public int Manaactuel { get; set; }
 
-        public int Energiemax
-        {
-            get { return this.energiemax; }
-            set { this.energiemax = value; }
-        }
+        public int Energiemax { get; set; }
 
-        public int Energiebase
-        {
-            get { return this.energiebase; }
-            set { this.energiebase = value; }
-        }
+        public int Energiebase { get; set; }
 
-        public int Energieactuel
-        {
-            get { return this.energieactuel; }
-            set { this.energieactuel = value; }
-        }
+        public int Energieactuel { get; set; }
 
-        public int Initiativebase
-        {
-            get { return this.initiativebase; }
-            set { this.initiativebase = value; }
-        }
+        public int Initiativebase { get; set; }
 
-        public int Initiativeactuel
-        {
-            get { return this.initiativeactuel; }
-            set { this.initiativeactuel = value; }
-        }
+        public int Initiativeactuel { get; set; }
 
-        public int Precisionbase
-        {
-            get { return this.precisionbase; }
-            set { this.precisionbase = value; }
-        }
+        public int Precisionbase { get; set; }
 
-        public int Precisionactuel
-        {
-            get { return this.precisionactuel; }
-            set { this.precisionactuel = value; }
-        }
+        public int Precisionactuel { get; set; }
 
-        public int Esquivebase
-        {
-            get { return this.esquivebase; }
-            set { this.esquivebase = value; }
-        }
+        public int Esquivebase { get; set; }
 
-        public int Esquiveactuel
-        {
-            get { return this.esquiveactuel; }
-            set { this.esquiveactuel = value; }
-        }
+        public int Esquiveactuel { get; set; }
 
-        public int Forcebase
-        {
-            get { return this.forcebase; }
-            set { this.forcebase = value; }
-        }
+        public int Forcebase { get; set; }
 
-        public int Forceactuel
-        {
-            get { return this.forceactuel; }
-            set { this.forceactuel = value; }
-        }
+        public int Forceactuel { get; set; }
 
-        public int Defensebase
-        {
-            get { return this.defensebase; }
-            set { this.defensebase = value; }
-        }
+        public int Defensebase { get; set; }
 
-        public int Defenseactuel
-        {
-            get { return this.defenseactuel; }
-            set { this.defenseactuel = value; }
-        }
+        public int Defenseactuel { get; set; }
 
-        public Image Imageclasse
-        {
-            get { return this.imageclasse; }
-            set { this.imageclasse = value; }
-        }
+        public Bitmap Imageclasse { get; set; }
+
         #endregion
 
         #region Fonctions
