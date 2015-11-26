@@ -9,7 +9,7 @@ using System.Drawing;
 
 namespace JRPG.Classes.Aventurier
 {
-    abstract class Aventuriers
+    abstract class Aventurier
     {
         #region Attributs
 

@@ -9,7 +9,7 @@ using System.Drawing;
 namespace JRPG.Classes.Aventurier
 {
     //Classe d'aventurier qui a une bonne attaque et defense(hp) de base. Utilise de l'energie
-    class Guerrier : Aventuriers
+    class Guerrier : Aventurier
     {
 
         #region Constructeurs

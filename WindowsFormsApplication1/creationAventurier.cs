@@ -34,7 +34,7 @@ namespace JRPG
 
         private void btnAccepter_Click(object sender, EventArgs e)
         {
-            Aventuriers premierAventurier;
+            Aventurier premierAventurier;
 
             if (rboGuerrier.Checked)
             {

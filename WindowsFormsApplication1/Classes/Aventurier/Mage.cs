@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace JRPG.Classes.Aventurier
 {
     //Classe avec des mauvaises statistique mais des sorts puissants. Utilise de la mana.
-    class Mage : Aventuriers
+    class Mage : Aventurier
     {
         #region Constructeurs
         public Mage(string pNomAventurier, int pExperience, int pNiveau)

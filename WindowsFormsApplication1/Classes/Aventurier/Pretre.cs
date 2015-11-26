@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace JRPG.Classes.Aventurier
 {
     //Classe qui buff et heal ses alliés principalement. Utilise de la mana.
-    class Pretre : Aventuriers
+    class Pretre : Aventurier
     {
         #region Constructeurs
         public Pretre(string pNomAventurier, int pExperience, int pNiveau)

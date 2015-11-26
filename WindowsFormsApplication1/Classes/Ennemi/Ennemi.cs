@@ -110,7 +110,7 @@ namespace JRPG.Classes.Ennemi
 
         }
 
-        protected void Attaquer(Aventuriers cible)
+        protected void Attaquer(Aventurier.Aventurier cible)
         {
 
         }
