@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JRPG.Classes.Item
 {
-    class Arme : Items
+    public class Arme : Items
     {
         #region Attributs
         private int force;
@@ -14,8 +14,9 @@ namespace JRPG.Classes.Item
         #endregion
 
         #region Constructeurs
-        public Arme(string pNomItem, int pPrixRevente, int pForce, int pPrecision, bool pUtilisableGuerrier, bool pUtilisablePretre, bool pUtilisableMage, bool pUtilisableVoleur)
+        public Arme(int pIdItem, string pNomItem, int pPrixRevente, int pForce, int pPrecision, bool pUtilisableGuerrier, bool pUtilisablePretre, bool pUtilisableMage, bool pUtilisableVoleur)
         {
+            idItem = pIdItem;
             nomItem = pNomItem;
             prixRevente = pPrixRevente;
             force = pForce;

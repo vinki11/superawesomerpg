@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace JRPG.Classes.Item
 {
-    class Armure : Items
+    public class Armure : Items
     {
         #region Attributs
         private int defense;
         #endregion
 
         #region Constructeurs
-        public Armure(string pNomItem, int pPrixRevente, int pDefense, bool pUtilisableGuerrier, bool pUtilisablePretre, bool pUtilisableMage, bool pUtilisableVoleur)
+        public Armure(int pIdItem, string pNomItem, int pPrixRevente, int pDefense, bool pUtilisableGuerrier, bool pUtilisablePretre, bool pUtilisableMage, bool pUtilisableVoleur)
         {
+            idItem = pIdItem;
             nomItem = pNomItem;
             prixRevente = pPrixRevente;
             defense = pDefense;

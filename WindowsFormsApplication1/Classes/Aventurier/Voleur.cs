@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using JRPG.Classes.Item;
 using System.Threading.Tasks;
 
 
 namespace JRPG.Classes.Aventurier
 {
+    using li = ListeItem;
     //Classe qui a une bonne précision et esquive. Utilise de l'énergie
-    class Voleur : Aventuriers
+    public class Voleur : Aventuriers
     {
         #region Constructeurs
         public Voleur(string pNomAventurier, int pExperience, int pNiveau)
@@ -27,6 +29,8 @@ namespace JRPG.Classes.Aventurier
             this.NomClasse = "Voleur";
             this.Ressource = Ressource.Energie;
             this.Imageclasse = Properties.Resources.voleur;
+            this.Arme = li.ListeArmes[li.DAGUE_BRONZE_ID];
+            this.Armure = li.ListeArmures[li.ARMURE_CUIR_ID];
         }
         #endregion
 

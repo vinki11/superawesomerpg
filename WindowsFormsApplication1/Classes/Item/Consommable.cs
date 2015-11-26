@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace JRPG.Classes.Item
 {
-    class Consommable : Items
+    public class Consommable : Items
     {
         #region Attributs
         private int pv;
@@ -20,8 +20,9 @@ namespace JRPG.Classes.Item
 
 
         #region Constructeurs
-        public Consommable(string pNomItem, int pPrixRevente, int pPv, int pMana, int pDefense, int pEsquive, int pForce, int pPrecision, bool pUtilisableGuerrier, bool pUtilisablePretre, bool pUtilisableMage, bool pUtilisableVoleur)
+        public Consommable(int pIdItem, string pNomItem, int pPrixRevente, int pPv, int pMana, int pDefense, int pEsquive, int pForce, int pPrecision, bool pUtilisableGuerrier, bool pUtilisablePretre, bool pUtilisableMage, bool pUtilisableVoleur)
         {
+            idItem = pIdItem;
             nomItem = pNomItem;
             prixRevente = pPrixRevente;
             pv = pPv;

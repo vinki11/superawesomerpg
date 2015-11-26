@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using JRPG.Classes.Aventurier;
+using JRPG.Classes.Item;
 using System.Drawing;
 
 namespace JRPG.Classes.Aventurier
 {
+    using li = ListeItem;
     //Classe d'aventurier qui a une bonne attaque et defense(hp) de base. Utilise de l'energie
-    class Guerrier : Aventuriers
+    public class Guerrier : Aventuriers
     {
 
         #region Constructeurs
@@ -29,6 +31,8 @@ namespace JRPG.Classes.Aventurier
             this.NomClasse = "Guérrier";
             this.Ressource = Ressource.Energie;
             this.Imageclasse = Properties.Resources.guerrier;
+            this.Arme = li.ListeArmes[li.EPEE_BRONZE_ID];
+            this.Armure = li.ListeArmures[li.ARMURE_BRONZE_ID];
 
         }
         #endregion

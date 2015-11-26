@@ -12,6 +12,9 @@ using JRPG.Classes.Aventurier;
 
 namespace JRPG
 {
+    using p = Program;
+    using li = ListeItem;
+
     public partial class CreationAventurier : Form
     {
 
@@ -25,11 +28,48 @@ namespace JRPG
             pboxMage.Image = Properties.Resources.mage;
             pboxPretre.Image = Properties.Resources.pretre;
             pboxVoleur.Image = Properties.Resources.voleur;
+
+            rboGuerrier.CheckedChanged += new EventHandler(radioButtons_CheckedChanged);
+            rboMage.CheckedChanged += new EventHandler(radioButtons_CheckedChanged);
+            rboVoleur.CheckedChanged += new EventHandler(radioButtons_CheckedChanged);
+            rboPretre.CheckedChanged += new EventHandler(radioButtons_CheckedChanged);
+
+            //Par défaut on est sur le guerrier
+            txtArme.Text = li.ListeArmes[li.EPEE_BRONZE_ID].NomItem;
+            txtArmure.Text = li.ListeArmures[li.ARMURE_BRONZE_ID].NomItem;
+            txtBouclier.Text = "";
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        protected void radioButtons_CheckedChanged(object sender, EventArgs e)
+        {
+            if (sender is RadioButton)
+            {
+                if (rboGuerrier.Checked)
+                {
+                    txtArme.Text = li.ListeArmes[li.EPEE_BRONZE_ID].NomItem;
+                    txtArmure.Text = li.ListeArmures[li.ARMURE_BRONZE_ID].NomItem;
+                }
+                else if (rboMage.Checked)
+                {
+                    txtArme.Text = li.ListeArmes[li.BATON_ID].NomItem;
+                    txtArmure.Text = li.ListeArmures[li.ROBE_ID].NomItem;
+                }
+                else if (rboVoleur.Checked)
+                {
+                    txtArme.Text = li.ListeArmes[li.DAGUE_BRONZE_ID].NomItem;
+                    txtArmure.Text = li.ListeArmures[li.ARMURE_CUIR_ID].NomItem;
+                }
+                else if (rboPretre.Checked)
+                {
+                    txtArme.Text = li.ListeArmes[li.BATON_ID].NomItem;
+                    txtArmure.Text = li.ListeArmures[li.ROBE_ID].NomItem;
+                }
+            }
         }
 
         private void btnAccepter_Click(object sender, EventArgs e)
@@ -56,13 +96,12 @@ namespace JRPG
             {
                 premierAventurier = new Guerrier(tboxNomPerso.Text, 0, 1);
             }
-            Program.groupeAventurier.AjouterAventurier(premierAventurier);
+            p.groupeAventurier.AjouterAventurier(premierAventurier);
 
             Hide();
             MenuJeu menuJeu = new MenuJeu();
             menuJeu.ShowDialog();
 
         }
-
     }
 }

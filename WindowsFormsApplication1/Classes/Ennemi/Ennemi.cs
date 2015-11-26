@@ -7,7 +7,7 @@ using JRPG.Classes.Aventurier;
 
 namespace JRPG.Classes.Ennemi
 {
-    abstract class Ennemis
+    public abstract class Ennemis
     {
         #region  Attributs
         protected int niveau;

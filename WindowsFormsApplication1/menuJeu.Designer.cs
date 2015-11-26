@@ -98,7 +98,7 @@
             // pboxAventurier1
             // 
             this.pboxAventurier1.Location = new System.Drawing.Point(16, 39);
-            this.pboxAventurier1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pboxAventurier1.Margin = new System.Windows.Forms.Padding(2);
             this.pboxAventurier1.Name = "pboxAventurier1";
             this.pboxAventurier1.Size = new System.Drawing.Size(65, 64);
             this.pboxAventurier1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -108,7 +108,7 @@
             // pboxAventurier2
             // 
             this.pboxAventurier2.Location = new System.Drawing.Point(97, 39);
-            this.pboxAventurier2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pboxAventurier2.Margin = new System.Windows.Forms.Padding(2);
             this.pboxAventurier2.Name = "pboxAventurier2";
             this.pboxAventurier2.Size = new System.Drawing.Size(65, 64);
             this.pboxAventurier2.TabIndex = 1;
@@ -117,7 +117,7 @@
             // pboxAventurier3
             // 
             this.pboxAventurier3.Location = new System.Drawing.Point(178, 39);
-            this.pboxAventurier3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pboxAventurier3.Margin = new System.Windows.Forms.Padding(2);
             this.pboxAventurier3.Name = "pboxAventurier3";
             this.pboxAventurier3.Size = new System.Drawing.Size(65, 64);
             this.pboxAventurier3.TabIndex = 2;
@@ -139,7 +139,7 @@
             this.dgvInventaire.AllowUserToDeleteRows = false;
             this.dgvInventaire.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInventaire.Location = new System.Drawing.Point(16, 234);
-            this.dgvInventaire.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvInventaire.Margin = new System.Windows.Forms.Padding(2);
             this.dgvInventaire.Name = "dgvInventaire";
             this.dgvInventaire.ReadOnly = true;
             this.dgvInventaire.RowTemplate.Height = 24;
@@ -159,7 +159,7 @@
             // btnAventure
             // 
             this.btnAventure.Location = new System.Drawing.Point(371, 392);
-            this.btnAventure.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAventure.Margin = new System.Windows.Forms.Padding(2);
             this.btnAventure.Name = "btnAventure";
             this.btnAventure.Size = new System.Drawing.Size(100, 19);
             this.btnAventure.TabIndex = 10;
@@ -170,7 +170,7 @@
             // btnSauvegarder
             // 
             this.btnSauvegarder.Location = new System.Drawing.Point(371, 486);
-            this.btnSauvegarder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSauvegarder.Margin = new System.Windows.Forms.Padding(2);
             this.btnSauvegarder.Name = "btnSauvegarder";
             this.btnSauvegarder.Size = new System.Drawing.Size(100, 19);
             this.btnSauvegarder.TabIndex = 11;
@@ -180,7 +180,7 @@
             // btnChapelle
             // 
             this.btnChapelle.Location = new System.Drawing.Point(371, 439);
-            this.btnChapelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnChapelle.Margin = new System.Windows.Forms.Padding(2);
             this.btnChapelle.Name = "btnChapelle";
             this.btnChapelle.Size = new System.Drawing.Size(100, 19);
             this.btnChapelle.TabIndex = 12;
@@ -190,7 +190,7 @@
             // btnForge
             // 
             this.btnForge.Location = new System.Drawing.Point(371, 415);
-            this.btnForge.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnForge.Margin = new System.Windows.Forms.Padding(2);
             this.btnForge.Name = "btnForge";
             this.btnForge.Size = new System.Drawing.Size(100, 19);
             this.btnForge.TabIndex = 13;
@@ -200,7 +200,7 @@
             // btnTaverne
             // 
             this.btnTaverne.Location = new System.Drawing.Point(371, 462);
-            this.btnTaverne.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTaverne.Margin = new System.Windows.Forms.Padding(2);
             this.btnTaverne.Name = "btnTaverne";
             this.btnTaverne.Size = new System.Drawing.Size(100, 19);
             this.btnTaverne.TabIndex = 14;
@@ -231,7 +231,7 @@
             // 
             this.txtNom2.AutoSize = true;
             this.txtNom2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNom2.Location = new System.Drawing.Point(113, 106);
+            this.txtNom2.Location = new System.Drawing.Point(99, 106);
             this.txtNom2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtNom2.Name = "txtNom2";
             this.txtNom2.Size = new System.Drawing.Size(32, 13);
@@ -262,7 +262,7 @@
             // 
             this.txtNom3.AutoSize = true;
             this.txtNom3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNom3.Location = new System.Drawing.Point(200, 106);
+            this.txtNom3.Location = new System.Drawing.Point(176, 106);
             this.txtNom3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtNom3.Name = "txtNom3";
             this.txtNom3.Size = new System.Drawing.Size(32, 13);
@@ -314,9 +314,9 @@
             this.gboxInformations.Controls.Add(this.lblNom);
             this.gboxInformations.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gboxInformations.Location = new System.Drawing.Point(263, 39);
-            this.gboxInformations.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gboxInformations.Margin = new System.Windows.Forms.Padding(2);
             this.gboxInformations.Name = "gboxInformations";
-            this.gboxInformations.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gboxInformations.Padding = new System.Windows.Forms.Padding(2);
             this.gboxInformations.Size = new System.Drawing.Size(259, 314);
             this.gboxInformations.TabIndex = 24;
             this.gboxInformations.TabStop = false;
@@ -434,7 +434,7 @@
             // 
             this.cboArmure.FormattingEnabled = true;
             this.cboArmure.Location = new System.Drawing.Point(75, 252);
-            this.cboArmure.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboArmure.Margin = new System.Windows.Forms.Padding(2);
             this.cboArmure.Name = "cboArmure";
             this.cboArmure.Size = new System.Drawing.Size(92, 24);
             this.cboArmure.TabIndex = 40;
@@ -443,7 +443,7 @@
             // 
             this.cboBouclier.FormattingEnabled = true;
             this.cboBouclier.Location = new System.Drawing.Point(75, 274);
-            this.cboBouclier.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboBouclier.Margin = new System.Windows.Forms.Padding(2);
             this.cboBouclier.Name = "cboBouclier";
             this.cboBouclier.Size = new System.Drawing.Size(92, 24);
             this.cboBouclier.TabIndex = 39;
@@ -452,7 +452,7 @@
             // 
             this.cboArme.FormattingEnabled = true;
             this.cboArme.Location = new System.Drawing.Point(75, 230);
-            this.cboArme.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboArme.Margin = new System.Windows.Forms.Padding(2);
             this.cboArme.Name = "cboArme";
             this.cboArme.Size = new System.Drawing.Size(92, 24);
             this.cboArme.TabIndex = 38;
@@ -622,7 +622,7 @@
             // 
             this.txtNom1.AutoSize = true;
             this.txtNom1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNom1.Location = new System.Drawing.Point(36, 106);
+            this.txtNom1.Location = new System.Drawing.Point(20, 106);
             this.txtNom1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtNom1.Name = "txtNom1";
             this.txtNom1.Size = new System.Drawing.Size(32, 13);
@@ -746,7 +746,7 @@
             this.Controls.Add(this.pboxAventurier3);
             this.Controls.Add(this.pboxAventurier2);
             this.Controls.Add(this.pboxAventurier1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuJeu";
             this.Text = "Menu jeu";
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).EndInit();

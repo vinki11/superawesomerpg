@@ -11,6 +11,7 @@ using System.Windows.Forms;
 
 namespace JRPG
 {
+    using p = Program;
     public partial class MenuJeu : Form
     {
         public MenuJeu()
@@ -37,10 +38,10 @@ namespace JRPG
             lblXP3.Visible = false;
             txtXP3.Visible = false;
 
-            if (Program.groupeAventurier.Membres.Count >= 1)
+            if (p.groupeAventurier.Membres.Count >= 1)
             {
                 txtNom1.Visible = true;
-                lblLvl2.Visible = true;
+                lblLvl1.Visible = true;
                 txtLvl1.Visible = true;
                 lblXP1.Visible = true;
                 txtXP1.Visible = true;
@@ -50,7 +51,7 @@ namespace JRPG
                 pboxAventurier1.Image = Program.groupeAventurier.Membres[0].Imageclasse;
             }
 
-            if (Program.groupeAventurier.Membres.Count >= 2)
+            if (p.groupeAventurier.Membres.Count >= 2)
             {
                 txtNom2.Visible = true;
                 lblLvl2.Visible = true;
@@ -62,8 +63,8 @@ namespace JRPG
                 txtXP2.Text = Program.groupeAventurier.Membres[1].Experience.ToString();
                 pboxAventurier2.Image = Program.groupeAventurier.Membres[1].Imageclasse;
             }
-
-            if (Program.groupeAventurier.Membres.Count >= 3)
+        
+            if (p.groupeAventurier.Membres.Count >= 3)
             {
                 txtNom3.Visible = true;
                 lblLvl3.Visible = true;
@@ -74,6 +75,9 @@ namespace JRPG
                 txtLvl3.Text = Program.groupeAventurier.Membres[2].Niveau.ToString();
                 txtXP3.Text = Program.groupeAventurier.Membres[2].Experience.ToString();
                 pboxAventurier3.Image = Program.groupeAventurier.Membres[2].Imageclasse;
+                txtNom3.Text = p.groupeAventurier.Membres[2].NomAventurier;
+                txtLvl3.Text = p.groupeAventurier.Membres[2].Niveau.ToString();
+                txtXP3.Text = p.groupeAventurier.Membres[2].Experience.ToString();
             }
 }
 

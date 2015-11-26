@@ -9,15 +9,15 @@ using System.Drawing;
 
 namespace JRPG.Classes.Aventurier
 {
-    abstract class Aventuriers
+    public abstract class Aventuriers
     {
         #region Attributs
 
         //Verifier si je devrais pas mettre le reste dans un autre classe
 
-        protected Arme arme;
+        //protected Arme arme;
         protected Bouclier bouclier;
-        protected Armure armure; // Classe armure   
+        
 
         #endregion
 
@@ -74,6 +74,10 @@ namespace JRPG.Classes.Aventurier
 
         public Bitmap Imageclasse { get; set; }
 
+        public Arme Arme { get; set; }
+
+        public Armure Armure { get; set; }
+
         #endregion
 
         #region Fonctions
@@ -113,14 +117,14 @@ namespace JRPG.Classes.Aventurier
         #endregion
     }
 
-    enum Etat
+    public enum Etat
     {
         Normal,
         Etourdi,
         Mort
     };
 
-    enum Ressource
+    public enum Ressource
     {
         Mana,
         Energie

@@ -8,7 +8,7 @@ using JRPG.Classes.Aventurier;
 
 namespace JRPG.Classes
 {
-    class Groupe
+    public class Groupe
     {
         #region Attributs
         protected List<Aventuriers> membres;

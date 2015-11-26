@@ -6,15 +6,16 @@ using System.Threading.Tasks;
 
 namespace JRPG.Classes.Item
 {
-    class Bouclier : Items
+    public class Bouclier : Items
     {
         #region Attributs
         private int esquive;
         #endregion
 
         #region Constructeurs
-        public Bouclier(string pNomItem, int pPrixRevente, int pEsquive,  bool pUtilisableGuerrier, bool pUtilisablePretre, bool pUtilisableMage, bool pUtilisableVoleur)
+        public Bouclier(int pIdItem, string pNomItem, int pPrixRevente, int pEsquive,  bool pUtilisableGuerrier, bool pUtilisablePretre, bool pUtilisableMage, bool pUtilisableVoleur)
         {
+            idItem = pIdItem;
             nomItem = pNomItem;
             prixRevente = pPrixRevente;
             esquive = pEsquive;

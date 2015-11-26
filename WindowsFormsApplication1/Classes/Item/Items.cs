@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace JRPG.Classes.Item
 {
-    abstract class Items
+    public abstract class Items
     {
         #region Attributs
+        protected int idItem;
         protected string nomItem;
         //protected Categorie categorieItem; //C'est tu vrm valable d'avoir l'attribut et l'enum ou je suis mieu avoir simplement l'heritage
         protected int prixRevente;
@@ -19,6 +20,12 @@ namespace JRPG.Classes.Item
         #endregion
 
         #region Accesseurs et Mutateurs
+        public int IdItem
+        {
+            get { return this.idItem; }
+            set { this.idItem = value; }
+        }
+
         public string NomItem
         {
             get { return this.nomItem; }
