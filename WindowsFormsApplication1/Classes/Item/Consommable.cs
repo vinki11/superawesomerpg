@@ -9,12 +9,12 @@ namespace JRPG.Classes.Item
     public class Consommable : Item
     {
         #region Attributs
-        private int pv;
-        private int mana;
-        private int defense;
-        private int esquive;
-        private int force;
-        private int precision;
+        public int pv { get; set; }
+        public int mana { get; set; }
+        public int defense { get; set; }
+        public int esquive { get; set; }
+        public int force { get; set; }
+        public int precision { get; set; }
         //private int initiative;
         #endregion
 
@@ -22,19 +22,19 @@ namespace JRPG.Classes.Item
         #region Constructeurs
         public Consommable(int pIdItem, string pNomItem, int pPrixRevente, int pPv = 0, int pMana = 0, int pDefense = 0, int pEsquive = 0, int pForce = 0, int pPrecision = 0, bool pUtilisableGuerrier = true, bool pUtilisablePretre = true, bool pUtilisableMage = true, bool pUtilisableVoleur = true)
         {
-            idItem = pIdItem;
-            nomItem = pNomItem;
-            prixRevente = pPrixRevente;
-            pv = pPv;
-            mana = pMana;
-            defense = pDefense;
-            esquive = pEsquive;
-            force = pForce;
-            precision = pPrecision;
-            utilisableGuerrier = pUtilisableGuerrier;
-            utilisablePretre = pUtilisablePretre;
-            utilisableMage = pUtilisableMage;
-            utilisableVoleur = pUtilisableVoleur;
+            IdItem = pIdItem;
+            NomItem = pNomItem;
+            PrixRevente = pPrixRevente;
+            Pv = pPv;
+            Mana = pMana;
+            Defense = pDefense;
+            Esquive = pEsquive;
+            Force = pForce;
+            Precision = pPrecision;
+            UtilisableGuerrier = pUtilisableGuerrier;
+            UtilisablePretre = pUtilisablePretre;
+            UtilisableMage = pUtilisableMage;
+            UtilisableVoleur = pUtilisableVoleur;
         }
         #endregion
 

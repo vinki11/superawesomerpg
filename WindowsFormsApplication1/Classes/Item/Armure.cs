@@ -9,30 +9,23 @@ namespace JRPG.Classes.Item
     public class Armure : Item
     {
         #region Attributs
-        private int defense;
+        public int Defense { get; set; }
         #endregion
 
         #region Constructeurs
         public Armure(int pIdItem, string pNomItem, int pPrixRevente, int pDefense, bool pUtilisableGuerrier = false, bool pUtilisablePretre = false, bool pUtilisableMage = false, bool pUtilisableVoleur = false)
         {
-            idItem = pIdItem;
-            nomItem = pNomItem;
-            prixRevente = pPrixRevente;
-            defense = pDefense;
-            utilisableGuerrier = pUtilisableGuerrier;
-            utilisablePretre = pUtilisablePretre;
-            utilisableMage = pUtilisableMage;
-            utilisableVoleur = pUtilisableVoleur;
+            IdItem = pIdItem;
+            NomItem = pNomItem;
+            PrixRevente = pPrixRevente;
+            Defense = pDefense;
+            UtilisableGuerrier = pUtilisableGuerrier;
+            UtilisablePretre = pUtilisablePretre;
+            UtilisableMage = pUtilisableMage;
+            UtilisableVoleur = pUtilisableVoleur;
         }
         #endregion
-
-        #region Accesseurs et Mutateurs
-        public int Defense
-        {
-            get { return this.defense; }
-            set { this.defense = value; }
-        }
-        #endregion
+        
     }
 
 }

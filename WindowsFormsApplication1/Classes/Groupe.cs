@@ -11,46 +11,26 @@ namespace JRPG.Classes
     class Groupe
     {
         #region Attributs
-        protected List<Aventurier.Aventurier> membres;
-        protected int nbPiecesOr;
-        protected List<Item.Item> inventaire;
+        public List<Aventurier.Aventurier> Membres { get; set; }
+        public int NbPiecesOr { get; set; }
+        public List<Item.Item> Inventaire { get; set; }
         #endregion
 
         #region Constructeurs
         public Groupe()
         {
-            membres = new List<Aventurier.Aventurier>();
-            nbPiecesOr = 20;
-            inventaire = new List<Item.Item>();
-        }
-        #endregion
-
-        #region Accesseurs et mutateurs
-        public List<Aventurier.Aventurier> Membres
-        {
-            get { return this.membres; }
-            set { this.membres = value; }
-        }
-
-        public int NbPiecesOr
-        {
-            get { return this.nbPiecesOr; }
-            set { this.nbPiecesOr = value; }
-        }
-
-        public List<Item.Item> Inventaire
-        {
-            get { return this.inventaire; }
-            set { this.inventaire = value; }
+            Membres = new List<Aventurier.Aventurier>();
+            NbPiecesOr = 20;
+            Inventaire = new List<Item.Item>();
         }
         #endregion
 
         #region Fonctions
         public void AjouterAventurier(Aventurier.Aventurier nouveauAventurier)
         {
-            if (membres.Count() < 3)
+            if (Membres.Count() < 3)
             {
-                membres.Add(nouveauAventurier);
+                Membres.Add(nouveauAventurier);
             }
         }
 
@@ -61,7 +41,7 @@ namespace JRPG.Classes
 
         public void AjouterItem(Item.Item nouvelItem)
         {
-            inventaire.Add(nouvelItem);
+            Inventaire.Add(nouvelItem);
         }
 
         public void UtiliserItem()

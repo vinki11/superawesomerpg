@@ -9,38 +9,25 @@ namespace JRPG.Classes.Item
     public class Arme : Item
     {
         #region Attributs
-        private int force;
-        private int precision;
+        public int Force { get; set; }
+        public int Precision { get; set; }
         #endregion
 
         #region Constructeurs
         public Arme(int pIdItem, string pNomItem, int pPrixRevente, int pForce, int pPrecision, bool pUtilisableGuerrier = false, bool pUtilisablePretre = false, bool pUtilisableMage = false, bool pUtilisableVoleur = false)
         {
-            idItem = pIdItem;
-            nomItem = pNomItem;
-            prixRevente = pPrixRevente;
-            force = pForce;
-            precision = pPrecision;
-            utilisableGuerrier = pUtilisableGuerrier;
-            utilisablePretre = pUtilisablePretre;
-            utilisableMage = pUtilisableMage;
-            utilisableVoleur = pUtilisableVoleur;
+            IdItem = pIdItem;
+            NomItem = pNomItem;
+            PrixRevente = pPrixRevente;
+            Force = pForce;
+            Precision = pPrecision;
+            UtilisableGuerrier = pUtilisableGuerrier;
+            UtilisablePretre = pUtilisablePretre;
+            UtilisableMage = pUtilisableMage;
+            UtilisableVoleur = pUtilisableVoleur;
         }
         #endregion
-
-        #region Accesseurs et Mutateurs
-        public int Force
-        {
-            get { return this.force; }
-            set { this.force = value; }
-        }
-
-        public int Precision
-        {
-            get { return this.precision; }
-            set { this.precision = value; }
-        }
-        #endregion
+        
 
     }
 }

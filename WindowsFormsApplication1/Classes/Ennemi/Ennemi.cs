@@ -10,98 +10,24 @@ namespace JRPG.Classes.Ennemi
     abstract class Ennemis
     {
         #region  Attributs
-        protected int niveau;
-        protected string nom;
-        protected Etat etat;
-        protected int pvmax;
-        protected int pvactuel;
-        protected int initiative;
-        protected int precision;
-        protected int esquive;
-        protected int force;
-        protected int defense;
-        protected int gainxp;
-        protected int pieces;
+        public int Niveau { get; set; }
+        public string Nom { get; set; }
+        public Etat Etat { get; set; }
+        public int Pvmax { get; set; }
+        public int Pvactuel { get; set; }
+        public int Initiative { get; set; }
+        public int Precision { get; set; }
+        public int Esquive { get; set; }
+        public int Force { get; set; }
+        public int Defense { get; set; }
+        public int Gainxp { get; set; }
+        public int Pieces { get; set; }
 
         protected string item; // Plutot faire une fonction qui determine au hasard si un item est retrouvé en loot ?
         protected string competence; //Pas un string évidamment
         protected string strategie; // Pas un string mais un enum et surment pas ici du tout mais juste pour pas l'oublier
 
 
-        #endregion
-
-
-        #region Accesseurs et mutateurs
-        public int Niveau
-        {
-            get { return this.niveau; }
-            set { this.niveau = value; }
-        }
-
-        public string Nom
-        {
-            get { return this.nom; }
-            set { this.nom = value; }
-        }
-
-        public Etat Etat
-        {
-            get { return this.etat; }
-            set { this.etat = value; }
-        }
-
-        public int Pvmax
-        {
-            get { return this.pvmax; }
-            set { this.pvmax = value; }
-        }
-
-        public int Pvactuel
-        {
-            get { return this.pvactuel; }
-            set { this.pvactuel = value; }
-        }
-
-        public int Initiative
-        {
-            get { return this.initiative; }
-            set { this.initiative = value; }
-        }
-
-        public int Precision
-        {
-            get { return this.precision; }
-            set { this.precision = value; }
-        }
-
-        public int Esquive
-        {
-            get { return this.esquive; }
-            set { this.esquive = value; }
-        }
-
-        public int Force
-        {
-            get { return this.force; }
-            set { this.force = value; }
-        }
-
-        public int Defense
-        {
-            get { return this.defense; }
-            set { this.defense = value; }
-        }
-        public int Gainxp
-        {
-            get { return this.gainxp; }
-            set { this.gainxp = value; }
-        }
-
-        public int Pieces
-        {
-            get { return this.pieces; }
-            set { this.pieces = value; }
-        }
         #endregion
 
         #region Fonctions

@@ -12,7 +12,7 @@ namespace JRPG.Classes.Aventurier
     abstract class Aventurier
     {
 
-        #region Attributs, accesseurs et mutateurs
+        #region Attributs
         public int Experience { get; set; }
 
         public int Niveau { get; set; }

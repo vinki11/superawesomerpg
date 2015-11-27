@@ -11,10 +11,10 @@ namespace JRPG.Classes
     class GroupeEnnemi
     {
         #region Attributs
-        protected List<Ennemis> listeEnnemi;
-        protected int totalPieces;
-        protected int totalXp;
-        protected List<Item.Item> listeItem;
+        public List<Ennemis> ListeEnnemi { get; set; }
+        public int TotalPieces { get; set; }
+        public int TotalXp { get; set; }
+        public List<Item.Item> ListeItem { get; set; }
         #endregion
 
         #region Constructeurs
@@ -22,37 +22,10 @@ namespace JRPG.Classes
         // qui le fera verra en temps et lieu (xp et pieces calculé assuré et non par constructeur)
         public GroupeEnnemi() 
         {
-            listeEnnemi = new List<Ennemis>();
-            totalPieces = 0;
-            totalXp = 0;
-            listeItem = new List<Item.Item>();
-        }
-        #endregion
-
-        #region Accesseurs et mutateurs
-        public List<Ennemis> ListeEnnemi
-        {
-            get { return this.listeEnnemi; }
-            set { this.listeEnnemi = value; }
-        }
-
-        public int TotalPieces
-        {
-            get { return this.totalPieces; }
-            set { this.totalPieces = value; }
-        }
-
-        public int TotalXp
-        {
-            get { return this.totalXp; }
-            set { this.totalXp = value; }
-        }
-
-
-        public List<Item.Item> ListeItem
-        {
-            get { return this.listeItem; }
-            set { this.listeItem = value; }
+            ListeEnnemi = new List<Ennemis>();
+            TotalPieces = 0;
+            TotalXp = 0;
+            ListeItem = new List<Item.Item>();
         }
         #endregion
 
