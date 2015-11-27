@@ -18,8 +18,6 @@ namespace JRPG
 
     public partial class CreationAventurier : Form
     {
-        bool nomValide = false;
-
         public CreationAventurier()
         {
             InitializeComponent();
@@ -110,28 +108,27 @@ namespace JRPG
         }
 
         //Fonction qui valide si le nom du personnage est valide
-        private void ValiderNom(string nom)
+        private bool ValiderNom(string nom)
         {
             if (string.IsNullOrEmpty(nom))
             {
                 MessageBox.Show("Vous devez saisir un nom de personnage!", "Nom du personnage invalide");
+                return false;
             }
             else if (!nom.All(char.IsLetter))
             {
                 MessageBox.Show("Votre nom de personnage doit contenir seulement des lettres!", "Nom du personnage invalide");
+                return false;
             }
             else
             {
-                nomValide = true;
+                return true;
             }
         }
 
         private void btnAccepter_Click(object sender, EventArgs e)
         {
-            ValiderNom(txtNomPerso.Text);
-
-
-            if (nomValide)
+            if (ValiderNom(txtNomPerso.Text))
             {
                 Aventurier premierAventurier;
                 premierAventurier = new Guerrier(txtNomPerso.Text, 0, 1); // Par défaut un guerrier
@@ -153,14 +150,7 @@ namespace JRPG
                     premierAventurier = new Pretre(txtNomPerso.Text, 0, 1);
                 }
 
-
-                //Test pour afficher un full party
-                Aventurier deuxiemeAventurier = new Mage("Chose",0,1);
-                Aventurier troisiemeAventurier = new Voleur ("Binne",1000,2);
-
                 p.groupeAventurier.AjouterAventurier(premierAventurier);
-                p.groupeAventurier.AjouterAventurier(deuxiemeAventurier);
-                p.groupeAventurier.AjouterAventurier(troisiemeAventurier);
                 //Par defaut le groupe d'aventurier commence avec 2 potion de vie et 1 de mana (surtout un test pour l'affichage de l'inventaire)
                 p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_VIE_MINEURE_ID]);
                 p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_VIE_MINEURE_ID]);

@@ -62,11 +62,21 @@ namespace JRPG
                 i++;
             }
 
-            /*listInventaire.Items.Add("Nom Item");
-            foreach (var item in p.groupeAventurier.Inventaire)
+            listInventaire.View = View.Details;
+            listInventaire.Width = 229;
+            listInventaire.Columns.Add("Nom de l'item", 175);
+            listInventaire.Columns.Add("Nombre",50);
+
+            var query = p.groupeAventurier.Inventaire.Select(x => x)
+                .GroupBy(x => x, (a, b) => new { Nom = a.NomItem, Nb = b.Count() });
+
+            var j = 0;
+            foreach (var item in query)
             {
-                listInventaire.Items[0].SubItems.Add(item.NomItem);
-            }*/
+                listInventaire.Items.Add(item.Nom);
+                listInventaire.Items[j].SubItems.Add(item.Nb.ToString());
+                j++;
+            }
         }
 
         private void btnAventure_Click(object sender, EventArgs e)
