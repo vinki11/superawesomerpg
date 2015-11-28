@@ -36,6 +36,8 @@ namespace JRPG.Classes.Aventurier
             this.ClassId = lc.GUERRIER_ID;
             this.Arme = li.ListeArmes[li.EPEE_BRONZE_ID];
             this.Armure = li.ListeArmures[li.ARMURE_BRONZE_ID];
+            //test tempo affichage d'un bouclier
+            this.Bouclier = li.ListeBoucliers[li.BOUCLIER_BOIS_ID];
 
         }
         #endregion

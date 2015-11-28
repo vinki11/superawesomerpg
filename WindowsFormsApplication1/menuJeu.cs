@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using JRPG.Classes.Aventurier;
+using JRPG.Classes.Item;
 
 
 namespace JRPG
 {
     using p = Program;
+    using lc = ListeClasse;
+    using li = ListeItem;
 
     public partial class MenuJeu : Form
     {
@@ -84,6 +87,7 @@ namespace JRPG
 
         private void AfficherDetailsAventurier(int indexAventurier)
         {
+            //Affichage des infos de l'aventurier
             txtNom.Text = p.groupeAventurier.Membres[indexAventurier].NomAventurier;
             txtNiv.Text = p.groupeAventurier.Membres[indexAventurier].Niveau.ToString();
             txtXP.Text = p.groupeAventurier.Membres[indexAventurier].Experience.ToString();
@@ -95,11 +99,12 @@ namespace JRPG
             txtRessource.Text = p.groupeAventurier.Membres[indexAventurier].Ressource == Ressource.Mana ? p.groupeAventurier.Membres[indexAventurier].Manamax.ToString() : p.groupeAventurier.Membres[indexAventurier].Energiemax.ToString();
             txtInitiative.Text = p.groupeAventurier.Membres[indexAventurier].Initiativebase.ToString();
 
-            txtForce.Text = p.groupeAventurier.Membres[indexAventurier].Forcebase.ToString();
+            txtForce.Text = p.groupeAventurier.Membres[indexAventurier].Forceactuel.ToString();
             txtDefense.Text = p.groupeAventurier.Membres[indexAventurier].Defensebase.ToString();
             txtPrecision.Text = p.groupeAventurier.Membres[indexAventurier].Precisionbase.ToString();
             txtEsquive.Text = p.groupeAventurier.Membres[indexAventurier].Esquivebase.ToString();
 
+            //Gestion de la bordure du picturebox sélectionné
             for (var i = 1; i < 4;i++)
             {
                 PictureBox pBoxNotSelected = (PictureBox)this.Controls.Find("pboxAventurier" + i, true)[0];
@@ -112,7 +117,83 @@ namespace JRPG
             pBoxShow.Visible = true;
             PictureBox pBoxHide = (PictureBox)this.Controls.Find("pboxAventurier" + (indexAventurier + 1), true)[0];
             pBoxHide.Visible = false;
-            //Faire les armes ensuite (avec la gestion d'equipement ?
+
+            //Gestion des armes de l'aventurier
+
+            /*
+             Aller chercher l'id de la la classe de l'aventurier sélectionner - Done
+             aller chercher toutes les armes dans l'inventaire - done
+             que cet classe peut porté et l'ajouté au combobox - done
+             Ajouter l'arme qu'il a présentement au combobox - done
+             Sélectionner par defaut cet arme - done
+             enlever les doublons  - done
+             reset le combobox - done
+            */
+            cboArme.Items.Clear();
+
+            ComboboxItem cbItem;
+            cbItem = new ComboboxItem();
+            cbItem.Text = p.groupeAventurier.Membres[indexAventurier].Arme.NomItem;
+            cbItem.Value = p.groupeAventurier.Membres[indexAventurier].Arme.IdItem;
+            cboArme.Items.Add(cbItem);
+            cboArme.SelectedItem = cbItem;
+
+           foreach (Item item in p.groupeAventurier.Inventaire)
+            {
+                if (item is Arme)
+                {
+                    cbItem = new ComboboxItem();
+                    cbItem.Text = item.NomItem;
+                    cbItem.Value = item.IdItem;
+                    switch (p.groupeAventurier.Membres[indexAventurier].ClassId)
+                    {
+                        case lc.GUERRIER_ID:
+                            if (item.UtilisableGuerrier)
+                            {
+                                if (!cboArme.Items.Contains(cbItem))
+                                {
+                                    cboArme.Items.Add(cbItem);
+                                }
+                            }
+                            break;
+
+                        case lc.MAGE_ID:
+                            if (item.UtilisableMage)
+                            {
+                                if (!cboArme.Items.Contains(cbItem))
+                                {
+                                    cboArme.Items.Add(cbItem);
+                                }
+                            }
+                            break;
+
+                        case lc.VOLEUR_ID:
+                            if (item.UtilisableVoleur)
+                            {
+                                if (!cboArme.Items.Contains(cbItem))
+                                {
+                                    cboArme.Items.Add(cbItem);
+                                }
+                            }
+                            break;
+
+                        case lc.PRETRE_ID:
+                            if (item.UtilisablePretre)
+                            {
+                                if (!cboArme.Items.Contains(cbItem))
+                                {
+                                    cboArme.Items.Add(cbItem);
+                                }
+                            }
+                            break;
+                    }
+                }
+            }
+
+
+
+            // this.cboArme.Items.Add()
+
         }
 
         private void btnAventure_Click(object sender, EventArgs e)
@@ -155,6 +236,39 @@ namespace JRPG
         private void pboxAventurier3_Click(object sender, EventArgs e)
         {
             AfficherDetailsAventurier(2);
+        }
+    }
+
+    public class ComboboxItem :IEquatable<ComboboxItem>
+    {
+        public string Text { get; set; }
+        public object Value { get; set; }
+
+        public override string ToString()
+        {
+            return Text;
+        }
+
+
+        public bool Equals(ComboboxItem other)
+        {
+            return (this.ToString() == other.ToString());
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null)
+                return base.Equals(obj);
+
+            if (obj is ComboboxItem)
+                return this.Equals((ComboboxItem)obj);
+            else
+                return false;
+        }
+
+        public override int GetHashCode()
+        {
+            return this.ToString().GetHashCode();
         }
     }
 }
