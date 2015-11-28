@@ -87,7 +87,8 @@ namespace JRPG
 
         private void AfficherDetailsAventurier(int indexAventurier)
         {
-            //Affichage des infos de l'aventurier
+
+            #region Infos aventurier
             txtNom.Text = p.groupeAventurier.Membres[indexAventurier].NomAventurier;
             txtNiv.Text = p.groupeAventurier.Membres[indexAventurier].Niveau.ToString();
             txtXP.Text = p.groupeAventurier.Membres[indexAventurier].Experience.ToString();
@@ -103,8 +104,9 @@ namespace JRPG
             txtDefense.Text = p.groupeAventurier.Membres[indexAventurier].Defensebase.ToString();
             txtPrecision.Text = p.groupeAventurier.Membres[indexAventurier].Precisionbase.ToString();
             txtEsquive.Text = p.groupeAventurier.Membres[indexAventurier].Esquivebase.ToString();
+            #endregion
 
-            //Gestion de la bordure du picturebox sélectionné
+            #region Picturebox sélectionné
             for (var i = 1; i < 4;i++)
             {
                 PictureBox pBoxNotSelected = (PictureBox)this.Controls.Find("pboxAventurier" + i, true)[0];
@@ -117,42 +119,29 @@ namespace JRPG
             pBoxShow.Visible = true;
             PictureBox pBoxHide = (PictureBox)this.Controls.Find("pboxAventurier" + (indexAventurier + 1), true)[0];
             pBoxHide.Visible = false;
+            #endregion
 
-            //Gestion des armes de l'aventurier
+            #region  Armes
 
-            /*
-             Aller chercher l'id de la la classe de l'aventurier sélectionner - Done
-             aller chercher toutes les armes dans l'inventaire - done
-             que cet classe peut porté et l'ajouté au combobox - done
-             Ajouter l'arme qu'il a présentement au combobox - done
-             Sélectionner par defaut cet arme - done
-             enlever les doublons  - done
-             reset le combobox - done
-            */
             cboArme.Items.Clear();
 
-            ComboboxItem cbItem;
-            cbItem = new ComboboxItem();
-            cbItem.Text = p.groupeAventurier.Membres[indexAventurier].Arme.NomItem;
-            cbItem.Value = p.groupeAventurier.Membres[indexAventurier].Arme.IdItem;
-            cboArme.Items.Add(cbItem);
-            cboArme.SelectedItem = cbItem;
+            ComboboxItem cbItemArme;
 
-           foreach (Item item in p.groupeAventurier.Inventaire)
+            foreach (Item item in p.groupeAventurier.Inventaire)
             {
                 if (item is Arme)
                 {
-                    cbItem = new ComboboxItem();
-                    cbItem.Text = item.NomItem;
-                    cbItem.Value = item.IdItem;
+                    cbItemArme = new ComboboxItem();
+                    cbItemArme.Text = item.NomItem;
+                    cbItemArme.Value = item.IdItem;
                     switch (p.groupeAventurier.Membres[indexAventurier].ClassId)
                     {
                         case lc.GUERRIER_ID:
                             if (item.UtilisableGuerrier)
                             {
-                                if (!cboArme.Items.Contains(cbItem))
+                                if (!cboArme.Items.Contains(cbItemArme))
                                 {
-                                    cboArme.Items.Add(cbItem);
+                                    cboArme.Items.Add(cbItemArme);
                                 }
                             }
                             break;
@@ -160,9 +149,9 @@ namespace JRPG
                         case lc.MAGE_ID:
                             if (item.UtilisableMage)
                             {
-                                if (!cboArme.Items.Contains(cbItem))
+                                if (!cboArme.Items.Contains(cbItemArme))
                                 {
-                                    cboArme.Items.Add(cbItem);
+                                    cboArme.Items.Add(cbItemArme);
                                 }
                             }
                             break;
@@ -170,9 +159,9 @@ namespace JRPG
                         case lc.VOLEUR_ID:
                             if (item.UtilisableVoleur)
                             {
-                                if (!cboArme.Items.Contains(cbItem))
+                                if (!cboArme.Items.Contains(cbItemArme))
                                 {
-                                    cboArme.Items.Add(cbItem);
+                                    cboArme.Items.Add(cbItemArme);
                                 }
                             }
                             break;
@@ -180,9 +169,9 @@ namespace JRPG
                         case lc.PRETRE_ID:
                             if (item.UtilisablePretre)
                             {
-                                if (!cboArme.Items.Contains(cbItem))
+                                if (!cboArme.Items.Contains(cbItemArme))
                                 {
-                                    cboArme.Items.Add(cbItem);
+                                    cboArme.Items.Add(cbItemArme);
                                 }
                             }
                             break;
@@ -191,8 +180,154 @@ namespace JRPG
             }
 
 
+            cbItemArme = new ComboboxItem();
+            cbItemArme.Text = p.groupeAventurier.Membres[indexAventurier].Arme != null ? p.groupeAventurier.Membres[indexAventurier].Arme.NomItem : "";
+            cbItemArme.Value = p.groupeAventurier.Membres[indexAventurier].Arme != null ? p.groupeAventurier.Membres[indexAventurier].Arme.IdItem : -1;
+            if (!cboArme.Items.Contains(cbItemArme))
+            {
+                cboArme.Items.Add(cbItemArme);
+            }
+            cboArme.SelectedItem = cbItemArme;
 
-            // this.cboArme.Items.Add()
+            #endregion
+
+            #region Armures
+
+            cboArmure.Items.Clear();
+
+            ComboboxItem cbItemArmure;
+
+            foreach (Item item in p.groupeAventurier.Inventaire)
+            {
+                if (item is Armure)
+                {
+                    cbItemArmure = new ComboboxItem();
+                    cbItemArmure.Text = item.NomItem;
+                    cbItemArmure.Value = item.IdItem;
+                    switch (p.groupeAventurier.Membres[indexAventurier].ClassId)
+                    {
+                        case lc.GUERRIER_ID:
+                            if (item.UtilisableGuerrier)
+                            {
+                                if (!cboArmure.Items.Contains(cbItemArmure))
+                                {
+                                    cboArmure.Items.Add(cbItemArmure);
+                                }
+                            }
+                            break;
+
+                        case lc.MAGE_ID:
+                            if (item.UtilisableMage)
+                            {
+                                if (!cboArmure.Items.Contains(cbItemArmure))
+                                {
+                                    cboArmure.Items.Add(cbItemArmure);
+                                }
+                            }
+                            break;
+
+                        case lc.VOLEUR_ID:
+                            if (item.UtilisableVoleur)
+                            {
+                                if (!cboArmure.Items.Contains(cbItemArmure))
+                                {
+                                    cboArmure.Items.Add(cbItemArmure);
+                                }
+                            }
+                            break;
+
+                        case lc.PRETRE_ID:
+                            if (item.UtilisablePretre)
+                            {
+                                if (!cboArmure.Items.Contains(cbItemArmure))
+                                {
+                                    cboArmure.Items.Add(cbItemArmure);
+                                }
+                            }
+                            break;
+                    }
+                }
+            }
+            
+            cbItemArmure = new ComboboxItem();
+            cbItemArmure.Text = p.groupeAventurier.Membres[indexAventurier].Armure != null ? p.groupeAventurier.Membres[indexAventurier].Armure.NomItem : "";
+            cbItemArmure.Value = p.groupeAventurier.Membres[indexAventurier].Armure != null ? p.groupeAventurier.Membres[indexAventurier].Armure.IdItem : -1;
+            if (!cboArmure.Items.Contains(cbItemArmure))
+            {
+                cboArmure.Items.Add(cbItemArmure);
+            }
+            cboArmure.SelectedItem = cbItemArmure;
+
+            #endregion
+
+            #region Boucliers
+
+            cboBouclier.Items.Clear();
+
+            ComboboxItem cbItemBouclier;
+
+            foreach (Item item in p.groupeAventurier.Inventaire)
+            {
+                if (item is Bouclier)
+                {
+                    cbItemBouclier = new ComboboxItem();
+                    cbItemBouclier.Text = item.NomItem;
+                    cbItemBouclier.Value = item.IdItem;
+                    switch (p.groupeAventurier.Membres[indexAventurier].ClassId)
+                    {
+                        case lc.GUERRIER_ID:
+                            if (item.UtilisableGuerrier)
+                            {
+                                if (!cboBouclier.Items.Contains(cbItemBouclier))
+                                {
+                                    cboBouclier.Items.Add(cbItemBouclier);
+                                }
+                            }
+                            break;
+
+                        case lc.MAGE_ID:
+                            if (item.UtilisableMage)
+                            {
+                                if (!cboBouclier.Items.Contains(cbItemBouclier))
+                                {
+                                    cboBouclier.Items.Add(cbItemBouclier);
+                                }
+                            }
+                            break;
+
+                        case lc.VOLEUR_ID:
+                            if (item.UtilisableVoleur)
+                            {
+                                if (!cboBouclier.Items.Contains(cbItemBouclier))
+                                {
+                                    cboBouclier.Items.Add(cbItemBouclier);
+                                }
+                            }
+                            break;
+
+                        case lc.PRETRE_ID:
+                            if (item.UtilisablePretre)
+                            {
+                                if (!cboBouclier.Items.Contains(cbItemBouclier))
+                                {
+                                    cboBouclier.Items.Add(cbItemBouclier);
+                                }
+                            }
+                            break;
+                    }
+                }
+            }
+
+            cbItemBouclier = new ComboboxItem();
+            cbItemBouclier.Text = p.groupeAventurier.Membres[indexAventurier].Bouclier != null ? p.groupeAventurier.Membres[indexAventurier].Bouclier.NomItem : "";
+            cbItemBouclier.Value = p.groupeAventurier.Membres[indexAventurier].Bouclier != null ? p.groupeAventurier.Membres[indexAventurier].Bouclier.IdItem : -1;
+            if (!cboBouclier.Items.Contains(cbItemBouclier))
+            {
+                cboBouclier.Items.Add(cbItemBouclier);
+            }
+            cboBouclier.SelectedItem = cbItemBouclier;
+
+            #endregion
 
         }
 

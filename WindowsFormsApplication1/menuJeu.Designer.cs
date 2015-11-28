@@ -439,6 +439,7 @@
             this.cboArmure.Margin = new System.Windows.Forms.Padding(2);
             this.cboArmure.Name = "cboArmure";
             this.cboArmure.Size = new System.Drawing.Size(154, 24);
+            this.cboArmure.Sorted = true;
             this.cboArmure.TabIndex = 40;
             // 
             // cboBouclier
@@ -448,6 +449,7 @@
             this.cboBouclier.Margin = new System.Windows.Forms.Padding(2);
             this.cboBouclier.Name = "cboBouclier";
             this.cboBouclier.Size = new System.Drawing.Size(154, 24);
+            this.cboBouclier.Sorted = true;
             this.cboBouclier.TabIndex = 39;
             // 
             // txtNom
@@ -467,6 +469,7 @@
             this.cboArme.Margin = new System.Windows.Forms.Padding(2);
             this.cboArme.Name = "cboArme";
             this.cboArme.Size = new System.Drawing.Size(154, 24);
+            this.cboArme.Sorted = true;
             this.cboArme.TabIndex = 38;
             // 
             // lblBouclier

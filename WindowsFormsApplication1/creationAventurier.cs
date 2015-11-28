@@ -151,25 +151,12 @@ namespace JRPG
                 }
 
                 p.groupeAventurier.AjouterAventurier(premierAventurier);
-                //tempo test full party
-                Aventurier deuxiemeAventurier;
-                Aventurier troisiemeAventurier;
-                deuxiemeAventurier = new Pretre("Jean-Paul II", 0, 1);
-                troisiemeAventurier = new Voleur("Cout", 0, 1);
-                p.groupeAventurier.AjouterAventurier(deuxiemeAventurier);
-                p.groupeAventurier.AjouterAventurier(troisiemeAventurier);
 
                 //Par defaut le groupe d'aventurier commence avec 2 potion de vie et 1 de mana (surtout un test pour l'affichage de l'inventaire)
                 p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_VIE_MINEURE_ID]);
                 p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_VIE_MINEURE_ID]);
                 p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_MANA_MINEURE_ID]);
-
-                //tempo test pour équipper un item (et faire affiché l'équipement en meme temps
-                p.groupeAventurier.AjouterItem(li.ListeArmes[li.BATON_ID]);
-                p.groupeAventurier.AjouterItem(li.ListeArmes[li.EPEE_BRONZE_ID]);
-                p.groupeAventurier.AjouterItem(li.ListeArmures[li.ROBE_ID]);
-                p.groupeAventurier.AjouterItem(li.ListeBoucliers[li.ECU_ACIER_ID]);
-
+                
                 Hide();
                 MenuJeu menuJeu = new MenuJeu();
                 menuJeu.ShowDialog();
