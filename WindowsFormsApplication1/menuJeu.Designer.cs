@@ -57,9 +57,9 @@
             this.txtClasse = new System.Windows.Forms.Label();
             this.txtXP = new System.Windows.Forms.Label();
             this.txtNiv = new System.Windows.Forms.Label();
-            this.txtNom = new System.Windows.Forms.Label();
             this.cboArmure = new System.Windows.Forms.ComboBox();
             this.cboBouclier = new System.Windows.Forms.ComboBox();
+            this.txtNom = new System.Windows.Forms.Label();
             this.cboArme = new System.Windows.Forms.ComboBox();
             this.lblBouclier = new System.Windows.Forms.Label();
             this.lblArmure = new System.Windows.Forms.Label();
@@ -88,14 +88,21 @@
             this.txtNom1 = new System.Windows.Forms.Label();
             this.lblLvl1 = new System.Windows.Forms.Label();
             this.listInventaire = new System.Windows.Forms.ListView();
+            this.pboxSelectedAventurier1 = new System.Windows.Forms.PictureBox();
+            this.pboxSelectedAventurier2 = new System.Windows.Forms.PictureBox();
+            this.pboxSelectedAventurier3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).BeginInit();
             this.gboxInformations.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxSelectedAventurier1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxSelectedAventurier2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxSelectedAventurier3)).BeginInit();
             this.SuspendLayout();
             // 
             // pboxAventurier1
             // 
+            this.pboxAventurier1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pboxAventurier1.Location = new System.Drawing.Point(19, 39);
             this.pboxAventurier1.Margin = new System.Windows.Forms.Padding(2);
             this.pboxAventurier1.Name = "pboxAventurier1";
@@ -103,9 +110,11 @@
             this.pboxAventurier1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxAventurier1.TabIndex = 0;
             this.pboxAventurier1.TabStop = false;
+            this.pboxAventurier1.Click += new System.EventHandler(this.pboxAventurier1_Click);
             // 
             // pboxAventurier2
             // 
+            this.pboxAventurier2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pboxAventurier2.Location = new System.Drawing.Point(102, 39);
             this.pboxAventurier2.Margin = new System.Windows.Forms.Padding(2);
             this.pboxAventurier2.Name = "pboxAventurier2";
@@ -113,9 +122,11 @@
             this.pboxAventurier2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxAventurier2.TabIndex = 1;
             this.pboxAventurier2.TabStop = false;
+            this.pboxAventurier2.Click += new System.EventHandler(this.pboxAventurier2_Click);
             // 
             // pboxAventurier3
             // 
+            this.pboxAventurier3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pboxAventurier3.Location = new System.Drawing.Point(185, 39);
             this.pboxAventurier3.Margin = new System.Windows.Forms.Padding(2);
             this.pboxAventurier3.Name = "pboxAventurier3";
@@ -123,6 +134,7 @@
             this.pboxAventurier3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxAventurier3.TabIndex = 2;
             this.pboxAventurier3.TabStop = false;
+            this.pboxAventurier3.Click += new System.EventHandler(this.pboxAventurier3_Click);
             // 
             // lblGroupeAventurier
             // 
@@ -420,16 +432,6 @@
             this.txtNiv.TabIndex = 42;
             this.txtNiv.Text = "txtNiv";
             // 
-            // txtNom
-            // 
-            this.txtNom.AutoSize = true;
-            this.txtNom.Location = new System.Drawing.Point(105, 20);
-            this.txtNom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(49, 16);
-            this.txtNom.TabIndex = 41;
-            this.txtNom.Text = "txtNom";
-            // 
             // cboArmure
             // 
             this.cboArmure.FormattingEnabled = true;
@@ -447,6 +449,16 @@
             this.cboBouclier.Name = "cboBouclier";
             this.cboBouclier.Size = new System.Drawing.Size(92, 24);
             this.cboBouclier.TabIndex = 39;
+            // 
+            // txtNom
+            // 
+            this.txtNom.AutoSize = true;
+            this.txtNom.Location = new System.Drawing.Point(105, 20);
+            this.txtNom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtNom.Name = "txtNom";
+            this.txtNom.Size = new System.Drawing.Size(49, 16);
+            this.txtNom.TabIndex = 41;
+            this.txtNom.Text = "txtNom";
             // 
             // cboArme
             // 
@@ -721,11 +733,50 @@
             this.listInventaire.TabIndex = 49;
             this.listInventaire.UseCompatibleStateImageBehavior = false;
             // 
+            // pboxSelectedAventurier1
+            // 
+            this.pboxSelectedAventurier1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pboxSelectedAventurier1.Location = new System.Drawing.Point(19, 39);
+            this.pboxSelectedAventurier1.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxSelectedAventurier1.Name = "pboxSelectedAventurier1";
+            this.pboxSelectedAventurier1.Size = new System.Drawing.Size(65, 64);
+            this.pboxSelectedAventurier1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxSelectedAventurier1.TabIndex = 50;
+            this.pboxSelectedAventurier1.TabStop = false;
+            this.pboxSelectedAventurier1.Paint += new System.Windows.Forms.PaintEventHandler(this.pboxSelectedAventurier1_Paint);
+            // 
+            // pboxSelectedAventurier2
+            // 
+            this.pboxSelectedAventurier2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pboxSelectedAventurier2.Location = new System.Drawing.Point(102, 39);
+            this.pboxSelectedAventurier2.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxSelectedAventurier2.Name = "pboxSelectedAventurier2";
+            this.pboxSelectedAventurier2.Size = new System.Drawing.Size(65, 64);
+            this.pboxSelectedAventurier2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxSelectedAventurier2.TabIndex = 51;
+            this.pboxSelectedAventurier2.TabStop = false;
+            this.pboxSelectedAventurier2.Paint += new System.Windows.Forms.PaintEventHandler(this.pboxSelectedAventurier2_Paint);
+            // 
+            // pboxSelectedAventurier3
+            // 
+            this.pboxSelectedAventurier3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pboxSelectedAventurier3.Location = new System.Drawing.Point(185, 39);
+            this.pboxSelectedAventurier3.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxSelectedAventurier3.Name = "pboxSelectedAventurier3";
+            this.pboxSelectedAventurier3.Size = new System.Drawing.Size(65, 64);
+            this.pboxSelectedAventurier3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxSelectedAventurier3.TabIndex = 52;
+            this.pboxSelectedAventurier3.TabStop = false;
+            this.pboxSelectedAventurier3.Paint += new System.Windows.Forms.PaintEventHandler(this.pboxSelectedAventurier3_Paint);
+            // 
             // MenuJeu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(531, 544);
+            this.Controls.Add(this.pboxSelectedAventurier3);
+            this.Controls.Add(this.pboxSelectedAventurier2);
+            this.Controls.Add(this.pboxSelectedAventurier1);
             this.Controls.Add(this.listInventaire);
             this.Controls.Add(this.pboxAventurier1);
             this.Controls.Add(this.lblLvl1);
@@ -763,6 +814,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).EndInit();
             this.gboxInformations.ResumeLayout(false);
             this.gboxInformations.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxSelectedAventurier1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxSelectedAventurier2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxSelectedAventurier3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -829,6 +883,9 @@
         private System.Windows.Forms.Label lblLvl1;
         private System.Windows.Forms.PictureBox pboxAventurier1;
         private System.Windows.Forms.ListView listInventaire;
+        private System.Windows.Forms.PictureBox pboxSelectedAventurier1;
+        private System.Windows.Forms.PictureBox pboxSelectedAventurier2;
+        private System.Windows.Forms.PictureBox pboxSelectedAventurier3;
     }
 }
 

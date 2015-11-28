@@ -49,6 +49,8 @@ namespace JRPG
 
             PictureBox pBox = (PictureBox) this.Controls.Find("pboxAventurier" + i, true)[0];
             pBox.Image = aventurier.Imageclasse;
+            PictureBox pBoxSelected = (PictureBox)this.Controls.Find("pboxSelectedAventurier" + i, true)[0];
+            pBoxSelected.Image = aventurier.Imageclasse;
         }
 
         private void AfficherGroupeAventurier()
@@ -98,6 +100,18 @@ namespace JRPG
             txtPrecision.Text = p.groupeAventurier.Membres[indexAventurier].Precisionbase.ToString();
             txtEsquive.Text = p.groupeAventurier.Membres[indexAventurier].Esquivebase.ToString();
 
+            for (var i = 1; i < 4;i++)
+            {
+                PictureBox pBoxNotSelected = (PictureBox)this.Controls.Find("pboxAventurier" + i, true)[0];
+                pBoxNotSelected.Visible = true;
+                PictureBox pBoxSelected = (PictureBox)this.Controls.Find("pboxSelectedAventurier" + i, true)[0];
+                pBoxSelected.Visible = false;
+            }
+
+            PictureBox pBoxShow = (PictureBox)this.Controls.Find("pboxSelectedAventurier" + (indexAventurier+1), true)[0];
+            pBoxShow.Visible = true;
+            PictureBox pBoxHide = (PictureBox)this.Controls.Find("pboxAventurier" + (indexAventurier + 1), true)[0];
+            pBoxHide.Visible = false;
             //Faire les armes ensuite (avec la gestion d'equipement ?
         }
 
@@ -113,5 +127,34 @@ namespace JRPG
             Application.Exit();
         }
 
+        private void pboxSelectedAventurier1_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.DarkOrange, ButtonBorderStyle.Solid);
+        }
+
+        private void pboxSelectedAventurier2_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.DarkOrange, ButtonBorderStyle.Solid);
+        }
+
+        private void pboxSelectedAventurier3_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.DarkOrange, ButtonBorderStyle.Solid);
+        }
+
+        private void pboxAventurier1_Click(object sender, EventArgs e)
+        {
+            AfficherDetailsAventurier(0);
+        }
+
+        private void pboxAventurier2_Click(object sender, EventArgs e)
+        {
+            AfficherDetailsAventurier(1);
+        }
+
+        private void pboxAventurier3_Click(object sender, EventArgs e)
+        {
+            AfficherDetailsAventurier(2);
+        }
     }
 }

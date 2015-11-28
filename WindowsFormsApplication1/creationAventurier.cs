@@ -151,6 +151,7 @@ namespace JRPG
                 }
 
                 p.groupeAventurier.AjouterAventurier(premierAventurier);
+
                 //Par defaut le groupe d'aventurier commence avec 2 potion de vie et 1 de mana (surtout un test pour l'affichage de l'inventaire)
                 p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_VIE_MINEURE_ID]);
                 p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_VIE_MINEURE_ID]);
