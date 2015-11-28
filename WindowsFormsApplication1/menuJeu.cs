@@ -20,6 +20,7 @@ namespace JRPG
         {
             InitializeComponent();
             AfficherGroupeAventurier();
+            AfficherDetailsAventurier(0);
         }
 
         private void CacherGroupeAventurier()
@@ -77,6 +78,27 @@ namespace JRPG
                 listInventaire.Items[j].SubItems.Add(item.Nb.ToString());
                 j++;
             }
+        }
+
+        private void AfficherDetailsAventurier(int indexAventurier)
+        {
+            txtNom.Text = p.groupeAventurier.Membres[indexAventurier].NomAventurier;
+            txtNiv.Text = p.groupeAventurier.Membres[indexAventurier].Niveau.ToString();
+            txtXP.Text = p.groupeAventurier.Membres[indexAventurier].Experience.ToString();
+            txtClasse.Text = p.groupeAventurier.Membres[indexAventurier].NomClasse;
+
+            txtEtat.Text = p.groupeAventurier.Membres[indexAventurier].Etat.ToString();
+            txtPV.Text = p.groupeAventurier.Membres[indexAventurier].Pvmax.ToString();
+            lblEnrgMana.Text = p.groupeAventurier.Membres[indexAventurier].Ressource == Ressource.Mana ? "Mana:" : "Énergie:";
+            txtRessource.Text = p.groupeAventurier.Membres[indexAventurier].Ressource == Ressource.Mana ? p.groupeAventurier.Membres[indexAventurier].Manamax.ToString() : p.groupeAventurier.Membres[indexAventurier].Energiemax.ToString();
+            txtInitiative.Text = p.groupeAventurier.Membres[indexAventurier].Initiativebase.ToString();
+
+            txtForce.Text = p.groupeAventurier.Membres[indexAventurier].Forcebase.ToString();
+            txtDefense.Text = p.groupeAventurier.Membres[indexAventurier].Defensebase.ToString();
+            txtPrecision.Text = p.groupeAventurier.Membres[indexAventurier].Precisionbase.ToString();
+            txtEsquive.Text = p.groupeAventurier.Membres[indexAventurier].Esquivebase.ToString();
+
+            //Faire les armes ensuite (avec la gestion d'equipement ?
         }
 
         private void btnAventure_Click(object sender, EventArgs e)

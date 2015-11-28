@@ -51,7 +51,7 @@
             this.txtDefense = new System.Windows.Forms.Label();
             this.txtForce = new System.Windows.Forms.Label();
             this.txtInitiative = new System.Windows.Forms.Label();
-            this.txtEnrgMana = new System.Windows.Forms.Label();
+            this.txtRessource = new System.Windows.Forms.Label();
             this.txtPV = new System.Windows.Forms.Label();
             this.txtEtat = new System.Windows.Forms.Label();
             this.txtClasse = new System.Windows.Forms.Label();
@@ -88,11 +88,21 @@
             this.txtNom1 = new System.Windows.Forms.Label();
             this.lblLvl1 = new System.Windows.Forms.Label();
             this.listInventaire = new System.Windows.Forms.ListView();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).BeginInit();
             this.gboxInformations.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // pboxAventurier1
+            // 
+            this.pboxAventurier1.Location = new System.Drawing.Point(19, 39);
+            this.pboxAventurier1.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxAventurier1.Name = "pboxAventurier1";
+            this.pboxAventurier1.Size = new System.Drawing.Size(65, 64);
+            this.pboxAventurier1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxAventurier1.TabIndex = 0;
+            this.pboxAventurier1.TabStop = false;
             // 
             // pboxAventurier2
             // 
@@ -264,15 +274,15 @@
             this.gboxInformations.Controls.Add(this.txtDefense);
             this.gboxInformations.Controls.Add(this.txtForce);
             this.gboxInformations.Controls.Add(this.txtInitiative);
-            this.gboxInformations.Controls.Add(this.txtEnrgMana);
+            this.gboxInformations.Controls.Add(this.txtRessource);
             this.gboxInformations.Controls.Add(this.txtPV);
             this.gboxInformations.Controls.Add(this.txtEtat);
             this.gboxInformations.Controls.Add(this.txtClasse);
             this.gboxInformations.Controls.Add(this.txtXP);
             this.gboxInformations.Controls.Add(this.txtNiv);
-            this.gboxInformations.Controls.Add(this.txtNom);
             this.gboxInformations.Controls.Add(this.cboArmure);
             this.gboxInformations.Controls.Add(this.cboBouclier);
+            this.gboxInformations.Controls.Add(this.txtNom);
             this.gboxInformations.Controls.Add(this.cboArme);
             this.gboxInformations.Controls.Add(this.lblBouclier);
             this.gboxInformations.Controls.Add(this.lblArmure);
@@ -303,110 +313,122 @@
             // txtEsquive
             // 
             this.txtEsquive.AutoSize = true;
-            this.txtEsquive.Location = new System.Drawing.Point(106, 191);
+            this.txtEsquive.Location = new System.Drawing.Point(106, 196);
             this.txtEsquive.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtEsquive.Name = "txtEsquive";
-            this.txtEsquive.Size = new System.Drawing.Size(0, 16);
+            this.txtEsquive.Size = new System.Drawing.Size(69, 16);
             this.txtEsquive.TabIndex = 42;
+            this.txtEsquive.Text = "txtEsquive";
             // 
             // txtPrecision
             // 
             this.txtPrecision.AutoSize = true;
-            this.txtPrecision.Location = new System.Drawing.Point(106, 177);
+            this.txtPrecision.Location = new System.Drawing.Point(106, 180);
             this.txtPrecision.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtPrecision.Name = "txtPrecision";
-            this.txtPrecision.Size = new System.Drawing.Size(0, 16);
+            this.txtPrecision.Size = new System.Drawing.Size(76, 16);
             this.txtPrecision.TabIndex = 42;
+            this.txtPrecision.Text = "txtPrecision";
             // 
             // txtDefense
             // 
             this.txtDefense.AutoSize = true;
-            this.txtDefense.Location = new System.Drawing.Point(106, 163);
+            this.txtDefense.Location = new System.Drawing.Point(106, 164);
             this.txtDefense.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtDefense.Name = "txtDefense";
-            this.txtDefense.Size = new System.Drawing.Size(0, 16);
+            this.txtDefense.Size = new System.Drawing.Size(71, 16);
             this.txtDefense.TabIndex = 42;
+            this.txtDefense.Text = "txtDefense";
             // 
             // txtForce
             // 
             this.txtForce.AutoSize = true;
-            this.txtForce.Location = new System.Drawing.Point(106, 150);
+            this.txtForce.Location = new System.Drawing.Point(106, 148);
             this.txtForce.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtForce.Name = "txtForce";
-            this.txtForce.Size = new System.Drawing.Size(0, 16);
+            this.txtForce.Size = new System.Drawing.Size(55, 16);
             this.txtForce.TabIndex = 42;
+            this.txtForce.Text = "txtForce";
             // 
             // txtInitiative
             // 
             this.txtInitiative.AutoSize = true;
-            this.txtInitiative.Location = new System.Drawing.Point(106, 130);
+            this.txtInitiative.Location = new System.Drawing.Point(106, 132);
             this.txtInitiative.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtInitiative.Name = "txtInitiative";
-            this.txtInitiative.Size = new System.Drawing.Size(0, 16);
+            this.txtInitiative.Size = new System.Drawing.Size(68, 16);
             this.txtInitiative.TabIndex = 42;
+            this.txtInitiative.Text = "txtInitiative";
             // 
-            // txtEnrgMana
+            // txtRessource
             // 
-            this.txtEnrgMana.AutoSize = true;
-            this.txtEnrgMana.Location = new System.Drawing.Point(106, 115);
-            this.txtEnrgMana.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.txtEnrgMana.Name = "txtEnrgMana";
-            this.txtEnrgMana.Size = new System.Drawing.Size(0, 16);
-            this.txtEnrgMana.TabIndex = 42;
+            this.txtRessource.AutoSize = true;
+            this.txtRessource.Location = new System.Drawing.Point(105, 116);
+            this.txtRessource.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtRessource.Name = "txtRessource";
+            this.txtRessource.Size = new System.Drawing.Size(86, 16);
+            this.txtRessource.TabIndex = 42;
+            this.txtRessource.Text = "txtRessource";
             // 
             // txtPV
             // 
             this.txtPV.AutoSize = true;
-            this.txtPV.Location = new System.Drawing.Point(106, 93);
+            this.txtPV.Location = new System.Drawing.Point(105, 100);
             this.txtPV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtPV.Name = "txtPV";
-            this.txtPV.Size = new System.Drawing.Size(0, 16);
+            this.txtPV.Size = new System.Drawing.Size(38, 16);
             this.txtPV.TabIndex = 42;
+            this.txtPV.Text = "txtPV";
             // 
             // txtEtat
             // 
             this.txtEtat.AutoSize = true;
-            this.txtEtat.Location = new System.Drawing.Point(106, 80);
+            this.txtEtat.Location = new System.Drawing.Point(105, 84);
             this.txtEtat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtEtat.Name = "txtEtat";
-            this.txtEtat.Size = new System.Drawing.Size(0, 16);
+            this.txtEtat.Size = new System.Drawing.Size(43, 16);
             this.txtEtat.TabIndex = 42;
+            this.txtEtat.Text = "txtEtat";
             // 
             // txtClasse
             // 
             this.txtClasse.AutoSize = true;
-            this.txtClasse.Location = new System.Drawing.Point(106, 66);
+            this.txtClasse.Location = new System.Drawing.Point(105, 68);
             this.txtClasse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtClasse.Name = "txtClasse";
-            this.txtClasse.Size = new System.Drawing.Size(0, 16);
+            this.txtClasse.Size = new System.Drawing.Size(62, 16);
             this.txtClasse.TabIndex = 44;
+            this.txtClasse.Text = "txtClasse";
             // 
             // txtXP
             // 
             this.txtXP.AutoSize = true;
-            this.txtXP.Location = new System.Drawing.Point(106, 46);
+            this.txtXP.Location = new System.Drawing.Point(106, 52);
             this.txtXP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtXP.Name = "txtXP";
-            this.txtXP.Size = new System.Drawing.Size(0, 16);
+            this.txtXP.Size = new System.Drawing.Size(37, 16);
             this.txtXP.TabIndex = 43;
+            this.txtXP.Text = "txtXP";
             // 
             // txtNiv
             // 
             this.txtNiv.AutoSize = true;
-            this.txtNiv.Location = new System.Drawing.Point(106, 33);
+            this.txtNiv.Location = new System.Drawing.Point(106, 36);
             this.txtNiv.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtNiv.Name = "txtNiv";
-            this.txtNiv.Size = new System.Drawing.Size(0, 16);
+            this.txtNiv.Size = new System.Drawing.Size(40, 16);
             this.txtNiv.TabIndex = 42;
+            this.txtNiv.Text = "txtNiv";
             // 
             // txtNom
             // 
             this.txtNom.AutoSize = true;
-            this.txtNom.Location = new System.Drawing.Point(106, 20);
+            this.txtNom.Location = new System.Drawing.Point(105, 20);
             this.txtNom.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtNom.Name = "txtNom";
-            this.txtNom.Size = new System.Drawing.Size(0, 16);
+            this.txtNom.Size = new System.Drawing.Size(49, 16);
             this.txtNom.TabIndex = 41;
+            this.txtNom.Text = "txtNom";
             // 
             // cboArmure
             // 
@@ -479,7 +501,7 @@
             // lblEsquive
             // 
             this.lblEsquive.AutoSize = true;
-            this.lblEsquive.Location = new System.Drawing.Point(12, 191);
+            this.lblEsquive.Location = new System.Drawing.Point(12, 196);
             this.lblEsquive.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEsquive.Name = "lblEsquive";
             this.lblEsquive.Size = new System.Drawing.Size(60, 16);
@@ -489,7 +511,7 @@
             // lblDefense
             // 
             this.lblDefense.AutoSize = true;
-            this.lblDefense.Location = new System.Drawing.Point(12, 163);
+            this.lblDefense.Location = new System.Drawing.Point(12, 164);
             this.lblDefense.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDefense.Name = "lblDefense";
             this.lblDefense.Size = new System.Drawing.Size(62, 16);
@@ -499,7 +521,7 @@
             // lblForce
             // 
             this.lblForce.AutoSize = true;
-            this.lblForce.Location = new System.Drawing.Point(12, 150);
+            this.lblForce.Location = new System.Drawing.Point(12, 148);
             this.lblForce.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblForce.Name = "lblForce";
             this.lblForce.Size = new System.Drawing.Size(46, 16);
@@ -509,7 +531,7 @@
             // lblPrecision
             // 
             this.lblPrecision.AutoSize = true;
-            this.lblPrecision.Location = new System.Drawing.Point(12, 177);
+            this.lblPrecision.Location = new System.Drawing.Point(12, 180);
             this.lblPrecision.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPrecision.Name = "lblPrecision";
             this.lblPrecision.Size = new System.Drawing.Size(67, 16);
@@ -519,7 +541,7 @@
             // lblInitiative
             // 
             this.lblInitiative.AutoSize = true;
-            this.lblInitiative.Location = new System.Drawing.Point(13, 130);
+            this.lblInitiative.Location = new System.Drawing.Point(13, 132);
             this.lblInitiative.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblInitiative.Name = "lblInitiative";
             this.lblInitiative.Size = new System.Drawing.Size(59, 16);
@@ -529,17 +551,17 @@
             // lblEnrgMana
             // 
             this.lblEnrgMana.AutoSize = true;
-            this.lblEnrgMana.Location = new System.Drawing.Point(12, 115);
+            this.lblEnrgMana.Location = new System.Drawing.Point(12, 116);
             this.lblEnrgMana.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEnrgMana.Name = "lblEnrgMana";
-            this.lblEnrgMana.Size = new System.Drawing.Size(96, 16);
+            this.lblEnrgMana.Size = new System.Drawing.Size(77, 16);
             this.lblEnrgMana.TabIndex = 31;
-            this.lblEnrgMana.Text = "Energie/Mana:";
+            this.lblEnrgMana.Text = "Ressource:";
             // 
             // lblPV
             // 
             this.lblPV.AutoSize = true;
-            this.lblPV.Location = new System.Drawing.Point(12, 94);
+            this.lblPV.Location = new System.Drawing.Point(12, 100);
             this.lblPV.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPV.Name = "lblPV";
             this.lblPV.Size = new System.Drawing.Size(29, 16);
@@ -549,7 +571,7 @@
             // lblEtat
             // 
             this.lblEtat.AutoSize = true;
-            this.lblEtat.Location = new System.Drawing.Point(13, 80);
+            this.lblEtat.Location = new System.Drawing.Point(13, 84);
             this.lblEtat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEtat.Name = "lblEtat";
             this.lblEtat.Size = new System.Drawing.Size(34, 16);
@@ -559,7 +581,7 @@
             // lblClasse
             // 
             this.lblClasse.AutoSize = true;
-            this.lblClasse.Location = new System.Drawing.Point(13, 66);
+            this.lblClasse.Location = new System.Drawing.Point(13, 68);
             this.lblClasse.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblClasse.Name = "lblClasse";
             this.lblClasse.Size = new System.Drawing.Size(53, 16);
@@ -569,7 +591,7 @@
             // lblNiv
             // 
             this.lblNiv.AutoSize = true;
-            this.lblNiv.Location = new System.Drawing.Point(14, 33);
+            this.lblNiv.Location = new System.Drawing.Point(14, 36);
             this.lblNiv.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNiv.Name = "lblNiv";
             this.lblNiv.Size = new System.Drawing.Size(31, 16);
@@ -579,7 +601,7 @@
             // lblXP
             // 
             this.lblXP.AutoSize = true;
-            this.lblXP.Location = new System.Drawing.Point(14, 46);
+            this.lblXP.Location = new System.Drawing.Point(14, 52);
             this.lblXP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblXP.Name = "lblXP";
             this.lblXP.Size = new System.Drawing.Size(28, 16);
@@ -602,8 +624,9 @@
             this.txtPiecesOr.Location = new System.Drawing.Point(82, 169);
             this.txtPiecesOr.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtPiecesOr.Name = "txtPiecesOr";
-            this.txtPiecesOr.Size = new System.Drawing.Size(0, 13);
+            this.txtPiecesOr.Size = new System.Drawing.Size(61, 13);
             this.txtPiecesOr.TabIndex = 42;
+            this.txtPiecesOr.Text = "txtPiecesOr";
             // 
             // lblLvl2
             // 
@@ -690,16 +713,6 @@
             this.lblLvl1.TabIndex = 44;
             this.lblLvl1.Text = "Niveau:";
             // 
-            // pboxAventurier1
-            // 
-            this.pboxAventurier1.Location = new System.Drawing.Point(19, 39);
-            this.pboxAventurier1.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxAventurier1.Name = "pboxAventurier1";
-            this.pboxAventurier1.Size = new System.Drawing.Size(65, 64);
-            this.pboxAventurier1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pboxAventurier1.TabIndex = 0;
-            this.pboxAventurier1.TabStop = false;
-            // 
             // listInventaire
             // 
             this.listInventaire.Location = new System.Drawing.Point(12, 240);
@@ -745,11 +758,11 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuJeu";
             this.Text = "Menu jeu";
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).EndInit();
             this.gboxInformations.ResumeLayout(false);
             this.gboxInformations.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -797,7 +810,7 @@
         private System.Windows.Forms.Label txtDefense;
         private System.Windows.Forms.Label txtForce;
         private System.Windows.Forms.Label txtInitiative;
-        private System.Windows.Forms.Label txtEnrgMana;
+        private System.Windows.Forms.Label txtRessource;
         private System.Windows.Forms.Label txtPV;
         private System.Windows.Forms.Label txtEtat;
         private System.Windows.Forms.Label txtClasse;
