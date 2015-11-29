@@ -9,6 +9,7 @@ using System.Drawing;
 
 namespace JRPG.Classes.Aventurier
 {
+    [Serializable]
     abstract class Aventurier
     {
 

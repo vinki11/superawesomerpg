@@ -40,3 +40,4 @@ D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\obj\Deb
 D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.MenuJeu.resources
 D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.Properties.Resources.resources
 D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.csproj.GenerateResource.Cache
+D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.Maison.resources

@@ -10,6 +10,7 @@ namespace JRPG.Classes.Aventurier
     using li = ListeItem;
     using lc = ListeClasse;
     //Classe avec des mauvaises statistique mais des sorts puissants. Utilise de la mana.
+    [Serializable]
     class Mage : Aventurier
     {
         #region Constructeurs

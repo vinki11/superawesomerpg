@@ -12,6 +12,7 @@ namespace JRPG.Classes.Aventurier
     using li = ListeItem;
     using lc = ListeClasse;
     //Classe d'aventurier qui a une bonne attaque et defense(hp) de base. Utilise de l'energie
+    [Serializable]
     class Guerrier : Aventurier
     {
 

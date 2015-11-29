@@ -10,6 +10,7 @@ namespace JRPG.Classes.Aventurier
     using li = ListeItem;
     using lc = ListeClasse;
     //Classe qui buff et heal ses alliés principalement. Utilise de la mana.
+    [Serializable]
     class Pretre : Aventurier
     {
         #region Constructeurs

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace JRPG.Classes.Item
 {
+    [Serializable]
     public class Bouclier : Item
     {
         #region Attributs

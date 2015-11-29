@@ -81,6 +81,12 @@
     </Compile>
     <Compile Include="Classes\Groupe.cs" />
     <Compile Include="Classes\GroupeEnnemi.cs" />
+    <Compile Include="Maison.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Maison.Designer.cs">
+      <DependentUpon>Maison.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +110,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Combat.resx">
       <DependentUpon>Combat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Maison.resx">
+      <DependentUpon>Maison.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>

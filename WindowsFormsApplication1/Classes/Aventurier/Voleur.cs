@@ -11,6 +11,7 @@ namespace JRPG.Classes.Aventurier
     using li = ListeItem;
     using lc = ListeClasse;
     //Classe qui a une bonne précision et esquive. Utilise de l'énergie
+    [Serializable]
     class Voleur : Aventurier
     {
         #region Constructeurs

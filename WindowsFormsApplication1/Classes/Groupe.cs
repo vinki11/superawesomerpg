@@ -8,6 +8,7 @@ using JRPG.Classes.Aventurier;
 
 namespace JRPG.Classes
 {
+    [Serializable]
     class Groupe
     {
         #region Attributs

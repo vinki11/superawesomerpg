@@ -401,13 +401,21 @@ namespace JRPG
             selectedAventurier = 2;
             AfficherDetailsAventurier(selectedAventurier);
         }
-
+        
         private void cboArme_SelectedIndexChanged(object sender, EventArgs e)
         {
             Arme ancienArme = p.groupeAventurier.Membres[selectedAventurier].Arme; // On met l'ancien arme dans une variable temporaire
-            p.groupeAventurier.Membres[selectedAventurier].Arme = li.ListeArmes[(cboArme.SelectedItem as ComboboxItem).Value]; //On assigne la nouvelle arme au personnage
-            p.groupeAventurier.AjouterItem(ancienArme);//On ajoute l'ancienne arme à l'inventaire
-            p.groupeAventurier.RetirerItem(li.ListeArmes[(cboArme.SelectedItem as ComboboxItem).Value]); //On retire la nouvelle arme de l'inventaire
+            var comboboxItem = cboArme.SelectedItem as ComboboxItem;
+            if (comboboxItem != null)
+            {
+                Arme newArme = li.ListeArmes[comboboxItem.Value];
+                if (ancienArme.IdItem != newArme.IdItem)
+                {
+                    p.groupeAventurier.Membres[selectedAventurier].Arme = newArme; //On assigne la nouvelle arme au personnage
+                    p.groupeAventurier.AjouterItem(ancienArme);//On ajoute l'ancienne arme à l'inventaire
+                    p.groupeAventurier.RetirerItem(newArme); //On retire la nouvelle arme de l'inventaire
+                }
+            }
 
             AfficherInventaire();
             AfficherStatsEquipement(selectedAventurier);
@@ -416,9 +424,17 @@ namespace JRPG
         private void cboArmure_SelectedIndexChanged(object sender, EventArgs e)
         {
             Armure ancienArmure = p.groupeAventurier.Membres[selectedAventurier].Armure; // On met l'ancien armure dans une variable temporaire
-            p.groupeAventurier.Membres[selectedAventurier].Armure = li.ListeArmures[(cboArmure.SelectedItem as ComboboxItem).Value]; //On assigne la nouvelle armure au personnage
-            p.groupeAventurier.AjouterItem(ancienArmure);//On ajoute l'ancienne armure à l'inventaire
-            p.groupeAventurier.RetirerItem(li.ListeArmures[(cboArmure.SelectedItem as ComboboxItem).Value]); //On retire la nouvelle armure de l'inventaire
+            var comboboxItem = cboArme.SelectedItem as ComboboxItem;
+            if (comboboxItem != null)
+            {
+                Armure newArmure = li.ListeArmures[comboboxItem.Value];
+                if (ancienArmure.IdItem != newArmure.IdItem)
+                {
+                    p.groupeAventurier.Membres[selectedAventurier].Armure = newArmure; //On assigne la nouvelle armure au personnage
+                    p.groupeAventurier.AjouterItem(ancienArmure);//On ajoute l'ancienne armure à l'inventaire
+                    p.groupeAventurier.RetirerItem(newArmure); //On retire la nouvelle armure de l'inventaire
+                }
+            }
 
             AfficherInventaire();
             AfficherStatsEquipement(selectedAventurier);
@@ -427,12 +443,27 @@ namespace JRPG
         private void cboBouclier_SelectedIndexChanged(object sender, EventArgs e)
         {
             Bouclier ancienBouclier = p.groupeAventurier.Membres[selectedAventurier].Bouclier; // On met l'ancien Bouclier dans une variable temporaire                                                                                 //
-            p.groupeAventurier.Membres[selectedAventurier].Bouclier = li.ListeBoucliers[(cboBouclier.SelectedItem as ComboboxItem).Value]; //On assigne la nouvelle Bouclier au personnage
-            p.groupeAventurier.AjouterItem(ancienBouclier);//On ajoute l'ancienne Bouclier à l'inventaire
-            p.groupeAventurier.RetirerItem(li.ListeBoucliers[(cboBouclier.SelectedItem as ComboboxItem).Value]); //On retire la nouvelle Bouclier de l'inventaire
-            
+            var comboboxItem = cboArme.SelectedItem as ComboboxItem;
+            if (comboboxItem != null)
+            {
+                Bouclier newBouclier = li.ListeBoucliers[comboboxItem.Value];
+                if (ancienBouclier.IdItem != newBouclier.IdItem)
+                {
+                    p.groupeAventurier.Membres[selectedAventurier].Bouclier = newBouclier; //On assigne la nouvelle Bouclier au personnage
+                    p.groupeAventurier.AjouterItem(ancienBouclier);//On ajoute l'ancienne Bouclier à l'inventaire
+                    p.groupeAventurier.RetirerItem(newBouclier); //On retire la nouvelle Bouclier de l'inventaire
+                }
+            }
+
             AfficherInventaire();
             AfficherStatsEquipement(selectedAventurier);
+        }
+
+        private void btnMaison_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Maison maison = new Maison();
+            maison.ShowDialog();
         }
     }
 
