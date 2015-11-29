@@ -19,11 +19,13 @@ namespace JRPG
 
     public partial class MenuJeu : Form
     {
+        int selectedAventurier = 0;
+
         public MenuJeu()
         {
             InitializeComponent();
             AfficherGroupeAventurier();
-            AfficherDetailsAventurier(0);
+            AfficherDetailsAventurier(selectedAventurier);
         }
 
         private void CacherGroupeAventurier()
@@ -68,10 +70,18 @@ namespace JRPG
                 i++;
             }
 
+            //AfficherInventaire();
+
+        }
+
+        public void AfficherInventaire()
+        {
+            //Initialisation des details du listview d'inventaire
+            listInventaire.Clear();
             listInventaire.View = View.Details;
             listInventaire.Width = 229;
             listInventaire.Columns.Add("Nom de l'item", 175);
-            listInventaire.Columns.Add("Nombre",50);
+            listInventaire.Columns.Add("Nombre", 50);
 
             var query = p.groupeAventurier.Inventaire.Select(x => x)
                 .GroupBy(x => x, (a, b) => new { Nom = a.NomItem, Nb = b.Count() });
@@ -183,12 +193,13 @@ namespace JRPG
             cbItemArme = new ComboboxItem();
             cbItemArme.Text = p.groupeAventurier.Membres[indexAventurier].Arme != null ? p.groupeAventurier.Membres[indexAventurier].Arme.NomItem : "";
             cbItemArme.Value = p.groupeAventurier.Membres[indexAventurier].Arme != null ? p.groupeAventurier.Membres[indexAventurier].Arme.IdItem : -1;
-            if (!cboArme.Items.Contains(cbItemArme))
+            if (!cboArme.Items.Contains(cbItemArme) && cbItemArme.Value != -1)
             {
                 cboArme.Items.Add(cbItemArme);
             }
+            cboArme.Text = "";
             cboArme.SelectedItem = cbItemArme;
-
+            
             #endregion
 
             #region Armures
@@ -252,10 +263,12 @@ namespace JRPG
             cbItemArmure = new ComboboxItem();
             cbItemArmure.Text = p.groupeAventurier.Membres[indexAventurier].Armure != null ? p.groupeAventurier.Membres[indexAventurier].Armure.NomItem : "";
             cbItemArmure.Value = p.groupeAventurier.Membres[indexAventurier].Armure != null ? p.groupeAventurier.Membres[indexAventurier].Armure.IdItem : -1;
-            if (!cboArmure.Items.Contains(cbItemArmure))
+
+            if (!cboArmure.Items.Contains(cbItemArmure) && cbItemArme.Value != -1)
             {
                 cboArmure.Items.Add(cbItemArmure);
             }
+            cboArmure.Text = "";
             cboArmure.SelectedItem = cbItemArmure;
 
             #endregion
@@ -321,10 +334,12 @@ namespace JRPG
             cbItemBouclier = new ComboboxItem();
             cbItemBouclier.Text = p.groupeAventurier.Membres[indexAventurier].Bouclier != null ? p.groupeAventurier.Membres[indexAventurier].Bouclier.NomItem : "";
             cbItemBouclier.Value = p.groupeAventurier.Membres[indexAventurier].Bouclier != null ? p.groupeAventurier.Membres[indexAventurier].Bouclier.IdItem : -1;
-            if (!cboBouclier.Items.Contains(cbItemBouclier))
+
+            if (!cboBouclier.Items.Contains(cbItemBouclier) && cbItemBouclier.Value != -1)
             {
                 cboBouclier.Items.Add(cbItemBouclier);
             }
+            cboBouclier.Text = "";
             cboBouclier.SelectedItem = cbItemBouclier;
 
             #endregion
@@ -360,30 +375,62 @@ namespace JRPG
 
         private void pboxAventurier1_Click(object sender, EventArgs e)
         {
-            AfficherDetailsAventurier(0);
+            selectedAventurier = 0;
+            AfficherDetailsAventurier(selectedAventurier);
         }
 
         private void pboxAventurier2_Click(object sender, EventArgs e)
         {
-            AfficherDetailsAventurier(1);
+            selectedAventurier = 1;
+            AfficherDetailsAventurier(selectedAventurier);
         }
 
         private void pboxAventurier3_Click(object sender, EventArgs e)
         {
-            AfficherDetailsAventurier(2);
+            selectedAventurier = 2;
+            AfficherDetailsAventurier(selectedAventurier);
+        }
+
+        private void cboArme_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Arme ancienArme = p.groupeAventurier.Membres[selectedAventurier].Arme; // On met l'ancien arme dans une variable temporaire
+            p.groupeAventurier.Membres[selectedAventurier].Arme = li.ListeArmes[(cboArme.SelectedItem as ComboboxItem).Value]; //On assigne la nouvelle arme au personnage
+            p.groupeAventurier.AjouterItem(ancienArme);//On ajoute l'ancienne arme à l'inventaire
+            p.groupeAventurier.RetirerItem(li.ListeArmes[(cboArme.SelectedItem as ComboboxItem).Value]); //On retire la nouvelle arme de l'inventaire
+
+            AfficherInventaire();
+        }
+
+        private void cboArmure_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Armure ancienArmure = p.groupeAventurier.Membres[selectedAventurier].Armure; // On met l'ancien armure dans une variable temporaire
+            p.groupeAventurier.Membres[selectedAventurier].Armure = li.ListeArmures[(cboArmure.SelectedItem as ComboboxItem).Value]; //On assigne la nouvelle armure au personnage
+            p.groupeAventurier.AjouterItem(ancienArmure);//On ajoute l'ancienne armure à l'inventaire
+            p.groupeAventurier.RetirerItem(li.ListeArmures[(cboArmure.SelectedItem as ComboboxItem).Value]); //On retire la nouvelle armure de l'inventaire
+
+            AfficherInventaire();
+        }
+
+        private void cboBouclier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Bouclier ancienBouclier = p.groupeAventurier.Membres[selectedAventurier].Bouclier; // On met l'ancien Bouclier dans une variable temporaire                                                                                 //
+            p.groupeAventurier.Membres[selectedAventurier].Bouclier = li.ListeBoucliers[(cboBouclier.SelectedItem as ComboboxItem).Value]; //On assigne la nouvelle Bouclier au personnage
+            p.groupeAventurier.AjouterItem(ancienBouclier);//On ajoute l'ancienne Bouclier à l'inventaire
+            p.groupeAventurier.RetirerItem(li.ListeBoucliers[(cboBouclier.SelectedItem as ComboboxItem).Value]); //On retire la nouvelle Bouclier de l'inventaire
+            
+            AfficherInventaire();
         }
     }
 
     public class ComboboxItem :IEquatable<ComboboxItem>
     {
         public string Text { get; set; }
-        public object Value { get; set; }
+        public int Value { get; set; }
 
         public override string ToString()
         {
             return Text;
         }
-
 
         public bool Equals(ComboboxItem other)
         {

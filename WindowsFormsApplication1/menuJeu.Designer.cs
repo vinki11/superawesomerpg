@@ -441,6 +441,7 @@
             this.cboArmure.Size = new System.Drawing.Size(154, 24);
             this.cboArmure.Sorted = true;
             this.cboArmure.TabIndex = 40;
+            this.cboArmure.SelectedIndexChanged += new System.EventHandler(this.cboArmure_SelectedIndexChanged);
             // 
             // cboBouclier
             // 
@@ -451,6 +452,7 @@
             this.cboBouclier.Size = new System.Drawing.Size(154, 24);
             this.cboBouclier.Sorted = true;
             this.cboBouclier.TabIndex = 39;
+            this.cboBouclier.SelectedIndexChanged += new System.EventHandler(this.cboBouclier_SelectedIndexChanged);
             // 
             // txtNom
             // 
@@ -471,6 +473,7 @@
             this.cboArme.Size = new System.Drawing.Size(154, 24);
             this.cboArme.Sorted = true;
             this.cboArme.TabIndex = 38;
+            this.cboArme.SelectedIndexChanged += new System.EventHandler(this.cboArme_SelectedIndexChanged);
             // 
             // lblBouclier
             // 

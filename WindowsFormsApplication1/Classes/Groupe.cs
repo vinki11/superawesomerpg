@@ -44,6 +44,11 @@ namespace JRPG.Classes
             Inventaire.Add(nouvelItem);
         }
 
+        public void RetirerItem(Item.Item ancienItem)
+        {
+            Inventaire.Remove(ancienItem);
+        }
+
         public void UtiliserItem()
         {
 

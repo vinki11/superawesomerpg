@@ -1,0 +1,12 @@
+- Changer la valeur de l'équipement des aventurier quand on change de de valeur [done]
+- Ajouter l'ancien item a l'inventaire [done]
+- retiré la nouvelle arme sélectionné de l'inventaire [done]
+- Mettre le code d'affichage de l'inventaire ds une fonction et le callé sur le selectedIndexChanged des cbox [done]
+
+Envisager un bouton accepté pour pas rafraichir a tout bout de champs l'inventaire ?
+
+
+
+Ajouter la valeur des items sur la page des caracstéristiques
+
+Mettre un sort sur l'inventaire
