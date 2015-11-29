@@ -70,8 +70,6 @@ namespace JRPG
                 i++;
             }
 
-            //AfficherInventaire();
-
         }
 
         public void AfficherInventaire()
@@ -84,7 +82,8 @@ namespace JRPG
             listInventaire.Columns.Add("Nombre", 50);
 
             var query = p.groupeAventurier.Inventaire.Select(x => x)
-                .GroupBy(x => x, (a, b) => new { Nom = a.NomItem, Nb = b.Count() });
+                .GroupBy(x => x, (a, b) => new { Nom = a.NomItem, Nb = b.Count() })
+                .OrderBy(x => x.Nom);
 
             var j = 0;
             foreach (var item in query)
@@ -116,6 +115,10 @@ namespace JRPG
             txtEsquive.Text = p.groupeAventurier.Membres[indexAventurier].Esquivebase.ToString();
             #endregion
 
+            #region Statistiques équipement
+            AfficherStatsEquipement(indexAventurier);
+            #endregion
+
             #region Picturebox sélectionné
             for (var i = 1; i < 4;i++)
             {
@@ -131,7 +134,7 @@ namespace JRPG
             pBoxHide.Visible = false;
             #endregion
 
-            #region  Armes
+            #region Combobox Armes
 
             cboArme.Items.Clear();
 
@@ -202,7 +205,7 @@ namespace JRPG
             
             #endregion
 
-            #region Armures
+            #region Combobox Armures
 
             cboArmure.Items.Clear();
 
@@ -273,7 +276,7 @@ namespace JRPG
 
             #endregion
 
-            #region Boucliers
+            #region Combobox Boucliers
 
             cboBouclier.Items.Clear();
 
@@ -346,6 +349,14 @@ namespace JRPG
 
         }
 
+        private void AfficherStatsEquipement(int indexAventurier)
+        {
+            txtForceArme.Text = p.groupeAventurier.Membres[indexAventurier].Arme != null ? p.groupeAventurier.Membres[indexAventurier].Arme.Force.ToString() : "0";
+            txtDefenseArmure.Text = p.groupeAventurier.Membres[indexAventurier].Armure != null ? p.groupeAventurier.Membres[indexAventurier].Armure.Defense.ToString() : "0";
+            txtPrecisionArme.Text = p.groupeAventurier.Membres[indexAventurier].Arme != null ? p.groupeAventurier.Membres[indexAventurier].Arme.Precision.ToString() : "0";
+            txtEsquiveBouclier.Text = p.groupeAventurier.Membres[indexAventurier].Bouclier != null ? p.groupeAventurier.Membres[indexAventurier].Bouclier.Esquive.ToString() : "0";
+        }
+
         private void btnAventure_Click(object sender, EventArgs e)
         {
             Hide();
@@ -399,6 +410,7 @@ namespace JRPG
             p.groupeAventurier.RetirerItem(li.ListeArmes[(cboArme.SelectedItem as ComboboxItem).Value]); //On retire la nouvelle arme de l'inventaire
 
             AfficherInventaire();
+            AfficherStatsEquipement(selectedAventurier);
         }
 
         private void cboArmure_SelectedIndexChanged(object sender, EventArgs e)
@@ -409,6 +421,7 @@ namespace JRPG
             p.groupeAventurier.RetirerItem(li.ListeArmures[(cboArmure.SelectedItem as ComboboxItem).Value]); //On retire la nouvelle armure de l'inventaire
 
             AfficherInventaire();
+            AfficherStatsEquipement(selectedAventurier);
         }
 
         private void cboBouclier_SelectedIndexChanged(object sender, EventArgs e)
@@ -419,6 +432,7 @@ namespace JRPG
             p.groupeAventurier.RetirerItem(li.ListeBoucliers[(cboBouclier.SelectedItem as ComboboxItem).Value]); //On retire la nouvelle Bouclier de l'inventaire
             
             AfficherInventaire();
+            AfficherStatsEquipement(selectedAventurier);
         }
     }
 

@@ -46,6 +46,7 @@
             this.txtNom3 = new System.Windows.Forms.Label();
             this.lblPiecesOr = new System.Windows.Forms.Label();
             this.gboxInformations = new System.Windows.Forms.GroupBox();
+            this.lblPlusForce = new System.Windows.Forms.Label();
             this.txtEsquive = new System.Windows.Forms.Label();
             this.txtPrecision = new System.Windows.Forms.Label();
             this.txtDefense = new System.Windows.Forms.Label();
@@ -91,6 +92,13 @@
             this.pboxSelectedAventurier1 = new System.Windows.Forms.PictureBox();
             this.pboxSelectedAventurier2 = new System.Windows.Forms.PictureBox();
             this.pboxSelectedAventurier3 = new System.Windows.Forms.PictureBox();
+            this.lblPlusDefense = new System.Windows.Forms.Label();
+            this.lblPlusPrecision = new System.Windows.Forms.Label();
+            this.lblPlusEsquive = new System.Windows.Forms.Label();
+            this.txtForceArme = new System.Windows.Forms.Label();
+            this.txtDefenseArmure = new System.Windows.Forms.Label();
+            this.txtPrecisionArme = new System.Windows.Forms.Label();
+            this.txtEsquiveBouclier = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).BeginInit();
@@ -281,6 +289,14 @@
             // 
             // gboxInformations
             // 
+            this.gboxInformations.Controls.Add(this.txtEsquiveBouclier);
+            this.gboxInformations.Controls.Add(this.txtPrecisionArme);
+            this.gboxInformations.Controls.Add(this.txtDefenseArmure);
+            this.gboxInformations.Controls.Add(this.txtForceArme);
+            this.gboxInformations.Controls.Add(this.lblPlusEsquive);
+            this.gboxInformations.Controls.Add(this.lblPlusPrecision);
+            this.gboxInformations.Controls.Add(this.lblPlusDefense);
+            this.gboxInformations.Controls.Add(this.lblPlusForce);
             this.gboxInformations.Controls.Add(this.txtEsquive);
             this.gboxInformations.Controls.Add(this.txtPrecision);
             this.gboxInformations.Controls.Add(this.txtDefense);
@@ -317,10 +333,19 @@
             this.gboxInformations.Margin = new System.Windows.Forms.Padding(2);
             this.gboxInformations.Name = "gboxInformations";
             this.gboxInformations.Padding = new System.Windows.Forms.Padding(2);
-            this.gboxInformations.Size = new System.Drawing.Size(259, 314);
+            this.gboxInformations.Size = new System.Drawing.Size(274, 314);
             this.gboxInformations.TabIndex = 24;
             this.gboxInformations.TabStop = false;
             this.gboxInformations.Text = "Informations";
+            // 
+            // lblPlusForce
+            // 
+            this.lblPlusForce.AutoSize = true;
+            this.lblPlusForce.Location = new System.Drawing.Point(142, 148);
+            this.lblPlusForce.Name = "lblPlusForce";
+            this.lblPlusForce.Size = new System.Drawing.Size(15, 16);
+            this.lblPlusForce.TabIndex = 45;
+            this.lblPlusForce.Text = "+";
             // 
             // txtEsquive
             // 
@@ -775,11 +800,78 @@
             this.pboxSelectedAventurier3.TabStop = false;
             this.pboxSelectedAventurier3.Paint += new System.Windows.Forms.PaintEventHandler(this.pboxSelectedAventurier3_Paint);
             // 
+            // lblPlusDefense
+            // 
+            this.lblPlusDefense.AutoSize = true;
+            this.lblPlusDefense.Location = new System.Drawing.Point(142, 164);
+            this.lblPlusDefense.Name = "lblPlusDefense";
+            this.lblPlusDefense.Size = new System.Drawing.Size(15, 16);
+            this.lblPlusDefense.TabIndex = 46;
+            this.lblPlusDefense.Text = "+";
+            // 
+            // lblPlusPrecision
+            // 
+            this.lblPlusPrecision.AutoSize = true;
+            this.lblPlusPrecision.Location = new System.Drawing.Point(142, 180);
+            this.lblPlusPrecision.Name = "lblPlusPrecision";
+            this.lblPlusPrecision.Size = new System.Drawing.Size(15, 16);
+            this.lblPlusPrecision.TabIndex = 47;
+            this.lblPlusPrecision.Text = "+";
+            // 
+            // lblPlusEsquive
+            // 
+            this.lblPlusEsquive.AutoSize = true;
+            this.lblPlusEsquive.Location = new System.Drawing.Point(142, 196);
+            this.lblPlusEsquive.Name = "lblPlusEsquive";
+            this.lblPlusEsquive.Size = new System.Drawing.Size(15, 16);
+            this.lblPlusEsquive.TabIndex = 48;
+            this.lblPlusEsquive.Text = "+";
+            // 
+            // txtForceArme
+            // 
+            this.txtForceArme.AutoSize = true;
+            this.txtForceArme.Location = new System.Drawing.Point(162, 148);
+            this.txtForceArme.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtForceArme.Name = "txtForceArme";
+            this.txtForceArme.Size = new System.Drawing.Size(87, 16);
+            this.txtForceArme.TabIndex = 49;
+            this.txtForceArme.Text = "txtForceArme";
+            // 
+            // txtDefenseArmure
+            // 
+            this.txtDefenseArmure.AutoSize = true;
+            this.txtDefenseArmure.Location = new System.Drawing.Point(162, 164);
+            this.txtDefenseArmure.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtDefenseArmure.Name = "txtDefenseArmure";
+            this.txtDefenseArmure.Size = new System.Drawing.Size(114, 16);
+            this.txtDefenseArmure.TabIndex = 50;
+            this.txtDefenseArmure.Text = "txtDefenseArmure";
+            // 
+            // txtPrecisionArme
+            // 
+            this.txtPrecisionArme.AutoSize = true;
+            this.txtPrecisionArme.Location = new System.Drawing.Point(162, 180);
+            this.txtPrecisionArme.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtPrecisionArme.Name = "txtPrecisionArme";
+            this.txtPrecisionArme.Size = new System.Drawing.Size(108, 16);
+            this.txtPrecisionArme.TabIndex = 51;
+            this.txtPrecisionArme.Text = "txtPrecisionArme";
+            // 
+            // txtEsquiveBouclier
+            // 
+            this.txtEsquiveBouclier.AutoSize = true;
+            this.txtEsquiveBouclier.Location = new System.Drawing.Point(162, 196);
+            this.txtEsquiveBouclier.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtEsquiveBouclier.Name = "txtEsquiveBouclier";
+            this.txtEsquiveBouclier.Size = new System.Drawing.Size(118, 16);
+            this.txtEsquiveBouclier.TabIndex = 52;
+            this.txtEsquiveBouclier.Text = "txtEsquiveBouclier";
+            // 
             // MenuJeu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(531, 544);
+            this.ClientSize = new System.Drawing.Size(548, 544);
             this.Controls.Add(this.pboxSelectedAventurier3);
             this.Controls.Add(this.pboxSelectedAventurier2);
             this.Controls.Add(this.pboxSelectedAventurier1);
@@ -892,6 +984,14 @@
         private System.Windows.Forms.PictureBox pboxSelectedAventurier1;
         private System.Windows.Forms.PictureBox pboxSelectedAventurier2;
         private System.Windows.Forms.PictureBox pboxSelectedAventurier3;
+        private System.Windows.Forms.Label lblPlusForce;
+        private System.Windows.Forms.Label lblPlusEsquive;
+        private System.Windows.Forms.Label lblPlusPrecision;
+        private System.Windows.Forms.Label lblPlusDefense;
+        private System.Windows.Forms.Label txtForceArme;
+        private System.Windows.Forms.Label txtEsquiveBouclier;
+        private System.Windows.Forms.Label txtPrecisionArme;
+        private System.Windows.Forms.Label txtDefenseArmure;
     }
 }
 
