@@ -157,6 +157,20 @@ namespace JRPG
                 p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_VIE_MINEURE_ID]);
                 p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_MANA_MINEURE_ID]);
 
+                //tempo test full party
+                Aventurier deuxiemeAventurier;
+                Aventurier troisiemeAventurier;
+                deuxiemeAventurier = new Pretre("JeanPaul II", 0, 1);
+                troisiemeAventurier = new Voleur("RobinDesBois", 0, 1);
+                p.groupeAventurier.AjouterAventurier(deuxiemeAventurier);
+                p.groupeAventurier.AjouterAventurier(troisiemeAventurier);
+
+                //tempo test pour équipper un item (et faire affiché l'équipement en meme temps
+                p.groupeAventurier.AjouterItem(li.ListeArmes[li.BATON_ID]);
+                p.groupeAventurier.AjouterItem(li.ListeArmes[li.EPEE_BRONZE_ID]);
+                p.groupeAventurier.AjouterItem(li.ListeArmures[li.ROBE_ID]);
+                p.groupeAventurier.AjouterItem(li.ListeBoucliers[li.ECU_ACIER_ID]);
+
                 Hide();
                 MenuJeu menuJeu = new MenuJeu();
                 menuJeu.ShowDialog();

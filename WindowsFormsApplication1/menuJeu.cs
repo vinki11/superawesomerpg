@@ -424,7 +424,7 @@ namespace JRPG
         private void cboArmure_SelectedIndexChanged(object sender, EventArgs e)
         {
             Armure ancienArmure = p.groupeAventurier.Membres[selectedAventurier].Armure; // On met l'ancien armure dans une variable temporaire
-            var comboboxItem = cboArme.SelectedItem as ComboboxItem;
+            var comboboxItem = cboArmure.SelectedItem as ComboboxItem;
             if (comboboxItem != null)
             {
                 Armure newArmure = li.ListeArmures[comboboxItem.Value];
@@ -443,7 +443,7 @@ namespace JRPG
         private void cboBouclier_SelectedIndexChanged(object sender, EventArgs e)
         {
             Bouclier ancienBouclier = p.groupeAventurier.Membres[selectedAventurier].Bouclier; // On met l'ancien Bouclier dans une variable temporaire                                                                                 //
-            var comboboxItem = cboArme.SelectedItem as ComboboxItem;
+            var comboboxItem = cboBouclier.SelectedItem as ComboboxItem;
             if (comboboxItem != null)
             {
                 Bouclier newBouclier = li.ListeBoucliers[comboboxItem.Value];

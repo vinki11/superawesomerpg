@@ -13,7 +13,6 @@ namespace JRPG.Classes.Item
         public int IdItem { get; set; }
         public string NomItem { get; set; }
         public int PrixRevente { get; set; }
-        public bool Equipped { get; set; }
         public bool UtilisableGuerrier { get; set; }
         public bool UtilisablePretre { get; set; }
         public bool UtilisableMage { get; set; }

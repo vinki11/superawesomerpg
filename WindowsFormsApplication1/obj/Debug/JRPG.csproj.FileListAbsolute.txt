@@ -41,3 +41,4 @@ D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\obj\Deb
 D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.Properties.Resources.resources
 D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.csproj.GenerateResource.Cache
 D:\Documents\GitHubVisualStudio\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.Maison.resources
+C:\Users\Vincent\Documents\INF1035\TP2\WindowsFormsApplication1\WindowsFormsApplication1\obj\Debug\JRPG.Maison.resources
