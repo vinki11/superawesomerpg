@@ -15,7 +15,7 @@ using JRPG.Classes.Item;
 
 namespace JRPG
 {
-    using prop = Program;
+    using p = Program;
     using li = ListeItem;
 
     public partial class Maison : Form
@@ -55,7 +55,9 @@ namespace JRPG
                     FileShare.Read);
                 p.groupeAventurier = (Groupe)formatter.Deserialize(stream);
                 stream.Close();
-                
+
+                ReloadInventaire();
+
                 MessageBox.Show("Partie chargée.");
             }
             else
