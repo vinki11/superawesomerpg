@@ -49,6 +49,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Aventure\Aventure.cs" />
+    <Compile Include="Classes\Aventure\ListeAventure.cs" />
     <Compile Include="Classes\Aventurier\Aventurier.cs" />
     <Compile Include="Classes\Aventurier\Guerrier.cs" />
     <Compile Include="Classes\Aventurier\ListeClasse.cs" />
@@ -56,6 +58,7 @@
     <Compile Include="Classes\Aventurier\Pretre.cs" />
     <Compile Include="Classes\Aventurier\Voleur.cs" />
     <Compile Include="Classes\Ennemi\Ennemi.cs" />
+    <Compile Include="Classes\Ennemi\ListeEnnemi.cs" />
     <Compile Include="Classes\Item\Arme.cs" />
     <Compile Include="Classes\Item\Armure.cs" />
     <Compile Include="Classes\Item\Bouclier.cs" />
@@ -80,7 +83,7 @@
       <DependentUpon>Combat.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Groupe.cs" />
-    <Compile Include="Classes\GroupeEnnemi.cs" />
+    <Compile Include="Classes\Aventure\GroupeEnnemi.cs" />
     <Compile Include="Maison.cs">
       <SubType>Form</SubType>
     </Compile>

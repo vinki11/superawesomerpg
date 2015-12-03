@@ -79,10 +79,10 @@ namespace JRPG.Classes.Aventurier
         #endregion
 
         #region Fonctions
-        public void Attaquer(Ennemis cible)
+        public void Attaquer(Ennemi.Ennemi cible)
         {
         }
-        
+
         public void UtiliserCompetenceA()
         {
 
@@ -127,6 +127,6 @@ namespace JRPG.Classes.Aventurier
         Mana,
         Energie
     };
-   
-     
+
+
 }
