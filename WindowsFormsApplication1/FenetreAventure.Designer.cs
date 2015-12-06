@@ -54,6 +54,7 @@
             this.cboChoisirAventure.Name = "cboChoisirAventure";
             this.cboChoisirAventure.Size = new System.Drawing.Size(178, 21);
             this.cboChoisirAventure.TabIndex = 1;
+            this.cboChoisirAventure.SelectedIndexChanged += new System.EventHandler(this.cboChoisirAventure_SelectedIndexChanged);
             // 
             // txtInformationsAventure
             // 

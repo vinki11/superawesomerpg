@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using JRPG.Classes.Aventurier;
+using System.Drawing;
 
 namespace JRPG.Classes.Ennemi
 {
@@ -12,6 +13,7 @@ namespace JRPG.Classes.Ennemi
         #region  Attributs
         public int IdEnnemie { get; set; }
         public string Nom { get; set; }
+        public Bitmap ImageEnnemi { get; protected set; }
         public int Niveau { get; set; }
         public Etat Etat { get; set; }
         public int PvMax { get; set; }
@@ -27,13 +29,12 @@ namespace JRPG.Classes.Ennemi
         protected string item; // Plutot faire une fonction qui determine au hasard si un item est retrouvé en loot ?
         protected string competence; //Pas un string évidamment
         protected string strategie; // Pas un string mais un enum et surment pas ici du tout mais juste pour pas l'oublier
-
-
+        
         #endregion
 
         #region Constructeur
 
-        public Ennemi(int pId, string pNom, int pNiveau, int pPv, int pInitiative, int pPrecision, int pEsquive, int pForce, int pDefense, int pGainXp, int pPieces)
+        public Ennemi(int pId, string pNom, int pNiveau, int pPv, int pInitiative, int pPrecision, int pEsquive, int pForce, int pDefense, int pGainXp, int pPieces, Bitmap pImageEnnemi)
         {
             Nom = pNom;
             Niveau = pNiveau;
@@ -46,6 +47,7 @@ namespace JRPG.Classes.Ennemi
             Defense = pDefense;
             Gainxp = pGainXp;
             Pieces = pPieces;
+            ImageEnnemi = pImageEnnemi;
         }
 
         public Ennemi(Ennemi pEnnemi)
@@ -61,6 +63,7 @@ namespace JRPG.Classes.Ennemi
             this.Defense = pEnnemi.Defense;
             this.Gainxp = pEnnemi.Gainxp;
             this.Pieces = pEnnemi.Pieces;
+            this.ImageEnnemi = pEnnemi.ImageEnnemi;
         }
 
         #endregion

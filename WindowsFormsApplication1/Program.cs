@@ -19,6 +19,9 @@ namespace JRPG
             Application.SetCompatibleTextRenderingDefault(false);
             MenuPrincipal menuPrinc = new MenuPrincipal();
             Application.Run(menuPrinc);
+
+            /*Combat fenCombat = new Combat();
+            Application.Run(fenCombat);*/
         }
     }
 }

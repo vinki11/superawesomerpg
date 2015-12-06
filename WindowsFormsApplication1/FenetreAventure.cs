@@ -37,6 +37,11 @@ namespace JRPG
                 }
             }
         }
+        
+        private void cboChoisirAventure_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            txtInformationsAventure.Text = la.ListeAventures[(cboChoisirAventure.SelectedItem as ComboboxItem).Value].DescriptionAventure != null ? la.ListeAventures[(cboChoisirAventure.SelectedItem as ComboboxItem).Value].DescriptionAventure : ""; 
+        }
 
         private void btnRetourVillage_Click(object sender, EventArgs e)
         {
@@ -53,8 +58,12 @@ namespace JRPG
             }
             else
             {
+                Hide();
+                Combat newCombat = new Combat((cboChoisirAventure.SelectedItem as ComboboxItem).Value, 1);
+                newCombat.ShowDialog();
                 //MessageBox.Show("Id de l'aventure choisi : " + (cboChoisirAventure.SelectedItem as ComboboxItem).Value);
             }
         }
+
     }
 }
