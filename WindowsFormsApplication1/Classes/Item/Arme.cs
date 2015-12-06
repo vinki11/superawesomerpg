@@ -12,10 +12,11 @@ namespace JRPG.Classes.Item
         #region Attributs
         public int Force { get; set; }
         public int Precision { get; set; }
+        public bool DeuxMain { get; set; }
         #endregion
 
         #region Constructeurs
-        public Arme(int pIdItem, string pNomItem, int pPrixRevente, int pForce, int pPrecision, bool pUtilisableGuerrier = false, bool pUtilisablePretre = false, bool pUtilisableMage = false, bool pUtilisableVoleur = false)
+        public Arme(int pIdItem, string pNomItem, int pPrixRevente, int pForce, int pPrecision, bool pDeuxMain = false, bool pUtilisableGuerrier = false, bool pUtilisablePretre = false, bool pUtilisableMage = false, bool pUtilisableVoleur = false)
         {
             IdItem = pIdItem;
             NomItem = pNomItem;
@@ -26,6 +27,7 @@ namespace JRPG.Classes.Item
             UtilisablePretre = pUtilisablePretre;
             UtilisableMage = pUtilisableMage;
             UtilisableVoleur = pUtilisableVoleur;
+            DeuxMain = pDeuxMain;
         }
         #endregion
         

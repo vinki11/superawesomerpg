@@ -22,6 +22,7 @@ namespace JRPG
         public const int DAGUE_BRONZE_ID = 0;
         public const int EPEE_BRONZE_ID = 1;
         public const int BATON_ID = 2;
+        public const int BATARDE_BRONZE_ID = 3;
 
         //Constante Armure
         public const int ARMURE_CUIR_ID = 0;
@@ -46,7 +47,8 @@ namespace JRPG
             //Armes
             ListeArmes.Add(new Arme(DAGUE_BRONZE_ID, "Dague de bronze", 10, 5, 10, pUtilisableGuerrier:true, pUtilisableVoleur:true));
             ListeArmes.Add(new Arme(EPEE_BRONZE_ID, "Épée de bronze", 10, 10, 0, pUtilisableGuerrier:true));
-            ListeArmes.Add(new Arme(BATON_ID, "Baton", 5, 2, 0, true, true, true, true));
+            ListeArmes.Add(new Arme(BATON_ID, "Baton", 5, 2, 0, true, true, true, true,true));
+            ListeArmes.Add(new Arme(BATARDE_BRONZE_ID, "Épée batarde de bronze", 15, 15, 0, true, pUtilisableGuerrier:true));
 
             //Armure
             ListeArmures.Add(new Armure(ARMURE_CUIR_ID, "Armure de cuir", 10, 5,  pUtilisableGuerrier:true, pUtilisableVoleur:true));

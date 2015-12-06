@@ -409,13 +409,41 @@ namespace JRPG
             if (comboboxItem != null)
             {
                 Arme newArme = li.ListeArmes[comboboxItem.Value];
-                if (ancienArme.IdItem != newArme.IdItem)
+                if (ancienArme != null && ancienArme.IdItem != newArme.IdItem)
                 {
                     p.groupeAventurier.Membres[selectedAventurier].Arme = newArme; //On assigne la nouvelle arme au personnage
                     p.groupeAventurier.AjouterItem(ancienArme);//On ajoute l'ancienne arme à l'inventaire
                     p.groupeAventurier.RetirerItem(newArme); //On retire la nouvelle arme de l'inventaire
+
+                    if (newArme.DeuxMain == true)
+                    {
+                        if (cboBouclier.SelectedIndex != -1)
+                        {
+                            cboBouclier.SelectedIndex = -1;
+                            Bouclier ancienBouclier = p.groupeAventurier.Membres[selectedAventurier].Bouclier;
+                            p.groupeAventurier.Membres[selectedAventurier].Bouclier = null; //Unequip le bouclier
+                            p.groupeAventurier.AjouterItem(ancienBouclier);//On ajoute l'ancienne armure à l'inventaire
+                        }
+                    }
                 }
+                else if (ancienArme == null)
+                {
+                    p.groupeAventurier.Membres[selectedAventurier].Arme = newArme; //On assigne la nouvelle Bouclier au personnage
+                    p.groupeAventurier.RetirerItem(newArme); //On retire la nouvelle Bouclier de l'inventaire
+          
+                    if (newArme.DeuxMain == true)
+                    {
+                        if (cboBouclier.SelectedIndex != -1)
+                        {
+                            cboBouclier.SelectedIndex = -1;
+                            Bouclier ancienBouclier = p.groupeAventurier.Membres[selectedAventurier].Bouclier;
+                            p.groupeAventurier.Membres[selectedAventurier].Bouclier = null; //Unequip le bouclier
+                            p.groupeAventurier.AjouterItem(ancienBouclier);//On ajoute l'ancienne armure à l'inventaire
+                         }
+                    }
+                }   
             }
+
 
             AfficherInventaire();
             AfficherStatsEquipement(selectedAventurier);
@@ -428,7 +456,7 @@ namespace JRPG
             if (comboboxItem != null)
             {
                 Armure newArmure = li.ListeArmures[comboboxItem.Value];
-                if (ancienArmure.IdItem != newArmure.IdItem)
+                if (ancienArmure != null && ancienArmure.IdItem != newArmure.IdItem)
                 {
                     p.groupeAventurier.Membres[selectedAventurier].Armure = newArmure; //On assigne la nouvelle armure au personnage
                     p.groupeAventurier.AjouterItem(ancienArmure);//On ajoute l'ancienne armure à l'inventaire
@@ -447,11 +475,39 @@ namespace JRPG
             if (comboboxItem != null)
             {
                 Bouclier newBouclier = li.ListeBoucliers[comboboxItem.Value];
-                if (ancienBouclier.IdItem != newBouclier.IdItem)
+                if (ancienBouclier != null && ancienBouclier.IdItem != newBouclier.IdItem)
                 {
                     p.groupeAventurier.Membres[selectedAventurier].Bouclier = newBouclier; //On assigne la nouvelle Bouclier au personnage
                     p.groupeAventurier.AjouterItem(ancienBouclier);//On ajoute l'ancienne Bouclier à l'inventaire
                     p.groupeAventurier.RetirerItem(newBouclier); //On retire la nouvelle Bouclier de l'inventaire
+
+                    Arme ancienArme = p.groupeAventurier.Membres[selectedAventurier].Arme;
+                    if (ancienArme.DeuxMain == true)
+                    {
+                        if (cboArme.SelectedIndex != -1)
+                        {
+                            cboArme.SelectedIndex = -1;
+                            p.groupeAventurier.Membres[selectedAventurier].Arme = null; //Unequip le bouclier
+                            p.groupeAventurier.AjouterItem(ancienArme);//On ajoute l'ancienne armure à l'inventaire
+                        }
+                    }
+                }
+                else if (ancienBouclier == null)
+                {
+                    p.groupeAventurier.Membres[selectedAventurier].Bouclier = newBouclier; //On assigne la nouvelle Bouclier au personnage
+                    p.groupeAventurier.RetirerItem(newBouclier); //On retire la nouvelle Bouclier de l'inventaire
+                    
+                    Arme ancienArme = p.groupeAventurier.Membres[selectedAventurier].Arme;
+                    if (ancienArme.DeuxMain == true)
+                    {
+                        if (cboArme.SelectedIndex != -1)
+                        {
+                            cboArme.SelectedIndex = -1;
+                            p.groupeAventurier.Membres[selectedAventurier].Arme = null; //Unequip le bouclier
+                            p.groupeAventurier.AjouterItem(ancienArme);//On ajoute l'ancienne armure à l'inventaire
+                        }
+                    }
+
                 }
             }
 
