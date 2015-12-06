@@ -54,6 +54,20 @@ namespace JRPG.Classes
         {
 
         }
+
+        public int PlusHautNiveau()
+        {
+            int niveaumax = 0;
+            foreach (Aventurier.Aventurier aventurier in this.Membres)
+            {
+                if (aventurier.Niveau > niveaumax)
+                {
+                    niveaumax = aventurier.Niveau;
+                }
+            }
+
+            return niveaumax;
+        }
         #endregion
 
     }

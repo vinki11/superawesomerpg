@@ -1,3 +1,5 @@
 WindowsFormsApplication1/obj/Debug/JRPG.csproj.FileListAbsolute.txt
 WindowsFormsApplication1/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 *.suo
+*.exe
+*.suo

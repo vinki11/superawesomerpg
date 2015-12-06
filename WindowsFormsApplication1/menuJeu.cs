@@ -360,7 +360,7 @@ namespace JRPG
         private void btnAventure_Click(object sender, EventArgs e)
         {
             Hide();
-            Aventure choixAventure = new Aventure();
+            FenetreAventure choixAventure = new FenetreAventure();
             choixAventure.ShowDialog();
         }
 

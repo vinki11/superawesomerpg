@@ -1,6 +1,6 @@
 ﻿namespace JRPG
 {
-    partial class Aventure
+    partial class FenetreAventure
     {
         /// <summary>
         /// Required designer variable.
@@ -30,7 +30,7 @@
         {
             this.lblChoisirAventure = new System.Windows.Forms.Label();
             this.cboChoisirAventure = new System.Windows.Forms.ComboBox();
-            this.rtbInformationsAventure = new System.Windows.Forms.RichTextBox();
+            this.txtInformationsAventure = new System.Windows.Forms.RichTextBox();
             this.btnRetourVillage = new System.Windows.Forms.Button();
             this.btnAventure = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -50,53 +50,56 @@
             // 
             this.cboChoisirAventure.FormattingEnabled = true;
             this.cboChoisirAventure.Location = new System.Drawing.Point(32, 67);
-            this.cboChoisirAventure.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cboChoisirAventure.Margin = new System.Windows.Forms.Padding(2);
             this.cboChoisirAventure.Name = "cboChoisirAventure";
             this.cboChoisirAventure.Size = new System.Drawing.Size(178, 21);
             this.cboChoisirAventure.TabIndex = 1;
             // 
-            // rtbInformationsAventure
+            // txtInformationsAventure
             // 
-            this.rtbInformationsAventure.Location = new System.Drawing.Point(32, 108);
-            this.rtbInformationsAventure.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.rtbInformationsAventure.Name = "rtbInformationsAventure";
-            this.rtbInformationsAventure.Size = new System.Drawing.Size(302, 197);
-            this.rtbInformationsAventure.TabIndex = 2;
-            this.rtbInformationsAventure.Text = "";
+            this.txtInformationsAventure.Location = new System.Drawing.Point(32, 108);
+            this.txtInformationsAventure.Margin = new System.Windows.Forms.Padding(2);
+            this.txtInformationsAventure.Name = "txtInformationsAventure";
+            this.txtInformationsAventure.Size = new System.Drawing.Size(302, 197);
+            this.txtInformationsAventure.TabIndex = 2;
+            this.txtInformationsAventure.Text = "";
             // 
             // btnRetourVillage
             // 
             this.btnRetourVillage.Location = new System.Drawing.Point(118, 336);
-            this.btnRetourVillage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRetourVillage.Margin = new System.Windows.Forms.Padding(2);
             this.btnRetourVillage.Name = "btnRetourVillage";
             this.btnRetourVillage.Size = new System.Drawing.Size(114, 25);
             this.btnRetourVillage.TabIndex = 5;
             this.btnRetourVillage.Text = "Retour au village";
             this.btnRetourVillage.UseVisualStyleBackColor = true;
+            this.btnRetourVillage.Click += new System.EventHandler(this.btnRetourVillage_Click);
             // 
             // btnAventure
             // 
             this.btnAventure.Location = new System.Drawing.Point(244, 336);
-            this.btnAventure.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAventure.Margin = new System.Windows.Forms.Padding(2);
             this.btnAventure.Name = "btnAventure";
             this.btnAventure.Size = new System.Drawing.Size(92, 25);
             this.btnAventure.TabIndex = 6;
             this.btnAventure.Text = "À l\'aventure!";
             this.btnAventure.UseVisualStyleBackColor = true;
+            this.btnAventure.Click += new System.EventHandler(this.btnAventure_Click);
             // 
-            // Aventure
+            // FenetreAventure
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(380, 384);
             this.Controls.Add(this.btnAventure);
             this.Controls.Add(this.btnRetourVillage);
-            this.Controls.Add(this.rtbInformationsAventure);
+            this.Controls.Add(this.txtInformationsAventure);
             this.Controls.Add(this.cboChoisirAventure);
             this.Controls.Add(this.lblChoisirAventure);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Name = "Aventure";
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "FenetreAventure";
             this.Text = "JRPG";
+            this.Load += new System.EventHandler(this.Aventure_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -106,7 +109,7 @@
 
         private System.Windows.Forms.Label lblChoisirAventure;
         private System.Windows.Forms.ComboBox cboChoisirAventure;
-        private System.Windows.Forms.RichTextBox rtbInformationsAventure;
+        private System.Windows.Forms.RichTextBox txtInformationsAventure;
         private System.Windows.Forms.Button btnRetourVillage;
         private System.Windows.Forms.Button btnAventure;
     }

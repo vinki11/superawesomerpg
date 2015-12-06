@@ -70,11 +70,11 @@
     <Compile Include="CreationAventurier.Designer.cs">
       <DependentUpon>CreationAventurier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Aventure.cs">
+    <Compile Include="FenetreAventure.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Aventure.Designer.cs">
-      <DependentUpon>Aventure.cs</DependentUpon>
+    <Compile Include="FenetreAventure.Designer.cs">
+      <DependentUpon>FenetreAventure.cs</DependentUpon>
     </Compile>
     <Compile Include="Combat.cs">
       <SubType>Form</SubType>
@@ -108,8 +108,8 @@
     <EmbeddedResource Include="CreationAventurier.resx">
       <DependentUpon>CreationAventurier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Aventure.resx">
-      <DependentUpon>Aventure.cs</DependentUpon>
+    <EmbeddedResource Include="FenetreAventure.resx">
+      <DependentUpon>FenetreAventure.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Combat.resx">
       <DependentUpon>Combat.cs</DependentUpon>

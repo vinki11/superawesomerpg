@@ -100,6 +100,7 @@ namespace JRPG.Classes.Aventure
             ListeAventures[LA_PLAGE_ID].AjouterGroupeEnnemis(groupe3);
 
             #endregion
+            
         }
 
     }
