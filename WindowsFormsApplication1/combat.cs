@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -28,11 +29,69 @@ namespace JRPG
             etapeAventure = etapeId;
             indexEtape = etapeAventure - 1;
             nbEtapesAventure = la.ListeAventures[aventureId].ListeGroupeEnnemis.Count();
+
+            Stack stackInitiative = new Stack();
         }
 
         private void Combat_Load(object sender, EventArgs e)
         {
             AfficherElements();
+            CalculerInitiative();
+        }
+
+        struct Personnage
+        {
+            public TypePersonnage typePerso;
+            public int initiative;
+            public int idPerso;
+            public string nomPerso;
+        }
+
+        enum TypePersonnage
+        {
+            AVENTURIER,
+            ENNEMI
+        }
+
+        private void CalculerInitiative()
+        {
+            List<Personnage> lstPersonnages = new List<Personnage>();
+
+            int indAventurier = 0;
+            foreach(Aventurier aventurier in p.groupeAventurier.Membres)
+            {
+                Personnage perso = new Personnage();
+                perso.nomPerso = aventurier.NomAventurier;
+                perso.initiative = aventurier.Initiativeactuel;
+                perso.typePerso = TypePersonnage.AVENTURIER;
+                perso.idPerso = indAventurier;
+                lstPersonnages.Add(perso);
+                indAventurier++;
+
+            }
+
+            int indEnnemi = 0;
+            foreach (Ennemi ennemi in la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi)
+            {
+                Personnage perso = new Personnage();
+                perso.nomPerso = ennemi.Nom;
+                perso.initiative = ennemi.Initiative;
+                perso.typePerso = TypePersonnage.ENNEMI;
+                perso.idPerso = indEnnemi;
+                lstPersonnages.Add(perso);
+                indEnnemi++;
+            }
+
+            lstPersonnages = lstPersonnages.OrderByDescending(o => o.initiative).ToList();
+
+
+            listviewListeInitiative.Clear();
+            listviewListeInitiative.View = View.List;
+            for (int i = 0;i < lstPersonnages.Count(); i++)
+            {
+                listviewListeInitiative.Items.Add(lstPersonnages[i].nomPerso + " :" + lstPersonnages[i].initiative);
+                //MessageBox.Show(lstPersonnages[i].nomPerso + " : " + lstPersonnages[i].initiative.ToString());
+            }
         }
 
         private void CacherElements()

@@ -34,11 +34,6 @@
             this.lblRessource1 = new System.Windows.Forms.Label();
             this.lblNomAventurier1 = new System.Windows.Forms.Label();
             this.lblGroupeAventurier = new System.Windows.Forms.Label();
-            this.pboxEnnemi1 = new System.Windows.Forms.PictureBox();
-            this.pboxAventurier3 = new System.Windows.Forms.PictureBox();
-            this.pboxAventurier2 = new System.Windows.Forms.PictureBox();
-            this.pboxAventurier1 = new System.Windows.Forms.PictureBox();
-            this.pboxEnnemi2 = new System.Windows.Forms.PictureBox();
             this.lblNomEnnemi1 = new System.Windows.Forms.Label();
             this.lblPVAventurier2 = new System.Windows.Forms.Label();
             this.lblRessource2 = new System.Windows.Forms.Label();
@@ -53,19 +48,14 @@
             this.lblManaSort1 = new System.Windows.Forms.Label();
             this.lblNomAction = new System.Windows.Forms.Label();
             this.lblChoisirCible = new System.Windows.Forms.Label();
-            this.pboxAction = new System.Windows.Forms.PictureBox();
             this.cboChoisirCible = new System.Windows.Forms.ComboBox();
             this.btnUtiliserConsommable = new System.Windows.Forms.Button();
             this.cboConsommable = new System.Windows.Forms.ComboBox();
             this.lblAttaquer = new System.Windows.Forms.Label();
             this.lblConsommable = new System.Windows.Forms.Label();
-            this.pboxAttaquer = new System.Windows.Forms.PictureBox();
             this.lblSort3 = new System.Windows.Forms.Label();
             this.lblSort2 = new System.Windows.Forms.Label();
             this.lblSort1 = new System.Windows.Forms.Label();
-            this.pboxSort2 = new System.Windows.Forms.PictureBox();
-            this.pboxSort3 = new System.Windows.Forms.PictureBox();
-            this.pboxSort1 = new System.Windows.Forms.PictureBox();
             this.rtbHistoriqueActions = new System.Windows.Forms.RichTextBox();
             this.gboxHistoriqueActions = new System.Windows.Forms.GroupBox();
             this.listviewListeInitiative = new System.Windows.Forms.ListView();
@@ -74,16 +64,12 @@
             this.lblEtapeAventure = new System.Windows.Forms.Label();
             this.lblPVEnnemi3 = new System.Windows.Forms.Label();
             this.lblNomEnnemi3 = new System.Windows.Forms.Label();
-            this.pboxEnnemi3 = new System.Windows.Forms.PictureBox();
             this.lblPVEnnemi6 = new System.Windows.Forms.Label();
             this.lblNomEnnemi6 = new System.Windows.Forms.Label();
-            this.pboxEnnemi6 = new System.Windows.Forms.PictureBox();
             this.lblPVEnnemi4 = new System.Windows.Forms.Label();
             this.lblPVEnnemi5 = new System.Windows.Forms.Label();
             this.lblNomEnnemi5 = new System.Windows.Forms.Label();
             this.lblNomEnnemi4 = new System.Windows.Forms.Label();
-            this.pboxEnnemi5 = new System.Windows.Forms.PictureBox();
-            this.pboxEnnemi4 = new System.Windows.Forms.PictureBox();
             this.lblMaxPvEnnemi1 = new System.Windows.Forms.Label();
             this.lblMaxPvEnnemi2 = new System.Windows.Forms.Label();
             this.lblMaxPvEnnemi3 = new System.Windows.Forms.Label();
@@ -93,22 +79,36 @@
             this.lblMaxPvAventurier1 = new System.Windows.Forms.Label();
             this.lblMaxPvAventurier2 = new System.Windows.Forms.Label();
             this.lblMaxPvAventurier3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi2)).BeginInit();
+            this.pboxEnnemi6 = new System.Windows.Forms.PictureBox();
+            this.pboxEnnemi5 = new System.Windows.Forms.PictureBox();
+            this.pboxEnnemi4 = new System.Windows.Forms.PictureBox();
+            this.pboxEnnemi3 = new System.Windows.Forms.PictureBox();
+            this.pboxAction = new System.Windows.Forms.PictureBox();
+            this.pboxAttaquer = new System.Windows.Forms.PictureBox();
+            this.pboxSort2 = new System.Windows.Forms.PictureBox();
+            this.pboxSort3 = new System.Windows.Forms.PictureBox();
+            this.pboxSort1 = new System.Windows.Forms.PictureBox();
+            this.pboxEnnemi2 = new System.Windows.Forms.PictureBox();
+            this.pboxEnnemi1 = new System.Windows.Forms.PictureBox();
+            this.pboxAventurier3 = new System.Windows.Forms.PictureBox();
+            this.pboxAventurier2 = new System.Windows.Forms.PictureBox();
+            this.pboxAventurier1 = new System.Windows.Forms.PictureBox();
             this.gboxActions.SuspendLayout();
+            this.gboxHistoriqueActions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAttaquer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSort2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSort3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSort1)).BeginInit();
-            this.gboxHistoriqueActions.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNomAventurier3
@@ -170,58 +170,6 @@
             this.lblGroupeAventurier.Size = new System.Drawing.Size(105, 13);
             this.lblGroupeAventurier.TabIndex = 26;
             this.lblGroupeAventurier.Text = "Groupe d\'aventuriers";
-            // 
-            // pboxEnnemi1
-            // 
-            this.pboxEnnemi1.Image = global::JRPG.Properties.Resources.spectre;
-            this.pboxEnnemi1.Location = new System.Drawing.Point(32, 54);
-            this.pboxEnnemi1.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxEnnemi1.Name = "pboxEnnemi1";
-            this.pboxEnnemi1.Size = new System.Drawing.Size(75, 75);
-            this.pboxEnnemi1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pboxEnnemi1.TabIndex = 36;
-            this.pboxEnnemi1.TabStop = false;
-            // 
-            // pboxAventurier3
-            // 
-            this.pboxAventurier3.Location = new System.Drawing.Point(205, 354);
-            this.pboxAventurier3.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxAventurier3.Name = "pboxAventurier3";
-            this.pboxAventurier3.Size = new System.Drawing.Size(75, 75);
-            this.pboxAventurier3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pboxAventurier3.TabIndex = 25;
-            this.pboxAventurier3.TabStop = false;
-            // 
-            // pboxAventurier2
-            // 
-            this.pboxAventurier2.Location = new System.Drawing.Point(123, 354);
-            this.pboxAventurier2.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxAventurier2.Name = "pboxAventurier2";
-            this.pboxAventurier2.Size = new System.Drawing.Size(75, 75);
-            this.pboxAventurier2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pboxAventurier2.TabIndex = 24;
-            this.pboxAventurier2.TabStop = false;
-            // 
-            // pboxAventurier1
-            // 
-            this.pboxAventurier1.Location = new System.Drawing.Point(40, 354);
-            this.pboxAventurier1.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxAventurier1.Name = "pboxAventurier1";
-            this.pboxAventurier1.Size = new System.Drawing.Size(75, 75);
-            this.pboxAventurier1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pboxAventurier1.TabIndex = 23;
-            this.pboxAventurier1.TabStop = false;
-            // 
-            // pboxEnnemi2
-            // 
-            this.pboxEnnemi2.Image = global::JRPG.Properties.Resources.spectre;
-            this.pboxEnnemi2.Location = new System.Drawing.Point(131, 54);
-            this.pboxEnnemi2.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxEnnemi2.Name = "pboxEnnemi2";
-            this.pboxEnnemi2.Size = new System.Drawing.Size(75, 75);
-            this.pboxEnnemi2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pboxEnnemi2.TabIndex = 37;
-            this.pboxEnnemi2.TabStop = false;
             // 
             // lblNomEnnemi1
             // 
@@ -385,15 +333,6 @@
             this.lblChoisirCible.TabIndex = 12;
             this.lblChoisirCible.Text = "Choisir cible:";
             // 
-            // pboxAction
-            // 
-            this.pboxAction.Location = new System.Drawing.Point(17, 24);
-            this.pboxAction.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxAction.Name = "pboxAction";
-            this.pboxAction.Size = new System.Drawing.Size(65, 64);
-            this.pboxAction.TabIndex = 53;
-            this.pboxAction.TabStop = false;
-            // 
             // cboChoisirCible
             // 
             this.cboChoisirCible.FormattingEnabled = true;
@@ -442,15 +381,6 @@
             this.lblConsommable.TabIndex = 7;
             this.lblConsommable.Text = "Consommable";
             // 
-            // pboxAttaquer
-            // 
-            this.pboxAttaquer.Location = new System.Drawing.Point(17, 176);
-            this.pboxAttaquer.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxAttaquer.Name = "pboxAttaquer";
-            this.pboxAttaquer.Size = new System.Drawing.Size(54, 56);
-            this.pboxAttaquer.TabIndex = 6;
-            this.pboxAttaquer.TabStop = false;
-            // 
             // lblSort3
             // 
             this.lblSort3.AutoSize = true;
@@ -480,33 +410,6 @@
             this.lblSort1.Size = new System.Drawing.Size(66, 13);
             this.lblSort1.TabIndex = 3;
             this.lblSort1.Text = "nom du spell";
-            // 
-            // pboxSort2
-            // 
-            this.pboxSort2.Location = new System.Drawing.Point(155, 176);
-            this.pboxSort2.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxSort2.Name = "pboxSort2";
-            this.pboxSort2.Size = new System.Drawing.Size(54, 56);
-            this.pboxSort2.TabIndex = 2;
-            this.pboxSort2.TabStop = false;
-            // 
-            // pboxSort3
-            // 
-            this.pboxSort3.Location = new System.Drawing.Point(214, 176);
-            this.pboxSort3.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxSort3.Name = "pboxSort3";
-            this.pboxSort3.Size = new System.Drawing.Size(54, 56);
-            this.pboxSort3.TabIndex = 1;
-            this.pboxSort3.TabStop = false;
-            // 
-            // pboxSort1
-            // 
-            this.pboxSort1.Location = new System.Drawing.Point(97, 176);
-            this.pboxSort1.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxSort1.Name = "pboxSort1";
-            this.pboxSort1.Size = new System.Drawing.Size(54, 56);
-            this.pboxSort1.TabIndex = 0;
-            this.pboxSort1.TabStop = false;
             // 
             // rtbHistoriqueActions
             // 
@@ -591,17 +494,6 @@
             this.lblNomEnnemi3.TabIndex = 54;
             this.lblNomEnnemi3.Text = "nom du mob";
             // 
-            // pboxEnnemi3
-            // 
-            this.pboxEnnemi3.Image = global::JRPG.Properties.Resources.spectre;
-            this.pboxEnnemi3.Location = new System.Drawing.Point(229, 54);
-            this.pboxEnnemi3.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxEnnemi3.Name = "pboxEnnemi3";
-            this.pboxEnnemi3.Size = new System.Drawing.Size(75, 75);
-            this.pboxEnnemi3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pboxEnnemi3.TabIndex = 53;
-            this.pboxEnnemi3.TabStop = false;
-            // 
             // lblPVEnnemi6
             // 
             this.lblPVEnnemi6.AutoSize = true;
@@ -621,17 +513,6 @@
             this.lblNomEnnemi6.Size = new System.Drawing.Size(65, 13);
             this.lblNomEnnemi6.TabIndex = 63;
             this.lblNomEnnemi6.Text = "nom du mob";
-            // 
-            // pboxEnnemi6
-            // 
-            this.pboxEnnemi6.Image = global::JRPG.Properties.Resources.spectre;
-            this.pboxEnnemi6.Location = new System.Drawing.Point(229, 172);
-            this.pboxEnnemi6.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxEnnemi6.Name = "pboxEnnemi6";
-            this.pboxEnnemi6.Size = new System.Drawing.Size(75, 75);
-            this.pboxEnnemi6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pboxEnnemi6.TabIndex = 62;
-            this.pboxEnnemi6.TabStop = false;
             // 
             // lblPVEnnemi4
             // 
@@ -672,28 +553,6 @@
             this.lblNomEnnemi4.Size = new System.Drawing.Size(65, 13);
             this.lblNomEnnemi4.TabIndex = 58;
             this.lblNomEnnemi4.Text = "nom du mob";
-            // 
-            // pboxEnnemi5
-            // 
-            this.pboxEnnemi5.Image = global::JRPG.Properties.Resources.spectre;
-            this.pboxEnnemi5.Location = new System.Drawing.Point(131, 172);
-            this.pboxEnnemi5.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxEnnemi5.Name = "pboxEnnemi5";
-            this.pboxEnnemi5.Size = new System.Drawing.Size(75, 75);
-            this.pboxEnnemi5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pboxEnnemi5.TabIndex = 57;
-            this.pboxEnnemi5.TabStop = false;
-            // 
-            // pboxEnnemi4
-            // 
-            this.pboxEnnemi4.Image = global::JRPG.Properties.Resources.spectre;
-            this.pboxEnnemi4.Location = new System.Drawing.Point(32, 172);
-            this.pboxEnnemi4.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxEnnemi4.Name = "pboxEnnemi4";
-            this.pboxEnnemi4.Size = new System.Drawing.Size(75, 75);
-            this.pboxEnnemi4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pboxEnnemi4.TabIndex = 56;
-            this.pboxEnnemi4.TabStop = false;
             // 
             // lblMaxPvEnnemi1
             // 
@@ -785,6 +644,149 @@
             this.lblMaxPvAventurier3.TabIndex = 73;
             this.lblMaxPvAventurier3.Text = "Max";
             // 
+            // pboxEnnemi6
+            // 
+            this.pboxEnnemi6.Image = global::JRPG.Properties.Resources.spectre;
+            this.pboxEnnemi6.Location = new System.Drawing.Point(229, 172);
+            this.pboxEnnemi6.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxEnnemi6.Name = "pboxEnnemi6";
+            this.pboxEnnemi6.Size = new System.Drawing.Size(75, 75);
+            this.pboxEnnemi6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxEnnemi6.TabIndex = 62;
+            this.pboxEnnemi6.TabStop = false;
+            // 
+            // pboxEnnemi5
+            // 
+            this.pboxEnnemi5.Image = global::JRPG.Properties.Resources.spectre;
+            this.pboxEnnemi5.Location = new System.Drawing.Point(131, 172);
+            this.pboxEnnemi5.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxEnnemi5.Name = "pboxEnnemi5";
+            this.pboxEnnemi5.Size = new System.Drawing.Size(75, 75);
+            this.pboxEnnemi5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxEnnemi5.TabIndex = 57;
+            this.pboxEnnemi5.TabStop = false;
+            // 
+            // pboxEnnemi4
+            // 
+            this.pboxEnnemi4.Image = global::JRPG.Properties.Resources.spectre;
+            this.pboxEnnemi4.Location = new System.Drawing.Point(32, 172);
+            this.pboxEnnemi4.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxEnnemi4.Name = "pboxEnnemi4";
+            this.pboxEnnemi4.Size = new System.Drawing.Size(75, 75);
+            this.pboxEnnemi4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxEnnemi4.TabIndex = 56;
+            this.pboxEnnemi4.TabStop = false;
+            // 
+            // pboxEnnemi3
+            // 
+            this.pboxEnnemi3.Image = global::JRPG.Properties.Resources.spectre;
+            this.pboxEnnemi3.Location = new System.Drawing.Point(229, 54);
+            this.pboxEnnemi3.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxEnnemi3.Name = "pboxEnnemi3";
+            this.pboxEnnemi3.Size = new System.Drawing.Size(75, 75);
+            this.pboxEnnemi3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxEnnemi3.TabIndex = 53;
+            this.pboxEnnemi3.TabStop = false;
+            // 
+            // pboxAction
+            // 
+            this.pboxAction.Location = new System.Drawing.Point(17, 24);
+            this.pboxAction.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxAction.Name = "pboxAction";
+            this.pboxAction.Size = new System.Drawing.Size(65, 64);
+            this.pboxAction.TabIndex = 53;
+            this.pboxAction.TabStop = false;
+            // 
+            // pboxAttaquer
+            // 
+            this.pboxAttaquer.Image = global::JRPG.Properties.Resources.attaque;
+            this.pboxAttaquer.Location = new System.Drawing.Point(17, 176);
+            this.pboxAttaquer.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxAttaquer.Name = "pboxAttaquer";
+            this.pboxAttaquer.Size = new System.Drawing.Size(54, 56);
+            this.pboxAttaquer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxAttaquer.TabIndex = 6;
+            this.pboxAttaquer.TabStop = false;
+            // 
+            // pboxSort2
+            // 
+            this.pboxSort2.Location = new System.Drawing.Point(155, 176);
+            this.pboxSort2.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxSort2.Name = "pboxSort2";
+            this.pboxSort2.Size = new System.Drawing.Size(54, 56);
+            this.pboxSort2.TabIndex = 2;
+            this.pboxSort2.TabStop = false;
+            // 
+            // pboxSort3
+            // 
+            this.pboxSort3.Location = new System.Drawing.Point(214, 176);
+            this.pboxSort3.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxSort3.Name = "pboxSort3";
+            this.pboxSort3.Size = new System.Drawing.Size(54, 56);
+            this.pboxSort3.TabIndex = 1;
+            this.pboxSort3.TabStop = false;
+            // 
+            // pboxSort1
+            // 
+            this.pboxSort1.Location = new System.Drawing.Point(97, 176);
+            this.pboxSort1.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxSort1.Name = "pboxSort1";
+            this.pboxSort1.Size = new System.Drawing.Size(54, 56);
+            this.pboxSort1.TabIndex = 0;
+            this.pboxSort1.TabStop = false;
+            // 
+            // pboxEnnemi2
+            // 
+            this.pboxEnnemi2.Image = global::JRPG.Properties.Resources.spectre;
+            this.pboxEnnemi2.Location = new System.Drawing.Point(131, 54);
+            this.pboxEnnemi2.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxEnnemi2.Name = "pboxEnnemi2";
+            this.pboxEnnemi2.Size = new System.Drawing.Size(75, 75);
+            this.pboxEnnemi2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxEnnemi2.TabIndex = 37;
+            this.pboxEnnemi2.TabStop = false;
+            // 
+            // pboxEnnemi1
+            // 
+            this.pboxEnnemi1.Image = global::JRPG.Properties.Resources.spectre;
+            this.pboxEnnemi1.Location = new System.Drawing.Point(32, 54);
+            this.pboxEnnemi1.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxEnnemi1.Name = "pboxEnnemi1";
+            this.pboxEnnemi1.Size = new System.Drawing.Size(75, 75);
+            this.pboxEnnemi1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxEnnemi1.TabIndex = 36;
+            this.pboxEnnemi1.TabStop = false;
+            // 
+            // pboxAventurier3
+            // 
+            this.pboxAventurier3.Location = new System.Drawing.Point(205, 354);
+            this.pboxAventurier3.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxAventurier3.Name = "pboxAventurier3";
+            this.pboxAventurier3.Size = new System.Drawing.Size(75, 75);
+            this.pboxAventurier3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxAventurier3.TabIndex = 25;
+            this.pboxAventurier3.TabStop = false;
+            // 
+            // pboxAventurier2
+            // 
+            this.pboxAventurier2.Location = new System.Drawing.Point(123, 354);
+            this.pboxAventurier2.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxAventurier2.Name = "pboxAventurier2";
+            this.pboxAventurier2.Size = new System.Drawing.Size(75, 75);
+            this.pboxAventurier2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxAventurier2.TabIndex = 24;
+            this.pboxAventurier2.TabStop = false;
+            // 
+            // pboxAventurier1
+            // 
+            this.pboxAventurier1.Location = new System.Drawing.Point(40, 354);
+            this.pboxAventurier1.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxAventurier1.Name = "pboxAventurier1";
+            this.pboxAventurier1.Size = new System.Drawing.Size(75, 75);
+            this.pboxAventurier1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxAventurier1.TabIndex = 23;
+            this.pboxAventurier1.TabStop = false;
+            // 
             // Combat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -839,23 +841,23 @@
             this.Name = "Combat";
             this.Text = "Combat";
             this.Load += new System.EventHandler(this.Combat_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi2)).EndInit();
             this.gboxActions.ResumeLayout(false);
             this.gboxActions.PerformLayout();
+            this.gboxHistoriqueActions.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAttaquer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSort2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSort3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSort1)).EndInit();
-            this.gboxHistoriqueActions.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
