@@ -22,6 +22,8 @@ namespace JRPG
         int etapeAventure;
         int indexEtape;
         int nbEtapesAventure;
+
+        Personnage persoActif;
         public Combat(int aventureId, int etapeId)
         {
             InitializeComponent();
@@ -30,13 +32,14 @@ namespace JRPG
             indexEtape = etapeAventure - 1;
             nbEtapesAventure = la.ListeAventures[aventureId].ListeGroupeEnnemis.Count();
 
-            Stack stackInitiative = new Stack();
+            //Stack stackInitiative = new Stack();
         }
 
         private void Combat_Load(object sender, EventArgs e)
         {
             AfficherElements();
             CalculerInitiative();
+            ProchainTour();
         }
 
         struct Personnage
@@ -51,6 +54,24 @@ namespace JRPG
         {
             AVENTURIER,
             ENNEMI
+        }
+        private void ProchainTour()
+        {
+            //Gestion de la bordure selected
+            if (persoActif.typePerso == TypePersonnage.AVENTURIER)
+            {
+                PictureBox pBox = (PictureBox)this.Controls.Find("pboxAventurier" + (persoActif.idPerso + 1), true)[0];
+                pBox.Visible = false;
+                PictureBox pBoxSelected = (PictureBox)this.Controls.Find("pboxAventurierSelected" + (persoActif.idPerso+1), true)[0];
+                pBoxSelected.Visible = true;
+            }
+            else
+            {
+                PictureBox pBox = (PictureBox)this.Controls.Find("pboxEnnemi" + (persoActif.idPerso + 1), true)[0];
+                pBox.Visible = false;
+                PictureBox pBoxSelected = (PictureBox)this.Controls.Find("pboxEnnemiSelected" + (persoActif.idPerso + 1), true)[0];
+                pBoxSelected.Visible = true;
+            }
         }
 
         private void CalculerInitiative()
@@ -67,7 +88,6 @@ namespace JRPG
                 perso.idPerso = indAventurier;
                 lstPersonnages.Add(perso);
                 indAventurier++;
-
             }
 
             int indEnnemi = 0;
@@ -92,6 +112,8 @@ namespace JRPG
                 listviewListeInitiative.Items.Add(lstPersonnages[i].nomPerso + " :" + lstPersonnages[i].initiative);
                 //MessageBox.Show(lstPersonnages[i].nomPerso + " : " + lstPersonnages[i].initiative.ToString());
             }
+
+            persoActif = lstPersonnages.First();
         }
 
         private void CacherElements()
@@ -104,6 +126,9 @@ namespace JRPG
                 this.Controls.Find("lblMaxPvEnnemi" + i, true)[0].Visible = false;
                 PictureBox pBox = (PictureBox)this.Controls.Find("pboxEnnemi" + i, true)[0];
                 pBox.Visible = false;
+                PictureBox pBoxSelected = (PictureBox)this.Controls.Find("pboxEnnemiSelected" + i, true)[0];
+                pBoxSelected.Visible = false;
+
             }
 
             //Cacher les éléments des aventuriers
@@ -115,6 +140,8 @@ namespace JRPG
                 this.Controls.Find("lblRessource" + i, true)[0].Visible = false;
                 PictureBox pBox = (PictureBox)this.Controls.Find("pboxAventurier" + i, true)[0];
                 pBox.Visible = false;
+                PictureBox pBoxSelected = (PictureBox)this.Controls.Find("pboxAventurierSelected" + i, true)[0];
+                pBoxSelected.Visible = false;
             }
 
             //Cacher les éléments d'attaque spécial
@@ -142,15 +169,18 @@ namespace JRPG
 
                 this.Controls.Find("lblNomEnnemi" + i, true)[0].Text = la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[(i - 1)].Nom;
                 this.Controls.Find("lblPVEnnemi" + i, true)[0].Text = la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[(i - 1)].PvActuel.ToString();
-                this.Controls.Find("lblMaxPvEnnemi" + i, true)[0].Text = la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[(i - 1)].PvMax.ToString();
+                this.Controls.Find("lblMaxPvEnnemi" + i, true)[0].Text = "/  " + la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[(i - 1)].PvMax.ToString();
+                this.Controls.Find("lblMaxPvEnnemi" + i, true)[0].Left = this.Controls.Find("lblPVEnnemi" + i, true)[0].Right;
 
                 this.Controls.Find("lblPVEnnemi" + i, true)[0].ForeColor = Color.Red;
                 this.Controls.Find("lblMaxPvEnnemi" + i, true)[0].ForeColor = Color.Red;
 
 
                 PictureBox pBox = (PictureBox)this.Controls.Find("pboxEnnemi" + i, true)[0];
+                PictureBox pBoxSelected = (PictureBox)this.Controls.Find("pboxEnnemiSelected" + i, true)[0];
                 pBox.Visible = true;
                 pBox.Image = la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[(i - 1)].ImageEnnemi;
+                pBoxSelected.Image = la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[(i - 1)].ImageEnnemi;
             }
         }
 
@@ -165,17 +195,20 @@ namespace JRPG
 
                 this.Controls.Find("lblNomAventurier" + i, true)[0].Text = p.groupeAventurier.Membres[(i - 1)].NomAventurier;
                 this.Controls.Find("lblPVAventurier" + i, true)[0].Text = p.groupeAventurier.Membres[(i - 1)].Pvactuel.ToString();
-                this.Controls.Find("lblMaxPvAventurier" + i, true)[0].Text = p.groupeAventurier.Membres[(i - 1)].Pvmax.ToString();
+                this.Controls.Find("lblMaxPvAventurier" + i, true)[0].Text = "/  " + p.groupeAventurier.Membres[(i - 1)].Pvmax.ToString();
+                this.Controls.Find("lblMaxPvAventurier" + i, true)[0].Left = this.Controls.Find("lblPVAventurier" + i, true)[0].Right;
                 this.Controls.Find("lblRessource" + i, true)[0].Text = p.groupeAventurier.Membres[(i - 1)].Ressource == Ressource.Mana ? p.groupeAventurier.Membres[(i - 1)].Manaactuel.ToString() : p.groupeAventurier.Membres[(i - 1)].Energieactuel.ToString();
 
                 this.Controls.Find("lblPVAventurier" + i, true)[0].ForeColor = Color.Red;
                 this.Controls.Find("lblMaxPvAventurier" + i, true)[0].ForeColor = Color.Red;
-                this.Controls.Find("lblRessource" + i, true)[0].ForeColor = p.groupeAventurier.Membres[(i - 1)].Ressource == Ressource.Mana ? Color.Blue : Color.SandyBrown;
+                this.Controls.Find("lblRessource" + i, true)[0].ForeColor = p.groupeAventurier.Membres[(i - 1)].Ressource == Ressource.Mana ? Color.Blue : Color.Brown;
 
 
                 PictureBox pBox = (PictureBox)this.Controls.Find("pboxAventurier" + i, true)[0];
+                PictureBox pBoxSelected = (PictureBox)this.Controls.Find("pboxAventurierSelected" + i, true)[0];
                 pBox.Visible = true;
                 pBox.Image = p.groupeAventurier.Membres[(i-1)].Imageclasse;
+                pBoxSelected.Image = p.groupeAventurier.Membres[(i - 1)].Imageclasse;
             }
         }
 
@@ -185,5 +218,54 @@ namespace JRPG
             lblEtapeAventure.Text = etapeAventure + "/" + nbEtapesAventure;
 
         }
+
+        #region paint des borders des picturebox
+
+        private void pboxEnnemiSelected1_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.DarkOrange, ButtonBorderStyle.Solid);
+        }
+
+        private void pboxEnnemiSelected2_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.DarkOrange, ButtonBorderStyle.Solid);
+        }
+
+        private void pboxEnnemiSelected3_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.DarkOrange, ButtonBorderStyle.Solid);
+        }
+
+        private void pboxEnnemiSelected4_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.DarkOrange, ButtonBorderStyle.Solid);
+        }
+
+        private void pboxEnnemiSelected5_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.DarkOrange, ButtonBorderStyle.Solid);
+        }
+
+        private void pboxEnnemiSelected6_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.DarkOrange, ButtonBorderStyle.Solid);
+        }
+
+        private void pboxAventurierSelected3_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.DarkOrange, ButtonBorderStyle.Solid);
+        }
+
+        private void pboxAventurierSelected2_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.DarkOrange, ButtonBorderStyle.Solid);
+        }
+
+        private void pboxAventurierSelected1_Paint(object sender, PaintEventArgs e)
+        {
+            ControlPaint.DrawBorder(e.Graphics, e.ClipRectangle, Color.DarkOrange, ButtonBorderStyle.Solid);
+        }
+
+        #endregion
     }
 }

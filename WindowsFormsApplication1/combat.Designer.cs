@@ -93,6 +93,15 @@
             this.pboxAventurier3 = new System.Windows.Forms.PictureBox();
             this.pboxAventurier2 = new System.Windows.Forms.PictureBox();
             this.pboxAventurier1 = new System.Windows.Forms.PictureBox();
+            this.pboxEnnemiSelected1 = new System.Windows.Forms.PictureBox();
+            this.pboxEnnemiSelected2 = new System.Windows.Forms.PictureBox();
+            this.pboxEnnemiSelected4 = new System.Windows.Forms.PictureBox();
+            this.pboxEnnemiSelected5 = new System.Windows.Forms.PictureBox();
+            this.pboxEnnemiSelected3 = new System.Windows.Forms.PictureBox();
+            this.pboxEnnemiSelected6 = new System.Windows.Forms.PictureBox();
+            this.pboxAventurierSelected1 = new System.Windows.Forms.PictureBox();
+            this.pboxAventurierSelected2 = new System.Windows.Forms.PictureBox();
+            this.pboxAventurierSelected3 = new System.Windows.Forms.PictureBox();
             this.gboxActions.SuspendLayout();
             this.gboxHistoriqueActions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi6)).BeginInit();
@@ -109,12 +118,21 @@
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemiSelected1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemiSelected2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemiSelected4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemiSelected5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemiSelected3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemiSelected6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurierSelected1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurierSelected2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurierSelected3)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNomAventurier3
             // 
             this.lblNomAventurier3.AutoSize = true;
-            this.lblNomAventurier3.Location = new System.Drawing.Point(225, 441);
+            this.lblNomAventurier3.Location = new System.Drawing.Point(226, 439);
             this.lblNomAventurier3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNomAventurier3.Name = "lblNomAventurier3";
             this.lblNomAventurier3.Size = new System.Drawing.Size(29, 13);
@@ -124,7 +142,7 @@
             // lblNomAventurier2
             // 
             this.lblNomAventurier2.AutoSize = true;
-            this.lblNomAventurier2.Location = new System.Drawing.Point(137, 441);
+            this.lblNomAventurier2.Location = new System.Drawing.Point(128, 439);
             this.lblNomAventurier2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNomAventurier2.Name = "lblNomAventurier2";
             this.lblNomAventurier2.Size = new System.Drawing.Size(29, 13);
@@ -134,7 +152,7 @@
             // lblPVAventurier1
             // 
             this.lblPVAventurier1.AutoSize = true;
-            this.lblPVAventurier1.Location = new System.Drawing.Point(67, 454);
+            this.lblPVAventurier1.Location = new System.Drawing.Point(39, 454);
             this.lblPVAventurier1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPVAventurier1.Name = "lblPVAventurier1";
             this.lblPVAventurier1.Size = new System.Drawing.Size(21, 13);
@@ -144,7 +162,7 @@
             // lblRessource1
             // 
             this.lblRessource1.AutoSize = true;
-            this.lblRessource1.Location = new System.Drawing.Point(45, 467);
+            this.lblRessource1.Location = new System.Drawing.Point(37, 467);
             this.lblRessource1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRessource1.Name = "lblRessource1";
             this.lblRessource1.Size = new System.Drawing.Size(74, 13);
@@ -154,7 +172,7 @@
             // lblNomAventurier1
             // 
             this.lblNomAventurier1.AutoSize = true;
-            this.lblNomAventurier1.Location = new System.Drawing.Point(60, 441);
+            this.lblNomAventurier1.Location = new System.Drawing.Point(37, 439);
             this.lblNomAventurier1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNomAventurier1.Name = "lblNomAventurier1";
             this.lblNomAventurier1.Size = new System.Drawing.Size(29, 13);
@@ -174,7 +192,7 @@
             // lblNomEnnemi1
             // 
             this.lblNomEnnemi1.AutoSize = true;
-            this.lblNomEnnemi1.Location = new System.Drawing.Point(43, 144);
+            this.lblNomEnnemi1.Location = new System.Drawing.Point(29, 144);
             this.lblNomEnnemi1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNomEnnemi1.Name = "lblNomEnnemi1";
             this.lblNomEnnemi1.Size = new System.Drawing.Size(65, 13);
@@ -184,7 +202,7 @@
             // lblPVAventurier2
             // 
             this.lblPVAventurier2.AutoSize = true;
-            this.lblPVAventurier2.Location = new System.Drawing.Point(139, 454);
+            this.lblPVAventurier2.Location = new System.Drawing.Point(128, 454);
             this.lblPVAventurier2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPVAventurier2.Name = "lblPVAventurier2";
             this.lblPVAventurier2.Size = new System.Drawing.Size(21, 13);
@@ -194,7 +212,7 @@
             // lblRessource2
             // 
             this.lblRessource2.AutoSize = true;
-            this.lblRessource2.Location = new System.Drawing.Point(117, 467);
+            this.lblRessource2.Location = new System.Drawing.Point(128, 467);
             this.lblRessource2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRessource2.Name = "lblRessource2";
             this.lblRessource2.Size = new System.Drawing.Size(74, 13);
@@ -214,7 +232,7 @@
             // lblRessource3
             // 
             this.lblRessource3.AutoSize = true;
-            this.lblRessource3.Location = new System.Drawing.Point(203, 467);
+            this.lblRessource3.Location = new System.Drawing.Point(225, 467);
             this.lblRessource3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblRessource3.Name = "lblRessource3";
             this.lblRessource3.Size = new System.Drawing.Size(74, 13);
@@ -224,7 +242,7 @@
             // lblNomEnnemi2
             // 
             this.lblNomEnnemi2.AutoSize = true;
-            this.lblNomEnnemi2.Location = new System.Drawing.Point(139, 144);
+            this.lblNomEnnemi2.Location = new System.Drawing.Point(128, 144);
             this.lblNomEnnemi2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNomEnnemi2.Name = "lblNomEnnemi2";
             this.lblNomEnnemi2.Size = new System.Drawing.Size(65, 13);
@@ -234,7 +252,7 @@
             // lblPVEnnemi2
             // 
             this.lblPVEnnemi2.AutoSize = true;
-            this.lblPVEnnemi2.Location = new System.Drawing.Point(158, 157);
+            this.lblPVEnnemi2.Location = new System.Drawing.Point(128, 162);
             this.lblPVEnnemi2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPVEnnemi2.Name = "lblPVEnnemi2";
             this.lblPVEnnemi2.Size = new System.Drawing.Size(21, 13);
@@ -244,7 +262,7 @@
             // lblPVEnnemi1
             // 
             this.lblPVEnnemi1.AutoSize = true;
-            this.lblPVEnnemi1.Location = new System.Drawing.Point(58, 157);
+            this.lblPVEnnemi1.Location = new System.Drawing.Point(29, 162);
             this.lblPVEnnemi1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPVEnnemi1.Name = "lblPVEnnemi1";
             this.lblPVEnnemi1.Size = new System.Drawing.Size(21, 13);
@@ -477,7 +495,7 @@
             // lblPVEnnemi3
             // 
             this.lblPVEnnemi3.AutoSize = true;
-            this.lblPVEnnemi3.Location = new System.Drawing.Point(256, 157);
+            this.lblPVEnnemi3.Location = new System.Drawing.Point(226, 162);
             this.lblPVEnnemi3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPVEnnemi3.Name = "lblPVEnnemi3";
             this.lblPVEnnemi3.Size = new System.Drawing.Size(21, 13);
@@ -487,7 +505,7 @@
             // lblNomEnnemi3
             // 
             this.lblNomEnnemi3.AutoSize = true;
-            this.lblNomEnnemi3.Location = new System.Drawing.Point(236, 144);
+            this.lblNomEnnemi3.Location = new System.Drawing.Point(226, 144);
             this.lblNomEnnemi3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNomEnnemi3.Name = "lblNomEnnemi3";
             this.lblNomEnnemi3.Size = new System.Drawing.Size(65, 13);
@@ -497,7 +515,7 @@
             // lblPVEnnemi6
             // 
             this.lblPVEnnemi6.AutoSize = true;
-            this.lblPVEnnemi6.Location = new System.Drawing.Point(256, 275);
+            this.lblPVEnnemi6.Location = new System.Drawing.Point(226, 294);
             this.lblPVEnnemi6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPVEnnemi6.Name = "lblPVEnnemi6";
             this.lblPVEnnemi6.Size = new System.Drawing.Size(21, 13);
@@ -507,7 +525,7 @@
             // lblNomEnnemi6
             // 
             this.lblNomEnnemi6.AutoSize = true;
-            this.lblNomEnnemi6.Location = new System.Drawing.Point(236, 262);
+            this.lblNomEnnemi6.Location = new System.Drawing.Point(226, 277);
             this.lblNomEnnemi6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNomEnnemi6.Name = "lblNomEnnemi6";
             this.lblNomEnnemi6.Size = new System.Drawing.Size(65, 13);
@@ -517,7 +535,7 @@
             // lblPVEnnemi4
             // 
             this.lblPVEnnemi4.AutoSize = true;
-            this.lblPVEnnemi4.Location = new System.Drawing.Point(58, 275);
+            this.lblPVEnnemi4.Location = new System.Drawing.Point(29, 294);
             this.lblPVEnnemi4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPVEnnemi4.Name = "lblPVEnnemi4";
             this.lblPVEnnemi4.Size = new System.Drawing.Size(21, 13);
@@ -527,7 +545,7 @@
             // lblPVEnnemi5
             // 
             this.lblPVEnnemi5.AutoSize = true;
-            this.lblPVEnnemi5.Location = new System.Drawing.Point(158, 275);
+            this.lblPVEnnemi5.Location = new System.Drawing.Point(128, 294);
             this.lblPVEnnemi5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPVEnnemi5.Name = "lblPVEnnemi5";
             this.lblPVEnnemi5.Size = new System.Drawing.Size(21, 13);
@@ -537,7 +555,7 @@
             // lblNomEnnemi5
             // 
             this.lblNomEnnemi5.AutoSize = true;
-            this.lblNomEnnemi5.Location = new System.Drawing.Point(139, 262);
+            this.lblNomEnnemi5.Location = new System.Drawing.Point(128, 277);
             this.lblNomEnnemi5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNomEnnemi5.Name = "lblNomEnnemi5";
             this.lblNomEnnemi5.Size = new System.Drawing.Size(65, 13);
@@ -547,7 +565,7 @@
             // lblNomEnnemi4
             // 
             this.lblNomEnnemi4.AutoSize = true;
-            this.lblNomEnnemi4.Location = new System.Drawing.Point(43, 262);
+            this.lblNomEnnemi4.Location = new System.Drawing.Point(29, 277);
             this.lblNomEnnemi4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNomEnnemi4.Name = "lblNomEnnemi4";
             this.lblNomEnnemi4.Size = new System.Drawing.Size(65, 13);
@@ -557,7 +575,7 @@
             // lblMaxPvEnnemi1
             // 
             this.lblMaxPvEnnemi1.AutoSize = true;
-            this.lblMaxPvEnnemi1.Location = new System.Drawing.Point(83, 157);
+            this.lblMaxPvEnnemi1.Location = new System.Drawing.Point(54, 162);
             this.lblMaxPvEnnemi1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaxPvEnnemi1.Name = "lblMaxPvEnnemi1";
             this.lblMaxPvEnnemi1.Size = new System.Drawing.Size(27, 13);
@@ -567,7 +585,7 @@
             // lblMaxPvEnnemi2
             // 
             this.lblMaxPvEnnemi2.AutoSize = true;
-            this.lblMaxPvEnnemi2.Location = new System.Drawing.Point(177, 157);
+            this.lblMaxPvEnnemi2.Location = new System.Drawing.Point(153, 162);
             this.lblMaxPvEnnemi2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaxPvEnnemi2.Name = "lblMaxPvEnnemi2";
             this.lblMaxPvEnnemi2.Size = new System.Drawing.Size(27, 13);
@@ -577,7 +595,7 @@
             // lblMaxPvEnnemi3
             // 
             this.lblMaxPvEnnemi3.AutoSize = true;
-            this.lblMaxPvEnnemi3.Location = new System.Drawing.Point(281, 157);
+            this.lblMaxPvEnnemi3.Location = new System.Drawing.Point(250, 162);
             this.lblMaxPvEnnemi3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaxPvEnnemi3.Name = "lblMaxPvEnnemi3";
             this.lblMaxPvEnnemi3.Size = new System.Drawing.Size(27, 13);
@@ -587,7 +605,7 @@
             // lblMaxPvEnnemi4
             // 
             this.lblMaxPvEnnemi4.AutoSize = true;
-            this.lblMaxPvEnnemi4.Location = new System.Drawing.Point(81, 275);
+            this.lblMaxPvEnnemi4.Location = new System.Drawing.Point(54, 294);
             this.lblMaxPvEnnemi4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaxPvEnnemi4.Name = "lblMaxPvEnnemi4";
             this.lblMaxPvEnnemi4.Size = new System.Drawing.Size(27, 13);
@@ -597,7 +615,7 @@
             // lblMaxPvEnnemi5
             // 
             this.lblMaxPvEnnemi5.AutoSize = true;
-            this.lblMaxPvEnnemi5.Location = new System.Drawing.Point(183, 275);
+            this.lblMaxPvEnnemi5.Location = new System.Drawing.Point(153, 294);
             this.lblMaxPvEnnemi5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaxPvEnnemi5.Name = "lblMaxPvEnnemi5";
             this.lblMaxPvEnnemi5.Size = new System.Drawing.Size(27, 13);
@@ -607,7 +625,7 @@
             // lblMaxPvEnnemi6
             // 
             this.lblMaxPvEnnemi6.AutoSize = true;
-            this.lblMaxPvEnnemi6.Location = new System.Drawing.Point(281, 275);
+            this.lblMaxPvEnnemi6.Location = new System.Drawing.Point(250, 294);
             this.lblMaxPvEnnemi6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaxPvEnnemi6.Name = "lblMaxPvEnnemi6";
             this.lblMaxPvEnnemi6.Size = new System.Drawing.Size(27, 13);
@@ -617,7 +635,7 @@
             // lblMaxPvAventurier1
             // 
             this.lblMaxPvAventurier1.AutoSize = true;
-            this.lblMaxPvAventurier1.Location = new System.Drawing.Point(92, 454);
+            this.lblMaxPvAventurier1.Location = new System.Drawing.Point(64, 454);
             this.lblMaxPvAventurier1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaxPvAventurier1.Name = "lblMaxPvAventurier1";
             this.lblMaxPvAventurier1.Size = new System.Drawing.Size(27, 13);
@@ -627,7 +645,7 @@
             // lblMaxPvAventurier2
             // 
             this.lblMaxPvAventurier2.AutoSize = true;
-            this.lblMaxPvAventurier2.Location = new System.Drawing.Point(164, 454);
+            this.lblMaxPvAventurier2.Location = new System.Drawing.Point(153, 454);
             this.lblMaxPvAventurier2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblMaxPvAventurier2.Name = "lblMaxPvAventurier2";
             this.lblMaxPvAventurier2.Size = new System.Drawing.Size(27, 13);
@@ -647,7 +665,7 @@
             // pboxEnnemi6
             // 
             this.pboxEnnemi6.Image = global::JRPG.Properties.Resources.spectre;
-            this.pboxEnnemi6.Location = new System.Drawing.Point(229, 172);
+            this.pboxEnnemi6.Location = new System.Drawing.Point(229, 187);
             this.pboxEnnemi6.Margin = new System.Windows.Forms.Padding(2);
             this.pboxEnnemi6.Name = "pboxEnnemi6";
             this.pboxEnnemi6.Size = new System.Drawing.Size(75, 75);
@@ -658,7 +676,7 @@
             // pboxEnnemi5
             // 
             this.pboxEnnemi5.Image = global::JRPG.Properties.Resources.spectre;
-            this.pboxEnnemi5.Location = new System.Drawing.Point(131, 172);
+            this.pboxEnnemi5.Location = new System.Drawing.Point(131, 187);
             this.pboxEnnemi5.Margin = new System.Windows.Forms.Padding(2);
             this.pboxEnnemi5.Name = "pboxEnnemi5";
             this.pboxEnnemi5.Size = new System.Drawing.Size(75, 75);
@@ -669,7 +687,7 @@
             // pboxEnnemi4
             // 
             this.pboxEnnemi4.Image = global::JRPG.Properties.Resources.spectre;
-            this.pboxEnnemi4.Location = new System.Drawing.Point(32, 172);
+            this.pboxEnnemi4.Location = new System.Drawing.Point(32, 187);
             this.pboxEnnemi4.Margin = new System.Windows.Forms.Padding(2);
             this.pboxEnnemi4.Name = "pboxEnnemi4";
             this.pboxEnnemi4.Size = new System.Drawing.Size(75, 75);
@@ -759,7 +777,7 @@
             // 
             // pboxAventurier3
             // 
-            this.pboxAventurier3.Location = new System.Drawing.Point(205, 354);
+            this.pboxAventurier3.Location = new System.Drawing.Point(228, 350);
             this.pboxAventurier3.Margin = new System.Windows.Forms.Padding(2);
             this.pboxAventurier3.Name = "pboxAventurier3";
             this.pboxAventurier3.Size = new System.Drawing.Size(75, 75);
@@ -769,7 +787,7 @@
             // 
             // pboxAventurier2
             // 
-            this.pboxAventurier2.Location = new System.Drawing.Point(123, 354);
+            this.pboxAventurier2.Location = new System.Drawing.Point(131, 350);
             this.pboxAventurier2.Margin = new System.Windows.Forms.Padding(2);
             this.pboxAventurier2.Name = "pboxAventurier2";
             this.pboxAventurier2.Size = new System.Drawing.Size(75, 75);
@@ -779,7 +797,7 @@
             // 
             // pboxAventurier1
             // 
-            this.pboxAventurier1.Location = new System.Drawing.Point(40, 354);
+            this.pboxAventurier1.Location = new System.Drawing.Point(32, 350);
             this.pboxAventurier1.Margin = new System.Windows.Forms.Padding(2);
             this.pboxAventurier1.Name = "pboxAventurier1";
             this.pboxAventurier1.Size = new System.Drawing.Size(75, 75);
@@ -787,14 +805,128 @@
             this.pboxAventurier1.TabIndex = 23;
             this.pboxAventurier1.TabStop = false;
             // 
+            // pboxEnnemiSelected1
+            // 
+            this.pboxEnnemiSelected1.Image = global::JRPG.Properties.Resources.spectre;
+            this.pboxEnnemiSelected1.Location = new System.Drawing.Point(32, 54);
+            this.pboxEnnemiSelected1.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxEnnemiSelected1.Name = "pboxEnnemiSelected1";
+            this.pboxEnnemiSelected1.Size = new System.Drawing.Size(75, 75);
+            this.pboxEnnemiSelected1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxEnnemiSelected1.TabIndex = 74;
+            this.pboxEnnemiSelected1.TabStop = false;
+            this.pboxEnnemiSelected1.Paint += new System.Windows.Forms.PaintEventHandler(this.pboxEnnemiSelected1_Paint);
+            // 
+            // pboxEnnemiSelected2
+            // 
+            this.pboxEnnemiSelected2.Image = global::JRPG.Properties.Resources.spectre;
+            this.pboxEnnemiSelected2.Location = new System.Drawing.Point(131, 54);
+            this.pboxEnnemiSelected2.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxEnnemiSelected2.Name = "pboxEnnemiSelected2";
+            this.pboxEnnemiSelected2.Size = new System.Drawing.Size(75, 75);
+            this.pboxEnnemiSelected2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxEnnemiSelected2.TabIndex = 75;
+            this.pboxEnnemiSelected2.TabStop = false;
+            this.pboxEnnemiSelected2.Paint += new System.Windows.Forms.PaintEventHandler(this.pboxEnnemiSelected2_Paint);
+            // 
+            // pboxEnnemiSelected4
+            // 
+            this.pboxEnnemiSelected4.Image = global::JRPG.Properties.Resources.spectre;
+            this.pboxEnnemiSelected4.Location = new System.Drawing.Point(32, 187);
+            this.pboxEnnemiSelected4.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxEnnemiSelected4.Name = "pboxEnnemiSelected4";
+            this.pboxEnnemiSelected4.Size = new System.Drawing.Size(75, 75);
+            this.pboxEnnemiSelected4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxEnnemiSelected4.TabIndex = 75;
+            this.pboxEnnemiSelected4.TabStop = false;
+            this.pboxEnnemiSelected4.Paint += new System.Windows.Forms.PaintEventHandler(this.pboxEnnemiSelected4_Paint);
+            // 
+            // pboxEnnemiSelected5
+            // 
+            this.pboxEnnemiSelected5.Image = global::JRPG.Properties.Resources.spectre;
+            this.pboxEnnemiSelected5.Location = new System.Drawing.Point(131, 187);
+            this.pboxEnnemiSelected5.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxEnnemiSelected5.Name = "pboxEnnemiSelected5";
+            this.pboxEnnemiSelected5.Size = new System.Drawing.Size(75, 75);
+            this.pboxEnnemiSelected5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxEnnemiSelected5.TabIndex = 77;
+            this.pboxEnnemiSelected5.TabStop = false;
+            this.pboxEnnemiSelected5.Paint += new System.Windows.Forms.PaintEventHandler(this.pboxEnnemiSelected5_Paint);
+            // 
+            // pboxEnnemiSelected3
+            // 
+            this.pboxEnnemiSelected3.Image = global::JRPG.Properties.Resources.spectre;
+            this.pboxEnnemiSelected3.Location = new System.Drawing.Point(229, 54);
+            this.pboxEnnemiSelected3.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxEnnemiSelected3.Name = "pboxEnnemiSelected3";
+            this.pboxEnnemiSelected3.Size = new System.Drawing.Size(75, 75);
+            this.pboxEnnemiSelected3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxEnnemiSelected3.TabIndex = 76;
+            this.pboxEnnemiSelected3.TabStop = false;
+            this.pboxEnnemiSelected3.Paint += new System.Windows.Forms.PaintEventHandler(this.pboxEnnemiSelected3_Paint);
+            // 
+            // pboxEnnemiSelected6
+            // 
+            this.pboxEnnemiSelected6.Image = global::JRPG.Properties.Resources.spectre;
+            this.pboxEnnemiSelected6.Location = new System.Drawing.Point(229, 187);
+            this.pboxEnnemiSelected6.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxEnnemiSelected6.Name = "pboxEnnemiSelected6";
+            this.pboxEnnemiSelected6.Size = new System.Drawing.Size(75, 75);
+            this.pboxEnnemiSelected6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxEnnemiSelected6.TabIndex = 78;
+            this.pboxEnnemiSelected6.TabStop = false;
+            this.pboxEnnemiSelected6.Paint += new System.Windows.Forms.PaintEventHandler(this.pboxEnnemiSelected6_Paint);
+            // 
+            // pboxAventurierSelected1
+            // 
+            this.pboxAventurierSelected1.Location = new System.Drawing.Point(32, 350);
+            this.pboxAventurierSelected1.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxAventurierSelected1.Name = "pboxAventurierSelected1";
+            this.pboxAventurierSelected1.Size = new System.Drawing.Size(75, 75);
+            this.pboxAventurierSelected1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxAventurierSelected1.TabIndex = 79;
+            this.pboxAventurierSelected1.TabStop = false;
+            this.pboxAventurierSelected1.Paint += new System.Windows.Forms.PaintEventHandler(this.pboxAventurierSelected1_Paint);
+            // 
+            // pboxAventurierSelected2
+            // 
+            this.pboxAventurierSelected2.Location = new System.Drawing.Point(131, 350);
+            this.pboxAventurierSelected2.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxAventurierSelected2.Name = "pboxAventurierSelected2";
+            this.pboxAventurierSelected2.Size = new System.Drawing.Size(75, 75);
+            this.pboxAventurierSelected2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxAventurierSelected2.TabIndex = 80;
+            this.pboxAventurierSelected2.TabStop = false;
+            this.pboxAventurierSelected2.Paint += new System.Windows.Forms.PaintEventHandler(this.pboxAventurierSelected2_Paint);
+            // 
+            // pboxAventurierSelected3
+            // 
+            this.pboxAventurierSelected3.Location = new System.Drawing.Point(229, 350);
+            this.pboxAventurierSelected3.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxAventurierSelected3.Name = "pboxAventurierSelected3";
+            this.pboxAventurierSelected3.Size = new System.Drawing.Size(75, 75);
+            this.pboxAventurierSelected3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxAventurierSelected3.TabIndex = 81;
+            this.pboxAventurierSelected3.TabStop = false;
+            this.pboxAventurierSelected3.Paint += new System.Windows.Forms.PaintEventHandler(this.pboxAventurierSelected3_Paint);
+            // 
             // Combat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(785, 522);
+            this.Controls.Add(this.pboxAventurierSelected3);
+            this.Controls.Add(this.pboxAventurierSelected1);
+            this.Controls.Add(this.pboxAventurierSelected2);
+            this.Controls.Add(this.pboxEnnemiSelected6);
+            this.Controls.Add(this.pboxEnnemiSelected1);
+            this.Controls.Add(this.pboxEnnemiSelected5);
             this.Controls.Add(this.lblMaxPvAventurier3);
+            this.Controls.Add(this.pboxEnnemiSelected4);
             this.Controls.Add(this.lblMaxPvAventurier2);
+            this.Controls.Add(this.pboxEnnemiSelected3);
             this.Controls.Add(this.lblMaxPvAventurier1);
+            this.Controls.Add(this.pboxEnnemiSelected2);
             this.Controls.Add(this.lblMaxPvEnnemi6);
             this.Controls.Add(this.lblMaxPvEnnemi5);
             this.Controls.Add(this.lblMaxPvEnnemi4);
@@ -858,6 +990,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemiSelected1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemiSelected2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemiSelected4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemiSelected5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemiSelected3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemiSelected6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurierSelected1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurierSelected2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxAventurierSelected3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -929,5 +1070,14 @@
         private System.Windows.Forms.Label lblMaxPvAventurier1;
         private System.Windows.Forms.Label lblMaxPvAventurier2;
         private System.Windows.Forms.Label lblMaxPvAventurier3;
+        private System.Windows.Forms.PictureBox pboxEnnemiSelected2;
+        private System.Windows.Forms.PictureBox pboxEnnemiSelected1;
+        private System.Windows.Forms.PictureBox pboxEnnemiSelected6;
+        private System.Windows.Forms.PictureBox pboxEnnemiSelected5;
+        private System.Windows.Forms.PictureBox pboxEnnemiSelected4;
+        private System.Windows.Forms.PictureBox pboxEnnemiSelected3;
+        private System.Windows.Forms.PictureBox pboxAventurierSelected3;
+        private System.Windows.Forms.PictureBox pboxAventurierSelected2;
+        private System.Windows.Forms.PictureBox pboxAventurierSelected1;
     }
 }
