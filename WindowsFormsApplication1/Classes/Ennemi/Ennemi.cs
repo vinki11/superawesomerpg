@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using JRPG.Classes.Aventurier;
 using System.Drawing;
 
 namespace JRPG.Classes.Ennemi
 {
+    using p = Program;
     class Ennemi
     {
         #region  Attributs
@@ -25,16 +27,17 @@ namespace JRPG.Classes.Ennemi
         public int Defense { get; set; }
         public int Gainxp { get; set; }
         public int Pieces { get; set; }
+        public StrategieAction Strategie { get; set; }
+
 
         protected string item; // Plutot faire une fonction qui determine au hasard si un item est retrouvé en loot ?
         protected string competence; //Pas un string évidamment
-        protected string strategie; // Pas un string mais un enum et surment pas ici du tout mais juste pour pas l'oublier
         
         #endregion
 
         #region Constructeur
 
-        public Ennemi(int pId, string pNom, int pNiveau, int pPv, int pInitiative, int pPrecision, int pEsquive, int pForce, int pDefense, int pGainXp, int pPieces, Bitmap pImageEnnemi)
+        public Ennemi(int pId, string pNom, int pNiveau, int pPv, int pInitiative, int pPrecision, int pEsquive, int pForce, int pDefense, int pGainXp, int pPieces, Bitmap pImageEnnemi, StrategieAction pStrat)
         {
             Nom = pNom;
             Niveau = pNiveau;
@@ -48,6 +51,7 @@ namespace JRPG.Classes.Ennemi
             Gainxp = pGainXp;
             Pieces = pPieces;
             ImageEnnemi = pImageEnnemi;
+            Strategie = pStrat;
         }
 
         public Ennemi(Ennemi pEnnemi)
@@ -64,25 +68,74 @@ namespace JRPG.Classes.Ennemi
             this.Gainxp = pEnnemi.Gainxp;
             this.Pieces = pEnnemi.Pieces;
             this.ImageEnnemi = pEnnemi.ImageEnnemi;
+            this.Strategie = pEnnemi.Strategie;
         }
 
         #endregion
 
         #region Fonctions
-        protected void Agir()
+        public void Agir()
+        {
+            int cibleAleatoire;
+            switch (Strategie)
+            {
+                case StrategieAction.AttaqueAleatoire:
+                    if (p.groupeAventurier.NombreMembreVivant() == 3)
+                    {
+                        Random rnd = new Random();
+                        cibleAleatoire = rnd.Next(1, 10);
+
+                        if (cibleAleatoire >= 1 && cibleAleatoire <= 3)
+                        {
+                            MessageBox.Show(this.Nom + " attaque l'aventurier #1");
+                        }
+                        else if (cibleAleatoire >= 4 && cibleAleatoire <= 6)
+                        {
+                            MessageBox.Show(this.Nom + " attaque l'aventurier #2");
+                        }
+                        else if (cibleAleatoire >= 7 && cibleAleatoire <= 9)
+                        {
+                            MessageBox.Show(this.Nom + " attaque l'aventurier #3");
+                        }
+                    }
+                    break;
+
+                case StrategieAction.AttaquePlusFaible:
+                    if (p.groupeAventurier.NombreMembreVivant() == 3)
+                    {
+                        Random rnd = new Random();
+                         cibleAleatoire = rnd.Next(1, 10);
+                        
+                        /*if (cibleAleatoire >= 1 && cibleAleatoire <=3)
+                        {
+                            MessageBox.Show(this.Nom + " attaque l'aventurier #1");
+                        }*/
+                    }
+                    break;
+
+                case StrategieAction.AttaquePlusFort:
+                    break;
+            }
+
+        }
+
+        public void Attaquer(Aventurier.Aventurier cible)
         {
 
         }
 
-        protected void Attaquer(Aventurier.Aventurier cible)
+        public void UtiliserCompetence()
         {
-
-        }
-
-        protected void UtiliserCompetence()
-        {
-
+            
         }
         #endregion
+
+
+        public enum StrategieAction
+        {
+            AttaquePlusFaible,
+            AttaquePlusFort,
+            AttaqueAleatoire
+        };
     }
 }

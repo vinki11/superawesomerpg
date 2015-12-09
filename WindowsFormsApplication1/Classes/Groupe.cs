@@ -68,6 +68,19 @@ namespace JRPG.Classes
 
             return niveaumax;
         }
+
+        public int NombreMembreVivant()
+        {
+            int nbVivant = 0;
+            foreach (Aventurier.Aventurier aventurier in this.Membres)
+            {
+                if (aventurier.Etat != Etat.Mort)
+                {
+                    nbVivant++;
+                }
+            }
+            return nbVivant;
+        }
         #endregion
 
     }

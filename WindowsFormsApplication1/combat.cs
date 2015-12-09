@@ -101,7 +101,10 @@ namespace JRPG
                 pBox.Visible = false;
                 PictureBox pBoxSelected = (PictureBox)this.Controls.Find("pboxEnnemiSelected" + (persoActif.idPerso + 1), true)[0];
                 pBoxSelected.Visible = true;
+
+                AgirMonstre();
             }
+
         }
 
         private void CalculerInitiative()
@@ -320,6 +323,17 @@ namespace JRPG
             persoActif = lstPersonnages.First();
             NouveauTour();
 
+        }
+
+        private void AgirMonstre()
+        {
+            // Vérif si ya un compétence spécial et si il peut l'utilisé
+            /*
+                code here
+            */
+            la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Agir();
+            ProchainTour();
+            //MessageBox.Show("C'est le tour de " + la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Nom + " et il a la stratégie " + la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Strategie.ToString());
         }
 
         private void btnFinTour_Click(object sender, EventArgs e)
