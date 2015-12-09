@@ -16,12 +16,18 @@ namespace JRPG
 {
     using p = Program;
     using la = ListeAventure;
+
     public partial class Combat : Form
     {
         int idAventure;
         int etapeAventure;
         int indexEtape;
         int nbEtapesAventure;
+
+        string typeAction;
+        int cibleId;
+
+        List<Personnage> lstPersonnages = new List<Personnage>();
 
         Personnage persoActif;
         public Combat(int aventureId, int etapeId)
@@ -39,7 +45,7 @@ namespace JRPG
         {
             AfficherElements();
             CalculerInitiative();
-            ProchainTour();
+            NouveauTour();
         }
 
         struct Personnage
@@ -55,9 +61,33 @@ namespace JRPG
             AVENTURIER,
             ENNEMI
         }
-        private void ProchainTour()
+        private void NouveauTour()
         {
+            pboxAction.Image = null;
+            lblNomAction.Text = "Choississez un action";
+            btnFinTour.Enabled = false;
+
             //Gestion de la bordure selected
+
+            //Pbox des ennemis
+            for (var i = 1; i <= la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi.Count(); i++)
+            {
+                PictureBox pBox = (PictureBox)this.Controls.Find("pboxEnnemi" + i, true)[0];
+                pBox.Visible = true;
+                PictureBox pBoxSelected = (PictureBox)this.Controls.Find("pboxEnnemiSelected" + i, true)[0];
+                pBoxSelected.Visible = false;
+
+            }
+
+            //Pbox des aventuriers
+            for (var i = 1; i <= p.groupeAventurier.Membres.Count(); i++)
+            {
+                PictureBox pBox = (PictureBox)this.Controls.Find("pboxAventurier" + i, true)[0];
+                pBox.Visible = true;
+                PictureBox pBoxSelected = (PictureBox)this.Controls.Find("pboxAventurierSelected" + i, true)[0];
+                pBoxSelected.Visible = false;
+            }
+
             if (persoActif.typePerso == TypePersonnage.AVENTURIER)
             {
                 PictureBox pBox = (PictureBox)this.Controls.Find("pboxAventurier" + (persoActif.idPerso + 1), true)[0];
@@ -76,7 +106,6 @@ namespace JRPG
 
         private void CalculerInitiative()
         {
-            List<Personnage> lstPersonnages = new List<Personnage>();
 
             int indAventurier = 0;
             foreach(Aventurier aventurier in p.groupeAventurier.Membres)
@@ -267,5 +296,82 @@ namespace JRPG
         }
 
         #endregion
+
+        private void ProchainTour()
+        {
+            Personnage tempo;
+
+            tempo = lstPersonnages.First();
+            lstPersonnages.Remove(lstPersonnages.First());
+            lstPersonnages.Add(tempo);
+
+            listviewListeInitiative.Clear();
+            listviewListeInitiative.View = View.List;
+            for (int i = 0; i < lstPersonnages.Count(); i++)
+            {
+                listviewListeInitiative.Items.Add(lstPersonnages[i].nomPerso + " :" + lstPersonnages[i].initiative);
+                //MessageBox.Show(lstPersonnages[i].nomPerso + " : " + lstPersonnages[i].initiative.ToString());
+            }
+
+            cboChoisirCible.Items.Clear();
+            cboChoisirCible.SelectedItem = null;
+            cboChoisirCible.Text = "";
+
+            persoActif = lstPersonnages.First();
+            NouveauTour();
+
+        }
+
+        private void btnFinTour_Click(object sender, EventArgs e)
+        {
+            if (persoActif.typePerso == TypePersonnage.ENNEMI)
+            {
+                ProchainTour();
+                //NouveauTour();
+            }
+            else
+            {
+                cibleId = (cboChoisirCible.SelectedItem as ComboboxItem).Value;
+                //MessageBox.Show("Vous attaquer la cible : " + la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[(cibleId)].Nom);
+                if (typeAction == "Attaque")
+                {   
+                    LancerAttaque(p.groupeAventurier.Membres[persoActif.idPerso], la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[cibleId]);
+                }
+
+                ProchainTour();
+            }
+        }
+
+        private void pboxAttaquer_Click(object sender, EventArgs e)
+        {
+            pboxAction.Image = pboxAttaquer.Image;
+            lblNomAction.Text = "Attaque";
+
+            ComboboxItem cbCible;
+
+            for (var i = 0; i < la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi.Count(); i++ )
+            {
+                if (la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[i].Etat != Etat.Mort)
+                {
+                    cbCible = new ComboboxItem();
+                    cbCible.Text = la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[i].Nom;
+                    cbCible.Value = i;
+                    cboChoisirCible.Items.Add(cbCible);
+                }
+            }
+
+            btnFinTour.Enabled = true;
+            cboChoisirCible.SelectedItem = cboChoisirCible.Items[0];
+            typeAction = "Attaque";
+
+        }
+
+        private void LancerAttaque(Aventurier aventurier, Ennemi cible)
+        {
+            //cible.PvActuel = 
+            aventurier.Attaquer(cible);
+            this.Controls.Find("lblPVEnnemi" + (cibleId + 1), true)[0].Text = cible.PvActuel.ToString() ;
+            //MessageBox.Show("Vous attaquer la cible : " + cible.Nom);
+        }
     }
 }

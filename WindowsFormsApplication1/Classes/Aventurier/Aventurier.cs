@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Windows.Forms;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -79,8 +81,41 @@ namespace JRPG.Classes.Aventurier
         #endregion
 
         #region Fonctions
-        public void Attaquer(Ennemi.Ennemi cible)
+        public string Attaquer(Ennemi.Ennemi cible)
         {
+            int chanceAttaque = 5;
+            int degatAttaque = 0;
+            string strAction = "";
+
+            chanceAttaque += this.Precisionactuel + this.Arme.Precision - cible.Esquive;
+            chanceAttaque = chanceAttaque > 9 ? 9 : chanceAttaque;
+            chanceAttaque = chanceAttaque < 1 ? 1 : chanceAttaque;
+
+            //MessageBox.Show("La chance de l'attaque est de: " + chanceAttaque);
+
+            Random rnd = new Random();
+            int chiffreAleatoire = rnd.Next(1, 11);
+
+            //MessageBox.Show("Le chiffre aléatoire est de: " + chiffreAleatoire);
+            strAction = this.NomAventurier + " à attaqué " + cible.Nom;
+            if (chiffreAleatoire < chanceAttaque)
+            {
+                degatAttaque = this.Forceactuel + this.Arme.Force - cible.Defense;
+                degatAttaque = degatAttaque < 1 ? 1 : degatAttaque;
+                cible.PvActuel -= degatAttaque;
+                
+                strAction += "\r\n" + this.NomAventurier + "à touché la cible et infligé : " + degatAttaque + " points de dégats!";
+                MessageBox.Show(strAction);
+
+            }
+            else
+            {
+                strAction += "\r\n" + this.NomAventurier + " à manqué la cible!";
+                MessageBox.Show(strAction);
+            }
+
+            return strAction; //utilisé le return pour faire l'historique si on le désire vraiment
+
         }
 
         public void UtiliserCompetenceA()

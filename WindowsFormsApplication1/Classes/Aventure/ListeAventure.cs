@@ -54,7 +54,7 @@ namespace JRPG.Classes.Aventure
             ennemi1 = new Ennemi.Ennemi(le.ListeEnnemis[le.GOBELIN_ARCHER_ID]);
             ennemi1.Nom = ennemi1.Nom + " 1";
             ennemi2 = new Ennemi.Ennemi(le.ListeEnnemis[le.GOBELIN_ARCHER_ID]);
-            ennemi2.Nom = ennemi1.Nom + " 2";
+            ennemi2.Nom = ennemi2.Nom + " 2";
             groupe2.AjouterEnnemi(ennemi1);
             groupe2.AjouterEnnemi(ennemi2);
             ListeAventures[VILLAGE_GOBELINS_ID].AjouterGroupeEnnemis(groupe2);
@@ -64,7 +64,7 @@ namespace JRPG.Classes.Aventure
             ennemi1 = new Ennemi.Ennemi(le.ListeEnnemis[le.LOUP_ID]);
             ennemi1.Nom = ennemi1.Nom + " 1";
             ennemi2 = new Ennemi.Ennemi(le.ListeEnnemis[le.LOUP_ID]);
-            ennemi2.Nom = ennemi1.Nom + " 2";
+            ennemi2.Nom = ennemi2.Nom + " 2";
             boss = new Ennemi.Ennemi(le.ListeEnnemis[le.GOBELIN_SHAMAN_ID]);
             groupe3.AjouterEnnemi(ennemi1);
             groupe3.AjouterEnnemi(ennemi2);
@@ -82,7 +82,7 @@ namespace JRPG.Classes.Aventure
             ennemi1 = new Ennemi.Ennemi(le.ListeEnnemis[le.CRABE_GEANT_ID]);
             ennemi1.Nom = ennemi1.Nom + " 1";
             ennemi2 = new Ennemi.Ennemi(le.ListeEnnemis[le.CRABE_GEANT_ID]);
-            ennemi2.Nom = ennemi1.Nom + " 2";
+            ennemi2.Nom = ennemi2.Nom + " 2";
             groupe1.AjouterEnnemi(ennemi1);
             groupe1.AjouterEnnemi(ennemi2);
             ListeAventures[LA_PLAGE_ID].AjouterGroupeEnnemis(groupe1);
@@ -92,7 +92,7 @@ namespace JRPG.Classes.Aventure
             ennemi1 = new Ennemi.Ennemi(le.ListeEnnemis[le.HOMME_CRABE_GUERRIER_ID]);
             ennemi1.Nom = ennemi1.Nom + " 1";
             ennemi2 = new Ennemi.Ennemi(le.ListeEnnemis[le.HOMME_CRABE_GUERRIER_ID]);
-            ennemi2.Nom = ennemi1.Nom + " 2";
+            ennemi2.Nom = ennemi2.Nom + " 2";
             ennemi3 = new Ennemi.Ennemi(le.ListeEnnemis[le.CRABE_GEANT_ID]);
             groupe2.AjouterEnnemi(ennemi1);
             groupe2.AjouterEnnemi(ennemi2);
@@ -104,7 +104,7 @@ namespace JRPG.Classes.Aventure
             ennemi1 = new Ennemi.Ennemi(le.ListeEnnemis[le.HOMME_CRABE_GUERRIER_ID]);
             ennemi1.Nom = ennemi1.Nom + " 1";
             ennemi2 = new Ennemi.Ennemi(le.ListeEnnemis[le.HOMME_CRABE_GUERRIER_ID]);
-            ennemi2.Nom = ennemi1.Nom + " 2";
+            ennemi2.Nom = ennemi2.Nom + " 2";
             boss = new Ennemi.Ennemi(le.ListeEnnemis[le.HOMME_CRABE_ROI_ID]);
             groupe3.AjouterEnnemi(ennemi1);
             groupe3.AjouterEnnemi(boss);

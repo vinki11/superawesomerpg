@@ -48,14 +48,19 @@
             this.lblManaSort1 = new System.Windows.Forms.Label();
             this.lblNomAction = new System.Windows.Forms.Label();
             this.lblChoisirCible = new System.Windows.Forms.Label();
+            this.pboxAction = new System.Windows.Forms.PictureBox();
             this.cboChoisirCible = new System.Windows.Forms.ComboBox();
             this.btnUtiliserConsommable = new System.Windows.Forms.Button();
             this.cboConsommable = new System.Windows.Forms.ComboBox();
             this.lblAttaquer = new System.Windows.Forms.Label();
             this.lblConsommable = new System.Windows.Forms.Label();
+            this.pboxAttaquer = new System.Windows.Forms.PictureBox();
             this.lblSort3 = new System.Windows.Forms.Label();
             this.lblSort2 = new System.Windows.Forms.Label();
             this.lblSort1 = new System.Windows.Forms.Label();
+            this.pboxSort2 = new System.Windows.Forms.PictureBox();
+            this.pboxSort3 = new System.Windows.Forms.PictureBox();
+            this.pboxSort1 = new System.Windows.Forms.PictureBox();
             this.rtbHistoriqueActions = new System.Windows.Forms.RichTextBox();
             this.gboxHistoriqueActions = new System.Windows.Forms.GroupBox();
             this.listviewListeInitiative = new System.Windows.Forms.ListView();
@@ -83,11 +88,6 @@
             this.pboxEnnemi5 = new System.Windows.Forms.PictureBox();
             this.pboxEnnemi4 = new System.Windows.Forms.PictureBox();
             this.pboxEnnemi3 = new System.Windows.Forms.PictureBox();
-            this.pboxAction = new System.Windows.Forms.PictureBox();
-            this.pboxAttaquer = new System.Windows.Forms.PictureBox();
-            this.pboxSort2 = new System.Windows.Forms.PictureBox();
-            this.pboxSort3 = new System.Windows.Forms.PictureBox();
-            this.pboxSort1 = new System.Windows.Forms.PictureBox();
             this.pboxEnnemi2 = new System.Windows.Forms.PictureBox();
             this.pboxEnnemi1 = new System.Windows.Forms.PictureBox();
             this.pboxAventurier3 = new System.Windows.Forms.PictureBox();
@@ -102,17 +102,18 @@
             this.pboxAventurierSelected1 = new System.Windows.Forms.PictureBox();
             this.pboxAventurierSelected2 = new System.Windows.Forms.PictureBox();
             this.pboxAventurierSelected3 = new System.Windows.Forms.PictureBox();
+            this.btnFinTour = new System.Windows.Forms.Button();
             this.gboxActions.SuspendLayout();
-            this.gboxHistoriqueActions.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAttaquer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSort2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSort3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSort1)).BeginInit();
+            this.gboxHistoriqueActions.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).BeginInit();
@@ -271,6 +272,7 @@
             // 
             // gboxActions
             // 
+            this.gboxActions.Controls.Add(this.btnFinTour);
             this.gboxActions.Controls.Add(this.lblManaSort3);
             this.gboxActions.Controls.Add(this.lblManaSort2);
             this.gboxActions.Controls.Add(this.lblManaSort1);
@@ -351,13 +353,23 @@
             this.lblChoisirCible.TabIndex = 12;
             this.lblChoisirCible.Text = "Choisir cible:";
             // 
+            // pboxAction
+            // 
+            this.pboxAction.Location = new System.Drawing.Point(17, 24);
+            this.pboxAction.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxAction.Name = "pboxAction";
+            this.pboxAction.Size = new System.Drawing.Size(65, 64);
+            this.pboxAction.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxAction.TabIndex = 53;
+            this.pboxAction.TabStop = false;
+            // 
             // cboChoisirCible
             // 
             this.cboChoisirCible.FormattingEnabled = true;
-            this.cboChoisirCible.Location = new System.Drawing.Point(118, 67);
+            this.cboChoisirCible.Location = new System.Drawing.Point(108, 67);
             this.cboChoisirCible.Margin = new System.Windows.Forms.Padding(2);
             this.cboChoisirCible.Name = "cboChoisirCible";
-            this.cboChoisirCible.Size = new System.Drawing.Size(92, 21);
+            this.cboChoisirCible.Size = new System.Drawing.Size(164, 21);
             this.cboChoisirCible.TabIndex = 11;
             // 
             // btnUtiliserConsommable
@@ -399,6 +411,18 @@
             this.lblConsommable.TabIndex = 7;
             this.lblConsommable.Text = "Consommable";
             // 
+            // pboxAttaquer
+            // 
+            this.pboxAttaquer.Image = global::JRPG.Properties.Resources.attaque;
+            this.pboxAttaquer.Location = new System.Drawing.Point(17, 176);
+            this.pboxAttaquer.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxAttaquer.Name = "pboxAttaquer";
+            this.pboxAttaquer.Size = new System.Drawing.Size(54, 56);
+            this.pboxAttaquer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pboxAttaquer.TabIndex = 6;
+            this.pboxAttaquer.TabStop = false;
+            this.pboxAttaquer.Click += new System.EventHandler(this.pboxAttaquer_Click);
+            // 
             // lblSort3
             // 
             this.lblSort3.AutoSize = true;
@@ -428,6 +452,33 @@
             this.lblSort1.Size = new System.Drawing.Size(66, 13);
             this.lblSort1.TabIndex = 3;
             this.lblSort1.Text = "nom du spell";
+            // 
+            // pboxSort2
+            // 
+            this.pboxSort2.Location = new System.Drawing.Point(155, 176);
+            this.pboxSort2.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxSort2.Name = "pboxSort2";
+            this.pboxSort2.Size = new System.Drawing.Size(54, 56);
+            this.pboxSort2.TabIndex = 2;
+            this.pboxSort2.TabStop = false;
+            // 
+            // pboxSort3
+            // 
+            this.pboxSort3.Location = new System.Drawing.Point(214, 176);
+            this.pboxSort3.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxSort3.Name = "pboxSort3";
+            this.pboxSort3.Size = new System.Drawing.Size(54, 56);
+            this.pboxSort3.TabIndex = 1;
+            this.pboxSort3.TabStop = false;
+            // 
+            // pboxSort1
+            // 
+            this.pboxSort1.Location = new System.Drawing.Point(97, 176);
+            this.pboxSort1.Margin = new System.Windows.Forms.Padding(2);
+            this.pboxSort1.Name = "pboxSort1";
+            this.pboxSort1.Size = new System.Drawing.Size(54, 56);
+            this.pboxSort1.TabIndex = 0;
+            this.pboxSort1.TabStop = false;
             // 
             // rtbHistoriqueActions
             // 
@@ -706,53 +757,6 @@
             this.pboxEnnemi3.TabIndex = 53;
             this.pboxEnnemi3.TabStop = false;
             // 
-            // pboxAction
-            // 
-            this.pboxAction.Location = new System.Drawing.Point(17, 24);
-            this.pboxAction.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxAction.Name = "pboxAction";
-            this.pboxAction.Size = new System.Drawing.Size(65, 64);
-            this.pboxAction.TabIndex = 53;
-            this.pboxAction.TabStop = false;
-            // 
-            // pboxAttaquer
-            // 
-            this.pboxAttaquer.Image = global::JRPG.Properties.Resources.attaque;
-            this.pboxAttaquer.Location = new System.Drawing.Point(17, 176);
-            this.pboxAttaquer.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxAttaquer.Name = "pboxAttaquer";
-            this.pboxAttaquer.Size = new System.Drawing.Size(54, 56);
-            this.pboxAttaquer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pboxAttaquer.TabIndex = 6;
-            this.pboxAttaquer.TabStop = false;
-            // 
-            // pboxSort2
-            // 
-            this.pboxSort2.Location = new System.Drawing.Point(155, 176);
-            this.pboxSort2.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxSort2.Name = "pboxSort2";
-            this.pboxSort2.Size = new System.Drawing.Size(54, 56);
-            this.pboxSort2.TabIndex = 2;
-            this.pboxSort2.TabStop = false;
-            // 
-            // pboxSort3
-            // 
-            this.pboxSort3.Location = new System.Drawing.Point(214, 176);
-            this.pboxSort3.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxSort3.Name = "pboxSort3";
-            this.pboxSort3.Size = new System.Drawing.Size(54, 56);
-            this.pboxSort3.TabIndex = 1;
-            this.pboxSort3.TabStop = false;
-            // 
-            // pboxSort1
-            // 
-            this.pboxSort1.Location = new System.Drawing.Point(97, 176);
-            this.pboxSort1.Margin = new System.Windows.Forms.Padding(2);
-            this.pboxSort1.Name = "pboxSort1";
-            this.pboxSort1.Size = new System.Drawing.Size(54, 56);
-            this.pboxSort1.TabIndex = 0;
-            this.pboxSort1.TabStop = false;
-            // 
             // pboxEnnemi2
             // 
             this.pboxEnnemi2.Image = global::JRPG.Properties.Resources.spectre;
@@ -910,6 +914,16 @@
             this.pboxAventurierSelected3.TabStop = false;
             this.pboxAventurierSelected3.Paint += new System.Windows.Forms.PaintEventHandler(this.pboxAventurierSelected3_Paint);
             // 
+            // btnFinTour
+            // 
+            this.btnFinTour.Location = new System.Drawing.Point(277, 65);
+            this.btnFinTour.Name = "btnFinTour";
+            this.btnFinTour.Size = new System.Drawing.Size(75, 23);
+            this.btnFinTour.TabIndex = 58;
+            this.btnFinTour.Text = "Valider cible";
+            this.btnFinTour.UseVisualStyleBackColor = true;
+            this.btnFinTour.Click += new System.EventHandler(this.btnFinTour_Click);
+            // 
             // Combat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -975,16 +989,16 @@
             this.Load += new System.EventHandler(this.Combat_Load);
             this.gboxActions.ResumeLayout(false);
             this.gboxActions.PerformLayout();
-            this.gboxHistoriqueActions.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAction)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAttaquer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSort2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSort3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSort1)).EndInit();
+            this.gboxHistoriqueActions.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier3)).EndInit();
@@ -1025,7 +1039,7 @@
         private System.Windows.Forms.Label lblPVEnnemi2;
         private System.Windows.Forms.Label lblPVEnnemi1;
         private System.Windows.Forms.GroupBox gboxActions;
-        private System.Windows.Forms.RichTextBox rtbHistoriqueActions;
+        public System.Windows.Forms.RichTextBox rtbHistoriqueActions; //mis publique pour pouvoir affiché l'historique par la classe aventurier là où la majorité des actions se font
         private System.Windows.Forms.GroupBox gboxHistoriqueActions;
         private System.Windows.Forms.ListView listviewListeInitiative;
         private System.Windows.Forms.Label lblNomAventure;
@@ -1079,5 +1093,6 @@
         private System.Windows.Forms.PictureBox pboxAventurierSelected3;
         private System.Windows.Forms.PictureBox pboxAventurierSelected2;
         private System.Windows.Forms.PictureBox pboxAventurierSelected1;
+        private System.Windows.Forms.Button btnFinTour;
     }
 }
