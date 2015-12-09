@@ -94,7 +94,7 @@ namespace JRPG.Classes.Aventurier
             //MessageBox.Show("La chance de l'attaque est de: " + chanceAttaque);
 
             Random rnd = new Random();
-            int chiffreAleatoire = rnd.Next(1, 11);
+            int chiffreAleatoire = rnd.Next(0, 10);
 
             //MessageBox.Show("Le chiffre aléatoire est de: " + chiffreAleatoire);
             strAction = this.NomAventurier + " à attaqué " + cible.Nom;
@@ -105,6 +105,14 @@ namespace JRPG.Classes.Aventurier
                 cible.PvActuel -= degatAttaque;
                 
                 strAction += "\r\n" + this.NomAventurier + "à touché la cible et infligé : " + degatAttaque + " points de dégats!";
+
+                if (cible.PvActuel <= 0)
+                {
+                    cible.Etat = Etat.Mort;
+                    strAction += "\r\n" + cible.Nom + " est mort!";
+                }
+
+
                 MessageBox.Show(strAction);
 
             }

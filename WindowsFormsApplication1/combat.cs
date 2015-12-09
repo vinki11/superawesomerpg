@@ -368,10 +368,20 @@ namespace JRPG
 
         private void LancerAttaque(Aventurier aventurier, Ennemi cible)
         {
-            //cible.PvActuel = 
             aventurier.Attaquer(cible);
-            this.Controls.Find("lblPVEnnemi" + (cibleId + 1), true)[0].Text = cible.PvActuel.ToString() ;
-            //MessageBox.Show("Vous attaquer la cible : " + cible.Nom);
+            this.Controls.Find("lblPVEnnemi" + (cibleId + 1), true)[0].Text = cible.PvActuel > 0 ? cible.PvActuel.ToString() : "0";
+            if (cible.PvActuel <= 0)
+            {
+                Personnage tempo = new Personnage();
+                foreach (Personnage perso in lstPersonnages)
+                {
+                    if (perso.typePerso == TypePersonnage.ENNEMI && perso.idPerso == cibleId)
+                    {
+                        tempo = perso;
+                    }
+                }
+                lstPersonnages.Remove(tempo);
+            }
         }
     }
 }

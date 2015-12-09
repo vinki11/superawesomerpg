@@ -1039,7 +1039,7 @@
         private System.Windows.Forms.Label lblPVEnnemi2;
         private System.Windows.Forms.Label lblPVEnnemi1;
         private System.Windows.Forms.GroupBox gboxActions;
-        public System.Windows.Forms.RichTextBox rtbHistoriqueActions; //mis publique pour pouvoir affiché l'historique par la classe aventurier là où la majorité des actions se font
+        private System.Windows.Forms.RichTextBox rtbHistoriqueActions;
         private System.Windows.Forms.GroupBox gboxHistoriqueActions;
         private System.Windows.Forms.ListView listviewListeInitiative;
         private System.Windows.Forms.Label lblNomAventure;

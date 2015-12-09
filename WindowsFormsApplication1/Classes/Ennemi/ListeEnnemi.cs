@@ -29,7 +29,7 @@ namespace JRPG.Classes.Ennemi
         //Créer la liste des "modèles" d'ennemis
         public static void creerEnnemis()
         {   //                                                              Lvl, PV, In, Pr, Es, F, D, Xp, Or
-            ListeEnnemis.Add(new Ennemi(GOBELIN_VOLEUR_ID, "Voleur gobelin", 1, 40, 12, 12, 12, 8, 10, 100, 5,Properties.Resources.spectre));
+            ListeEnnemis.Add(new Ennemi(GOBELIN_VOLEUR_ID, "Voleur gobelin", 1, 5, 12, 12, 12, 8, 10, 100, 5,Properties.Resources.spectre)); //5 pv au lieu de 40 pour des tests
             ListeEnnemis.Add(new Ennemi(GOBELIN_ARCHER_ID, "Archer gobelin", 1, 35, 10, 15, 10, 10, 10, 100, 5, Properties.Resources.spectre));
             ListeEnnemis.Add(new Ennemi(GOBELIN_SHAMAN_ID, "Shaman gobelin", 2, 50, 12, 12, 10, 12, 12, 150, 15, Properties.Resources.spectre));
             ListeEnnemis.Add(new Ennemi(LOUP_ID, "Loup", 1, 40, 18, 10, 15, 12, 10, 100, 0, Properties.Resources.spectre));
