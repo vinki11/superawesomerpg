@@ -81,6 +81,50 @@ namespace JRPG.Classes
             }
             return nbVivant;
         }
+
+        public int MembrePlusFort()
+        {
+            int indexMembre = 0;
+            int maxPv = 1;
+            int currentIndex = 0;
+            foreach (Aventurier.Aventurier aventurier in this.Membres)
+            {
+                if (aventurier.Etat != Etat.Mort)
+                {
+                    if (aventurier.Pvmax > maxPv)
+                    {
+                        indexMembre = currentIndex;
+                        maxPv = aventurier.Pvmax;
+                    }
+                    currentIndex++;
+                }
+            }
+
+            return indexMembre;
+        }
+
+
+        public int MembrePlusFaible()
+        {
+            int indexMembre = 0;
+            int minPv = 999999999;
+            int currentIndex = 0;
+            foreach (Aventurier.Aventurier aventurier in this.Membres)
+            {
+                if (aventurier.Etat != Etat.Mort)
+                {
+                    if (aventurier.Pvmax < minPv)
+                    {
+                        indexMembre = currentIndex;
+                        minPv = aventurier.Pvmax;
+                    }
+                }
+                currentIndex++;
+            }
+
+            return indexMembre;
+        }
+
         #endregion
 
     }

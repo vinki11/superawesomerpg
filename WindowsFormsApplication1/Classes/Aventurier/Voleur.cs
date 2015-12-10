@@ -27,7 +27,7 @@ namespace JRPG.Classes.Aventurier
             this.Precisionactuel = Precisionbase = 20;
             this.Esquiveactuel = Esquivebase = 15;
             this.Forceactuel = Forcebase = 10;
-            this.Defenseactuel = Defensebase = 10;
+            this.Defenseactuel = Defensebase = 2;
             this.NomClasse = "Voleur";
             this.DescriptionClasse = "Combattant agile et rapide. Ses forces sont la précision et l'esquive";
             this.Ressource = Ressource.Energie;

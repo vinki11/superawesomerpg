@@ -29,7 +29,7 @@ namespace JRPG.Classes.Aventurier
             this.Precisionactuel = Precisionbase = 10;
             this.Esquiveactuel = Esquivebase = 8;
             this.Forceactuel = Forcebase = 15;
-            this.Defenseactuel = Defensebase = 15;
+            this.Defenseactuel = Defensebase = 2;
             this.NomClasse = "Guérrier";
             this.DescriptionClasse = "Combattant au corps à corps avec une bonne force et défense";
             this.Ressource = Ressource.Energie;

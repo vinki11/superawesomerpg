@@ -84,6 +84,12 @@
     </Compile>
     <Compile Include="Classes\Groupe.cs" />
     <Compile Include="Classes\Aventure\GroupeEnnemi.cs" />
+    <Compile Include="Gameover.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gameover.Designer.cs">
+      <DependentUpon>Gameover.cs</DependentUpon>
+    </Compile>
     <Compile Include="Maison.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Combat.resx">
       <DependentUpon>Combat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gameover.resx">
+      <DependentUpon>Gameover.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Maison.resx">
       <DependentUpon>Maison.cs</DependentUpon>

@@ -26,7 +26,7 @@ namespace JRPG.Classes.Aventurier
             this.Precisionactuel = Precisionbase = 8;
             this.Esquiveactuel = Esquivebase = 10;
             this.Forceactuel = Forcebase = 5;
-            this.Defenseactuel = Defensebase = 8;
+            this.Defenseactuel = Defensebase = 2;
             this.NomClasse = "Mage";
             this.DescriptionClasse = "Spécialiste de la magie avec des attributs faibles mais des sorts offensifs puissants";
             this.Ressource = Ressource.Mana;

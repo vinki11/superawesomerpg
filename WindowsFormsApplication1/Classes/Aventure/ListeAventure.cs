@@ -34,6 +34,7 @@ namespace JRPG.Classes.Aventure
             Ennemi.Ennemi ennemi2;
             Ennemi.Ennemi ennemi3;
             Ennemi.Ennemi boss;
+            ListeAventures.Clear();
 
             #region Aventure 0 Village des gobelins
             //Créer la premiere Aventure Le village des gobelins
