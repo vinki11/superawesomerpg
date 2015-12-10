@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows.Forms;
 using System.Text;
 using JRPG.Classes.Item;
 using System.Threading.Tasks;
@@ -35,24 +36,86 @@ namespace JRPG.Classes.Aventurier
             this.ClassId = lc.VOLEUR_ID;
             this.Arme = li.ListeArmes[li.DAGUE_BRONZE_ID];
             this.Armure = li.ListeArmures[li.ARMURE_CUIR_ID];
+            this.NomCompetenceA = "Coup étourdissant"; //Étourdi un ennemi
+            this.NomCompetenceB = "Placeholder";
+            this.NomCompetenceC = "Placeholder";
+            this.CibleCompetenceA = Cible.Enemy;
+            this.CibleCompetenceB = Cible.Enemy;
+            this.CibleCompetenceC = Cible.Enemy;
+            this.CoutCompetenceA = 30;
+            this.CoutCompetenceB = 30;
+            this.CoutCompetenceC = 30;
+            this.ImageCompetenceA = Properties.Resources.attaque;
+            this.ImageCompetenceB = Properties.Resources.attaque;
+            this.ImageCompetenceC = Properties.Resources.attaque;
         }
         #endregion
 
 
         #region Fonctions
-        public new void UtiliserCompetenceA()
+        public override string UtiliserCompetenceA(Ennemi.Ennemi cible)
         {
+            int chanceAttaque = 5;
+            int degatAttaque = 0;
+            string strAction = "";
 
+            chanceAttaque += this.Precisionactuel + this.Arme.Precision - cible.Esquive;
+            chanceAttaque = chanceAttaque > 9 ? 9 : chanceAttaque;
+            chanceAttaque = chanceAttaque < 1 ? 1 : chanceAttaque;
+
+            Random rnd = new Random();
+            int chiffreAleatoire = rnd.Next(0, 10);
+
+            strAction = this.NomAventurier + " tente un coup étourdissant sur " + cible.Nom;
+            if (chiffreAleatoire < chanceAttaque)
+            {
+                degatAttaque = this.Forceactuel + this.Arme.Force - cible.Defense - 2;
+                degatAttaque = degatAttaque < 1 ? 1 : degatAttaque;
+                cible.PvActuel -= degatAttaque;
+
+                strAction += "\r\n" + this.NomAventurier + " à touché la cible et infligé : " + degatAttaque + " points de dégats!";
+
+                int chanceEtourdi = rnd.Next(0, 10);
+                chanceEtourdi += (this.Niveau - cible.Niveau);
+
+
+                if (cible.PvActuel <= 0)
+                {
+                    cible.Etat = Etat.Mort;
+                    strAction += "\r\n" + cible.Nom + " est mort!";
+                } else if (chanceEtourdi > 1)
+                {
+                    cible.Etat = Etat.Etourdi;
+                    strAction += "\r\n" + cible.Nom + " est étourdi!";
+                }
+                else
+                {
+                    strAction += "\r\n" + cible.Nom + " a résister à l'étourdissement!";
+                }
+
+
+
+                MessageBox.Show(strAction);
+
+            }
+            else
+            {
+                strAction += "\r\n" + this.NomAventurier + " à manqué la cible!";
+                MessageBox.Show(strAction);
+            }
+
+            this.Energieactuel -= this.CoutCompetenceA;
+            return strAction;
         }
 
-        public new void UtiliserCompetenceB()
+        public override string UtiliserCompetenceB()
         {
-
+            return "";
         }
 
-        public new void UtiliserCompetenceC()
+        public override string UtiliserCompetenceC()
         {
-
+            return "";
         }
         #endregion
     }

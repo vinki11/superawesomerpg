@@ -78,6 +78,22 @@ namespace JRPG.Classes.Aventurier
 
         public Bouclier Bouclier { get; set; }
 
+        public string NomCompetenceA { get; set; }
+        public string NomCompetenceB { get; set; }
+        public string NomCompetenceC { get; set; }
+
+        public Cible CibleCompetenceA { get; set; }
+        public Cible CibleCompetenceB { get; set; }
+        public Cible CibleCompetenceC { get; set; }
+
+        public int CoutCompetenceA { get; set; }
+        public int CoutCompetenceB { get; set; }
+        public int CoutCompetenceC { get; set; }
+
+        public Bitmap ImageCompetenceA { get; set; }
+        public Bitmap ImageCompetenceB { get; set; }
+        public Bitmap ImageCompetenceC { get; set; }
+
         #endregion
 
         #region Fonctions
@@ -104,7 +120,7 @@ namespace JRPG.Classes.Aventurier
                 degatAttaque = degatAttaque < 1 ? 1 : degatAttaque;
                 cible.PvActuel -= degatAttaque;
                 
-                strAction += "\r\n" + this.NomAventurier + "à touché la cible et infligé : " + degatAttaque + " points de dégats!";
+                strAction += "\r\n" + this.NomAventurier + " à touché la cible et infligé : " + degatAttaque + " points de dégats!";
 
                 if (cible.PvActuel <= 0)
                 {
@@ -122,23 +138,26 @@ namespace JRPG.Classes.Aventurier
                 MessageBox.Show(strAction);
             }
 
-            return strAction; //utilisé le return pour faire l'historique si on le désire vraiment
+            return strAction;
 
         }
 
-        public void UtiliserCompetenceA()
+        public virtual string UtiliserCompetenceA(Ennemi.Ennemi cible)
         {
-
+            MessageBox.Show("J'aimerais bien ca passe pas ici svp");
+            return "";
         }
 
-        public void UtiliserCompetenceB()
+        public virtual string UtiliserCompetenceB()
         {
-
+            MessageBox.Show("J'aimerais bien ca passe pas ici svp");
+            return "";
         }
 
-        public void UtiliserCompetenceC()
+        public virtual string UtiliserCompetenceC()
         {
-
+            MessageBox.Show("J'aimerais bien ca passe pas ici svp");
+            return "";
         }
 
         public void MonterNiveauExperience()
@@ -169,6 +188,15 @@ namespace JRPG.Classes.Aventurier
     {
         Mana,
         Energie
+    };
+
+    public enum Cible
+    {
+        Self,
+        Enemy,
+        AllEnemies,
+        Ally,
+        AllAllies
     };
 
 

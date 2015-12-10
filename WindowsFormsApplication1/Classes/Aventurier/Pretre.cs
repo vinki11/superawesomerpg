@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 using System.Threading.Tasks;
 
 
@@ -34,6 +35,18 @@ namespace JRPG.Classes.Aventurier
             this.ClassId = lc.PRETRE_ID;
             this.Arme = li.ListeArmes[li.BATON_ID];
             this.Armure = li.ListeArmures[li.ROBE_ID];
+            this.NomCompetenceA = "Soins"; //Soigne 1 allié
+            this.NomCompetenceB = "Placeholder";
+            this.NomCompetenceC = "Placeholder";
+            this.CibleCompetenceA = Cible.Ally;
+            this.CibleCompetenceB = Cible.Enemy;
+            this.CibleCompetenceC = Cible.Enemy;
+            this.CoutCompetenceA = 30;
+            this.CoutCompetenceB = 30;
+            this.CoutCompetenceC = 30;
+            this.ImageCompetenceA = Properties.Resources.attaque;
+            this.ImageCompetenceB = Properties.Resources.attaque;
+            this.ImageCompetenceC = Properties.Resources.attaque;
         }
         #endregion
 

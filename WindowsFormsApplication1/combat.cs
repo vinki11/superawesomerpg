@@ -44,10 +44,11 @@ namespace JRPG
 
         private void Combat_Load(object sender, EventArgs e)
         {
-            //Tempo test stratégie ennemi
+            //Tempo tests
             //p.groupeAventurier.Membres.RemoveAt(2);
             //p.groupeAventurier.Membres.RemoveAt(1);
             //p.groupeAventurier.Membres[0].Etat = Etat.Mort;
+            //p.groupeAventurier.Membres[2].Energieactuel = 15;
 
             AfficherElements();
             CalculerInitiative();
@@ -72,6 +73,20 @@ namespace JRPG
             pboxAction.Image = null;
             lblNomAction.Text = "Choississez un action";
             btnFinTour.Enabled = false;
+
+            pboxSort1.Image = p.groupeAventurier.Membres[persoActif.idPerso].ImageCompetenceA;
+            pboxSort2.Image = p.groupeAventurier.Membres[persoActif.idPerso].ImageCompetenceB;
+            pboxSort3.Image = p.groupeAventurier.Membres[persoActif.idPerso].ImageCompetenceC;
+
+            lblManaSort1.Text = p.groupeAventurier.Membres[persoActif.idPerso].CoutCompetenceA.ToString();
+            lblManaSort2.Text = p.groupeAventurier.Membres[persoActif.idPerso].CoutCompetenceB.ToString();
+            lblManaSort3.Text = p.groupeAventurier.Membres[persoActif.idPerso].CoutCompetenceC.ToString();
+            lblManaSort1.ForeColor = p.groupeAventurier.Membres[persoActif.idPerso].Ressource == Ressource.Mana ? Color.Blue : Color.Brown;
+            lblManaSort2.ForeColor = p.groupeAventurier.Membres[persoActif.idPerso].Ressource == Ressource.Mana ? Color.Blue : Color.Brown;
+            lblManaSort3.ForeColor = p.groupeAventurier.Membres[persoActif.idPerso].Ressource == Ressource.Mana ? Color.Blue : Color.Brown;
+            lblSort1.Text = p.groupeAventurier.Membres[persoActif.idPerso].NomCompetenceA;
+            lblSort2.Text = p.groupeAventurier.Membres[persoActif.idPerso].NomCompetenceB;
+            lblSort3.Text = p.groupeAventurier.Membres[persoActif.idPerso].NomCompetenceC;
 
             //Gestion de la bordure selected
 
@@ -100,6 +115,14 @@ namespace JRPG
                 pBox.Visible = false;
                 PictureBox pBoxSelected = (PictureBox)this.Controls.Find("pboxAventurierSelected" + (persoActif.idPerso + 1), true)[0];
                 pBoxSelected.Visible = true;
+
+                if (p.groupeAventurier.Membres[persoActif.idPerso].Etat == Etat.Etourdi)
+                {
+                    //add à l'historique ?
+                    MessageBox.Show(p.groupeAventurier.Membres[persoActif.idPerso].NomAventurier + " est étourdi et ne peut pas agir!");
+                    p.groupeAventurier.Membres[persoActif.idPerso].Etat = Etat.Normal;
+                    ProchainTour();
+                }
             }
             else
             {
@@ -108,7 +131,18 @@ namespace JRPG
                 PictureBox pBoxSelected = (PictureBox)this.Controls.Find("pboxEnnemiSelected" + (persoActif.idPerso + 1), true)[0];
                 pBoxSelected.Visible = true;
 
-                AgirMonstre();
+                if (la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Etat == Etat.Etourdi)
+                {
+                    //add à l'historique ?
+                    MessageBox.Show(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Nom + " est étourdi et ne peut pas agir!");
+                    la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Etat = Etat.Normal;
+                    ProchainTour();
+                }
+                else
+                {
+                    AgirMonstre();
+                }
+
             }
 
         }
@@ -181,12 +215,13 @@ namespace JRPG
                 PictureBox pBoxSelected = (PictureBox)this.Controls.Find("pboxAventurierSelected" + i, true)[0];
                 pBoxSelected.Visible = false;
             }
-
+            /*
             //Cacher les éléments d'attaque spécial
             for (var i = 1; i < 4; i++)
             {
                 this.Controls.Find("lblManaSort" + i, true)[0].Visible = false;
             }
+            */
         }
 
         private void AfficherElements()
@@ -358,24 +393,7 @@ namespace JRPG
                 this.Controls.Find("lblPVEnnemi" + i, true)[0].Text = la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[(i - 1)].PvActuel > 0 ? la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[(i - 1)].PvActuel.ToString() : "0";
             }
             */
-
-            List<Personnage> lstTempo = new List<Personnage>();
-
-            foreach (Personnage perso in lstPersonnages)
-            {
-                lstTempo.Add(perso);
-            }
-
-            foreach (Personnage perso in lstTempo)
-            {
-                if (perso.typePerso == TypePersonnage.AVENTURIER)
-                {
-                    if (p.groupeAventurier.Membres[perso.idPerso].Etat == Etat.Mort)
-                    {
-                        lstPersonnages.Remove(perso);
-                    }
-                }
-            }
+            RetirerMortInitiative();
 
             ProchainTour();
             //MessageBox.Show("C'est le tour de " + la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Nom + " et il a la stratégie " + la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Strategie.ToString());
@@ -395,6 +413,10 @@ namespace JRPG
                 if (typeAction == "Attaque")
                 {
                     LancerAttaque(p.groupeAventurier.Membres[persoActif.idPerso], la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[cibleId]);
+                }
+                else if(typeAction == "Ennemi simple")
+                {
+                    LancerCompetence(1,p.groupeAventurier.Membres[persoActif.idPerso], la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[cibleId]);
                 }
 
                 ProchainTour();
@@ -431,18 +453,106 @@ namespace JRPG
             //this.Controls.Find("lblPVEnnemi" + (cibleId + 1), true)[0].Text = cible.PvActuel > 0 ? cible.PvActuel.ToString() : "0";
             AfficherInfosEnnemies(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi.Count());
             AfficherInfosAventuriers(p.groupeAventurier.Membres.Count());
-            if (cible.PvActuel <= 0)
+
+            RetirerMortInitiative();
+        }
+
+        private void LancerCompetence(int idCompetence, Aventurier aventurier, Ennemi cible)
+        {
+            switch (idCompetence)
             {
-                Personnage tempo = new Personnage();
-                foreach (Personnage perso in lstPersonnages)
+                case 1:
+                    aventurier.UtiliserCompetenceA(cible);
+                    break;
+
+                case 2:
+
+                    break;
+
+                case 3:
+
+                    break;
+            }
+
+            //this.Controls.Find("lblPVEnnemi" + (cibleId + 1), true)[0].Text = cible.PvActuel > 0 ? cible.PvActuel.ToString() : "0";
+            AfficherInfosEnnemies(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi.Count());
+            AfficherInfosAventuriers(p.groupeAventurier.Membres.Count());
+            RetirerMortInitiative();
+
+        }
+
+        private void UtiliserCompetence(int idCompetence)
+        {
+            ComboboxItem cbCible;
+
+            if(idCompetence == 1)
+            {
+
+                if (p.groupeAventurier.Membres[persoActif.idPerso].CoutCompetenceA <= (p.groupeAventurier.Membres[persoActif.idPerso].Ressource == Ressource.Mana ? p.groupeAventurier.Membres[persoActif.idPerso].Manaactuel : p.groupeAventurier.Membres[persoActif.idPerso].Energieactuel))
                 {
-                    if (perso.typePerso == TypePersonnage.ENNEMI && perso.idPerso == cibleId)
+                    PictureBox pBox = (PictureBox)this.Controls.Find("pboxSort" + idCompetence, true)[0];
+                    pboxAction.Image = pBox.Image;
+                    lblNomAction.Text = this.Controls.Find("lblSort" + idCompetence, true)[0].Text;
+
+
+                    switch (p.groupeAventurier.Membres[persoActif.idPerso].CibleCompetenceA)
                     {
-                        tempo = perso;
+                        case Cible.Enemy:
+                            {
+                                for (var i = 0; i < la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi.Count(); i++)
+                                {
+                                    if (la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[i].Etat != Etat.Mort)
+                                    {
+                                        cbCible = new ComboboxItem();
+                                        cbCible.Text = la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[i].Nom;
+                                        cbCible.Value = i;
+                                        cboChoisirCible.Items.Add(cbCible);
+                                    }
+                                }
+                                typeAction = "Ennemi simple";
+                                break;
+                            }
+                    }
+
+                    btnFinTour.Enabled = true;
+                    cboChoisirCible.SelectedItem = cboChoisirCible.Items[0];
+                }
+                else
+                {
+                    string strRessource = "";
+
+                    strRessource = p.groupeAventurier.Membres[persoActif.idPerso].Ressource == Ressource.Mana ? "de mana" : "d'énergie";
+
+                    MessageBox.Show(p.groupeAventurier.Membres[persoActif.idPerso].NomAventurier + " n'a pas assez " + strRessource + " pour effectuer cet action");
+                }
+                
+            }
+        }
+
+        private void RetirerMortInitiative()
+        {
+            List<Personnage> lstTempo = new List<Personnage>();
+
+            foreach (Personnage perso in lstPersonnages)
+            {
+                lstTempo.Add(perso);
+            }
+
+            foreach (Personnage perso in lstTempo)
+            {
+                if (perso.typePerso == TypePersonnage.AVENTURIER)
+                {
+                    if (p.groupeAventurier.Membres[perso.idPerso].Etat == Etat.Mort)
+                    {
+                        lstPersonnages.Remove(perso);
                     }
                 }
-                lstPersonnages.Remove(tempo);
             }
+        }
+
+        private void pboxSort1_Click(object sender, EventArgs e)
+        {
+            UtiliserCompetence(1);
         }
     }
 }

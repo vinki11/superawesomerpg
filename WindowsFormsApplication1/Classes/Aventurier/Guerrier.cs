@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
 using System.Threading.Tasks;
 using JRPG.Classes.Aventurier;
 using JRPG.Classes.Item;
@@ -37,8 +38,19 @@ namespace JRPG.Classes.Aventurier
             this.ClassId = lc.GUERRIER_ID;
             this.Arme = li.ListeArmes[li.EPEE_BRONZE_ID];
             this.Armure = li.ListeArmures[li.ARMURE_BRONZE_ID];
-            //test tempo affichage d'un bouclier
             this.Bouclier = li.ListeBoucliers[li.BOUCLIER_BOIS_ID];
+            this.NomCompetenceA = "Coup perçant"; // piercing strike en francais ? Kekechose qui ignore un pourcentage de la def de l'ennemi
+            this.NomCompetenceB = "Cri de guerre"; //Buff self ou allallies ? ?
+            this.NomCompetenceC = "Placeholder";
+            this.CibleCompetenceA = Cible.Enemy;
+            this.CibleCompetenceB = Cible.AllAllies;
+            this.CibleCompetenceC = Cible.Enemy;
+            this.CoutCompetenceA = 30;
+            this.CoutCompetenceB = 30;
+            this.CoutCompetenceC = 30;
+            this.ImageCompetenceA = Properties.Resources.attaque;
+            this.ImageCompetenceB = Properties.Resources.attaque;
+            this.ImageCompetenceC = Properties.Resources.attaque;
 
         }
         #endregion

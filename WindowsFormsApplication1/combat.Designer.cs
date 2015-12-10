@@ -43,6 +43,7 @@
             this.lblPVEnnemi2 = new System.Windows.Forms.Label();
             this.lblPVEnnemi1 = new System.Windows.Forms.Label();
             this.gboxActions = new System.Windows.Forms.GroupBox();
+            this.btnFinTour = new System.Windows.Forms.Button();
             this.lblManaSort3 = new System.Windows.Forms.Label();
             this.lblManaSort2 = new System.Windows.Forms.Label();
             this.lblManaSort1 = new System.Windows.Forms.Label();
@@ -102,7 +103,6 @@
             this.pboxAventurierSelected1 = new System.Windows.Forms.PictureBox();
             this.pboxAventurierSelected2 = new System.Windows.Forms.PictureBox();
             this.pboxAventurierSelected3 = new System.Windows.Forms.PictureBox();
-            this.btnFinTour = new System.Windows.Forms.Button();
             this.gboxActions.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAction)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAttaquer)).BeginInit();
@@ -300,6 +300,16 @@
             this.gboxActions.TabStop = false;
             this.gboxActions.Text = "Actions";
             // 
+            // btnFinTour
+            // 
+            this.btnFinTour.Location = new System.Drawing.Point(277, 65);
+            this.btnFinTour.Name = "btnFinTour";
+            this.btnFinTour.Size = new System.Drawing.Size(75, 23);
+            this.btnFinTour.TabIndex = 58;
+            this.btnFinTour.Text = "Valider cible";
+            this.btnFinTour.UseVisualStyleBackColor = true;
+            this.btnFinTour.Click += new System.EventHandler(this.btnFinTour_Click);
+            // 
             // lblManaSort3
             // 
             this.lblManaSort3.AutoSize = true;
@@ -459,6 +469,7 @@
             this.pboxSort2.Margin = new System.Windows.Forms.Padding(2);
             this.pboxSort2.Name = "pboxSort2";
             this.pboxSort2.Size = new System.Drawing.Size(54, 56);
+            this.pboxSort2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxSort2.TabIndex = 2;
             this.pboxSort2.TabStop = false;
             // 
@@ -468,6 +479,7 @@
             this.pboxSort3.Margin = new System.Windows.Forms.Padding(2);
             this.pboxSort3.Name = "pboxSort3";
             this.pboxSort3.Size = new System.Drawing.Size(54, 56);
+            this.pboxSort3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxSort3.TabIndex = 1;
             this.pboxSort3.TabStop = false;
             // 
@@ -477,8 +489,10 @@
             this.pboxSort1.Margin = new System.Windows.Forms.Padding(2);
             this.pboxSort1.Name = "pboxSort1";
             this.pboxSort1.Size = new System.Drawing.Size(54, 56);
+            this.pboxSort1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxSort1.TabIndex = 0;
             this.pboxSort1.TabStop = false;
+            this.pboxSort1.Click += new System.EventHandler(this.pboxSort1_Click);
             // 
             // rtbHistoriqueActions
             // 
@@ -913,16 +927,6 @@
             this.pboxAventurierSelected3.TabIndex = 81;
             this.pboxAventurierSelected3.TabStop = false;
             this.pboxAventurierSelected3.Paint += new System.Windows.Forms.PaintEventHandler(this.pboxAventurierSelected3_Paint);
-            // 
-            // btnFinTour
-            // 
-            this.btnFinTour.Location = new System.Drawing.Point(277, 65);
-            this.btnFinTour.Name = "btnFinTour";
-            this.btnFinTour.Size = new System.Drawing.Size(75, 23);
-            this.btnFinTour.TabIndex = 58;
-            this.btnFinTour.Text = "Valider cible";
-            this.btnFinTour.UseVisualStyleBackColor = true;
-            this.btnFinTour.Click += new System.EventHandler(this.btnFinTour_Click);
             // 
             // Combat
             // 
