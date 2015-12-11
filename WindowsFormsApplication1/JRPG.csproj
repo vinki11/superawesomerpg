@@ -84,6 +84,12 @@
     </Compile>
     <Compile Include="Classes\Groupe.cs" />
     <Compile Include="Classes\Aventure\GroupeEnnemi.cs" />
+    <Compile Include="Boutique.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Boutique.Designer.cs">
+      <DependentUpon>Boutique.cs</DependentUpon>
+    </Compile>
     <Compile Include="Gameover.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Combat.resx">
       <DependentUpon>Combat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Boutique.resx">
+      <DependentUpon>Boutique.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Gameover.resx">
       <DependentUpon>Gameover.cs</DependentUpon>

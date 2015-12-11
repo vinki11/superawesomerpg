@@ -46,7 +46,9 @@ namespace JRPG
                     FileMode.Open,
                     FileAccess.Read,
                     FileShare.Read);
-                p.groupeAventurier = (Groupe) formatter.Deserialize(stream);
+                List<Object> save = (List<object>)formatter.Deserialize(stream);
+                p.groupeAventurier = (Groupe)save[0];
+                p.Boutique = (List<Item>)save[1];
                 stream.Close();
 
                 ReloadInventaire();

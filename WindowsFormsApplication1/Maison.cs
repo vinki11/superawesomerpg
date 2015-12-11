@@ -34,11 +34,15 @@ namespace JRPG
 
         private void btnSauvegarder_Click(object sender, EventArgs e)
         { 
+            List<Object> save = new List<object>();
+            save.Add(p.groupeAventurier);
+            save.Add(p.Boutique);
+
             IFormatter formatter = new BinaryFormatter();
             Stream stream = new FileStream("sauvegardePartie.bin",
                                      FileMode.Create,
                                      FileAccess.Write, FileShare.None);
-            formatter.Serialize(stream, Program.groupeAventurier);
+            formatter.Serialize(stream, save);
             stream.Close();
 
             MessageBox.Show("Partie sauvegarder avec succès.");
@@ -53,7 +57,9 @@ namespace JRPG
                     FileMode.Open,
                     FileAccess.Read,
                     FileShare.Read);
-                p.groupeAventurier = (Groupe)formatter.Deserialize(stream);
+                List<Object> save = (List<object>) formatter.Deserialize(stream);
+                p.groupeAventurier = (Groupe)save[0];
+                p.Boutique = (List<Item>) save[1];
                 stream.Close();
 
                 ReloadInventaire();

@@ -36,7 +36,7 @@
             this.btnAventure = new System.Windows.Forms.Button();
             this.btnMaison = new System.Windows.Forms.Button();
             this.btnChapelle = new System.Windows.Forms.Button();
-            this.btnForge = new System.Windows.Forms.Button();
+            this.btnBoutique = new System.Windows.Forms.Button();
             this.btnTaverne = new System.Windows.Forms.Button();
             this.txtLvl2 = new System.Windows.Forms.Label();
             this.txtXP2 = new System.Windows.Forms.Label();
@@ -196,15 +196,16 @@
             this.btnChapelle.Text = "Visiter la chapelle";
             this.btnChapelle.UseVisualStyleBackColor = true;
             // 
-            // btnForge
+            // btnBoutique
             // 
-            this.btnForge.Location = new System.Drawing.Point(371, 415);
-            this.btnForge.Margin = new System.Windows.Forms.Padding(2);
-            this.btnForge.Name = "btnForge";
-            this.btnForge.Size = new System.Drawing.Size(100, 19);
-            this.btnForge.TabIndex = 13;
-            this.btnForge.Text = "Aller à la forge";
-            this.btnForge.UseVisualStyleBackColor = true;
+            this.btnBoutique.Location = new System.Drawing.Point(371, 415);
+            this.btnBoutique.Margin = new System.Windows.Forms.Padding(2);
+            this.btnBoutique.Name = "btnBoutique";
+            this.btnBoutique.Size = new System.Drawing.Size(100, 19);
+            this.btnBoutique.TabIndex = 13;
+            this.btnBoutique.Text = "Aller à la boutique";
+            this.btnBoutique.UseVisualStyleBackColor = true;
+            this.btnBoutique.Click += new System.EventHandler(this.btnForge_Click);
             // 
             // btnTaverne
             // 
@@ -897,7 +898,7 @@
             this.Controls.Add(this.txtXP2);
             this.Controls.Add(this.txtNom2);
             this.Controls.Add(this.btnTaverne);
-            this.Controls.Add(this.btnForge);
+            this.Controls.Add(this.btnBoutique);
             this.Controls.Add(this.btnChapelle);
             this.Controls.Add(this.btnMaison);
             this.Controls.Add(this.btnAventure);
@@ -929,7 +930,7 @@
         private System.Windows.Forms.Button btnAventure;
         private System.Windows.Forms.Button btnMaison;
         private System.Windows.Forms.Button btnChapelle;
-        private System.Windows.Forms.Button btnForge;
+        private System.Windows.Forms.Button btnBoutique;
         private System.Windows.Forms.Button btnTaverne;
         private System.Windows.Forms.Label txtLvl2;
         private System.Windows.Forms.Label txtXP2;
