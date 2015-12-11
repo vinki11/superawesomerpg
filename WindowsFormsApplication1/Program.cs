@@ -5,12 +5,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using JRPG.Classes;
 using JRPG.Classes.Aventurier;
+using JRPG.Classes.Item;
 
 namespace JRPG
 {
     static class Program
     {
         public static Groupe groupeAventurier = new Groupe();
+        public static List<Item> Boutique = new List<Item>();
 
         [STAThread]
         static void Main()

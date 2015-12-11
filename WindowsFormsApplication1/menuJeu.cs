@@ -521,6 +521,13 @@ namespace JRPG
             Maison maison = new Maison();
             maison.ShowDialog();
         }
+
+        private void btnForge_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Boutique forge = new Boutique();
+            forge.ShowDialog();
+        }
     }
 
     public class ComboboxItem :IEquatable<ComboboxItem>
