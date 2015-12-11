@@ -430,6 +430,7 @@ namespace JRPG
 
             ComboboxItem cbCible;
 
+            cboChoisirCible.Items.Clear();
             for (var i = 0; i < la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi.Count(); i++)
             {
                 if (la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[i].Etat != Etat.Mort)
@@ -484,8 +485,9 @@ namespace JRPG
         private void UtiliserCompetence(int idCompetence)
         {
             ComboboxItem cbCible;
+            cboChoisirCible.Items.Clear();
 
-            if(idCompetence == 1)
+            if (idCompetence == 1)
             {
 
                 if (p.groupeAventurier.Membres[persoActif.idPerso].CoutCompetenceA <= (p.groupeAventurier.Membres[persoActif.idPerso].Ressource == Ressource.Mana ? p.groupeAventurier.Membres[persoActif.idPerso].Manaactuel : p.groupeAventurier.Membres[persoActif.idPerso].Energieactuel))
@@ -543,6 +545,14 @@ namespace JRPG
                 if (perso.typePerso == TypePersonnage.AVENTURIER)
                 {
                     if (p.groupeAventurier.Membres[perso.idPerso].Etat == Etat.Mort)
+                    {
+                        lstPersonnages.Remove(perso);
+                    }
+                }
+
+                if (perso.typePerso == TypePersonnage.ENNEMI)
+                {
+                    if (la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[perso.idPerso].Etat == Etat.Mort)
                     {
                         lstPersonnages.Remove(perso);
                     }
