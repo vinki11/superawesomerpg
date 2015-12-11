@@ -95,13 +95,13 @@ namespace JRPG.Classes.Aventurier
 
 
 
-                MessageBox.Show(strAction);
+                //MessageBox.Show(strAction);
 
             }
             else
             {
                 strAction += "\r\n" + this.NomAventurier + " à manqué la cible!";
-                MessageBox.Show(strAction);
+                //MessageBox.Show(strAction);
             }
 
             this.Energieactuel -= this.CoutCompetenceA;

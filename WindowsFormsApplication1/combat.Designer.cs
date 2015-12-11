@@ -295,7 +295,7 @@
             this.gboxActions.Margin = new System.Windows.Forms.Padding(2);
             this.gboxActions.Name = "gboxActions";
             this.gboxActions.Padding = new System.Windows.Forms.Padding(2);
-            this.gboxActions.Size = new System.Drawing.Size(434, 266);
+            this.gboxActions.Size = new System.Drawing.Size(544, 266);
             this.gboxActions.TabIndex = 46;
             this.gboxActions.TabStop = false;
             this.gboxActions.Text = "Actions";
@@ -384,7 +384,7 @@
             // 
             // btnUtiliserConsommable
             // 
-            this.btnUtiliserConsommable.Location = new System.Drawing.Point(322, 210);
+            this.btnUtiliserConsommable.Location = new System.Drawing.Point(430, 206);
             this.btnUtiliserConsommable.Margin = new System.Windows.Forms.Padding(2);
             this.btnUtiliserConsommable.Name = "btnUtiliserConsommable";
             this.btnUtiliserConsommable.Size = new System.Drawing.Size(56, 19);
@@ -395,10 +395,10 @@
             // cboConsommable
             // 
             this.cboConsommable.FormattingEnabled = true;
-            this.cboConsommable.Location = new System.Drawing.Point(288, 186);
+            this.cboConsommable.Location = new System.Drawing.Point(290, 206);
             this.cboConsommable.Margin = new System.Windows.Forms.Padding(2);
             this.cboConsommable.Name = "cboConsommable";
-            this.cboConsommable.Size = new System.Drawing.Size(92, 21);
+            this.cboConsommable.Size = new System.Drawing.Size(136, 21);
             this.cboConsommable.TabIndex = 9;
             // 
             // lblAttaquer
@@ -414,7 +414,7 @@
             // lblConsommable
             // 
             this.lblConsommable.AutoSize = true;
-            this.lblConsommable.Location = new System.Drawing.Point(286, 167);
+            this.lblConsommable.Location = new System.Drawing.Point(288, 187);
             this.lblConsommable.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblConsommable.Name = "lblConsommable";
             this.lblConsommable.Size = new System.Drawing.Size(73, 13);
@@ -499,7 +499,8 @@
             this.rtbHistoriqueActions.Location = new System.Drawing.Point(4, 17);
             this.rtbHistoriqueActions.Margin = new System.Windows.Forms.Padding(2);
             this.rtbHistoriqueActions.Name = "rtbHistoriqueActions";
-            this.rtbHistoriqueActions.Size = new System.Drawing.Size(303, 207);
+            this.rtbHistoriqueActions.ReadOnly = true;
+            this.rtbHistoriqueActions.Size = new System.Drawing.Size(374, 207);
             this.rtbHistoriqueActions.TabIndex = 47;
             this.rtbHistoriqueActions.Text = "";
             // 
@@ -507,18 +508,19 @@
             // 
             this.gboxHistoriqueActions.Controls.Add(this.rtbHistoriqueActions);
             this.gboxHistoriqueActions.Controls.Add(this.listviewListeInitiative);
+            this.gboxHistoriqueActions.Controls.Add(this.lblListeInitiative);
             this.gboxHistoriqueActions.Location = new System.Drawing.Point(342, 11);
             this.gboxHistoriqueActions.Margin = new System.Windows.Forms.Padding(2);
             this.gboxHistoriqueActions.Name = "gboxHistoriqueActions";
             this.gboxHistoriqueActions.Padding = new System.Windows.Forms.Padding(2);
-            this.gboxHistoriqueActions.Size = new System.Drawing.Size(434, 229);
+            this.gboxHistoriqueActions.Size = new System.Drawing.Size(544, 229);
             this.gboxHistoriqueActions.TabIndex = 48;
             this.gboxHistoriqueActions.TabStop = false;
             this.gboxHistoriqueActions.Text = "Historique des actions";
             // 
             // listviewListeInitiative
             // 
-            this.listviewListeInitiative.Location = new System.Drawing.Point(309, 42);
+            this.listviewListeInitiative.Location = new System.Drawing.Point(398, 42);
             this.listviewListeInitiative.Margin = new System.Windows.Forms.Padding(2);
             this.listviewListeInitiative.Name = "listviewListeInitiative";
             this.listviewListeInitiative.Size = new System.Drawing.Size(122, 182);
@@ -539,7 +541,7 @@
             // lblListeInitiative
             // 
             this.lblListeInitiative.AutoSize = true;
-            this.lblListeInitiative.Location = new System.Drawing.Point(658, 38);
+            this.lblListeInitiative.Location = new System.Drawing.Point(395, 22);
             this.lblListeInitiative.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblListeInitiative.Name = "lblListeInitiative";
             this.lblListeInitiative.Size = new System.Drawing.Size(78, 13);
@@ -932,7 +934,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(785, 522);
+            this.ClientSize = new System.Drawing.Size(996, 522);
             this.Controls.Add(this.pboxAventurierSelected3);
             this.Controls.Add(this.pboxAventurierSelected1);
             this.Controls.Add(this.pboxAventurierSelected2);
@@ -964,7 +966,6 @@
             this.Controls.Add(this.lblNomEnnemi3);
             this.Controls.Add(this.pboxEnnemi3);
             this.Controls.Add(this.lblEtapeAventure);
-            this.Controls.Add(this.lblListeInitiative);
             this.Controls.Add(this.lblNomAventure);
             this.Controls.Add(this.gboxHistoriqueActions);
             this.Controls.Add(this.gboxActions);
@@ -999,6 +1000,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pboxSort3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSort1)).EndInit();
             this.gboxHistoriqueActions.ResumeLayout(false);
+            this.gboxHistoriqueActions.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxEnnemi4)).EndInit();

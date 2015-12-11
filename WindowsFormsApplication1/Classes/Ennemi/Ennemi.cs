@@ -74,10 +74,11 @@ namespace JRPG.Classes.Ennemi
         #endregion
 
         #region Fonctions
-        public void Agir()
+        public string Agir()
         {
             int cibleAleatoire;
             int cibleId = -1;
+            string strAction = "";
             switch (Strategie)
             {
                 #region Attaque Aléatoire
@@ -310,7 +311,7 @@ namespace JRPG.Classes.Ennemi
                     #endregion
             }
 
-            this.Attaquer(p.groupeAventurier.Membres[cibleId]);
+            return this.Attaquer(p.groupeAventurier.Membres[cibleId]);
         }
 
         public string Attaquer(Aventurier.Aventurier cible)
@@ -343,13 +344,13 @@ namespace JRPG.Classes.Ennemi
                 }
 
 
-                MessageBox.Show(strAction);
+                //MessageBox.Show(strAction);
 
             }
             else
             {
                 strAction += "\r\n" + this.Nom + " à manqué la cible!";
-                MessageBox.Show(strAction);
+                //MessageBox.Show(strAction);
             }
 
             return strAction; //utilisé le return pour faire l'historique si on le désire vraiment

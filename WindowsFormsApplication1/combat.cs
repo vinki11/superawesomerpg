@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+//using System.Timers;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -26,6 +27,9 @@ namespace JRPG
 
         string typeAction;
         int cibleId;
+
+        private static Timer timerEnnemi;
+        //private static System.Timers.Timer Timer timerEnnemi;
 
         List<Personnage> lstPersonnages = new List<Personnage>();
 
@@ -118,8 +122,8 @@ namespace JRPG
 
                 if (p.groupeAventurier.Membres[persoActif.idPerso].Etat == Etat.Etourdi)
                 {
-                    //add à l'historique ?
-                    MessageBox.Show(p.groupeAventurier.Membres[persoActif.idPerso].NomAventurier + " est étourdi et ne peut pas agir!");
+                    AjouterTexteHistorique(p.groupeAventurier.Membres[persoActif.idPerso].NomAventurier + " est étourdi et ne peut pas agir!");
+                    //MessageBox.Show(p.groupeAventurier.Membres[persoActif.idPerso].NomAventurier + " est étourdi et ne peut pas agir!");
                     p.groupeAventurier.Membres[persoActif.idPerso].Etat = Etat.Normal;
                     ProchainTour();
                 }
@@ -133,19 +137,30 @@ namespace JRPG
 
                 if (la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Etat == Etat.Etourdi)
                 {
-                    //add à l'historique ?
-                    MessageBox.Show(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Nom + " est étourdi et ne peut pas agir!");
+                    AjouterTexteHistorique(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Nom + " est étourdi et ne peut pas agir!");
+                    //MessageBox.Show(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Nom + " est étourdi et ne peut pas agir!");
                     la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Etat = Etat.Normal;
                     ProchainTour();
                 }
                 else
                 {
                     AgirMonstre();
+                        /*
+                    timerEnnemi.Tick += new EventHandler(EventTimer);
+
+                    timerEnnemi.Interval = 2000;
+                    timerEnnemi.Start();*/
                 }
 
             }
 
         }
+
+       /* private static void EventTimer(Object myObject,
+                                            EventArgs myEventArgs)
+        {
+            timerEnnemi.Stop();
+        }*/
 
         private void CalculerInitiative()
         {
@@ -382,7 +397,7 @@ namespace JRPG
             /*
                 code here ou plutot dans Agir de ennemi
             */
-            la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Agir();
+            AjouterTexteHistorique(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Agir());
 
             AfficherInfosEnnemies(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi.Count());
             AfficherInfosAventuriers(p.groupeAventurier.Membres.Count());
@@ -404,7 +419,6 @@ namespace JRPG
             if (persoActif.typePerso == TypePersonnage.ENNEMI)
             {
                 ProchainTour();
-                //NouveauTour();
             }
             else
             {
@@ -450,7 +464,7 @@ namespace JRPG
 
         private void LancerAttaque(Aventurier aventurier, Ennemi cible)
         {
-            aventurier.Attaquer(cible);
+            AjouterTexteHistorique(aventurier.Attaquer(cible));
             //this.Controls.Find("lblPVEnnemi" + (cibleId + 1), true)[0].Text = cible.PvActuel > 0 ? cible.PvActuel.ToString() : "0";
             AfficherInfosEnnemies(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi.Count());
             AfficherInfosAventuriers(p.groupeAventurier.Membres.Count());
@@ -463,7 +477,7 @@ namespace JRPG
             switch (idCompetence)
             {
                 case 1:
-                    aventurier.UtiliserCompetenceA(cible);
+                    AjouterTexteHistorique(aventurier.UtiliserCompetenceA(cible));
                     break;
 
                 case 2:
@@ -558,6 +572,11 @@ namespace JRPG
                     }
                 }
             }
+        }
+
+        private void AjouterTexteHistorique(string strMessage)
+        {
+            rtbHistoriqueActions.Text = rtbHistoriqueActions.Text.Insert(0, strMessage+ "__________________________________________________\r\n\n");
         }
 
         private void pboxSort1_Click(object sender, EventArgs e)
