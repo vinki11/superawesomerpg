@@ -150,6 +150,32 @@ namespace JRPG.Classes
                 aventurier.Esquiveactuel = aventurier.Esquivebase;
                 aventurier.Forceactuel = aventurier.Forcebase;
                 aventurier.Defenseactuel = aventurier.Defensebase;
+                if (aventurier.Etat == Etat.Etourdi)
+                {
+                    aventurier.Etat = Etat.Normal;
+                }
+            }
+        }
+
+        public void ModifApresCombat()
+        {
+            foreach (Aventurier.Aventurier aventurier in Membres)
+            {
+                if (aventurier.Etat == Etat.Etourdi)
+                {
+                    aventurier.Etat = Etat.Normal;
+                }
+
+                if (aventurier.Ressource == Ressource.Energie)
+                {
+                    aventurier.Energieactuel = aventurier.Energiemax;
+                }
+                else
+                {
+                    aventurier.Manaactuel += 15;
+                    aventurier.Manaactuel = aventurier.Manaactuel > aventurier.Manamax ? aventurier.Manamax : aventurier.Manaactuel;
+                }
+
             }
         }
         #endregion

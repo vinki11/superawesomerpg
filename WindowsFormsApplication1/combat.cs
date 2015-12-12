@@ -436,6 +436,7 @@ namespace JRPG
                 }
                 else
                 {
+                    p.groupeAventurier.ModifApresCombat();
                     Hide();
                     Combat newCombat = new Combat(idAventure, etapeAventure+1);
                     newCombat.ShowDialog();

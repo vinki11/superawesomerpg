@@ -44,7 +44,7 @@ namespace JRPG.Classes.Ennemi
             listeProbLoot.Add(87);
             listeProbLoot.Add(5);
             listeProbLoot.Add(8);
-            ListeEnnemis.Add(new Ennemi(GOBELIN_VOLEUR_ID, "Voleur gobelin", 1, 5, 12, 12, 12, 12, 10, 100, 5, Properties.Resources.spectre, Ennemi.StrategieAction.AttaquePlusFaible,listeLoot,listeProbLoot));
+            ListeEnnemis.Add(new Ennemi(GOBELIN_VOLEUR_ID, "Voleur gobelin", 1, 40, 12, 12, 12, 12, 10, 100, 5, Properties.Resources.spectre, Ennemi.StrategieAction.AttaquePlusFaible,listeLoot,listeProbLoot));
 
             //Archer gobelin
             listeLoot = new List<Item.Item>();
@@ -55,7 +55,7 @@ namespace JRPG.Classes.Ennemi
             listeProbLoot.Add(85);
             listeProbLoot.Add(5);
             listeProbLoot.Add(10);
-            ListeEnnemis.Add(new Ennemi(GOBELIN_ARCHER_ID, "Archer gobelin", 1, 5, 10, 15, 10, 14, 10, 100, 5, Properties.Resources.spectre, Ennemi.StrategieAction.AttaquePlusFaible, listeLoot, listeProbLoot));
+            ListeEnnemis.Add(new Ennemi(GOBELIN_ARCHER_ID, "Archer gobelin", 1, 35, 10, 15, 10, 14, 10, 100, 5, Properties.Resources.spectre, Ennemi.StrategieAction.AttaquePlusFaible, listeLoot, listeProbLoot));
 
             //Shaman Gobelin
             listeLoot = new List<Item.Item>();
@@ -68,14 +68,14 @@ namespace JRPG.Classes.Ennemi
             listeProbLoot.Add(30);
             listeProbLoot.Add(15);
             listeProbLoot.Add(25);
-            ListeEnnemis.Add(new Ennemi(GOBELIN_SHAMAN_ID, "Shaman gobelin", 2, 5, 12, 12, 10, 16, 12, 150, 15, Properties.Resources.spectre, Ennemi.StrategieAction.AttaquePlusFort, listeLoot, listeProbLoot));
+            ListeEnnemis.Add(new Ennemi(GOBELIN_SHAMAN_ID, "Shaman gobelin", 2, 50, 12, 12, 10, 16, 12, 150, 15, Properties.Resources.spectre, Ennemi.StrategieAction.AttaquePlusFort, listeLoot, listeProbLoot));
 
             //Loup
             listeLoot = new List<Item.Item>();
             listeLoot.Add(null);
             listeProbLoot = new List<int>();
             listeProbLoot.Add(100);
-            ListeEnnemis.Add(new Ennemi(LOUP_ID, "Loup", 1, 5, 18, 10, 15, 16, 10, 100, 0, Properties.Resources.spectre, Ennemi.StrategieAction.AttaqueAleatoire, listeLoot, listeProbLoot));
+            ListeEnnemis.Add(new Ennemi(LOUP_ID, "Loup", 1, 40, 18, 10, 15, 16, 10, 100, 0, Properties.Resources.spectre, Ennemi.StrategieAction.AttaqueAleatoire, listeLoot, listeProbLoot));
 
             //Crabe Géant
             listeLoot = new List<Item.Item>();
