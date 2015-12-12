@@ -57,3 +57,4 @@ C:\Users\Vincent\Documents\GitHub\superawesomerpg\WindowsFormsApplication1\obj\D
 C:\Users\Vincent\Documents\GitHub\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.csproj.GenerateResource.Cache
 C:\Users\Vincent\Documents\GitHub\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.FenetreAventure.resources
 C:\Users\Vincent\Documents\GitHub\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.Gameover.resources
+C:\Users\Vincent\Documents\GitHub\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.Boutique.resources

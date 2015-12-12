@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using JRPG.Classes.Aventurier;
 using JRPG.Classes.Ennemi;
 using JRPG.Classes.Item;
 
@@ -49,6 +50,19 @@ namespace JRPG.Classes
 
             this.TotalPieces = totalPiece;
             this.TotalXp = totalXp;
+        }
+
+        public int NombreEnnemiVivant()
+        {
+            int nbVivant = 0;
+            foreach (Ennemi.Ennemi ennemi in this.ListeEnnemi)
+            {
+                if (ennemi.Etat != Etat.Mort)
+                {
+                    nbVivant++;
+                }
+            }
+            return nbVivant;
         }
 
         #endregion

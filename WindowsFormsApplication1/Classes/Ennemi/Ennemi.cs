@@ -29,15 +29,16 @@ namespace JRPG.Classes.Ennemi
         public int Pieces { get; set; }
         public StrategieAction Strategie { get; set; }
 
+        public List<Item.Item> Items { get; set; }
 
-        protected string item; // Plutot faire une fonction qui determine au hasard si un item est retrouvé en loot ?
+        public List<int> ProbItems { get; set; }
         protected string competence; //Pas un string évidamment
 
         #endregion
 
         #region Constructeur
 
-        public Ennemi(int pId, string pNom, int pNiveau, int pPv, int pInitiative, int pPrecision, int pEsquive, int pForce, int pDefense, int pGainXp, int pPieces, Bitmap pImageEnnemi, StrategieAction pStrat)
+        public Ennemi(int pId, string pNom, int pNiveau, int pPv, int pInitiative, int pPrecision, int pEsquive, int pForce, int pDefense, int pGainXp, int pPieces, Bitmap pImageEnnemi, StrategieAction pStrat, List<Item.Item> pItems, List<int> pProbItems)
         {
             Nom = pNom;
             Niveau = pNiveau;
@@ -52,6 +53,8 @@ namespace JRPG.Classes.Ennemi
             Pieces = pPieces;
             ImageEnnemi = pImageEnnemi;
             Strategie = pStrat;
+            Items = pItems;
+            ProbItems = pProbItems;
         }
 
         public Ennemi(Ennemi pEnnemi)
@@ -69,6 +72,8 @@ namespace JRPG.Classes.Ennemi
             this.Pieces = pEnnemi.Pieces;
             this.ImageEnnemi = pEnnemi.ImageEnnemi;
             this.Strategie = pEnnemi.Strategie;
+            this.Items = pEnnemi.Items;
+            this.ProbItems = pEnnemi.ProbItems;
         }
 
         #endregion

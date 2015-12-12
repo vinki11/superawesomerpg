@@ -28,8 +28,8 @@ namespace JRPG
         string typeAction;
         int cibleId;
 
-        private static Timer timerEnnemi;
-        //private static System.Timers.Timer Timer timerEnnemi;
+        //private static Timer timerEnnemi;
+        //private static System.Timers.Timer timerEnnemi;
 
         List<Personnage> lstPersonnages = new List<Personnage>();
 
@@ -144,7 +144,7 @@ namespace JRPG
                 }
                 else
                 {
-                    AgirMonstre();
+                        AgirMonstre();
                         /*
                     timerEnnemi.Tick += new EventHandler(EventTimer);
 
@@ -168,12 +168,15 @@ namespace JRPG
             int indAventurier = 0;
             foreach (Aventurier aventurier in p.groupeAventurier.Membres)
             {
-                Personnage perso = new Personnage();
-                perso.nomPerso = aventurier.NomAventurier;
-                perso.initiative = aventurier.Initiativeactuel;
-                perso.typePerso = TypePersonnage.AVENTURIER;
-                perso.idPerso = indAventurier;
-                lstPersonnages.Add(perso);
+                if (aventurier.Etat != Etat.Mort)
+                {
+                    Personnage perso = new Personnage();
+                    perso.nomPerso = aventurier.NomAventurier;
+                    perso.initiative = aventurier.Initiativeactuel;
+                    perso.typePerso = TypePersonnage.AVENTURIER;
+                    perso.idPerso = indAventurier;
+                    lstPersonnages.Add(perso);
+                }
                 indAventurier++;
             }
 
@@ -378,15 +381,47 @@ namespace JRPG
 
             persoActif = lstPersonnages.First();
 
-            if (p.groupeAventurier.NombreMembreVivant() > 0)
-            {
-                NouveauTour();
-            }
-            else
+            if (p.groupeAventurier.NombreMembreVivant() == 0)
             {
                 Hide();
                 Gameover gameover = new Gameover();
-                gameover.ShowDialog();
+                gameover.ShowDialog(); 
+            }
+            else if (la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].NombreEnnemiVivant() == 0)
+            {
+                int nbOr;
+                int nbXp;
+
+                nbOr = la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].TotalPieces;
+                nbXp = la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].TotalXp;
+
+                p.groupeAventurier.NbPiecesOr += nbOr;
+                
+                foreach(Aventurier aventurier in p.groupeAventurier.Membres)
+                {
+                    if (aventurier.Etat != Etat.Mort)
+                    {
+                        aventurier.Experience += nbXp;
+                    }
+                }
+
+                if (etapeAventure == nbEtapesAventure)
+                {
+                    Hide();
+                    MenuJeu menujeu = new MenuJeu();
+                    menujeu.ShowDialog();
+                }
+                else
+                {
+                    Hide();
+                    Combat newCombat = new Combat(idAventure, etapeAventure+1);
+                    newCombat.ShowDialog();
+                }
+                
+            }
+            else
+            {
+                NouveauTour();
             }
 
         }
