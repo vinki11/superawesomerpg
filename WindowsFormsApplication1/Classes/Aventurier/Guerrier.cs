@@ -39,7 +39,7 @@ namespace JRPG.Classes.Aventurier
             this.Arme = li.ListeArmes[li.EPEE_BRONZE_ID];
             this.Armure = li.ListeArmures[li.ARMURE_BRONZE_ID];
             this.Bouclier = li.ListeBoucliers[li.BOUCLIER_BOIS_ID];
-            this.NomCompetenceA = "Coup perçant"; // piercing strike en francais ? Kekechose qui ignore un pourcentage de la def de l'ennemi
+            this.NomCompetenceA = "Frappe puissante"; //? Kekechose qui ignore un pourcentage de la def de l'ennemi
             this.NomCompetenceB = "Cri de guerre"; //Buff self ou allallies ? ?
             this.NomCompetenceC = "Placeholder";
             this.CibleCompetenceA = Cible.Enemy;
@@ -56,9 +56,52 @@ namespace JRPG.Classes.Aventurier
         #endregion
 
         #region Fonctions
-        public override string UtiliserCompetenceA(Ennemi.Ennemi ennemi)
+        public override string UtiliserCompetenceA(Ennemi.Ennemi cible)
         {
-            return "";
+            int chanceAttaque = 4;
+            int degatAttaque = 0;
+            string strAction = "";
+
+            chanceAttaque += this.Precisionactuel + this.Arme.Precision - cible.Esquive;
+            chanceAttaque = chanceAttaque > 9 ? 9 : chanceAttaque;
+            chanceAttaque = chanceAttaque < 1 ? 1 : chanceAttaque;
+
+            Random rnd = new Random();
+            int chiffreAleatoire = rnd.Next(0, 10);
+
+            strAction = this.NomAventurier + " tente une frappe puissante sur " + cible.Nom;
+            if (chiffreAleatoire < chanceAttaque)
+            {
+                double defenseCible = cible.Defense / 2;
+                degatAttaque = this.Forceactuel + this.Arme.Force - (int)Math.Ceiling(defenseCible);
+                degatAttaque = degatAttaque < 1 ? 1 : degatAttaque;
+                cible.PvActuel -= degatAttaque;
+
+                strAction += "\r\n" + this.NomAventurier + " à touché la cible et infligé : " + degatAttaque + " points de dégats!";
+
+                int chanceEtourdi = rnd.Next(0, 10);
+                chanceEtourdi += (this.Niveau - cible.Niveau);
+
+
+                if (cible.PvActuel <= 0)
+                {
+                    cible.Etat = Etat.Mort;
+                    strAction += "\r\n" + cible.Nom + " est mort!";
+                }
+
+
+
+                //MessageBox.Show(strAction);
+
+            }
+            else
+            {
+                strAction += "\r\n" + this.NomAventurier + " à manqué la cible!";
+                //MessageBox.Show(strAction);
+            }
+
+            this.Energieactuel -= this.CoutCompetenceA;
+            return strAction;
         }
 
         public new void UtiliserCompetenceB()

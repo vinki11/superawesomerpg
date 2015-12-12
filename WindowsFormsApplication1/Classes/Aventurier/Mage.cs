@@ -37,33 +37,70 @@ namespace JRPG.Classes.Aventurier
             this.Armure = li.ListeArmures[li.ROBE_ID];
             this.NomCompetenceA = "Éclair"; //Single damage spell
             this.NomCompetenceB = "Boule de feu"; //Aoe Spell
-            this.NomCompetenceC = "Placeholder";
+            this.NomCompetenceC = "Enchantement de l'arme"; //Buff Force ally
             this.CibleCompetenceA = Cible.Enemy;
             this.CibleCompetenceB = Cible.AllEnemies;
-            this.CibleCompetenceC = Cible.Enemy;
-            this.CoutCompetenceA = 30;
+            this.CibleCompetenceC = Cible.Ally;
+            this.CoutCompetenceA = 25;
             this.CoutCompetenceB = 30;
-            this.CoutCompetenceC = 30;
-            this.ImageCompetenceA = Properties.Resources.attaque;
-            this.ImageCompetenceB = Properties.Resources.attaque;
-            this.ImageCompetenceC = Properties.Resources.attaque;
+            this.CoutCompetenceC = 10;
+            this.ImageCompetenceA = Properties.Resources.eclair;
+            this.ImageCompetenceB = Properties.Resources.boulefeu;
+            this.ImageCompetenceC = Properties.Resources.enchantement;
         }
         #endregion
 
         #region Fonctions
-        public new void UtiliserCompetenceA()
+        public override string UtiliserCompetenceA(Ennemi.Ennemi cible)
         {
+            //int chanceAttaque = 5;
+            int degatAttaque = 0;
+            string strAction = "";
 
+            /*chanceAttaque += this.Precisionactuel + this.Arme.Precision - cible.Esquive;
+            chanceAttaque = chanceAttaque > 9 ? 9 : chanceAttaque;
+            chanceAttaque = chanceAttaque < 1 ? 1 : chanceAttaque;*/
+
+            Random rnd = new Random();
+            int chiffreAleatoire = rnd.Next(0, 10);
+
+            strAction = this.NomAventurier + " lance un éclair vers " + cible.Nom;
+            if (chiffreAleatoire > 1)
+            {
+                degatAttaque = 10 + (this.Niveau * 5);
+                //degatAttaque = degatAttaque < 1 ? 1 : degatAttaque;
+                cible.PvActuel -= degatAttaque;
+
+                strAction += "\r\n" + this.NomAventurier + " à touché la cible et infligé : " + degatAttaque + " points de dégats!";
+                
+                if (cible.PvActuel <= 0)
+                {
+                    cible.Etat = Etat.Mort;
+                    strAction += "\r\n" + cible.Nom + " est mort!";
+                }
+
+
+                //MessageBox.Show(strAction);
+
+            }
+            else
+            {
+                strAction += "\r\n" + this.NomAventurier + " à manqué la cible!";
+                //MessageBox.Show(strAction);
+            }
+
+            this.Manaactuel -= this.CoutCompetenceA;
+            return strAction;
         }
 
-        public new void UtiliserCompetenceB()
+        public override string UtiliserCompetenceB()
         {
-
+            return "";
         }
 
-        public new void UtiliserCompetenceC()
+        public override string UtiliserCompetenceC()
         {
-
+            return "";
         }
 
         public override string MonterNiveauExperience()

@@ -26,7 +26,7 @@ namespace JRPG.Classes.Aventurier
             this.Energieactuel = Energiebase = Energiemax = 100;
             this.Initiativeactuel = Initiativebase = 20;
             this.Precisionactuel = Precisionbase = 20;
-            this.Esquiveactuel = Esquivebase = 15;
+            this.Esquiveactuel = Esquivebase = 12;
             this.Forceactuel = Forcebase = 10;
             this.Defenseactuel = Defensebase = 2;
             this.NomClasse = "Voleur";

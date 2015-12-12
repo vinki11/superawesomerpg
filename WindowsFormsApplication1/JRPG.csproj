@@ -184,6 +184,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\attaque.png" />
+    <Content Include="Resources\boulefeu.png" />
+    <Content Include="Resources\eclair.png" />
+    <Content Include="Resources\enchantement.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

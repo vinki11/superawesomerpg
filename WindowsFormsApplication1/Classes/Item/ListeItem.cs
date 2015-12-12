@@ -51,8 +51,8 @@ namespace JRPG
             ListeArmes.Add(new Arme(BATARDE_BRONZE_ID, "Épée batarde de bronze", 15, 15, 0, true, pUtilisableGuerrier:true));
 
             //Armure
-            ListeArmures.Add(new Armure(ARMURE_CUIR_ID, "Armure de cuir", 10, 5,  pUtilisableGuerrier:true, pUtilisableVoleur:true));
-            ListeArmures.Add(new Armure(ARMURE_BRONZE_ID, "Armure de bronze", 20, 10, pUtilisableGuerrier:true));
+            ListeArmures.Add(new Armure(ARMURE_CUIR_ID, "Armure de cuir", 10, 4,  pUtilisableGuerrier:true, pUtilisableVoleur:true));
+            ListeArmures.Add(new Armure(ARMURE_BRONZE_ID, "Armure de bronze", 20, 6, pUtilisableGuerrier:true));
             ListeArmures.Add(new Armure(ROBE_ID, "Robe", 5, 2, true, true, true, true));
 
             //Bouclier
