@@ -53,14 +53,8 @@ namespace JRPG.Classes.Aventurier
         #region Fonctions
         public override string UtiliserCompetenceA(Ennemi.Ennemi cible)
         {
-            //int chanceAttaque = 5;
             int degatAttaque = 0;
             string strAction = "";
-
-            /*chanceAttaque += this.Precisionactuel + this.Arme.Precision - cible.Esquive;
-            chanceAttaque = chanceAttaque > 9 ? 9 : chanceAttaque;
-            chanceAttaque = chanceAttaque < 1 ? 1 : chanceAttaque;*/
-
             Random rnd = new Random();
             int chiffreAleatoire = rnd.Next(0, 10);
 
@@ -68,7 +62,6 @@ namespace JRPG.Classes.Aventurier
             if (chiffreAleatoire > 1)
             {
                 degatAttaque = 10 + (this.Niveau * 5);
-                //degatAttaque = degatAttaque < 1 ? 1 : degatAttaque;
                 cible.PvActuel -= degatAttaque;
 
                 strAction += "\r\n" + this.NomAventurier + " à touché la cible et infligé : " + degatAttaque + " points de dégats!";
@@ -93,9 +86,42 @@ namespace JRPG.Classes.Aventurier
             return strAction;
         }
 
-        public override string UtiliserCompetenceB()
+        public override string UtiliserCompetenceB(List<Ennemi.Ennemi> listeEnnemi)
         {
-            return "";
+            int degatAttaque = 0;
+            string strAction = "";
+
+            strAction = this.NomAventurier + " lance une boule de feu.";
+
+            for (var i = 0; i < listeEnnemi.Count(); i++)
+            {
+                Random rnd = new Random();
+                int chiffreAleatoire = rnd.Next(0, 10);
+
+                if (chiffreAleatoire > 2)
+                {
+                    degatAttaque = 6 + (this.Niveau * 3);
+                    listeEnnemi[i].PvActuel -= degatAttaque;
+
+                    strAction += "\r\n" + listeEnnemi[i].Nom + " à été touché pour : " + degatAttaque + " points de dégats!";
+
+                    if (listeEnnemi[i].PvActuel <= 0)
+                    {
+                        listeEnnemi[i].Etat = Etat.Mort;
+                        strAction += "\r\n" + listeEnnemi[i].Nom + " est mort!";
+                    }
+                }
+                else
+                {
+                    strAction += "\r\n" + listeEnnemi[i].Nom + " à évité l'attaque!";
+                    //MessageBox.Show(strAction);
+                }
+            }
+
+
+            this.Manaactuel -= this.CoutCompetenceB;
+            return strAction;
+
         }
 
         public override string UtiliserCompetenceC()

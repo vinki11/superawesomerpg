@@ -40,16 +40,16 @@ namespace JRPG.Classes.Aventurier
             this.Armure = li.ListeArmures[li.ARMURE_BRONZE_ID];
             this.Bouclier = li.ListeBoucliers[li.BOUCLIER_BOIS_ID];
             this.NomCompetenceA = "Frappe puissante"; //? Kekechose qui ignore un pourcentage de la def de l'ennemi
-            this.NomCompetenceB = "Cri de guerre"; //Buff self ou allallies ? ?
-            this.NomCompetenceC = "Placeholder";
+            this.NomCompetenceB = "Attaque circulaire"; // Cleave qui attaque tout le monde
+            this.NomCompetenceC = "Cri de guerre"; //Buff self ou allallies ? ?
             this.CibleCompetenceA = Cible.Enemy;
-            this.CibleCompetenceB = Cible.AllAllies;
-            this.CibleCompetenceC = Cible.Enemy;
+            this.CibleCompetenceB = Cible.AllEnemies;
+            this.CibleCompetenceC = Cible.AllAllies;
             this.CoutCompetenceA = 30;
-            this.CoutCompetenceB = 30;
+            this.CoutCompetenceB = 35;
             this.CoutCompetenceC = 30;
-            this.ImageCompetenceA = Properties.Resources.attaque;
-            this.ImageCompetenceB = Properties.Resources.attaque;
+            this.ImageCompetenceA = Properties.Resources.frappepuissante;
+            this.ImageCompetenceB = Properties.Resources.coupcirculaire;
             this.ImageCompetenceC = Properties.Resources.attaque;
 
         }
@@ -78,21 +78,12 @@ namespace JRPG.Classes.Aventurier
                 cible.PvActuel -= degatAttaque;
 
                 strAction += "\r\n" + this.NomAventurier + " à touché la cible et infligé : " + degatAttaque + " points de dégats!";
-
-                int chanceEtourdi = rnd.Next(0, 10);
-                chanceEtourdi += (this.Niveau - cible.Niveau);
-
-
+                
                 if (cible.PvActuel <= 0)
                 {
                     cible.Etat = Etat.Mort;
                     strAction += "\r\n" + cible.Nom + " est mort!";
                 }
-
-
-
-                //MessageBox.Show(strAction);
-
             }
             else
             {
@@ -104,8 +95,47 @@ namespace JRPG.Classes.Aventurier
             return strAction;
         }
 
-        public new void UtiliserCompetenceB()
+        public override string UtiliserCompetenceB(List<Ennemi.Ennemi> listeEnnemi)
         {
+            int chanceAttaque = 4;
+            int degatAttaque = 0;
+            string strAction = "";
+
+            strAction = this.NomAventurier + " tente une attaque circulaire.";
+
+            for (var i = 0; i < listeEnnemi.Count(); i++)
+            {
+                chanceAttaque += this.Precisionactuel + this.Arme.Precision - listeEnnemi[i].Esquive;
+                chanceAttaque = chanceAttaque > 9 ? 9 : chanceAttaque;
+                chanceAttaque = chanceAttaque < 1 ? 1 : chanceAttaque;
+
+                Random rnd = new Random();
+                int chiffreAleatoire = rnd.Next(0, 10);
+
+                if (chiffreAleatoire < chanceAttaque)
+                {
+                    degatAttaque = this.Forceactuel + this.Arme.Force - listeEnnemi[i].Defense - 5;
+                    degatAttaque = degatAttaque < 1 ? 1 : degatAttaque;
+                    listeEnnemi[i].PvActuel -= degatAttaque;
+
+                    strAction += "\r\n" + listeEnnemi[i].Nom + " à été touché pour : " + degatAttaque + " points de dégats!";
+                    
+                    if (listeEnnemi[i].PvActuel <= 0)
+                    {
+                        listeEnnemi[i].Etat = Etat.Mort;
+                        strAction += "\r\n" + listeEnnemi[i].Nom + " est mort!";
+                    }
+                }
+                else
+                {
+                    strAction += "\r\n" + listeEnnemi[i].Nom + " à évité l'attaque!";
+                    //MessageBox.Show(strAction);
+                }
+            }
+
+
+            this.Energieactuel -= this.CoutCompetenceB;
+            return strAction;
 
         }
 

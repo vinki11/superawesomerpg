@@ -65,8 +65,8 @@
             this.rtbHistoriqueActions = new System.Windows.Forms.RichTextBox();
             this.gboxHistoriqueActions = new System.Windows.Forms.GroupBox();
             this.listviewListeInitiative = new System.Windows.Forms.ListView();
-            this.lblNomAventure = new System.Windows.Forms.Label();
             this.lblListeInitiative = new System.Windows.Forms.Label();
+            this.lblNomAventure = new System.Windows.Forms.Label();
             this.lblEtapeAventure = new System.Windows.Forms.Label();
             this.lblPVEnnemi3 = new System.Windows.Forms.Label();
             this.lblNomEnnemi3 = new System.Windows.Forms.Label();
@@ -472,6 +472,7 @@
             this.pboxSort2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxSort2.TabIndex = 2;
             this.pboxSort2.TabStop = false;
+            this.pboxSort2.Click += new System.EventHandler(this.pboxSort2_Click);
             // 
             // pboxSort3
             // 
@@ -527,6 +528,16 @@
             this.listviewListeInitiative.TabIndex = 49;
             this.listviewListeInitiative.UseCompatibleStateImageBehavior = false;
             // 
+            // lblListeInitiative
+            // 
+            this.lblListeInitiative.AutoSize = true;
+            this.lblListeInitiative.Location = new System.Drawing.Point(395, 22);
+            this.lblListeInitiative.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblListeInitiative.Name = "lblListeInitiative";
+            this.lblListeInitiative.Size = new System.Drawing.Size(78, 13);
+            this.lblListeInitiative.TabIndex = 51;
+            this.lblListeInitiative.Text = "Liste d\'initiative";
+            // 
             // lblNomAventure
             // 
             this.lblNomAventure.AutoSize = true;
@@ -537,16 +548,6 @@
             this.lblNomAventure.Size = new System.Drawing.Size(134, 16);
             this.lblNomAventure.TabIndex = 50;
             this.lblNomAventure.Text = "Nom de l\'aventure";
-            // 
-            // lblListeInitiative
-            // 
-            this.lblListeInitiative.AutoSize = true;
-            this.lblListeInitiative.Location = new System.Drawing.Point(395, 22);
-            this.lblListeInitiative.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblListeInitiative.Name = "lblListeInitiative";
-            this.lblListeInitiative.Size = new System.Drawing.Size(78, 13);
-            this.lblListeInitiative.TabIndex = 51;
-            this.lblListeInitiative.Text = "Liste d\'initiative";
             // 
             // lblEtapeAventure
             // 

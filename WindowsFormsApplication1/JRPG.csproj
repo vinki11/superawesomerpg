@@ -185,6 +185,9 @@
   <ItemGroup>
     <Content Include="Resources\attaque.png" />
     <Content Include="Resources\boulefeu.png" />
+    <None Include="Resources\frappepuissante.png" />
+    <None Include="Resources\coupetourdissant.png" />
+    <None Include="Resources\coupcirculaire.png" />
     <Content Include="Resources\eclair.png" />
     <Content Include="Resources\enchantement.png" />
   </ItemGroup>

@@ -83,6 +83,26 @@ namespace JRPG.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap coupcirculaire {
+            get {
+                object obj = ResourceManager.GetObject("coupcirculaire", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap coupetourdissant {
+            get {
+                object obj = ResourceManager.GetObject("coupetourdissant", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap eclair {
             get {
                 object obj = ResourceManager.GetObject("eclair", resourceCulture);
@@ -96,6 +116,16 @@ namespace JRPG.Properties {
         internal static System.Drawing.Bitmap enchantement {
             get {
                 object obj = ResourceManager.GetObject("enchantement", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap frappepuissante {
+            get {
+                object obj = ResourceManager.GetObject("frappepuissante", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

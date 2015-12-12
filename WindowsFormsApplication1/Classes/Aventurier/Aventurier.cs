@@ -154,6 +154,13 @@ namespace JRPG.Classes.Aventurier
             return "";
         }
 
+        public virtual string UtiliserCompetenceB(List <Ennemi.Ennemi> listEnnemi)
+        {
+            MessageBox.Show("J'aimerais bien ca passe pas ici svp");
+            return "";
+        }
+
+
         public virtual string UtiliserCompetenceC()
         {
             MessageBox.Show("J'aimerais bien ca passe pas ici svp");

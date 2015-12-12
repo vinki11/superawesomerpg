@@ -142,10 +142,19 @@
   <data name="boulefeu" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\boulefeu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="coupcirculaire" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coupcirculaire.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coupetourdissant" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coupetourdissant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="eclair" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\eclair.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="enchantement" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\resources\enchantement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="frappepuissante" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frappepuissante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

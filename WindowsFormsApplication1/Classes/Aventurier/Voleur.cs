@@ -45,7 +45,7 @@ namespace JRPG.Classes.Aventurier
             this.CoutCompetenceA = 30;
             this.CoutCompetenceB = 30;
             this.CoutCompetenceC = 30;
-            this.ImageCompetenceA = Properties.Resources.attaque;
+            this.ImageCompetenceA = Properties.Resources.coupetourdissant;
             this.ImageCompetenceB = Properties.Resources.attaque;
             this.ImageCompetenceC = Properties.Resources.attaque;
         }
