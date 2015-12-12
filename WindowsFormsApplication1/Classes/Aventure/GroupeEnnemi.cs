@@ -52,6 +52,25 @@ namespace JRPG.Classes
             this.TotalXp = totalXp;
         }
 
+        public void CalculerItems()
+        {
+            foreach(Ennemi.Ennemi ennemi in ListeEnnemi)
+            {
+                Random rnd = new Random();
+                int lootAleatoire = rnd.Next(1, 101);
+
+                for (var i = 0; i < ennemi.Items.Count();i++)
+                {
+                    if (lootAleatoire <= ennemi.ProbItems[i])
+                    {
+                        this.ListeItem.Add(ennemi.Items[i]);
+                        break;
+                    }
+                }
+
+            }
+        }
+
         public int NombreEnnemiVivant()
         {
             int nbVivant = 0;

@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using JRPG.Classes.Aventure;
 using JRPG.Classes.Ennemi;
+using JRPG.Classes.Item;
 using JRPG.Classes.Aventurier;
 
 namespace JRPG
@@ -389,21 +390,44 @@ namespace JRPG
             }
             else if (la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].NombreEnnemiVivant() == 0)
             {
+                string strRewards = "";
                 int nbOr;
                 int nbXp;
+                List<Item> loot = new List<Item>();
 
                 nbOr = la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].TotalPieces;
                 nbXp = la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].TotalXp;
 
-                p.groupeAventurier.NbPiecesOr += nbOr;
-                
-                foreach(Aventurier aventurier in p.groupeAventurier.Membres)
+                la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].CalculerItems();
+                loot = la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeItem;
+
+                foreach (Aventurier aventurier in p.groupeAventurier.Membres)
                 {
                     if (aventurier.Etat != Etat.Mort)
                     {
                         aventurier.Experience += nbXp;
                     }
                 }
+                strRewards += "Le groupe a récolté " + nbXp.ToString() + " points d'expériences.";
+
+                p.groupeAventurier.NbPiecesOr += nbOr;
+                strRewards += "\r\nIls ont ramassé " + nbOr.ToString() + " pièces d'ors.";
+
+                int indLoot = 0;
+                //bool noItem = true;
+                foreach (Item item in loot)
+                {
+                    if (loot[indLoot] != null)
+                    {
+                        strRewards += "\r\nIls ont trouvé un(e)" + loot[indLoot].NomItem + "!";
+                        //noItem = false;
+                        p.groupeAventurier.Inventaire.Add(item);
+                    }
+                    //MessageBox.Show(loot[indLoot] != null ? loot[indLoot].NomItem : "Aucun item");
+                    indLoot++;
+                }
+
+                MessageBox.Show(strRewards);
 
                 if (etapeAventure == nbEtapesAventure)
                 {
