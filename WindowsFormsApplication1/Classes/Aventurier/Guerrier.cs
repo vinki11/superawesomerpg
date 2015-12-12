@@ -56,9 +56,9 @@ namespace JRPG.Classes.Aventurier
         #endregion
 
         #region Fonctions
-        public new void UtiliserCompetenceA()
+        public override string UtiliserCompetenceA(Ennemi.Ennemi ennemi)
         {
-
+            return "";
         }
 
         public new void UtiliserCompetenceB()
@@ -68,6 +68,37 @@ namespace JRPG.Classes.Aventurier
 
         public new void UtiliserCompetenceC()
         {
+
+        }
+
+        public override string MonterNiveauExperience()
+        {
+            string strLevelUp = "";
+            int upPv = 10;
+            int upInitiative = 2;
+            int upPrecision = 2;
+            int upEsquive = 2;
+            int upForce = 4;
+            int upDefense = 3;
+
+            base.MonterNiveauExperience();
+            this.Pvactuel = Pvbase = Pvmax += upPv;
+            this.Initiativeactuel = Initiativebase += upInitiative;
+            this.Precisionactuel = Precisionbase += upPrecision;
+            this.Esquiveactuel = Esquivebase += upEsquive;
+            this.Forceactuel = Forcebase += upForce;
+            this.Defenseactuel = Defensebase += upDefense;
+
+            strLevelUp += NomAventurier + " a monté de niveau!";
+            strLevelUp += "\r\nNiveau: " + Niveau;
+            strLevelUp += "\r\nPV: +" + upPv;
+            strLevelUp += "\r\nInitiative: +" + upInitiative;
+            strLevelUp += "\r\nPrécision: +" + upPrecision;
+            strLevelUp += "\r\nEsquive: +" + upEsquive;
+            strLevelUp += "\r\nForce: +" + upForce;
+            strLevelUp += "\r\nDefense: +" + upDefense;
+
+            return strLevelUp;
 
         }
         #endregion

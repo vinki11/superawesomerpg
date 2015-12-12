@@ -54,20 +54,25 @@ namespace JRPG.Classes
 
         public void CalculerItems()
         {
-            foreach(Ennemi.Ennemi ennemi in ListeEnnemi)
+            for (var j = 0; j < ListeEnnemi.Count(); j++)
             {
                 Random rnd = new Random();
                 int lootAleatoire = rnd.Next(1, 101);
+                int previousProb = 0;
 
-                for (var i = 0; i < ennemi.Items.Count();i++)
+
+                for (var i = 0; i < ListeEnnemi[j].Items.Count(); i++)
                 {
-                    if (lootAleatoire <= ennemi.ProbItems[i])
+                    if (lootAleatoire <= ListeEnnemi[j].ProbItems[i]+ previousProb)
                     {
-                        this.ListeItem.Add(ennemi.Items[i]);
+                        this.ListeItem.Add(ListeEnnemi[j].Items[i]);
                         break;
                     }
+                    else
+                    {
+                        previousProb += ListeEnnemi[j].ProbItems[i];
+                    }
                 }
-
             }
         }
 

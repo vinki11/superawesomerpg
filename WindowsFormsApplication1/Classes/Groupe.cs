@@ -124,7 +124,34 @@ namespace JRPG.Classes
 
             return indexMembre;
         }
+        
+        public void AjouterExperience(int xp)
+        {
+            
+            foreach (Aventurier.Aventurier aventurier in this.Membres)
+            {
+                if (aventurier.Etat != Etat.Mort)
+                {
+                    aventurier.Experience += xp;
+                    aventurier.VerifSiMonterNiveau();
+                }
+            }
+            
+        }
 
+        public void StatParDefaut()
+        {
+            foreach (Aventurier.Aventurier aventurier in Membres)
+            {
+                aventurier.Pvactuel = aventurier.Pvmax;
+                aventurier.Manaactuel = aventurier.Manamax;
+                aventurier.Energieactuel = aventurier.Energiemax;
+                aventurier.Precisionactuel = aventurier.Precisionbase;
+                aventurier.Esquiveactuel = aventurier.Esquivebase;
+                aventurier.Forceactuel = aventurier.Forcebase;
+                aventurier.Defenseactuel = aventurier.Defensebase;
+            }
+        }
         #endregion
 
     }

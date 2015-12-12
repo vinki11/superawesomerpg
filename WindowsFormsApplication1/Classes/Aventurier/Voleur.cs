@@ -117,6 +117,36 @@ namespace JRPG.Classes.Aventurier
         {
             return "";
         }
+
+        public override string MonterNiveauExperience()
+        {
+            string strLevelUp = "";
+            int upPv = 8;
+            int upInitiative = 4;
+            int upPrecision = 3;
+            int upEsquive = 3;
+            int upForce = 3;
+            int upDefense = 2;
+
+            base.MonterNiveauExperience();
+            this.Pvactuel = Pvbase = Pvmax += upPv;
+            this.Initiativeactuel = Initiativebase += upInitiative;
+            this.Precisionactuel = Precisionbase += upPrecision;
+            this.Esquiveactuel = Esquivebase += upEsquive;
+            this.Forceactuel = Forcebase += upForce;
+            this.Defenseactuel = Defensebase += upDefense;
+
+            strLevelUp += NomAventurier + " a monté de niveau!";
+            strLevelUp += "\r\nNiveau: " + Niveau;
+            strLevelUp += "\r\nPV: +" + upPv;
+            strLevelUp += "\r\nInitiative: +" + upInitiative;
+            strLevelUp += "\r\nPrécision: +" + upPrecision;
+            strLevelUp += "\r\nEsquive: +" + upEsquive;
+            strLevelUp += "\r\nForce: +" + upForce;
+            strLevelUp += "\r\nDefense: +" + upDefense;
+
+            return strLevelUp;
+        }
         #endregion
     }
 }

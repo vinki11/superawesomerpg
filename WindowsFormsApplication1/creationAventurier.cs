@@ -166,11 +166,11 @@ namespace JRPG
                 p.groupeAventurier.AjouterAventurier(troisiemeAventurier);
 
                 //tempo test pour équipper un item (et faire affiché l'équipement en meme temps
-                p.groupeAventurier.AjouterItem(li.ListeArmes[li.BATON_ID]);
+                /*p.groupeAventurier.AjouterItem(li.ListeArmes[li.BATON_ID]);
                 p.groupeAventurier.AjouterItem(li.ListeArmes[li.EPEE_BRONZE_ID]);
                 p.groupeAventurier.AjouterItem(li.ListeArmes[li.BATARDE_BRONZE_ID]);
                 p.groupeAventurier.AjouterItem(li.ListeArmures[li.ROBE_ID]);
-                p.groupeAventurier.AjouterItem(li.ListeBoucliers[li.ECU_ACIER_ID]);
+                p.groupeAventurier.AjouterItem(li.ListeBoucliers[li.ECU_ACIER_ID]);*/
 
                 Hide();
                 MenuJeu menuJeu = new MenuJeu();

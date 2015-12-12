@@ -37,6 +37,8 @@ namespace JRPG
         Personnage persoActif;
         public Combat(int aventureId, int etapeId)
         {
+            ListeEnnemi.CreerEnnemis();
+            la.creerAventures();
             InitializeComponent();
             idAventure = aventureId;
             etapeAventure = etapeId;
@@ -401,13 +403,8 @@ namespace JRPG
                 la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].CalculerItems();
                 loot = la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeItem;
 
-                foreach (Aventurier aventurier in p.groupeAventurier.Membres)
-                {
-                    if (aventurier.Etat != Etat.Mort)
-                    {
-                        aventurier.Experience += nbXp;
-                    }
-                }
+                p.groupeAventurier.AjouterExperience(nbXp);
+
                 strRewards += "Le groupe a récolté " + nbXp.ToString() + " points d'expériences.";
 
                 p.groupeAventurier.NbPiecesOr += nbOr;
@@ -419,7 +416,7 @@ namespace JRPG
                 {
                     if (loot[indLoot] != null)
                     {
-                        strRewards += "\r\nIls ont trouvé un(e)" + loot[indLoot].NomItem + "!";
+                        strRewards += "\r\nIls ont trouvé un(e) " + loot[indLoot].NomItem + "!";
                         //noItem = false;
                         p.groupeAventurier.Inventaire.Add(item);
                     }
@@ -431,6 +428,8 @@ namespace JRPG
 
                 if (etapeAventure == nbEtapesAventure)
                 {
+                    MessageBox.Show("Bravo vous avez completé l'aventure " + lblNomAventure.Text +"!" );
+                    p.groupeAventurier.StatParDefaut();
                     Hide();
                     MenuJeu menujeu = new MenuJeu();
                     menujeu.ShowDialog();
@@ -460,13 +459,7 @@ namespace JRPG
 
             AfficherInfosEnnemies(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi.Count());
             AfficherInfosAventuriers(p.groupeAventurier.Membres.Count());
-            /*
-            //Met a jour les pv des alliés
-            for (var i = 0; i < la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi.Count(); i++)
-            {
-                this.Controls.Find("lblPVEnnemi" + i, true)[0].Text = la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[(i - 1)].PvActuel > 0 ? la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[(i - 1)].PvActuel.ToString() : "0";
-            }
-            */
+
             RetirerMortInitiative();
 
             ProchainTour();

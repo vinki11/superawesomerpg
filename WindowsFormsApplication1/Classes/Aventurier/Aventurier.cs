@@ -160,13 +160,42 @@ namespace JRPG.Classes.Aventurier
             return "";
         }
 
-        public void MonterNiveauExperience()
+        public virtual string MonterNiveauExperience()
         {
-
+            Niveau += 1;
+            return "";
         }
 
         public void VerifSiMonterNiveau()
         {
+            int niv1Cap = 1000;
+            int niv2Cap = 2500;
+            int niv3Cap = 5000;
+            int niv4Cap = 8000;
+
+            string strLevelUp = "";
+
+            if (Niveau == 1 && Experience >= niv1Cap)
+            {
+                strLevelUp += "\r\n" + MonterNiveauExperience();
+            }
+            if (Niveau == 2 && Experience >= niv2Cap)
+            {
+                strLevelUp += "\r\n" + MonterNiveauExperience();
+            }
+            if (Niveau == 3 && Experience >= niv3Cap)
+            {
+                strLevelUp += "\r\n" + MonterNiveauExperience();
+            }
+            if (Niveau == 4 && Experience >= niv4Cap)
+            {
+                strLevelUp += "\r\n" + MonterNiveauExperience();
+            }
+            if (strLevelUp != "")
+            {
+                MessageBox.Show(strLevelUp);
+            }
+            
 
         }
 
