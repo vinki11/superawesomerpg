@@ -482,7 +482,7 @@ namespace JRPG
                     p.groupeAventurier.RetirerItem(newBouclier); //On retire la nouvelle Bouclier de l'inventaire
 
                     Arme ancienArme = p.groupeAventurier.Membres[selectedAventurier].Arme;
-                    if (ancienArme.DeuxMain == true)
+                    if (ancienArme != null && ancienArme.DeuxMain == true)
                     {
                         if (cboArme.SelectedIndex != -1)
                         {
