@@ -453,10 +453,7 @@ namespace JRPG
 
         private void AgirMonstre()
         {
-            // Vérif si ya un compétence spécial et si il peut l'utilisé
-            /*
-                code here ou plutot dans Agir de ennemi
-            */
+            MessageBox.Show(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Agir());
             AjouterTexteHistorique(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Agir());
 
             AfficherInfosEnnemies(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi.Count());
