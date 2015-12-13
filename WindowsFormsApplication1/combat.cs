@@ -507,9 +507,7 @@ namespace JRPG
 
         private void UtiliserCompetence(int idCompetence)
         {
-            ComboboxItem cbCible;
-            cboChoisirCible.Items.Clear();
-
+            
             selectedCompetence = idCompetence;
 
             #region Compétence A
@@ -518,6 +516,8 @@ namespace JRPG
 
                 if (p.groupeAventurier.Membres[persoActif.idPerso].CoutCompetenceA <= (p.groupeAventurier.Membres[persoActif.idPerso].Ressource == Ressource.Mana ? p.groupeAventurier.Membres[persoActif.idPerso].Manaactuel : p.groupeAventurier.Membres[persoActif.idPerso].Energieactuel))
                 {
+                    ComboboxItem cbCible;
+                    cboChoisirCible.Items.Clear();
                     PictureBox pBox = (PictureBox)this.Controls.Find("pboxSort" + idCompetence, true)[0];
                     pboxAction.Image = pBox.Image;
                     lblNomAction.Text = this.Controls.Find("lblSort" + idCompetence, true)[0].Text;
@@ -563,6 +563,8 @@ namespace JRPG
 
                 if (p.groupeAventurier.Membres[persoActif.idPerso].CoutCompetenceB <= (p.groupeAventurier.Membres[persoActif.idPerso].Ressource == Ressource.Mana ? p.groupeAventurier.Membres[persoActif.idPerso].Manaactuel : p.groupeAventurier.Membres[persoActif.idPerso].Energieactuel))
                 {
+                    ComboboxItem cbCible;
+                    cboChoisirCible.Items.Clear();
                     PictureBox pBox = (PictureBox)this.Controls.Find("pboxSort" + idCompetence, true)[0];
                     pboxAction.Image = pBox.Image;
                     lblNomAction.Text = this.Controls.Find("lblSort" + idCompetence, true)[0].Text;

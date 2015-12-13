@@ -32,13 +32,16 @@ namespace JRPG.Classes.Ennemi
         public List<Item.Item> Items { get; set; }
 
         public List<int> ProbItems { get; set; }
-        protected string competence; //Pas un string évidamment
+
+        public int CompetenceId { get; set; }
+
+        public int ProbCompetence { get; set; }
 
         #endregion
 
         #region Constructeur
 
-        public Ennemi(int pId, string pNom, int pNiveau, int pPv, int pInitiative, int pPrecision, int pEsquive, int pForce, int pDefense, int pGainXp, int pPieces, Bitmap pImageEnnemi, StrategieAction pStrat, List<Item.Item> pItems, List<int> pProbItems)
+        public Ennemi(int pId, string pNom, int pNiveau, int pPv, int pInitiative, int pPrecision, int pEsquive, int pForce, int pDefense, int pGainXp, int pPieces, Bitmap pImageEnnemi, StrategieAction pStrat, List<Item.Item> pItems, List<int> pProbItems, int pCompetenceId = 0, int pProbCompetence = 0)
         {
             Nom = pNom;
             Niveau = pNiveau;
@@ -55,6 +58,8 @@ namespace JRPG.Classes.Ennemi
             Strategie = pStrat;
             Items = pItems;
             ProbItems = pProbItems;
+            CompetenceId = pCompetenceId;
+            ProbCompetence = pProbCompetence;
         }
 
         public Ennemi(Ennemi pEnnemi)
@@ -74,6 +79,8 @@ namespace JRPG.Classes.Ennemi
             this.Strategie = pEnnemi.Strategie;
             this.Items = pEnnemi.Items;
             this.ProbItems = pEnnemi.ProbItems;
+            CompetenceId = pEnnemi.CompetenceId;
+            ProbCompetence = pEnnemi.ProbCompetence;
         }
 
         #endregion
@@ -81,9 +88,26 @@ namespace JRPG.Classes.Ennemi
         #region Fonctions
         public string Agir()
         {
+            int action;
+            Random rnd = new Random();
+            action = rnd.Next(1, 101);
+
+            if (action > ProbCompetence)
+            { 
+                return Attaquer();
+            }
+            else
+            {
+                return UtiliserCompetence();
+            }
+            
+        }
+
+        public Aventurier.Aventurier DeterminerCible()
+        {
             int cibleAleatoire;
             int cibleId = -1;
-            string strAction = "";
+
             switch (Strategie)
             {
                 #region Attaque Aléatoire
@@ -96,12 +120,12 @@ namespace JRPG.Classes.Ennemi
                         if (cibleAleatoire >= 1 && cibleAleatoire <= 3)
                         {
                             cibleId = 0;
-                           // MessageBox.Show(this.Nom + " attaque l'aventurier #1");
+                            // MessageBox.Show(this.Nom + " attaque l'aventurier #1");
                         }
                         else if (cibleAleatoire >= 4 && cibleAleatoire <= 6)
                         {
                             cibleId = 1;
-                           // MessageBox.Show(this.Nom + " attaque l'aventurier #2");
+                            // MessageBox.Show(this.Nom + " attaque l'aventurier #2");
                         }
                         else if (cibleAleatoire >= 7 && cibleAleatoire <= 9)
                         {
@@ -134,12 +158,12 @@ namespace JRPG.Classes.Ennemi
                         if (cibleAleatoire >= 1 && cibleAleatoire <= 5)
                         {
                             cibleId = index1;
-                           // MessageBox.Show(this.Nom + " attaque l'aventurier #" + (cibleId + 1));
+                            // MessageBox.Show(this.Nom + " attaque l'aventurier #" + (cibleId + 1));
                         }
                         else if (cibleAleatoire >= 6 && cibleAleatoire <= 10)
                         {
                             cibleId = index2;
-                           // MessageBox.Show(this.Nom + " attaque l'aventurier #" + (cibleId + 1));
+                            // MessageBox.Show(this.Nom + " attaque l'aventurier #" + (cibleId + 1));
                         }
                     }
                     else if (p.groupeAventurier.NombreMembreVivant() == 1)
@@ -152,7 +176,7 @@ namespace JRPG.Classes.Ennemi
                                 cibleId = i;
                             }
                         }
-                       // MessageBox.Show(this.Nom + " attaque l'aventurier #" + (cibleId + 1));
+                        // MessageBox.Show(this.Nom + " attaque l'aventurier #" + (cibleId + 1));
                     }
                     break;
                 #endregion
@@ -166,7 +190,7 @@ namespace JRPG.Classes.Ennemi
                         if (cibleAleatoire >= 1 && cibleAleatoire <= 4)
                         {
                             cibleId = p.groupeAventurier.MembrePlusFaible();
-                           // MessageBox.Show(this.Nom + " attaque l'aventurier #" + (cibleId + 1));
+                            // MessageBox.Show(this.Nom + " attaque l'aventurier #" + (cibleId + 1));
                         }
                         else if (cibleAleatoire >= 5 && cibleAleatoire <= 8)
                         {
@@ -245,7 +269,7 @@ namespace JRPG.Classes.Ennemi
                         if (cibleAleatoire >= 1 && cibleAleatoire <= 4)
                         {
                             cibleId = p.groupeAventurier.MembrePlusFort();
-                           // MessageBox.Show(this.Nom + " attaque l'aventurier #" + (cibleId + 1));
+                            // MessageBox.Show(this.Nom + " attaque l'aventurier #" + (cibleId + 1));
                         }
                         else if (cibleAleatoire >= 5 && cibleAleatoire <= 8)
                         {
@@ -266,12 +290,12 @@ namespace JRPG.Classes.Ennemi
                             if (cibleAleatoire <= 6)
                             {
                                 cibleId = index1;
-                               // MessageBox.Show(this.Nom + " attaque l'aventurier #" + (cibleId + 1));
+                                // MessageBox.Show(this.Nom + " attaque l'aventurier #" + (cibleId + 1));
                             }
                             else
                             {
                                 cibleId = index2;
-                               // MessageBox.Show(this.Nom + " attaque l'aventurier #" + (cibleId + 1));
+                                // MessageBox.Show(this.Nom + " attaque l'aventurier #" + (cibleId + 1));
                             }
                         }
                     }
@@ -297,7 +321,7 @@ namespace JRPG.Classes.Ennemi
                         else if (cibleAleatoire >= 2)
                         {
                             cibleId = index;
-                          //  MessageBox.Show(this.Nom + " attaque l'aventurier #" + (cibleId + 1));
+                            //  MessageBox.Show(this.Nom + " attaque l'aventurier #" + (cibleId + 1));
                         }
                     }
                     else if (p.groupeAventurier.NombreMembreVivant() == 1)
@@ -316,11 +340,12 @@ namespace JRPG.Classes.Ennemi
                     #endregion
             }
 
-            return this.Attaquer(p.groupeAventurier.Membres[cibleId]);
+            return p.groupeAventurier.Membres[cibleId];
         }
 
-        public string Attaquer(Aventurier.Aventurier cible)
+        public string Attaquer()
         {
+            Aventurier.Aventurier cible = DeterminerCible();
             int chanceAttaque = 5;
             int degatAttaque = 0;
             string strAction = "";
@@ -361,9 +386,40 @@ namespace JRPG.Classes.Ennemi
             return strAction; //utilisé le return pour faire l'historique si on le désire vraiment
         }
 
-        public void UtiliserCompetence()
+        public string UtiliserCompetence()
         {
+            Aventurier.Aventurier cible = DeterminerCible();
+            int chanceAttaque = 5;
+            int degatAttaque = 0;
+            string strAction = "";
 
+            Random rnd = new Random();
+            int chiffreAleatoire = rnd.Next(0, 10);
+
+            switch (CompetenceId)
+            {
+                case 1:
+                    strAction += this.Nom + " lance un sort à " + cible.NomAventurier;
+                    if (chiffreAleatoire > 2)
+                    {
+                        degatAttaque = 12;
+                        cible.Pvactuel -= degatAttaque;
+
+                        strAction += "\r\n" + this.Nom + " à touché la cible et infligé : " + degatAttaque + " points de dégats!";
+
+                        if (cible.Pvactuel <= 0)
+                        {
+                            cible.Etat = Etat.Mort;
+                            strAction += "\r\n" + cible.NomAventurier + " est mort!";
+                        }
+                    }
+                    else
+                    {
+                        strAction += "\r\n" + this.Nom + " à manqué la cible!";
+                    }
+                    break;
+            }
+            return strAction;
         }
         #endregion
 

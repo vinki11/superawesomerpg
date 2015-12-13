@@ -172,7 +172,7 @@ namespace JRPG.Classes
                 }
                 else
                 {
-                    aventurier.Manaactuel += 15;
+                    aventurier.Manaactuel += 20;
                     aventurier.Manaactuel = aventurier.Manaactuel > aventurier.Manamax ? aventurier.Manamax : aventurier.Manaactuel;
                 }
 

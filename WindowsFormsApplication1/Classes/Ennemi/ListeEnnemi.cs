@@ -68,7 +68,7 @@ namespace JRPG.Classes.Ennemi
             listeProbLoot.Add(30);
             listeProbLoot.Add(15);
             listeProbLoot.Add(25);
-            ListeEnnemis.Add(new Ennemi(GOBELIN_SHAMAN_ID, "Shaman gobelin", 2, 50, 12, 12, 9, 16, 12, 150, 15, Properties.Resources.spectre, Ennemi.StrategieAction.AttaquePlusFort, listeLoot, listeProbLoot));
+            ListeEnnemis.Add(new Ennemi(GOBELIN_SHAMAN_ID, "Shaman gobelin", 2, 50, 12, 12, 9, 16, 12, 150, 15, Properties.Resources.spectre, Ennemi.StrategieAction.AttaquePlusFort, listeLoot, listeProbLoot,1,40));
 
             //Loup
             listeLoot = new List<Item.Item>();

@@ -39,7 +39,7 @@ namespace JRPG.Classes.Aventure
             #region Aventure 0 Village des gobelins
             //Créer la premiere Aventure Le village des gobelins
             ListeAventures.Add(new Aventure(VILLAGE_GOBELINS_ID, "Le village des gobelins", "Une petite tribu de gobelins attaque les caravanes marchandes se rendant au village. Leur repère a été trouvé. Vous devez aller éliminer la menace!", 1, 1));
-
+            
             //Combat #1 
             groupe1 = new GroupeEnnemi();
             ennemi1 = new Ennemi.Ennemi(le.ListeEnnemis[le.GOBELIN_VOLEUR_ID]);
@@ -59,7 +59,7 @@ namespace JRPG.Classes.Aventure
             groupe2.AjouterEnnemi(ennemi1);
             groupe2.AjouterEnnemi(ennemi2);
             ListeAventures[VILLAGE_GOBELINS_ID].AjouterGroupeEnnemis(groupe2);
-
+            
             //Combat #3 
             groupe3 = new GroupeEnnemi();
             ennemi1 = new Ennemi.Ennemi(le.ListeEnnemis[le.LOUP_ID]);
