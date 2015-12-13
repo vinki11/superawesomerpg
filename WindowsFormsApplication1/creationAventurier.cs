@@ -157,6 +157,26 @@ namespace JRPG
                 p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_VIE_MINEURE_ID]);
                 p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_MANA_MINEURE_ID]);
 
+                //Création du stock de la boutique
+                for (var i = 0; i < 2; i++)
+                {
+                    p.Boutique.Add(li.ListeArmes[li.DAGUE_BRONZE_ID]);
+                    p.Boutique.Add(li.ListeArmes[li.EPEE_BRONZE_ID]);
+                    p.Boutique.Add(li.ListeArmes[li.BATON_ID]);
+                    p.Boutique.Add(li.ListeArmes[li.BATARDE_BRONZE_ID]);
+                    p.Boutique.Add(li.ListeArmures[li.ARMURE_CUIR_ID]);
+                    p.Boutique.Add(li.ListeArmures[li.ARMURE_BRONZE_ID]);
+                    p.Boutique.Add(li.ListeArmures[li.ROBE_ID]);
+                    p.Boutique.Add(li.ListeBoucliers[li.BOUCLIER_BOIS_ID]);
+                    p.Boutique.Add(li.ListeBoucliers[li.ECU_ACIER_ID]);
+                }
+                
+                for (var i = 0; i < 10; i++)
+                {
+                    p.Boutique.Add(li.ListeConsommables[li.POTION_VIE_MINEURE_ID]);
+                    p.Boutique.Add(li.ListeConsommables[li.POTION_MANA_MINEURE_ID]);
+                }
+
                 //tempo test full party
                 Aventurier deuxiemeAventurier;
                 Aventurier troisiemeAventurier;
