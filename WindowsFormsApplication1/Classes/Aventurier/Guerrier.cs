@@ -41,16 +41,18 @@ namespace JRPG.Classes.Aventurier
             this.Bouclier = li.ListeBoucliers[li.BOUCLIER_BOIS_ID];
             this.NomCompetenceA = "Frappe puissante"; //? Kekechose qui ignore un pourcentage de la def de l'ennemi
             this.NomCompetenceB = "Attaque circulaire"; // Cleave qui attaque tout le monde
-            this.NomCompetenceC = "Cri de guerre"; //Buff self ou allallies ? ?
+            this.NomCompetenceC = "Cri de guerre"; //Buff self ou allallies ? ? Précision !
             this.CibleCompetenceA = Cible.Enemy;
             this.CibleCompetenceB = Cible.AllEnemies;
             this.CibleCompetenceC = Cible.AllAllies;
-            this.CoutCompetenceA = 30;
-            this.CoutCompetenceB = 35;
+            this.CoutCompetenceA = 25;
+            this.CoutCompetenceB = 30;
             this.CoutCompetenceC = 30;
             this.ImageCompetenceA = Properties.Resources.frappepuissante;
             this.ImageCompetenceB = Properties.Resources.coupcirculaire;
             this.ImageCompetenceC = Properties.Resources.attaque;
+            this.EsquiveBuff = false;
+
 
         }
         #endregion

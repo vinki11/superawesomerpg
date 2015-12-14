@@ -41,12 +41,13 @@ namespace JRPG.Classes.Aventurier
             this.CibleCompetenceA = Cible.Enemy;
             this.CibleCompetenceB = Cible.AllEnemies;
             this.CibleCompetenceC = Cible.Ally;
-            this.CoutCompetenceA = 25;
-            this.CoutCompetenceB = 30;
+            this.CoutCompetenceA = 20;
+            this.CoutCompetenceB = 25;
             this.CoutCompetenceC = 10;
             this.ImageCompetenceA = Properties.Resources.eclair;
             this.ImageCompetenceB = Properties.Resources.boulefeu;
             this.ImageCompetenceC = Properties.Resources.enchantement;
+            this.EsquiveBuff = false;
         }
         #endregion
 

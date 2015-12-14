@@ -89,17 +89,21 @@ namespace JRPG.Classes.Ennemi
         public string Agir()
         {
             int action;
+            string strAction = "";
             Random rnd = new Random();
             action = rnd.Next(1, 101);
 
             if (action > ProbCompetence)
-            { 
-                return Attaquer();
+            {
+                strAction = Attaquer();
             }
             else
             {
-                return UtiliserCompetence();
+                strAction = UtiliserCompetence();
             }
+
+            MessageBox.Show(strAction);
+            return strAction;
             
         }
 

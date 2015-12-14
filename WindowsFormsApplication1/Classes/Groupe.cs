@@ -150,6 +150,7 @@ namespace JRPG.Classes
                 aventurier.Esquiveactuel = aventurier.Esquivebase;
                 aventurier.Forceactuel = aventurier.Forcebase;
                 aventurier.Defenseactuel = aventurier.Defensebase;
+                aventurier.EsquiveBuff = false;
                 if (aventurier.Etat == Etat.Etourdi)
                 {
                     aventurier.Etat = Etat.Normal;
@@ -161,10 +162,7 @@ namespace JRPG.Classes
         {
             foreach (Aventurier.Aventurier aventurier in Membres)
             {
-                if (aventurier.Etat == Etat.Etourdi)
-                {
-                    aventurier.Etat = Etat.Normal;
-                }
+                this.StatParDefaut();
 
                 if (aventurier.Ressource == Ressource.Energie)
                 {

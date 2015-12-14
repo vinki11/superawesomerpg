@@ -18,6 +18,7 @@ namespace JRPG
 {
     using p = Program;
     using la = ListeAventure;
+    using lc = ListeClasse;
 
     public partial class Combat : Form
     {
@@ -126,6 +127,7 @@ namespace JRPG
 
                 if (p.groupeAventurier.Membres[persoActif.idPerso].Etat == Etat.Etourdi)
                 {
+                    MessageBox.Show(p.groupeAventurier.Membres[persoActif.idPerso].NomAventurier + " est étourdi et ne peut pas agir!");
                     AjouterTexteHistorique(p.groupeAventurier.Membres[persoActif.idPerso].NomAventurier + " est étourdi et ne peut pas agir!");
                     //MessageBox.Show(p.groupeAventurier.Membres[persoActif.idPerso].NomAventurier + " est étourdi et ne peut pas agir!");
                     p.groupeAventurier.Membres[persoActif.idPerso].Etat = Etat.Normal;
@@ -141,6 +143,7 @@ namespace JRPG
 
                 if (la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Etat == Etat.Etourdi)
                 {
+                    MessageBox.Show(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Nom + " est étourdi et ne peut pas agir!");
                     AjouterTexteHistorique(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Nom + " est étourdi et ne peut pas agir!");
                     //MessageBox.Show(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Nom + " est étourdi et ne peut pas agir!");
                     la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Etat = Etat.Normal;
@@ -148,7 +151,7 @@ namespace JRPG
                 }
                 else
                 {
-                        AgirMonstre();
+                  AgirMonstre();
                         /*
                     timerEnnemi.Tick += new EventHandler(EventTimer);
 
@@ -453,7 +456,6 @@ namespace JRPG
 
         private void AgirMonstre()
         {
-            MessageBox.Show(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Agir());
             AjouterTexteHistorique(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Agir());
 
             AfficherInfosEnnemies(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi.Count());
@@ -480,13 +482,28 @@ namespace JRPG
             switch (idCompetence)
             {
                 case 1:
-                    AjouterTexteHistorique(aventurier.UtiliserCompetenceA(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[cible]));
+                    if (cible == 10)
+                    {
+                        AjouterTexteHistorique(aventurier.UtiliserCompetenceB(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi));
+                    }
+                    else
+                    {
+                        AjouterTexteHistorique(aventurier.UtiliserCompetenceA(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[cible]));
+                    }
                     break;
 
                 case 2:
                     if (cible == 10)
                     {
                         AjouterTexteHistorique(aventurier.UtiliserCompetenceB(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi));
+                    }
+                    else if (cible == 100)
+                    {
+                        AjouterTexteHistorique(aventurier.UtiliserCompetenceB());
+                    }
+                    else 
+                    {
+                        AjouterTexteHistorique(aventurier.UtiliserCompetenceB(p.groupeAventurier.Membres[cible]));
                     }
                     break;
 
@@ -506,6 +523,7 @@ namespace JRPG
         {
             
             selectedCompetence = idCompetence;
+            typeAction = "Competence";
 
             #region Compétence A
             if (idCompetence == 1)
@@ -534,7 +552,6 @@ namespace JRPG
                                         cboChoisirCible.Items.Add(cbCible);
                                     }
                                 }
-                                typeAction = "Ennemi simple";
                                 break;
                             }
                     }
@@ -581,7 +598,6 @@ namespace JRPG
                                         cboChoisirCible.Items.Add(cbCible);
                                     }
                                 }
-                                typeAction = "Ennemi simple";
                                 break;
                             }
 
@@ -592,8 +608,33 @@ namespace JRPG
                             cbCible.Text = "Tous les ennemis";
                             cbCible.Value = 10;
                             cboChoisirCible.Items.Add(cbCible);
+                                
+                                break;
+                            }
 
-                                typeAction = "Ennemi tous";
+                        case Cible.Self:
+                            {
+
+                                cbCible = new ComboboxItem();
+                                cbCible.Text = "L'aventurier";
+                                cbCible.Value = 100;
+                                cboChoisirCible.Items.Add(cbCible);
+                                
+                                break;
+                            }
+
+                        case Cible.Ally:
+                            {
+                                for (var i = 0; i < p.groupeAventurier.Membres.Count(); i++)
+                                {
+                                    if (p.groupeAventurier.Membres[i].Etat != Etat.Mort)
+                                    {
+                                        cbCible = new ComboboxItem();
+                                        cbCible.Text = p.groupeAventurier.Membres[i].NomAventurier;
+                                        cbCible.Value = i;
+                                        cboChoisirCible.Items.Add(cbCible);
+                                    }
+                                }
                                 break;
                             }
                     }
@@ -656,11 +697,7 @@ namespace JRPG
             {
                 LancerAttaque(p.groupeAventurier.Membres[persoActif.idPerso], la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[cibleId]);
             }
-            else if (typeAction == "Ennemi simple")
-            {
-                LancerCompetence(selectedCompetence, p.groupeAventurier.Membres[persoActif.idPerso], cibleId);
-            }
-            else if (typeAction == "Ennemi tous")
+            else if (typeAction == "Competence")
             {
                 LancerCompetence(selectedCompetence, p.groupeAventurier.Membres[persoActif.idPerso], cibleId);
             }
@@ -700,7 +737,14 @@ namespace JRPG
 
         private void pboxSort2_Click(object sender, EventArgs e)
         {
-            UtiliserCompetence(2);
+            if (p.groupeAventurier.Membres[persoActif.idPerso].ClassId == lc.VOLEUR_ID && p.groupeAventurier.Membres[persoActif.idPerso].EsquiveBuff)
+            {
+                MessageBox.Show(p.groupeAventurier.Membres[persoActif.idPerso].NomAventurier + " bénéficie déja de l'augmentation d'esquive. Son esquive ne peut pas augmenté d'avantage");
+            }
+            else
+            {
+                UtiliserCompetence(2);
+            }
         }
     }
 }

@@ -72,6 +72,8 @@ namespace JRPG.Classes.Aventurier
 
         public int Defenseactuel { get; set; }
 
+        public bool EsquiveBuff { get; set; }
+
         public Arme Arme { get; set; }
 
         public Armure Armure { get; set; }
@@ -143,6 +145,12 @@ namespace JRPG.Classes.Aventurier
         }
 
         public virtual string UtiliserCompetenceA(Ennemi.Ennemi cible)
+        {
+            MessageBox.Show("J'aimerais bien ca passe pas ici svp");
+            return "";
+        }
+
+        public virtual string UtiliserCompetenceB(Aventurier cible)
         {
             MessageBox.Show("J'aimerais bien ca passe pas ici svp");
             return "";

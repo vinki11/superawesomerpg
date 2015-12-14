@@ -37,17 +37,18 @@ namespace JRPG.Classes.Aventurier
             this.Arme = li.ListeArmes[li.DAGUE_BRONZE_ID];
             this.Armure = li.ListeArmures[li.ARMURE_CUIR_ID];
             this.NomCompetenceA = "Coup étourdissant"; //Étourdi un ennemi
-            this.NomCompetenceB = "Placeholder";
+            this.NomCompetenceB = "Furtivité"; //Augmente sa propre esquive encore plus !!
             this.NomCompetenceC = "Placeholder";
             this.CibleCompetenceA = Cible.Enemy;
-            this.CibleCompetenceB = Cible.Enemy;
+            this.CibleCompetenceB = Cible.Self;
             this.CibleCompetenceC = Cible.Enemy;
-            this.CoutCompetenceA = 30;
-            this.CoutCompetenceB = 30;
+            this.CoutCompetenceA = 25;
+            this.CoutCompetenceB = 10;
             this.CoutCompetenceC = 30;
             this.ImageCompetenceA = Properties.Resources.coupetourdissant;
             this.ImageCompetenceB = Properties.Resources.attaque;
             this.ImageCompetenceC = Properties.Resources.attaque;
+            this.EsquiveBuff = false;
         }
         #endregion
 
@@ -110,7 +111,16 @@ namespace JRPG.Classes.Aventurier
 
         public override string UtiliserCompetenceB()
         {
-            return "";
+            int modifEsquive;
+            string strAction = "";
+
+            modifEsquive = 1 + (1 * this.Niveau);
+            this.Esquiveactuel += modifEsquive;
+            this.EsquiveBuff = true;
+
+            strAction = this.NomAventurier + " utilise furtivité.";
+            strAction += "\r\n Son esquive a augmenté de : " + modifEsquive + " jusqu'à la fin du combat !" ;
+            return strAction;
         }
 
         public override string UtiliserCompetenceC()
@@ -121,8 +131,8 @@ namespace JRPG.Classes.Aventurier
         public override string MonterNiveauExperience()
         {
             string strLevelUp = "";
-            int upPv = 8;
-            int upInitiative = 4;
+            int upPv = 7;
+            int upInitiative = 3;
             int upPrecision = 3;
             int upEsquive = 3;
             int upForce = 3;

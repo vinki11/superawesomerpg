@@ -35,36 +35,79 @@ namespace JRPG.Classes.Aventurier
             this.ClassId = lc.PRETRE_ID;
             this.Arme = li.ListeArmes[li.BATON_ID];
             this.Armure = li.ListeArmures[li.ROBE_ID];
-            this.NomCompetenceA = "Soins"; //Soigne 1 allié
-            this.NomCompetenceB = "Placeholder";
+            this.NomCompetenceA = "Sort de lumière"; //Petit dmg sur un ennemi
+            this.NomCompetenceB = "Soins"; //Soigne 1 allié
             this.NomCompetenceC = "Placeholder";
-            this.CibleCompetenceA = Cible.Ally;
-            this.CibleCompetenceB = Cible.Enemy;
+            this.CibleCompetenceA = Cible.Enemy;
+            this.CibleCompetenceB = Cible.Ally;
             this.CibleCompetenceC = Cible.Enemy;
-            this.CoutCompetenceA = 30;
-            this.CoutCompetenceB = 30;
+            this.CoutCompetenceA = 15;
+            this.CoutCompetenceB = 20;
             this.CoutCompetenceC = 30;
             this.ImageCompetenceA = Properties.Resources.attaque;
             this.ImageCompetenceB = Properties.Resources.attaque;
             this.ImageCompetenceC = Properties.Resources.attaque;
+            this.EsquiveBuff = false;
         }
         #endregion
 
 
         #region Fonctions
-        public new void UtiliserCompetenceA()
+        public override string UtiliserCompetenceA(Ennemi.Ennemi cible)
         {
+            int degatAttaque = 0;
+            string strAction = "";
+            Random rnd = new Random();
+            int chiffreAleatoire = rnd.Next(0, 10);
+
+            strAction = this.NomAventurier + " lance un sort de lumière vers " + cible.Nom;
+            if (chiffreAleatoire > 2)
+            {
+                degatAttaque = 5 + (this.Niveau * 3);
+                cible.PvActuel -= degatAttaque;
+
+                strAction += "\r\n" + this.NomAventurier + " à touché la cible et infligé : " + degatAttaque + " points de dégats!";
+
+                if (cible.PvActuel <= 0)
+                {
+                    cible.Etat = Etat.Mort;
+                    strAction += "\r\n" + cible.Nom + " est mort!";
+                }
+
+
+                //MessageBox.Show(strAction);
+
+            }
+            else
+            {
+                strAction += "\r\n" + this.NomAventurier + " à manqué la cible!";
+                //MessageBox.Show(strAction);
+            }
+
+            this.Manaactuel -= this.CoutCompetenceA;
+            return strAction;
+        }
+
+        public override string UtiliserCompetenceB(Aventurier cible)
+        {
+            string strAction = "";
+            int soins;
+
+            strAction = this.NomAventurier + " lance un sort de soins sur " + cible.NomAventurier;
+
+            soins = 15 + (5 * this.Niveau);
+
+            cible.Pvactuel = cible.Pvactuel + soins > cible.Pvmax ? cible.Pvmax : cible.Pvactuel + soins;
+
+            strAction += "\r\n" + cible.NomAventurier + " a été soigné de " + soins + " point de vie!";
+
+            return strAction;
 
         }
 
-        public new void UtiliserCompetenceB()
+        public override string UtiliserCompetenceC()
         {
-
-        }
-
-        public new void UtiliserCompetenceC()
-        {
-
+            return "";
         }
         public override string MonterNiveauExperience()
         {
