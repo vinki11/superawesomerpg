@@ -48,6 +48,9 @@ namespace JRPG.Classes.Aventurier
             this.ImageCompetenceB = Properties.Resources.boulefeu;
             this.ImageCompetenceC = Properties.Resources.enchantement;
             this.EsquiveBuff = false;
+            this.DefenseBuff = false;
+            this.PrecisionBuff = false;
+            this.ForceBuff = false;
         }
         #endregion
 
@@ -125,9 +128,22 @@ namespace JRPG.Classes.Aventurier
 
         }
 
-        public override string UtiliserCompetenceC()
+        public override string UtiliserCompetenceC(Aventurier cible)
         {
-            return "";
+            string strAction = "";
+            int modifForce;
+
+            strAction = this.NomAventurier + " lance un sort d'enchangement sur l'arme de " + cible.NomAventurier;
+
+            modifForce = (2 * this.Niveau);
+
+            cible.Forceactuel += modifForce;
+            cible.ForceBuff = true;
+
+            strAction += "\r\nLa force de l'arme de " + cible.NomAventurier + " a augmenté de " + modifForce + " pour la durée du combat!";
+
+            this.Manaactuel -= this.CoutCompetenceC;
+            return strAction;
         }
 
         public override string MonterNiveauExperience()

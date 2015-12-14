@@ -48,6 +48,9 @@ namespace JRPG.Classes.Aventurier
             this.ImageCompetenceB = Properties.Resources.soins;
             this.ImageCompetenceC = Properties.Resources.protection;
             this.EsquiveBuff = false;
+            this.DefenseBuff = false;
+            this.PrecisionBuff = false;
+            this.ForceBuff = false;
         }
         #endregion
 
@@ -101,13 +104,27 @@ namespace JRPG.Classes.Aventurier
 
             strAction += "\r\n" + cible.NomAventurier + " a été soigné de " + soins + " point de vie!";
 
+            this.Manaactuel -= this.CoutCompetenceB;
             return strAction;
 
         }
 
-        public override string UtiliserCompetenceC()
+        public override string UtiliserCompetenceC(Aventurier cible)
         {
-            return "";
+            string strAction = "";
+            int modifDef;
+
+            strAction = this.NomAventurier + " lance un sort de protection sur " + cible.NomAventurier;
+
+            modifDef = 1 + (2 * this.Niveau);
+
+            cible.Defenseactuel += modifDef;
+            cible.DefenseBuff = true;
+            
+            strAction += "\r\nLa défense de " + cible.NomAventurier + " a augmenté de " + modifDef + " pour la durée du combat!";
+
+            this.Manaactuel -= this.CoutCompetenceC;
+            return strAction;
         }
         public override string MonterNiveauExperience()
         {

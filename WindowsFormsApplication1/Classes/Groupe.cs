@@ -139,18 +139,26 @@ namespace JRPG.Classes
             
         }
 
-        public void StatParDefaut()
+        public void StatParDefaut(bool finAventure)
         {
             foreach (Aventurier.Aventurier aventurier in Membres)
             {
-                aventurier.Pvactuel = aventurier.Pvmax;
-                aventurier.Manaactuel = aventurier.Manamax;
-                aventurier.Energieactuel = aventurier.Energiemax;
+                if (finAventure)
+                {
+                    aventurier.Pvactuel = aventurier.Pvmax;
+                    aventurier.Manaactuel = aventurier.Manamax;
+                    aventurier.Energieactuel = aventurier.Energiemax;
+                }
+
                 aventurier.Precisionactuel = aventurier.Precisionbase;
                 aventurier.Esquiveactuel = aventurier.Esquivebase;
                 aventurier.Forceactuel = aventurier.Forcebase;
                 aventurier.Defenseactuel = aventurier.Defensebase;
                 aventurier.EsquiveBuff = false;
+                aventurier.PrecisionBuff = false;
+                aventurier.ForceBuff = false;
+                aventurier.DefenseBuff = false;
+
                 if (aventurier.Etat == Etat.Etourdi)
                 {
                     aventurier.Etat = Etat.Normal;
@@ -162,7 +170,7 @@ namespace JRPG.Classes
         {
             foreach (Aventurier.Aventurier aventurier in Membres)
             {
-                this.StatParDefaut();
+                this.StatParDefaut(false);
 
                 if (aventurier.Ressource == Ressource.Energie)
                 {
@@ -170,7 +178,7 @@ namespace JRPG.Classes
                 }
                 else
                 {
-                    aventurier.Manaactuel += 20;
+                    aventurier.Manaactuel += 50;
                     aventurier.Manaactuel = aventurier.Manaactuel > aventurier.Manamax ? aventurier.Manamax : aventurier.Manaactuel;
                 }
 

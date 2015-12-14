@@ -82,7 +82,7 @@ namespace JRPG.Classes.Ennemi
             listeLoot.Add(null);
             listeProbLoot = new List<int>();
             listeProbLoot.Add(100);
-            ListeEnnemis.Add(new Ennemi(CRABE_GEANT_ID, "Crabe géant", 1, 50, 6, 7, 8, 18, 15, 100, 0, Properties.Resources.spectre, Ennemi.StrategieAction.AttaqueAleatoire, listeLoot, listeProbLoot));
+            ListeEnnemis.Add(new Ennemi(CRABE_GEANT_ID, "Crabe géant", 1, 50, 6, 8, 8, 18, 15, 100, 0, Properties.Resources.spectre, Ennemi.StrategieAction.AttaqueAleatoire, listeLoot, listeProbLoot));
 
             //Homme-Crabe
             listeLoot = new List<Item.Item>();
@@ -95,7 +95,7 @@ namespace JRPG.Classes.Ennemi
             listeProbLoot.Add(4);
             listeProbLoot.Add(6);
             listeProbLoot.Add(10);
-            ListeEnnemis.Add(new Ennemi(HOMME_CRABE_GUERRIER_ID, "Guerrier homme-crabe", 1, 40, 10, 9, 10, 14, 10, 100, 5, Properties.Resources.spectre, Ennemi.StrategieAction.AttaquePlusFort, listeLoot, listeProbLoot));
+            ListeEnnemis.Add(new Ennemi(HOMME_CRABE_GUERRIER_ID, "Guerrier homme-crabe", 1, 40, 10, 10, 10, 14, 10, 100, 5, Properties.Resources.spectre, Ennemi.StrategieAction.AttaquePlusFort, listeLoot, listeProbLoot));
 
             listeLoot = new List<Item.Item>();
             listeLoot.Add(li.ListeBoucliers[li.BOUCLIER_BOIS_ID]);

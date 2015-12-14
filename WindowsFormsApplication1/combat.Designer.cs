@@ -483,6 +483,7 @@
             this.pboxSort3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pboxSort3.TabIndex = 1;
             this.pboxSort3.TabStop = false;
+            this.pboxSort3.Click += new System.EventHandler(this.pboxSort3_Click);
             // 
             // pboxSort1
             // 

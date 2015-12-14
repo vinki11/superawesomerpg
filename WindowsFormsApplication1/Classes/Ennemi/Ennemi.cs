@@ -403,7 +403,7 @@ namespace JRPG.Classes.Ennemi
             switch (CompetenceId)
             {
                 case 1:
-                    strAction += this.Nom + " lance un sort à " + cible.NomAventurier;
+                    strAction += this.Nom + " lance lance une vague de feu à " + cible.NomAventurier;
                     if (chiffreAleatoire > 2)
                     {
                         degatAttaque = 12;

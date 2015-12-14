@@ -433,7 +433,7 @@ namespace JRPG
                 if (etapeAventure == nbEtapesAventure)
                 {
                     MessageBox.Show("Bravo vous avez completé l'aventure " + lblNomAventure.Text +"!" );
-                    p.groupeAventurier.StatParDefaut();
+                    p.groupeAventurier.StatParDefaut(true);
                     Hide();
                     MenuJeu menujeu = new MenuJeu();
                     menujeu.ShowDialog();
@@ -508,6 +508,26 @@ namespace JRPG
                     break;
 
                 case 3:
+                    if (cible == 50)
+                    {
+                        AjouterTexteHistorique(aventurier.UtiliserCompetenceC());
+                    }
+                    else if (cible == 100)
+                    {
+                        AjouterTexteHistorique(aventurier.UtiliserCompetenceC());
+                    }
+                    else
+                    {
+                        if (p.groupeAventurier.Membres[persoActif.idPerso].ClassId == lc.VOLEUR_ID)
+                        {
+                            AjouterTexteHistorique(aventurier.UtiliserCompetenceC(la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[cible]));
+                        }
+                        else
+                        {
+                            AjouterTexteHistorique(aventurier.UtiliserCompetenceC(p.groupeAventurier.Membres[cible]));
+                        }
+                        
+                    }
 
                     break;
             }
@@ -653,6 +673,78 @@ namespace JRPG
 
             }
             #endregion
+
+            #region Compétence C
+            if (idCompetence == 3)
+            {
+
+                if (p.groupeAventurier.Membres[persoActif.idPerso].CoutCompetenceC <= (p.groupeAventurier.Membres[persoActif.idPerso].Ressource == Ressource.Mana ? p.groupeAventurier.Membres[persoActif.idPerso].Manaactuel : p.groupeAventurier.Membres[persoActif.idPerso].Energieactuel))
+                {
+                    ComboboxItem cbCible;
+                    cboChoisirCible.Items.Clear();
+                    PictureBox pBox = (PictureBox)this.Controls.Find("pboxSort" + idCompetence, true)[0];
+                    pboxAction.Image = pBox.Image;
+                    lblNomAction.Text = this.Controls.Find("lblSort" + idCompetence, true)[0].Text;
+
+
+                    switch (p.groupeAventurier.Membres[persoActif.idPerso].CibleCompetenceC)
+                    {
+                        case Cible.Enemy:
+                            {
+                                for (var i = 0; i < la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi.Count(); i++)
+                                {
+                                    if (la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[i].Etat != Etat.Mort)
+                                    {
+                                        cbCible = new ComboboxItem();
+                                        cbCible.Text = la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[i].Nom;
+                                        cbCible.Value = i;
+                                        cboChoisirCible.Items.Add(cbCible);
+                                    }
+                                }
+                                break;
+                            }
+
+                        case Cible.Ally:
+                            {
+                                for (var i = 0; i < p.groupeAventurier.Membres.Count(); i++)
+                                {
+                                    if (p.groupeAventurier.Membres[i].Etat != Etat.Mort)
+                                    {
+                                        cbCible = new ComboboxItem();
+                                        cbCible.Text = p.groupeAventurier.Membres[i].NomAventurier;
+                                        cbCible.Value = i;
+                                        cboChoisirCible.Items.Add(cbCible);
+                                    }
+                                }
+                                break;
+                            }
+
+                        case Cible.AllAllies:
+                            {
+
+                                cbCible = new ComboboxItem();
+                                cbCible.Text = "Tous les alliés";
+                                cbCible.Value = 50;
+                                cboChoisirCible.Items.Add(cbCible);
+
+                                break;
+                            }
+                    }
+
+                    btnFinTour.Enabled = true;
+                    cboChoisirCible.SelectedItem = cboChoisirCible.Items[0];
+                }
+                else
+                {
+                    string strRessource = "";
+
+                    strRessource = p.groupeAventurier.Membres[persoActif.idPerso].Ressource == Ressource.Mana ? "de mana" : "d'énergie";
+
+                    MessageBox.Show(p.groupeAventurier.Membres[persoActif.idPerso].NomAventurier + " n'a pas assez " + strRessource + " pour effectuer cet action");
+                }
+
+            }
+            #endregion
         }
 
         private void RetirerMortInitiative()
@@ -692,6 +784,7 @@ namespace JRPG
         private void btnFinTour_Click(object sender, EventArgs e)
         {
             cibleId = (cboChoisirCible.SelectedItem as ComboboxItem).Value;
+            bool prochainTour = true;
             //MessageBox.Show("Vous attaquer la cible : " + la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[(cibleId)].Nom);
             if (typeAction == "Attaque")
             {
@@ -699,10 +792,28 @@ namespace JRPG
             }
             else if (typeAction == "Competence")
             {
-                LancerCompetence(selectedCompetence, p.groupeAventurier.Membres[persoActif.idPerso], cibleId);
+                if (selectedCompetence == 3 && p.groupeAventurier.Membres[persoActif.idPerso].ClassId == lc.PRETRE_ID && p.groupeAventurier.Membres[cibleId].DefenseBuff)
+                {
+                    prochainTour = false;
+                    MessageBox.Show("La défense de " + p.groupeAventurier.Membres[cibleId].NomAventurier + " a déja été augmenté et ne peut plus l'être pour la durée du combat.");
+                }
+                else if (selectedCompetence == 3 && p.groupeAventurier.Membres[persoActif.idPerso].ClassId == lc.MAGE_ID && p.groupeAventurier.Membres[cibleId].ForceBuff)
+                    {
+                        prochainTour = false;
+                        MessageBox.Show("L'arme de " + p.groupeAventurier.Membres[cibleId].NomAventurier + " a déja été enchantée et sa force ne peut plus être amélioré pour la durée du combat.");
+                    }
+                else
+                {
+                    LancerCompetence(selectedCompetence, p.groupeAventurier.Membres[persoActif.idPerso], cibleId);
+                }
+                
             }
 
-            ProchainTour();
+            if (prochainTour)
+            {
+                ProchainTour();
+            }
+            
         }
 
         private void pboxAttaquer_Click(object sender, EventArgs e)
@@ -744,6 +855,24 @@ namespace JRPG
             else
             {
                 UtiliserCompetence(2);
+            }
+        }
+
+        private void pboxSort3_Click(object sender, EventArgs e)
+        {
+            //tempo
+            /*foreach(Aventurier aventurier in p.groupeAventurier.Membres)
+            {
+                MessageBox.Show(aventurier.Precisionactuel.ToString());
+            }*/
+            
+            if (p.groupeAventurier.Membres[persoActif.idPerso].ClassId == lc.GUERRIER_ID && p.groupeAventurier.Membres[persoActif.idPerso].PrecisionBuff)
+            {
+                MessageBox.Show(p.groupeAventurier.Membres[persoActif.idPerso].NomAventurier + " a déja utilisé son cri de guerre pour ce combat");
+            }
+            else
+            {
+                UtiliserCompetence(3);
             }
         }
     }

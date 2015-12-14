@@ -25,7 +25,7 @@ namespace JRPG.Classes.Aventurier
             this.Pvactuel = Pvbase = Pvmax = 60;
             this.Energieactuel = Energiebase = Energiemax = 100;
             this.Initiativeactuel = Initiativebase = 20;
-            this.Precisionactuel = Precisionbase = 20;
+            this.Precisionactuel = Precisionbase = 14;
             this.Esquiveactuel = Esquivebase = 12;
             this.Forceactuel = Forcebase = 10;
             this.Defenseactuel = Defensebase = 2;
@@ -44,11 +44,14 @@ namespace JRPG.Classes.Aventurier
             this.CibleCompetenceC = Cible.Enemy;
             this.CoutCompetenceA = 25;
             this.CoutCompetenceB = 10;
-            this.CoutCompetenceC = 30;
+            this.CoutCompetenceC = 25;
             this.ImageCompetenceA = Properties.Resources.coupetourdissant;
             this.ImageCompetenceB = Properties.Resources.stealth;
             this.ImageCompetenceC = Properties.Resources.frappeprecise;
             this.EsquiveBuff = false;
+            this.DefenseBuff = false;
+            this.PrecisionBuff = false;
+            this.ForceBuff = false;
         }
         #endregion
 
@@ -120,12 +123,51 @@ namespace JRPG.Classes.Aventurier
 
             strAction = this.NomAventurier + " utilise furtivité.";
             strAction += "\r\n Son esquive a augmenté de : " + modifEsquive + " jusqu'à la fin du combat !" ;
+
+            this.Energieactuel -= this.CoutCompetenceB;
             return strAction;
         }
 
-        public override string UtiliserCompetenceC()
+        public override string UtiliserCompetenceC(Ennemi.Ennemi cible)
         {
-            return "";
+            int chanceAttaque = 6;
+            int degatAttaque = 0;
+            string strAction = "";
+
+            chanceAttaque += this.Precisionactuel + this.Arme.Precision - cible.Esquive;
+            chanceAttaque = chanceAttaque > 9 ? 9 : chanceAttaque;
+            chanceAttaque = chanceAttaque < 1 ? 1 : chanceAttaque;
+
+            Random rnd = new Random();
+            int chiffreAleatoire = rnd.Next(0, 10);
+
+            strAction = this.NomAventurier + " tente une frappe précise sur " + cible.Nom;
+            if (chiffreAleatoire < chanceAttaque)
+            {
+                degatAttaque = this.Forceactuel + this.Arme.Force - cible.Defense;
+                degatAttaque = degatAttaque < 1 ? 1 : degatAttaque;
+                degatAttaque *= 2;
+                cible.PvActuel -= degatAttaque;
+
+                strAction += "\r\n" + this.NomAventurier + " à touché la cible et infligé : " + degatAttaque + " points de dégats!";
+                
+                if (cible.PvActuel <= 0)
+                {
+                    cible.Etat = Etat.Mort;
+                    strAction += "\r\n" + cible.Nom + " est mort!";
+                }
+
+                //MessageBox.Show(strAction);
+
+            }
+            else
+            {
+                strAction += "\r\n" + this.NomAventurier + " à manqué la cible!";
+                //MessageBox.Show(strAction);
+            }
+
+            this.Energieactuel -= this.CoutCompetenceC;
+            return strAction;
         }
 
         public override string MonterNiveauExperience()

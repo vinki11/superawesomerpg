@@ -12,6 +12,7 @@ namespace JRPG.Classes.Aventurier
 {
     using li = ListeItem;
     using lc = ListeClasse;
+    using p = Program;
     //Classe d'aventurier qui a une bonne attaque et defense(hp) de base. Utilise de l'energie
     [Serializable]
     class Guerrier : Aventurier
@@ -30,7 +31,7 @@ namespace JRPG.Classes.Aventurier
             this.Precisionactuel = Precisionbase = 10;
             this.Esquiveactuel = Esquivebase = 8;
             this.Forceactuel = Forcebase = 15;
-            this.Defenseactuel = Defensebase = 2;
+            this.Defenseactuel = Defensebase = 3;
             this.NomClasse = "Guérrier";
             this.DescriptionClasse = "Combattant au corps à corps avec une bonne force et défense";
             this.Ressource = Ressource.Energie;
@@ -47,11 +48,14 @@ namespace JRPG.Classes.Aventurier
             this.CibleCompetenceC = Cible.AllAllies;
             this.CoutCompetenceA = 25;
             this.CoutCompetenceB = 30;
-            this.CoutCompetenceC = 30;
+            this.CoutCompetenceC = 10;
             this.ImageCompetenceA = Properties.Resources.frappepuissante;
             this.ImageCompetenceB = Properties.Resources.coupcirculaire;
             this.ImageCompetenceC = Properties.Resources.warcry;
             this.EsquiveBuff = false;
+            this.DefenseBuff = false;
+            this.PrecisionBuff = false;
+            this.ForceBuff = false;
 
 
         }
@@ -60,7 +64,7 @@ namespace JRPG.Classes.Aventurier
         #region Fonctions
         public override string UtiliserCompetenceA(Ennemi.Ennemi cible)
         {
-            int chanceAttaque = 4;
+            int chanceAttaque = 5;
             int degatAttaque = 0;
             string strAction = "";
 
@@ -141,9 +145,27 @@ namespace JRPG.Classes.Aventurier
 
         }
 
-        public new void UtiliserCompetenceC()
+        public override string UtiliserCompetenceC()
         {
+            int modifPrecision;
+            string strAction = "";
 
+            modifPrecision = (1 * this.Niveau);
+            strAction = this.NomAventurier + " lance un cri de guerre.";
+            strAction += "\r\nLa précision de chaque membre du groupe a augmenté de : " + modifPrecision + " jusqu'à la fin du combat !\r\n";
+            
+
+            foreach (Aventurier aventurier in p.groupeAventurier.Membres)
+            {
+                if (aventurier.Etat != Etat.Mort)
+                {
+                    aventurier.Precisionactuel += modifPrecision;
+                    aventurier.PrecisionBuff = true;
+                }
+            }
+
+            this.Energieactuel -= this.CoutCompetenceC;
+            return strAction;
         }
 
         public override string MonterNiveauExperience()
