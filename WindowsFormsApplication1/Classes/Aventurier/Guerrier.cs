@@ -41,7 +41,7 @@ namespace JRPG.Classes.Aventurier
             this.Bouclier = li.ListeBoucliers[li.BOUCLIER_BOIS_ID];
             this.NomCompetenceA = "Frappe puissante"; //? Kekechose qui ignore un pourcentage de la def de l'ennemi
             this.NomCompetenceB = "Attaque circulaire"; // Cleave qui attaque tout le monde
-            this.NomCompetenceC = "Cri de guerre"; //Buff self ou allallies ? ? Précision !
+            this.NomCompetenceC = "Cri de guerre"; //Buff la précision de tous les alliés !
             this.CibleCompetenceA = Cible.Enemy;
             this.CibleCompetenceB = Cible.AllEnemies;
             this.CibleCompetenceC = Cible.AllAllies;
@@ -50,7 +50,7 @@ namespace JRPG.Classes.Aventurier
             this.CoutCompetenceC = 30;
             this.ImageCompetenceA = Properties.Resources.frappepuissante;
             this.ImageCompetenceB = Properties.Resources.coupcirculaire;
-            this.ImageCompetenceC = Properties.Resources.attaque;
+            this.ImageCompetenceC = Properties.Resources.warcry;
             this.EsquiveBuff = false;
 
 

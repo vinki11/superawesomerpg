@@ -157,4 +157,22 @@
   <data name="frappepuissante" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\frappepuissante.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="frappeprecise" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\frappeprecise.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lumiere" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lumiere.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="protection" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shield.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="soins" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\soins.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="stealth" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\stealth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="warcry" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\warcry.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

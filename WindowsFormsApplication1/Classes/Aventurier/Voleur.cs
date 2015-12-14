@@ -38,7 +38,7 @@ namespace JRPG.Classes.Aventurier
             this.Armure = li.ListeArmures[li.ARMURE_CUIR_ID];
             this.NomCompetenceA = "Coup étourdissant"; //Étourdi un ennemi
             this.NomCompetenceB = "Furtivité"; //Augmente sa propre esquive encore plus !!
-            this.NomCompetenceC = "Placeholder";
+            this.NomCompetenceC = "Frappe précise"; //Une frappe avec plus de chance de touché et plus de dégat !!
             this.CibleCompetenceA = Cible.Enemy;
             this.CibleCompetenceB = Cible.Self;
             this.CibleCompetenceC = Cible.Enemy;
@@ -46,8 +46,8 @@ namespace JRPG.Classes.Aventurier
             this.CoutCompetenceB = 10;
             this.CoutCompetenceC = 30;
             this.ImageCompetenceA = Properties.Resources.coupetourdissant;
-            this.ImageCompetenceB = Properties.Resources.attaque;
-            this.ImageCompetenceC = Properties.Resources.attaque;
+            this.ImageCompetenceB = Properties.Resources.stealth;
+            this.ImageCompetenceC = Properties.Resources.frappeprecise;
             this.EsquiveBuff = false;
         }
         #endregion

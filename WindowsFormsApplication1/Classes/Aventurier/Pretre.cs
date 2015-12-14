@@ -37,16 +37,16 @@ namespace JRPG.Classes.Aventurier
             this.Armure = li.ListeArmures[li.ROBE_ID];
             this.NomCompetenceA = "Sort de lumière"; //Petit dmg sur un ennemi
             this.NomCompetenceB = "Soins"; //Soigne 1 allié
-            this.NomCompetenceC = "Placeholder";
+            this.NomCompetenceC = "Protection"; //Augmente la def d'un allié pour le combat
             this.CibleCompetenceA = Cible.Enemy;
             this.CibleCompetenceB = Cible.Ally;
-            this.CibleCompetenceC = Cible.Enemy;
+            this.CibleCompetenceC = Cible.Ally;
             this.CoutCompetenceA = 15;
             this.CoutCompetenceB = 20;
-            this.CoutCompetenceC = 30;
-            this.ImageCompetenceA = Properties.Resources.attaque;
-            this.ImageCompetenceB = Properties.Resources.attaque;
-            this.ImageCompetenceC = Properties.Resources.attaque;
+            this.CoutCompetenceC = 15;
+            this.ImageCompetenceA = Properties.Resources.lumiere;
+            this.ImageCompetenceB = Properties.Resources.soins;
+            this.ImageCompetenceC = Properties.Resources.protection;
             this.EsquiveBuff = false;
         }
         #endregion

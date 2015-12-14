@@ -123,6 +123,16 @@ namespace JRPG.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap frappeprecise {
+            get {
+                object obj = ResourceManager.GetObject("frappeprecise", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap frappepuissante {
             get {
                 object obj = ResourceManager.GetObject("frappepuissante", resourceCulture);
@@ -136,6 +146,16 @@ namespace JRPG.Properties {
         internal static System.Drawing.Bitmap guerrier {
             get {
                 object obj = ResourceManager.GetObject("guerrier", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lumiere {
+            get {
+                object obj = ResourceManager.GetObject("lumiere", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,6 +193,26 @@ namespace JRPG.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap protection {
+            get {
+                object obj = ResourceManager.GetObject("protection", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap soins {
+            get {
+                object obj = ResourceManager.GetObject("soins", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap spectre {
             get {
                 object obj = ResourceManager.GetObject("spectre", resourceCulture);
@@ -183,9 +223,29 @@ namespace JRPG.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap stealth {
+            get {
+                object obj = ResourceManager.GetObject("stealth", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap voleur {
             get {
                 object obj = ResourceManager.GetObject("voleur", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap warcry {
+            get {
+                object obj = ResourceManager.GetObject("warcry", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

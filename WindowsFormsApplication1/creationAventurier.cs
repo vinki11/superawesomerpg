@@ -180,7 +180,7 @@ namespace JRPG
                 //tempo test full party
                 Aventurier deuxiemeAventurier;
                 Aventurier troisiemeAventurier;
-                deuxiemeAventurier = new Mage("Merlin", 0, 1);
+                deuxiemeAventurier = new Pretre("JeanPaulII", 0, 1);
                 troisiemeAventurier = new Voleur("RobinDesBois", 0, 1);
                 p.groupeAventurier.AjouterAventurier(deuxiemeAventurier);
                 p.groupeAventurier.AjouterAventurier(troisiemeAventurier);
