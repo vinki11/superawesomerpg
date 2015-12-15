@@ -35,7 +35,7 @@ namespace JRPG.Classes.Ennemi
 
         public int CompetenceId { get; set; }
 
-        public int ProbCompetence { get; set; }
+        public int ProbCompetence { get; set; } //Plus le chiffre est haut, moins il utilise souvent sa compétence
 
         #endregion
 
@@ -354,7 +354,7 @@ namespace JRPG.Classes.Ennemi
             int degatAttaque = 0;
             string strAction = "";
 
-            chanceAttaque += this.Precision - cible.Esquiveactuel + (cible.Bouclier != null ? cible.Bouclier.Esquive : 0);
+            chanceAttaque += this.Precision - cible.Esquiveactuel - (cible.Bouclier != null ? cible.Bouclier.Esquive : 0);
             chanceAttaque = chanceAttaque > 9 ? 9 : chanceAttaque;
             chanceAttaque = chanceAttaque < 1 ? 1 : chanceAttaque;
 
@@ -402,8 +402,9 @@ namespace JRPG.Classes.Ennemi
 
             switch (CompetenceId)
             {
+                // Vague de feu du gobelin shaman
                 case 1:
-                    strAction += this.Nom + " lance lance une vague de feu à " + cible.NomAventurier;
+                    strAction += this.Nom + " lance une vague de feu à " + cible.NomAventurier;
                     if (chiffreAleatoire > 2)
                     {
                         degatAttaque = 12;
@@ -415,6 +416,46 @@ namespace JRPG.Classes.Ennemi
                         {
                             cible.Etat = Etat.Mort;
                             strAction += "\r\n" + cible.NomAventurier + " est mort!";
+                        }
+                    }
+                    else
+                    {
+                        strAction += "\r\n" + this.Nom + " à manqué la cible!";
+                    }
+                    break;
+
+                case 2: //Coup étourdissant du Roi Homme Crabe
+
+                    strAction += this.Nom + " tente un coup étourdissant sur  " + cible.NomAventurier;
+
+                    chanceAttaque += this.Precision - (cible.Bouclier != null ? cible.Bouclier.Esquive : 0) - cible.Esquiveactuel;
+                    chanceAttaque = chanceAttaque > 9 ? 9 : chanceAttaque;
+                    chanceAttaque = chanceAttaque < 1 ? 1 : chanceAttaque;
+
+                    if (chiffreAleatoire < chanceAttaque)
+                    {
+                        degatAttaque = this.Force - cible.Defenseactuel - cible.Armure.Defense - 2;
+                        degatAttaque = degatAttaque < 1 ? 1 : degatAttaque;
+                        cible.Pvactuel -= degatAttaque;
+
+                        strAction += "\r\n" + this.Nom + " à touché la cible et infligé : " + degatAttaque + " points de dégats!";
+
+                        int chanceEtourdi = rnd.Next(0, 10);
+                        chanceEtourdi += (this.Niveau - cible.Niveau);
+
+                        if (cible.Pvactuel <= 0)
+                        {
+                            cible.Etat = Etat.Mort;
+                            strAction += "\r\n" + cible.NomAventurier + " est mort!";
+                        }
+                        else if (chanceEtourdi > 1)
+                        {
+                            cible.Etat = Etat.Etourdi;
+                            strAction += "\r\n" + cible.NomAventurier + " est étourdi!";
+                        }
+                        else
+                        {
+                            strAction += "\r\n" + cible.NomAventurier + " a résister à l'étourdissement!";
                         }
                     }
                     else

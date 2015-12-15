@@ -77,7 +77,7 @@ namespace JRPG.Classes.Aventure
             #region Aventure 1 La plage
             //Créer la seconde Aventure La plage
             ListeAventures.Add(new Aventure(LA_PLAGE_ID, "La plage", "Une petite balade sur la plage, il ne peut rien arrivé de bien dangereux ?", 1, 1));
-
+            
             //Combat #1 
             groupe1 = new GroupeEnnemi();
             ennemi1 = new Ennemi.Ennemi(le.ListeEnnemis[le.CRABE_GEANT_ID]);
@@ -99,7 +99,7 @@ namespace JRPG.Classes.Aventure
             groupe2.AjouterEnnemi(ennemi2);
             groupe2.AjouterEnnemi(ennemi3);
             ListeAventures[LA_PLAGE_ID].AjouterGroupeEnnemis(groupe2);
-
+            
             //Combat #3 
             groupe3 = new GroupeEnnemi();
             ennemi1 = new Ennemi.Ennemi(le.ListeEnnemis[le.HOMME_CRABE_GUERRIER_ID]);

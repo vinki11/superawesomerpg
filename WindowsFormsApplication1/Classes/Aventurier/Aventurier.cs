@@ -108,10 +108,10 @@ namespace JRPG.Classes.Aventurier
         public string Attaquer(Ennemi.Ennemi cible)
         {
             int chanceAttaque = 5;
-            int degatAttaque = 0;
+            int degatAttaque = 0; 
             string strAction = "";
 
-            chanceAttaque += this.Precisionactuel + this.Arme.Precision - cible.Esquive;
+            chanceAttaque += this.Precisionactuel + (this.Arme != null ? this.Arme.Precision : 0) - cible.Esquive;
             chanceAttaque = chanceAttaque > 9 ? 9 : chanceAttaque;
             chanceAttaque = chanceAttaque < 1 ? 1 : chanceAttaque;
 
@@ -124,7 +124,7 @@ namespace JRPG.Classes.Aventurier
             strAction = this.NomAventurier + " à attaqué " + cible.Nom;
             if (chiffreAleatoire < chanceAttaque)
             {
-                degatAttaque = this.Forceactuel + this.Arme.Force - cible.Defense;
+                degatAttaque = this.Forceactuel + (this.Arme != null ? this.Arme.Force : 0) - cible.Defense;
                 degatAttaque = degatAttaque < 1 ? 1 : degatAttaque;
                 cible.PvActuel -= degatAttaque;
                 

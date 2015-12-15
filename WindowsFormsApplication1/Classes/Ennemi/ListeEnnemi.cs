@@ -97,6 +97,7 @@ namespace JRPG.Classes.Ennemi
             listeProbLoot.Add(10);
             ListeEnnemis.Add(new Ennemi(HOMME_CRABE_GUERRIER_ID, "Guerrier homme-crabe", 1, 40, 10, 10, 10, 14, 10, 100, 5, Properties.Resources.spectre, Ennemi.StrategieAction.AttaquePlusFort, listeLoot, listeProbLoot));
 
+            //Roi Homme-Crabe
             listeLoot = new List<Item.Item>();
             listeLoot.Add(li.ListeBoucliers[li.BOUCLIER_BOIS_ID]);
             listeLoot.Add(li.ListeArmes[li.BATARDE_BRONZE_ID]);
@@ -105,7 +106,7 @@ namespace JRPG.Classes.Ennemi
             listeProbLoot.Add(15);
             listeProbLoot.Add(35);
             listeProbLoot.Add(40);
-            ListeEnnemis.Add(new Ennemi(HOMME_CRABE_ROI_ID, "Roi homme-crabe", 2, 60, 14, 14, 10, 18, 14, 150, 15, Properties.Resources.spectre, Ennemi.StrategieAction.AttaquePlusFort, listeLoot, listeProbLoot));
+            ListeEnnemis.Add(new Ennemi(HOMME_CRABE_ROI_ID, "Roi homme-crabe", 2, 60, 14, 14, 10, 18, 14, 200, 15, Properties.Resources.spectre, Ennemi.StrategieAction.AttaquePlusFort, listeLoot, listeProbLoot, 2, 35));
         }
     }
 }
