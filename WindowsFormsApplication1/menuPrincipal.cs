@@ -66,8 +66,11 @@ namespace JRPG
         {
             //Quand on load une partie on doit recréer les items avec les items de l'instance courante du jeu sinon on a un bug
             List<Item> tempoInventaire = new List<Item>(p.groupeAventurier.Inventaire);
+            List<Item> tempoBoutique = new List<Item>(p.Boutique);
+
 
             p.groupeAventurier.Inventaire.Clear();
+            p.Boutique.Clear();
 
             //Items de l'inventaire
             foreach (var inventaireItem in tempoInventaire)
@@ -90,6 +93,30 @@ namespace JRPG
                 if (inventaireItem is Consommable)
                 {
                     p.groupeAventurier.AjouterItem(li.ListeConsommables[inventaireItem.IdItem]);
+                }
+            }
+
+            //Items de la boutique
+            foreach (var boutiqueItem in tempoBoutique)
+            {
+                if (boutiqueItem is Arme)
+                {
+                    p.Boutique.Add(li.ListeArmes[boutiqueItem.IdItem]);
+                }
+
+                if (boutiqueItem is Armure)
+                {
+                    p.Boutique.Add(li.ListeArmures[boutiqueItem.IdItem]);
+                }
+
+                if (boutiqueItem is Bouclier)
+                {
+                    p.Boutique.Add(li.ListeBoucliers[boutiqueItem.IdItem]);
+                }
+
+                if (boutiqueItem is Consommable)
+                {
+                    p.Boutique.Add(li.ListeConsommables[boutiqueItem.IdItem]);
                 }
             }
 
