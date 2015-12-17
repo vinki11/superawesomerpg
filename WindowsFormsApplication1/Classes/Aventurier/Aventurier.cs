@@ -6,13 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using JRPG.Classes.Ennemi;
+using JRPG.Interfaces;
 using JRPG.Classes.Item;
 using System.Drawing;
 
 namespace JRPG.Classes.Aventurier
 {
     [Serializable]
-    abstract class Aventurier
+    abstract class Aventurier : IAttaquerEnnemi
     {
 
         #region Attributs
