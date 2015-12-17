@@ -16,7 +16,7 @@ namespace JRPG.Classes.Aventurier
     abstract class Aventurier : IAttaquerEnnemi
     {
 
-        #region Attributs
+        #region Attributs et accesseurs mutateurs
         public int Experience { get; set; }
 
         public int Niveau { get; set; }
@@ -39,19 +39,18 @@ namespace JRPG.Classes.Aventurier
 
         public int Pvmax { get; set; }
 
-        public int Pvactuel { get; set; }
+        private int pvactuel;
 
         public int Manabase { get; set; }
 
         public int Manamax { get; set; }
 
-        public int Manaactuel { get; set; }
-
+        private int manaactuel;
         public int Energiemax { get; set; }
 
         public int Energiebase { get; set; }
 
-        public int Energieactuel { get; set; }
+        private int energieactuel;
 
         public int Initiativebase { get; set; }
 
@@ -102,6 +101,58 @@ namespace JRPG.Classes.Aventurier
         public Bitmap ImageCompetenceA { get; set; }
         public Bitmap ImageCompetenceB { get; set; }
         public Bitmap ImageCompetenceC { get; set; }
+
+        public int Pvactuel
+        {
+            get { return this.pvactuel; }
+            set
+            {
+                if (value < 0 )
+                {
+                    this.pvactuel = 0;
+                }
+                else if (value > Pvmax)
+                {
+                    this.pvactuel = Pvmax;
+                }
+                else
+                {
+                    this.pvactuel = value;
+                }
+            }
+        }
+        public int Manaactuel
+        {
+            get { return this.manaactuel; }
+            set
+            {
+                if (value > Manamax)
+                {
+                    this.manaactuel = Manamax;
+                }
+                else
+                {
+                    this.manaactuel = value;
+                }
+            }
+        }
+
+        public int Energieactuel
+        {
+            get { return this.energieactuel; }
+            set
+            {
+                if (value > Energiemax)
+                {
+                    this.energieactuel = Energiemax;
+                }
+                else
+                {
+                    this.energieactuel = value;
+                }
+            }
+        }
+
 
         #endregion
 

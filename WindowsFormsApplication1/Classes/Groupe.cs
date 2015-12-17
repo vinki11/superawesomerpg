@@ -12,9 +12,9 @@ namespace JRPG.Classes
     class Groupe
     {
         #region Attributs
-        public List<Aventurier.Aventurier> Membres { get; set; }
+        public List<Aventurier.Aventurier> Membres { get; private set; }
         public int NbPiecesOr { get; set; }
-        public List<Item.Item> Inventaire { get; set; }
+        public List<Item.Item> Inventaire { get; private set; }
         #endregion
 
         #region Constructeurs

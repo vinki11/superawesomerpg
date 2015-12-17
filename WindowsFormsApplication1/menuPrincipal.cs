@@ -66,7 +66,9 @@ namespace JRPG
 
                 ReloadInventaire();
 
-                MessageBox.Show("Partie chargée.", "Partie chargée");
+                Hide();
+                MenuJeu menuJeu = new MenuJeu();
+                menuJeu.ShowDialog();
             }
             else
             {

@@ -162,6 +162,8 @@ namespace JRPG
                 p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_VIE_MINEURE_ID]);
                 p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_VIE_MINEURE_ID]);
                 p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_MANA_MINEURE_ID]);
+                p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_ENERGIE_MINEURE_ID]);
+                p.groupeAventurier.AjouterItem(li.ListeConsommables[li.FLASQUE_RAVIGORANTE_ID]);
 
                 //Création du stock de la boutique
                 for (var i = 0; i < 2; i++)
@@ -181,6 +183,7 @@ namespace JRPG
                 {
                     p.Boutique.Add(li.ListeConsommables[li.POTION_VIE_MINEURE_ID]);
                     p.Boutique.Add(li.ListeConsommables[li.POTION_MANA_MINEURE_ID]);
+                    p.Boutique.Add(li.ListeConsommables[li.POTION_ENERGIE_MINEURE_ID]);
                 }
 
                 //tempo test full party

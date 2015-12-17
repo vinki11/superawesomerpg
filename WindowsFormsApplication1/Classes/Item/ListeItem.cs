@@ -36,6 +36,8 @@ namespace JRPG
         //Constante Consommable
         public const int POTION_VIE_MINEURE_ID = 0;
         public const int POTION_MANA_MINEURE_ID = 1;
+        public const int POTION_ENERGIE_MINEURE_ID = 2;
+        public const int FLASQUE_RAVIGORANTE_ID = 3;
 
         static ListeItem()
          {
@@ -62,6 +64,8 @@ namespace JRPG
             //
             ListeConsommables.Add(new Consommable(POTION_VIE_MINEURE_ID, "Potion de vie mineure", 2, 25));
             ListeConsommables.Add(new Consommable(POTION_MANA_MINEURE_ID, "Potion de mana mineure", 2, pMana:50, pUtilisableGuerrier:false, pUtilisableVoleur:false));
+            ListeConsommables.Add(new Consommable(POTION_ENERGIE_MINEURE_ID, "Potion d'énergie mineure", 2, pEnergie:30, pUtilisableMage:false, pUtilisablePretre:false));
+            ListeConsommables.Add(new Consommable(FLASQUE_RAVIGORANTE_ID, "Flasque ravigorante", 5,25,40,25));
 
 
         }

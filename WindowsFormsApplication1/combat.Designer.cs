@@ -391,6 +391,7 @@
             this.btnUtiliserConsommable.TabIndex = 10;
             this.btnUtiliserConsommable.Text = "Utiliser";
             this.btnUtiliserConsommable.UseVisualStyleBackColor = true;
+            this.btnUtiliserConsommable.Click += new System.EventHandler(this.btnUtiliserConsommable_Click);
             // 
             // cboConsommable
             // 

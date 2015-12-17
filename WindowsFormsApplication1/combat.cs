@@ -19,6 +19,7 @@ namespace JRPG
     using p = Program;
     using la = ListeAventure;
     using lc = ListeClasse;
+    using li = ListeItem;
 
     public partial class Combat : Form
     {
@@ -133,6 +134,9 @@ namespace JRPG
                     p.groupeAventurier.Membres[persoActif.idPerso].Etat = Etat.Normal;
                     ProchainTour();
                 }
+
+                LoadConsommable();
+
             }
             else
             {
@@ -366,6 +370,107 @@ namespace JRPG
 
         #endregion
 
+        private void UtiliserConsommable()
+        {
+            string strAction = p.groupeAventurier.Membres[persoActif.idPerso].NomAventurier + " utilise l'item : " + (cboConsommable.SelectedItem as ComboboxItem).Text;
+            
+            if (li.ListeConsommables[(cboConsommable.SelectedItem as ComboboxItem).Value].Pv > 0) 
+            {
+                strAction += "\r\nIl gagne " + li.ListeConsommables[(cboConsommable.SelectedItem as ComboboxItem).Value].Pv.ToString() + " points de vie!";
+                p.groupeAventurier.Membres[persoActif.idPerso].Pvactuel += li.ListeConsommables[(cboConsommable.SelectedItem as ComboboxItem).Value].Pv;
+            }
+
+            if (p.groupeAventurier.Membres[persoActif.idPerso].Ressource == Ressource.Mana)
+            {
+                if (li.ListeConsommables[(cboConsommable.SelectedItem as ComboboxItem).Value].Mana > 0)
+                {
+                    strAction += "\r\nIl gagne " + li.ListeConsommables[(cboConsommable.SelectedItem as ComboboxItem).Value].Mana.ToString() + " points de mana!";
+                    p.groupeAventurier.Membres[persoActif.idPerso].Manaactuel += li.ListeConsommables[(cboConsommable.SelectedItem as ComboboxItem).Value].Mana;
+                }
+            }
+           else
+            {
+                if (li.ListeConsommables[(cboConsommable.SelectedItem as ComboboxItem).Value].Energie > 0)
+                {
+                    strAction += "\r\nIl gagne " + li.ListeConsommables[(cboConsommable.SelectedItem as ComboboxItem).Value].Energie.ToString() + " points d'énergie!";
+                    p.groupeAventurier.Membres[persoActif.idPerso].Energieactuel += li.ListeConsommables[(cboConsommable.SelectedItem as ComboboxItem).Value].Energie;
+                }
+            }
+
+            p.groupeAventurier.RetirerItem(li.ListeConsommables[(cboConsommable.SelectedItem as ComboboxItem).Value]);
+
+            AjouterTexteHistorique(strAction);
+            AfficherInfosAventuriers(p.groupeAventurier.Membres.Count());
+            ProchainTour();
+
+        }
+        private void LoadConsommable()
+        {
+            cboConsommable.Items.Clear();
+            cboConsommable.SelectedItem = null;
+            cboConsommable.Text = "";
+            btnUtiliserConsommable.Enabled = false;
+
+            ComboboxItem cbConsommable;
+
+            foreach (Item item in p.groupeAventurier.Inventaire)
+            {
+                if (item is Consommable)
+                {
+                    cbConsommable = new ComboboxItem();
+                    cbConsommable.Text = item.NomItem;
+                    cbConsommable.Value = item.IdItem;
+                    switch (p.groupeAventurier.Membres[persoActif.idPerso].ClassId)
+                    {
+                        case lc.GUERRIER_ID:
+                            if (item.UtilisableGuerrier)
+                            {
+                                if (!cboConsommable.Items.Contains(cbConsommable))
+                                {
+                                    cboConsommable.Items.Add(cbConsommable);
+                                }
+                            }
+                            break;
+
+                        case lc.MAGE_ID:
+                            if (item.UtilisableMage)
+                            {
+                                if (!cboConsommable.Items.Contains(cbConsommable))
+                                {
+                                    cboConsommable.Items.Add(cbConsommable);
+                                }
+                            }
+                            break;
+
+                        case lc.VOLEUR_ID:
+                            if (item.UtilisableVoleur)
+                            {
+                                if (!cboConsommable.Items.Contains(cbConsommable))
+                                {
+                                    cboConsommable.Items.Add(cbConsommable);
+                                }
+                            }
+                            break;
+
+                        case lc.PRETRE_ID:
+                            if (item.UtilisablePretre)
+                            {
+                                if (!cboConsommable.Items.Contains(cbConsommable))
+                                {
+                                    cboConsommable.Items.Add(cbConsommable);
+                                }
+                            }
+                            break;
+                    }
+                }
+            }
+
+            if (cboConsommable.Items.Count > 0)
+            {
+                btnUtiliserConsommable.Enabled = true;
+                cboConsommable.SelectedItem = cboConsommable.Items[0];
+            }
+        }
         private void ProchainTour()
         {
             Personnage tempo;
@@ -415,16 +520,13 @@ namespace JRPG
                 strRewards += "\r\nIls ont ramassé " + nbOr.ToString() + " pièces d'ors.";
 
                 int indLoot = 0;
-                //bool noItem = true;
                 foreach (Item item in loot)
                 {
                     if (loot[indLoot] != null)
                     {
                         strRewards += "\r\nIls ont trouvé un(e) " + loot[indLoot].NomItem + "!";
-                        //noItem = false;
                         p.groupeAventurier.Inventaire.Add(item);
                     }
-                    //MessageBox.Show(loot[indLoot] != null ? loot[indLoot].NomItem : "Aucun item");
                     indLoot++;
                 }
 
@@ -874,6 +976,11 @@ namespace JRPG
             {
                 UtiliserCompetence(3);
             }
+        }
+
+        private void btnUtiliserConsommable_Click(object sender, EventArgs e)
+        {
+            UtiliserConsommable();
         }
     }
 }
