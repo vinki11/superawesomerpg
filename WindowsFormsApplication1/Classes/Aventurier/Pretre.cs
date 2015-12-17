@@ -100,7 +100,7 @@ namespace JRPG.Classes.Aventurier
 
             soins = 15 + (5 * this.Niveau);
 
-            cible.Pvactuel = cible.Pvactuel + soins > cible.Pvmax ? cible.Pvmax : cible.Pvactuel + soins;
+            cible.Pvactuel += soins;
 
             strAction += "\r\n" + cible.NomAventurier + " a été soigné de " + soins + " point de vie!";
 

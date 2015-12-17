@@ -32,6 +32,9 @@
             this.btnChargerPartie = new System.Windows.Forms.Button();
             this.btnNouvellePartie = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pboxTitre)).BeginInit();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.SuspendLayout();
             // 
             // pboxTitre

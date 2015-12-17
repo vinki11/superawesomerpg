@@ -128,6 +128,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurierSelected1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurierSelected2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurierSelected3)).BeginInit();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.SuspendLayout();
             // 
             // lblNomAventurier3

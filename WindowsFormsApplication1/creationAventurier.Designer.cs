@@ -74,6 +74,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pboxVoleur)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxMage)).BeginInit();
             this.gboxInformations.SuspendLayout();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.SuspendLayout();
             // 
             // lblNomPerso

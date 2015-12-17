@@ -33,6 +33,9 @@
             this.txtInformationsAventure = new System.Windows.Forms.RichTextBox();
             this.btnRetourVillage = new System.Windows.Forms.Button();
             this.btnAventure = new System.Windows.Forms.Button();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.SuspendLayout();
             // 
             // lblChoisirAventure

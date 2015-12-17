@@ -37,6 +37,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtPiecesOr = new System.Windows.Forms.Label();
             this.btnVillage = new System.Windows.Forms.Button();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.SuspendLayout();
             // 
             // lvInventaire

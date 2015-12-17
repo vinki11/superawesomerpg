@@ -31,6 +31,9 @@
             this.lblGameOver = new System.Windows.Forms.Label();
             this.lblGameOver2 = new System.Windows.Forms.Label();
             this.btnMenuPrincipal = new System.Windows.Forms.Button();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.SuspendLayout();
             // 
             // lblGameOver

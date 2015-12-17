@@ -31,6 +31,9 @@
             this.btnRetourVillage = new System.Windows.Forms.Button();
             this.btnSauvegarder = new System.Windows.Forms.Button();
             this.btnCharger = new System.Windows.Forms.Button();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.SuspendLayout();
             // 
             // btnRetourVillage

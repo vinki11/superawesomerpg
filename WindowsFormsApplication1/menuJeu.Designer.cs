@@ -106,6 +106,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pboxSelectedAventurier1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSelectedAventurier2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSelectedAventurier3)).BeginInit();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.SuspendLayout();
             // 
             // pboxAventurier1
