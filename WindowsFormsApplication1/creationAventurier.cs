@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using JRPG.Classes;
 using JRPG.Classes.Aventurier;
+using JRPG.Exceptions;
 
 namespace JRPG
 {
@@ -108,28 +109,33 @@ namespace JRPG
         }
 
         //Fonction qui valide si le nom du personnage est valide
-        private bool ValiderNom(string nom)
+        private void ValiderNom(string nom)
         {
             if (string.IsNullOrEmpty(nom))
             {
-                MessageBox.Show("Vous devez saisir un nom de personnage!", "Nom du personnage invalide");
-                return false;
+                throw new NomAventurierVideException();
+                //MessageBox.Show("Vous devez saisir un nom de personnage!", "Nom du personnage invalide");
+               // return false;
             }
             else if (!nom.All(char.IsLetter))
             {
-                MessageBox.Show("Votre nom de personnage doit contenir seulement des lettres!", "Nom du personnage invalide");
-                return false;
+
+                throw new NomAventurierNonValideException();
+                //MessageBox.Show("Votre nom de personnage doit contenir seulement des lettres!", "Nom du personnage invalide");
+                //return false;
             }
             else
             {
-                return true;
+                //return true;
             }
         }
 
         private void btnAccepter_Click(object sender, EventArgs e)
         {
-            if (ValiderNom(txtNomPerso.Text))
+            try
             {
+                ValiderNom(txtNomPerso.Text);
+
                 Aventurier premierAventurier;
                 premierAventurier = new Guerrier(txtNomPerso.Text, 0, 1); // Par défaut un guerrier
 
@@ -170,7 +176,7 @@ namespace JRPG
                     p.Boutique.Add(li.ListeBoucliers[li.BOUCLIER_BOIS_ID]);
                     p.Boutique.Add(li.ListeBoucliers[li.ECU_ACIER_ID]);
                 }
-                
+
                 for (var i = 0; i < 10; i++)
                 {
                     p.Boutique.Add(li.ListeConsommables[li.POTION_VIE_MINEURE_ID]);
@@ -196,10 +202,18 @@ namespace JRPG
                 MenuJeu menuJeu = new MenuJeu();
                 menuJeu.ShowDialog();
             }
-            else
+            catch (NomAventurierVideException ex)
             {
+                MessageBox.Show(ex.Message, "Nom du personnage invalide");
                 txtNomPerso.Focus();
             }
+            catch (NomAventurierNonValideException ex)
+            {
+                MessageBox.Show(ex.Message, "Nom du personnage invalide");
+                txtNomPerso.Focus();
+            }
+
+            
             
 
         }

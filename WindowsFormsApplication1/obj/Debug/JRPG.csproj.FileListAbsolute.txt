@@ -47,7 +47,6 @@ C:\Users\Vincent\Documents\GitHub\superawesomerpg\WindowsFormsApplication1\obj\D
 C:\Users\Vincent\Documents\GitHub\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.pdb
 C:\Users\Vincent\Documents\GitHub\superawesomerpg\WindowsFormsApplication1\bin\Debug\JRPG.exe
 C:\Users\Vincent\Documents\GitHub\superawesomerpg\WindowsFormsApplication1\bin\Debug\JRPG.pdb
-C:\Users\Vincent\Documents\GitHub\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.csprojResolveAssemblyReference.cache
 C:\Users\Vincent\Documents\GitHub\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.CreationAventurier.resources
 C:\Users\Vincent\Documents\GitHub\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.Combat.resources
 C:\Users\Vincent\Documents\GitHub\superawesomerpg\WindowsFormsApplication1\obj\Debug\JRPG.Maison.resources

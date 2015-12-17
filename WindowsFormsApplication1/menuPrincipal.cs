@@ -10,6 +10,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using JRPG.Exceptions;
 using JRPG.Classes;
 using JRPG.Classes.Item;
 using JRPG.Classes.Aventurier;
@@ -39,6 +40,18 @@ namespace JRPG
 
         private void btnChargerPartie_Click(object sender, EventArgs e)
         {
+            try
+            {
+                ChargerPartie();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erreur lors du chargement de partie");
+            }
+        }
+
+        private void ChargerPartie()
+        {
             if (File.Exists("sauvegardePartie.bin"))
             {
                 IFormatter formatter = new BinaryFormatter();
@@ -52,13 +65,12 @@ namespace JRPG
                 stream.Close();
 
                 ReloadInventaire();
-                Hide();
-                MenuJeu menuJeu = new MenuJeu();
-                menuJeu.ShowDialog();
+
+                MessageBox.Show("Partie chargée.", "Partie chargée");
             }
             else
             {
-                MessageBox.Show("Aucune partie sauvegardée présente.");
+                throw new SaveFileNotFound();
             }
         }
 

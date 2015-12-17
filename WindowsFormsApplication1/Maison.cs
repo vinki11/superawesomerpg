@@ -10,6 +10,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using JRPG.Exceptions;
 using JRPG.Classes;
 using JRPG.Classes.Item;
 
@@ -45,10 +46,22 @@ namespace JRPG
             formatter.Serialize(stream, save);
             stream.Close();
 
-            MessageBox.Show("Partie sauvegarder avec succès.");
+            MessageBox.Show("Partie sauvegardée avec succès.", "Partie sauvegardée");
         }
 
         private void btnCharger_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ChargerPartie();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message,"Erreur lors du chargement de partie");
+            }
+        }
+
+        private void ChargerPartie()
         {
             if (File.Exists("sauvegardePartie.bin"))
             {
@@ -57,18 +70,18 @@ namespace JRPG
                     FileMode.Open,
                     FileAccess.Read,
                     FileShare.Read);
-                List<Object> save = (List<object>) formatter.Deserialize(stream);
+                List<Object> save = (List<object>)formatter.Deserialize(stream);
                 p.groupeAventurier = (Groupe)save[0];
-                p.Boutique = (List<Item>) save[1];
+                p.Boutique = (List<Item>)save[1];
                 stream.Close();
 
                 ReloadInventaire();
 
-                MessageBox.Show("Partie chargée.");
+                MessageBox.Show("Partie chargée.", "Partie chargée");
             }
             else
             {
-                MessageBox.Show("Aucune partie sauvegardée présente.");
+                throw new SaveFileNotFound();
             }
         }
 

@@ -70,6 +70,9 @@
     <Compile Include="CreationAventurier.Designer.cs">
       <DependentUpon>CreationAventurier.cs</DependentUpon>
     </Compile>
+    <Compile Include="Exceptions\NomAventurierNonValideException.cs" />
+    <Compile Include="Exceptions\NomAventurierVideException.cs" />
+    <Compile Include="Exceptions\SaveFileNotFound.cs" />
     <Compile Include="FenetreAventure.cs">
       <SubType>Form</SubType>
     </Compile>
