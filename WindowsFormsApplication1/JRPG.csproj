@@ -96,6 +96,7 @@
     <Compile Include="Gameover.Designer.cs">
       <DependentUpon>Gameover.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IAttaquerEnnemi.cs" />
     <Compile Include="Maison.cs">
       <SubType>Form</SubType>
     </Compile>
