@@ -155,23 +155,23 @@ namespace JRPG
                 }
                 else
                 {
-                  AgirMonstre();
-                        /*
-                    timerEnnemi.Tick += new EventHandler(EventTimer);
+                    AgirMonstre();
+                    /*
+                timerEnnemi.Tick += new EventHandler(EventTimer);
 
-                    timerEnnemi.Interval = 2000;
-                    timerEnnemi.Start();*/
+                timerEnnemi.Interval = 2000;
+                timerEnnemi.Start();*/
                 }
 
             }
 
         }
 
-       /* private static void EventTimer(Object myObject,
-                                            EventArgs myEventArgs)
-        {
-            timerEnnemi.Stop();
-        }*/
+        /* private static void EventTimer(Object myObject,
+                                             EventArgs myEventArgs)
+         {
+             timerEnnemi.Stop();
+         }*/
 
         private void CalculerInitiative()
         {
@@ -270,7 +270,7 @@ namespace JRPG
                 this.Controls.Find("lblMaxPvEnnemi" + i, true)[0].Visible = true;
 
                 this.Controls.Find("lblNomEnnemi" + i, true)[0].Text = la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[(i - 1)].Nom;
-                this.Controls.Find("lblPVEnnemi" + i, true)[0].Text = la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[(i - 1)].PvActuel > 0 ? la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[(i - 1)].PvActuel .ToString() : "0";
+                this.Controls.Find("lblPVEnnemi" + i, true)[0].Text = la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[(i - 1)].PvActuel > 0 ? la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[(i - 1)].PvActuel.ToString() : "0";
                 this.Controls.Find("lblMaxPvEnnemi" + i, true)[0].Text = "/  " + la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[(i - 1)].PvMax.ToString();
                 this.Controls.Find("lblMaxPvEnnemi" + i, true)[0].Left = this.Controls.Find("lblPVEnnemi" + i, true)[0].Right;
 
@@ -373,8 +373,8 @@ namespace JRPG
         private void UtiliserConsommable()
         {
             string strAction = p.groupeAventurier.Membres[persoActif.idPerso].NomAventurier + " utilise l'item : " + (cboConsommable.SelectedItem as ComboboxItem).Text;
-            
-            if (li.ListeConsommables[(cboConsommable.SelectedItem as ComboboxItem).Value].Pv > 0) 
+
+            if (li.ListeConsommables[(cboConsommable.SelectedItem as ComboboxItem).Value].Pv > 0)
             {
                 strAction += "\r\nIl gagne " + li.ListeConsommables[(cboConsommable.SelectedItem as ComboboxItem).Value].Pv.ToString() + " points de vie!";
                 p.groupeAventurier.Membres[persoActif.idPerso].Pvactuel += li.ListeConsommables[(cboConsommable.SelectedItem as ComboboxItem).Value].Pv;
@@ -388,7 +388,7 @@ namespace JRPG
                     p.groupeAventurier.Membres[persoActif.idPerso].Manaactuel += li.ListeConsommables[(cboConsommable.SelectedItem as ComboboxItem).Value].Mana;
                 }
             }
-           else
+            else
             {
                 if (li.ListeConsommables[(cboConsommable.SelectedItem as ComboboxItem).Value].Energie > 0)
                 {
@@ -497,7 +497,7 @@ namespace JRPG
             {
                 Hide();
                 Gameover gameover = new Gameover();
-                gameover.ShowDialog(); 
+                gameover.ShowDialog();
             }
             else if (la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].NombreEnnemiVivant() == 0)
             {
@@ -534,7 +534,7 @@ namespace JRPG
 
                 if (etapeAventure == nbEtapesAventure)
                 {
-                    MessageBox.Show("Bravo vous avez completé l'aventure " + lblNomAventure.Text +"!" );
+                    MessageBox.Show("Bravo vous avez completé l'aventure " + lblNomAventure.Text + "!");
                     p.groupeAventurier.StatParDefaut(true);
                     Hide();
                     MenuJeu menujeu = new MenuJeu();
@@ -544,10 +544,10 @@ namespace JRPG
                 {
                     p.groupeAventurier.ModifApresCombat();
                     Hide();
-                    Combat newCombat = new Combat(idAventure, etapeAventure+1);
+                    Combat newCombat = new Combat(idAventure, etapeAventure + 1);
                     newCombat.ShowDialog();
                 }
-                
+
             }
             else
             {
@@ -568,7 +568,7 @@ namespace JRPG
             ProchainTour();
             //MessageBox.Show("C'est le tour de " + la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Nom + " et il a la stratégie " + la.ListeAventures[idAventure].ListeGroupeEnnemis[indexEtape].ListeEnnemi[persoActif.idPerso].Strategie.ToString());
         }
-        
+
         private void LancerAttaque(Aventurier aventurier, Ennemi cible)
         {
             AjouterTexteHistorique(aventurier.Attaquer(cible));
@@ -603,7 +603,7 @@ namespace JRPG
                     {
                         AjouterTexteHistorique(aventurier.UtiliserCompetenceB());
                     }
-                    else 
+                    else
                     {
                         AjouterTexteHistorique(aventurier.UtiliserCompetenceB(p.groupeAventurier.Membres[cible]));
                     }
@@ -628,7 +628,7 @@ namespace JRPG
                         {
                             AjouterTexteHistorique(aventurier.UtiliserCompetenceC(p.groupeAventurier.Membres[cible]));
                         }
-                        
+
                     }
 
                     break;
@@ -643,7 +643,7 @@ namespace JRPG
 
         private void UtiliserCompetence(int idCompetence)
         {
-            
+
             selectedCompetence = idCompetence;
             typeAction = "Competence";
 
@@ -689,7 +689,7 @@ namespace JRPG
 
                     MessageBox.Show(p.groupeAventurier.Membres[persoActif.idPerso].NomAventurier + " n'a pas assez " + strRessource + " pour effectuer cet action");
                 }
-                
+
             }
             #endregion
 
@@ -725,12 +725,12 @@ namespace JRPG
 
                         case Cible.AllEnemies:
                             {
-                             
-                            cbCible = new ComboboxItem();
-                            cbCible.Text = "Tous les ennemis";
-                            cbCible.Value = 10;
-                            cboChoisirCible.Items.Add(cbCible);
-                                
+
+                                cbCible = new ComboboxItem();
+                                cbCible.Text = "Tous les ennemis";
+                                cbCible.Value = 10;
+                                cboChoisirCible.Items.Add(cbCible);
+
                                 break;
                             }
 
@@ -741,7 +741,7 @@ namespace JRPG
                                 cbCible.Text = "L'aventurier";
                                 cbCible.Value = 100;
                                 cboChoisirCible.Items.Add(cbCible);
-                                
+
                                 break;
                             }
 
@@ -880,7 +880,7 @@ namespace JRPG
 
         private void AjouterTexteHistorique(string strMessage)
         {
-            rtbHistoriqueActions.Text = rtbHistoriqueActions.Text.Insert(0, strMessage+ "__________________________________________________\r\n\n");
+            rtbHistoriqueActions.Text = rtbHistoriqueActions.Text.Insert(0, strMessage + "___________________________________________________________________________\r\n\n");
         }
 
         private void btnFinTour_Click(object sender, EventArgs e)
@@ -900,22 +900,22 @@ namespace JRPG
                     MessageBox.Show("La défense de " + p.groupeAventurier.Membres[cibleId].NomAventurier + " a déja été augmenté et ne peut plus l'être pour la durée du combat.");
                 }
                 else if (selectedCompetence == 3 && p.groupeAventurier.Membres[persoActif.idPerso].ClassId == lc.MAGE_ID && p.groupeAventurier.Membres[cibleId].ForceBuff)
-                    {
-                        prochainTour = false;
-                        MessageBox.Show("L'arme de " + p.groupeAventurier.Membres[cibleId].NomAventurier + " a déja été enchantée et sa force ne peut plus être amélioré pour la durée du combat.");
-                    }
+                {
+                    prochainTour = false;
+                    MessageBox.Show("L'arme de " + p.groupeAventurier.Membres[cibleId].NomAventurier + " a déja été enchantée et sa force ne peut plus être amélioré pour la durée du combat.");
+                }
                 else
                 {
                     LancerCompetence(selectedCompetence, p.groupeAventurier.Membres[persoActif.idPerso], cibleId);
                 }
-                
+
             }
 
             if (prochainTour)
             {
                 ProchainTour();
             }
-            
+
         }
 
         private void pboxAttaquer_Click(object sender, EventArgs e)
@@ -967,7 +967,7 @@ namespace JRPG
             {
                 MessageBox.Show(aventurier.Precisionactuel.ToString());
             }*/
-            
+
             if (p.groupeAventurier.Membres[persoActif.idPerso].ClassId == lc.GUERRIER_ID && p.groupeAventurier.Membres[persoActif.idPerso].PrecisionBuff)
             {
                 MessageBox.Show(p.groupeAventurier.Membres[persoActif.idPerso].NomAventurier + " a déja utilisé son cri de guerre pour ce combat");

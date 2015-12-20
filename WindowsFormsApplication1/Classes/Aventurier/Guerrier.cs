@@ -152,7 +152,7 @@ namespace JRPG.Classes.Aventurier
 
             modifPrecision = (1 * this.Niveau);
             strAction = this.NomAventurier + " lance un cri de guerre.";
-            strAction += "\r\nLa précision de chaque membre du groupe a augmenté de : " + modifPrecision + " jusqu'à la fin du combat !\r\n";
+            strAction += "\r\nLa précision de chaque membre du groupe a augmenté de : " + modifPrecision + " jusqu'à la fin du combat !";
             
 
             foreach (Aventurier aventurier in p.groupeAventurier.Membres)

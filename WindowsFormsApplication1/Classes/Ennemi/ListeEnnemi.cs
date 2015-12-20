@@ -95,7 +95,7 @@ namespace JRPG.Classes.Ennemi
             listeProbLoot.Add(4);
             listeProbLoot.Add(6);
             listeProbLoot.Add(10);
-            ListeEnnemis.Add(new Ennemi(HOMME_CRABE_GUERRIER_ID, "Guerrier homme-crabe", 1, 40, 10, 10, 10, 14, 10, 100, 5, Properties.Resources.spectre, Ennemi.StrategieAction.AttaquePlusFort, listeLoot, listeProbLoot));
+            ListeEnnemis.Add(new Ennemi(HOMME_CRABE_GUERRIER_ID, "Homme-crabe", 1, 40, 10, 10, 10, 14, 10, 100, 5, Properties.Resources.spectre, Ennemi.StrategieAction.AttaquePlusFort, listeLoot, listeProbLoot));
 
             //Roi Homme-Crabe
             listeLoot = new List<Item.Item>();
