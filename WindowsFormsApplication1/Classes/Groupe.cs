@@ -82,6 +82,32 @@ namespace JRPG.Classes
             return nbVivant;
         }
 
+        public List<Aventurier.Aventurier> RetournerMembreMort()
+        {
+            List<Aventurier.Aventurier> listeMort = new List<Aventurier.Aventurier>();
+            for(int i = 0; i < this.Membres.Count(); i++)
+            {
+                if (this.Membres[i].Etat == Etat.Mort)
+                {
+                    listeMort.Add(this.Membres[i]);
+                }
+            }
+            return listeMort;
+        }
+
+        public List<int> RetournerIdMembreMort()
+        {
+            List<int> listeId = new List<int>();
+            for (int i = 0; i < this.Membres.Count(); i++)
+            {
+                if (this.Membres[i].Etat == Etat.Mort)
+                {
+                    listeId.Add(i);
+                }
+            }
+            return listeId;
+        }
+
         public int MembrePlusFort()
         {
             int indexMembre = 0;

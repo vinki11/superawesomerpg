@@ -528,6 +528,13 @@ namespace JRPG
             Boutique forge = new Boutique();
             forge.ShowDialog();
         }
+
+        private void btnChapelle_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Chapel chapel = new Chapel();
+            chapel.ShowDialog();
+        }
     }
 
     public class ComboboxItem :IEquatable<ComboboxItem>

@@ -3,3 +3,6 @@ WindowsFormsApplication1/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cach
 *.suo
 *.exe
 *.suo
+*.pdb
+WindowsFormsApplication1/obj/Debug/JRPG.exe
+*.suo

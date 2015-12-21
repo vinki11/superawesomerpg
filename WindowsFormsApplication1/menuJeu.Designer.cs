@@ -106,9 +106,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pboxSelectedAventurier1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSelectedAventurier2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pboxSelectedAventurier3)).BeginInit();
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.SuspendLayout();
             // 
             // pboxAventurier1
@@ -198,6 +195,7 @@
             this.btnChapelle.TabIndex = 12;
             this.btnChapelle.Text = "Visiter la chapelle";
             this.btnChapelle.UseVisualStyleBackColor = true;
+            this.btnChapelle.Click += new System.EventHandler(this.btnChapelle_Click);
             // 
             // btnBoutique
             // 
@@ -909,7 +907,10 @@
             this.Controls.Add(this.lblGroupeAventurier);
             this.Controls.Add(this.pboxAventurier3);
             this.Controls.Add(this.pboxAventurier2);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(2);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "MenuJeu";
             this.Text = "Menu jeu";
             ((System.ComponentModel.ISupportInitialize)(this.pboxAventurier1)).EndInit();

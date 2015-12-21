@@ -82,7 +82,7 @@ namespace JRPG.Classes.Ennemi
             listeLoot.Add(null);
             listeProbLoot = new List<int>();
             listeProbLoot.Add(100);
-            ListeEnnemis.Add(new Ennemi(CRABE_GEANT_ID, "Crabe géant", 1, 50, 6, 8, 8, 18, 15, 100, 0, Properties.Resources.spectre, Ennemi.StrategieAction.AttaqueAleatoire, listeLoot, listeProbLoot));
+            ListeEnnemis.Add(new Ennemi(CRABE_GEANT_ID, "Crabe géant", 1, 50, 6, 8, 8, 17, 15, 100, 0, Properties.Resources.spectre, Ennemi.StrategieAction.AttaqueAleatoire, listeLoot, listeProbLoot));
 
             //Homme-Crabe
             listeLoot = new List<Item.Item>();
@@ -106,7 +106,7 @@ namespace JRPG.Classes.Ennemi
             listeProbLoot.Add(15);
             listeProbLoot.Add(35);
             listeProbLoot.Add(40);
-            ListeEnnemis.Add(new Ennemi(HOMME_CRABE_ROI_ID, "Roi homme-crabe", 2, 60, 14, 14, 10, 18, 14, 200, 15, Properties.Resources.spectre, Ennemi.StrategieAction.AttaquePlusFort, listeLoot, listeProbLoot, 2, 35));
+            ListeEnnemis.Add(new Ennemi(HOMME_CRABE_ROI_ID, "Roi homme-crabe", 2, 60, 14, 14, 10, 16, 14, 200, 15, Properties.Resources.spectre, Ennemi.StrategieAction.AttaquePlusFort, listeLoot, listeProbLoot, 2, 35));
         }
     }
 }
