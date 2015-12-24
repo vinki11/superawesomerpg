@@ -84,19 +84,7 @@ namespace JRPG
             lblNomAction.Text = "Choississez un action";
             btnFinTour.Enabled = false;
 
-            pboxSort1.Image = p.groupeAventurier.Membres[persoActif.idPerso].ImageCompetenceA;
-            pboxSort2.Image = p.groupeAventurier.Membres[persoActif.idPerso].ImageCompetenceB;
-            pboxSort3.Image = p.groupeAventurier.Membres[persoActif.idPerso].ImageCompetenceC;
-
-            lblManaSort1.Text = p.groupeAventurier.Membres[persoActif.idPerso].CoutCompetenceA.ToString();
-            lblManaSort2.Text = p.groupeAventurier.Membres[persoActif.idPerso].CoutCompetenceB.ToString();
-            lblManaSort3.Text = p.groupeAventurier.Membres[persoActif.idPerso].CoutCompetenceC.ToString();
-            lblManaSort1.ForeColor = p.groupeAventurier.Membres[persoActif.idPerso].Ressource == Ressource.Mana ? Color.Blue : Color.Brown;
-            lblManaSort2.ForeColor = p.groupeAventurier.Membres[persoActif.idPerso].Ressource == Ressource.Mana ? Color.Blue : Color.Brown;
-            lblManaSort3.ForeColor = p.groupeAventurier.Membres[persoActif.idPerso].Ressource == Ressource.Mana ? Color.Blue : Color.Brown;
-            lblSort1.Text = p.groupeAventurier.Membres[persoActif.idPerso].NomCompetenceA;
-            lblSort2.Text = p.groupeAventurier.Membres[persoActif.idPerso].NomCompetenceB;
-            lblSort3.Text = p.groupeAventurier.Membres[persoActif.idPerso].NomCompetenceC;
+         
 
             //Gestion de la bordure selected
 
@@ -125,6 +113,20 @@ namespace JRPG
                 pBox.Visible = false;
                 PictureBox pBoxSelected = (PictureBox)this.Controls.Find("pboxAventurierSelected" + (persoActif.idPerso + 1), true)[0];
                 pBoxSelected.Visible = true;
+
+                pboxSort1.Image = p.groupeAventurier.Membres[persoActif.idPerso].ImageCompetenceA;
+                pboxSort2.Image = p.groupeAventurier.Membres[persoActif.idPerso].ImageCompetenceB;
+                pboxSort3.Image = p.groupeAventurier.Membres[persoActif.idPerso].ImageCompetenceC;
+
+                lblManaSort1.Text = p.groupeAventurier.Membres[persoActif.idPerso].CoutCompetenceA.ToString();
+                lblManaSort2.Text = p.groupeAventurier.Membres[persoActif.idPerso].CoutCompetenceB.ToString();
+                lblManaSort3.Text = p.groupeAventurier.Membres[persoActif.idPerso].CoutCompetenceC.ToString();
+                lblManaSort1.ForeColor = p.groupeAventurier.Membres[persoActif.idPerso].Ressource == Ressource.Mana ? Color.Blue : Color.Brown;
+                lblManaSort2.ForeColor = p.groupeAventurier.Membres[persoActif.idPerso].Ressource == Ressource.Mana ? Color.Blue : Color.Brown;
+                lblManaSort3.ForeColor = p.groupeAventurier.Membres[persoActif.idPerso].Ressource == Ressource.Mana ? Color.Blue : Color.Brown;
+                lblSort1.Text = p.groupeAventurier.Membres[persoActif.idPerso].NomCompetenceA;
+                lblSort2.Text = p.groupeAventurier.Membres[persoActif.idPerso].NomCompetenceB;
+                lblSort3.Text = p.groupeAventurier.Membres[persoActif.idPerso].NomCompetenceC;
 
                 if (p.groupeAventurier.Membres[persoActif.idPerso].Etat == Etat.Etourdi)
                 {
