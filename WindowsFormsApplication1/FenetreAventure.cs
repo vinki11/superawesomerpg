@@ -58,10 +58,16 @@ namespace JRPG
             }
             else
             {
-                Hide();
-                Combat newCombat = new Combat((cboChoisirAventure.SelectedItem as ComboboxItem).Value, 1);
-                newCombat.ShowDialog();
-                //MessageBox.Show("Id de l'aventure choisi : " + (cboChoisirAventure.SelectedItem as ComboboxItem).Value);
+                if ((cboChoisirAventure.SelectedItem as ComboboxItem).Value == la.TEMPLE_MAL_ID)
+                {
+                    MessageBox.Show("Pour pouvoir profiter de cette aventure vous devez acheter le DLC d'une valeur de 1.99$. Rendez vous sur le site web du jeu pour plus de détails.", "Vous ne possédez pas cette aventure");
+                }
+                else
+                {
+                    Hide();
+                    Combat newCombat = new Combat((cboChoisirAventure.SelectedItem as ComboboxItem).Value, 1);
+                    newCombat.ShowDialog();
+                }
             }
         }
 

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using JRPG.Classes;
 using JRPG.Classes.Aventurier;
+using JRPG.Exceptions;
 
 namespace JRPG
 {
@@ -108,28 +109,25 @@ namespace JRPG
         }
 
         //Fonction qui valide si le nom du personnage est valide
-        private bool ValiderNom(string nom)
+        private void ValiderNom(string nom)
         {
             if (string.IsNullOrEmpty(nom))
             {
-                MessageBox.Show("Vous devez saisir un nom de personnage!", "Nom du personnage invalide");
-                return false;
+                throw new NomAventurierVideException();
             }
             else if (!nom.All(char.IsLetter))
             {
-                MessageBox.Show("Votre nom de personnage doit contenir seulement des lettres!", "Nom du personnage invalide");
-                return false;
-            }
-            else
-            {
-                return true;
+
+                throw new NomAventurierNonValideException();
             }
         }
 
         private void btnAccepter_Click(object sender, EventArgs e)
         {
-            if (ValiderNom(txtNomPerso.Text))
+            try
             {
+                ValiderNom(txtNomPerso.Text);
+
                 Aventurier aventurierTaverne;
                 aventurierTaverne = new Guerrier(txtNomPerso.Text, 0, 1); // Par défaut un guerrier
 
@@ -157,8 +155,14 @@ namespace JRPG
                 Taverne taverne = new Taverne();
                 taverne.ShowDialog();
             }
-            else
+            catch (NomAventurierVideException ex)
             {
+                MessageBox.Show(ex.Message, "Nom du personnage invalide");
+                txtNomPerso.Focus();
+            }
+            catch (NomAventurierNonValideException ex)
+            {
+                MessageBox.Show(ex.Message, "Nom du personnage invalide");
                 txtNomPerso.Focus();
             }
 

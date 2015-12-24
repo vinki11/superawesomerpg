@@ -24,6 +24,8 @@ namespace JRPG.Classes.Ennemi
         public const int CRABE_GEANT_ID = 4;
         public const int HOMME_CRABE_GUERRIER_ID = 5;
         public const int HOMME_CRABE_ROI_ID = 6;
+        public const int LOUP_GAROU_ID = 7;
+        public const int CHEF_LOUP_GAROU_ID = 8;
 
         static ListeEnnemi()
         {
@@ -107,6 +109,40 @@ namespace JRPG.Classes.Ennemi
             listeProbLoot.Add(35);
             listeProbLoot.Add(40);
             ListeEnnemis.Add(new Ennemi(HOMME_CRABE_ROI_ID, "Roi homme-crabe", 2, 60, 14, 14, 12, 17, 14, 200, 15, Properties.Resources.spectre, Ennemi.StrategieAction.AttaquePlusFort, listeLoot, listeProbLoot, 2, 35));
+
+
+            //Loup-Garou
+            listeLoot = new List<Item.Item>();
+            listeLoot.Add(null);
+            listeLoot.Add(li.ListeArmes[li.HACHE_2MAINS_BRONZE_ID]);
+            listeLoot.Add(li.ListeArmes[li.EPEE_2MAINS_BRONZE_ID]);
+            listeLoot.Add(li.ListeConsommables[li.POTION_VIE_MINEURE_ID]);
+            listeLoot.Add(li.ListeConsommables[li.POTION_ENERGIE_MINEURE_ID]);
+            listeLoot.Add(li.ListeConsommables[li.POTION_MANA_MINEURE_ID]);
+            listeProbLoot = new List<int>();
+            listeProbLoot.Add(30);
+            listeProbLoot.Add(10);
+            listeProbLoot.Add(10);
+            listeProbLoot.Add(25);
+            listeProbLoot.Add(10);
+            listeProbLoot.Add(15);
+            ListeEnnemis.Add(new Ennemi(LOUP_GAROU_ID, "Loup-garou", 2, 60, 16, 13, 12, 19, 14, 200, 12, Properties.Resources.spectre, Ennemi.StrategieAction.AttaquePlusFort, listeLoot, listeProbLoot));
+
+            //Chef Loup-Garou
+            listeLoot = new List<Item.Item>();
+            listeLoot.Add(li.ListeArmes[li.HACHE_2MAINS_BRONZE_ID]);
+            listeLoot.Add(li.ListeArmes[li.EPEE_2MAINS_BRONZE_ID]);
+            listeLoot.Add(li.ListeBoucliers[li.ECU_ACIER_ID]);
+            listeLoot.Add(li.ListeArmes[li.BATARDE_BRONZE_ID]);
+            listeLoot.Add(li.ListeConsommables[li.POTION_MANA_MINEURE_ID]);
+            listeProbLoot = new List<int>();
+            listeProbLoot.Add(20);
+            listeProbLoot.Add(20);
+            listeProbLoot.Add(20);
+            listeProbLoot.Add(20);
+            listeProbLoot.Add(20);
+            ListeEnnemis.Add(new Ennemi(CHEF_LOUP_GAROU_ID, "Chef des loup-garou", 3, 85, 20, 16, 15, 22, 15, 300, 25, Properties.Resources.spectre, Ennemi.StrategieAction.AttaquePlusFort, listeLoot, listeProbLoot));
+
         }
     }
 }
