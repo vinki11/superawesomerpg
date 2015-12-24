@@ -535,6 +535,13 @@ namespace JRPG
             Chapel chapel = new Chapel();
             chapel.ShowDialog();
         }
+
+        private void btnTaverne_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Taverne taverne = new Taverne();
+            taverne.ShowDialog();
+        }
     }
 
     public class ComboboxItem :IEquatable<ComboboxItem>

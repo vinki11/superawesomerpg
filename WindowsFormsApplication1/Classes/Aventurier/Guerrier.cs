@@ -33,16 +33,16 @@ namespace JRPG.Classes.Aventurier
             this.Forceactuel = Forcebase = 15;
             this.Defenseactuel = Defensebase = 3;
             this.NomClasse = "Guérrier";
-            this.DescriptionClasse = "Combattant au corps à corps avec une bonne force et défense";
+            this.DescriptionClasse = "Combattant au corps à corps. Il possède beaucoup de points de vie et une force surprenante.";
             this.Ressource = Ressource.Energie;
             this.Imageclasse = Properties.Resources.guerrier;
             this.ClassId = lc.GUERRIER_ID;
             this.Arme = li.ListeArmes[li.EPEE_BRONZE_ID];
             this.Armure = li.ListeArmures[li.ARMURE_BRONZE_ID];
             this.Bouclier = li.ListeBoucliers[li.BOUCLIER_BOIS_ID];
-            this.NomCompetenceA = "Frappe puissante"; //? Kekechose qui ignore un pourcentage de la def de l'ennemi
-            this.NomCompetenceB = "Attaque circulaire"; // Cleave qui attaque tout le monde
-            this.NomCompetenceC = "Cri de guerre"; //Buff la précision de tous les alliés !
+            this.NomCompetenceA = "Frappe puissante"; // Attaque qui ignore une partie de la défense de l'ennemie
+            this.NomCompetenceB = "Attaque circulaire"; // Attaque de groupe
+            this.NomCompetenceC = "Cri de guerre"; //Buff la précision de tous les alliés
             this.CibleCompetenceA = Cible.Enemy;
             this.CibleCompetenceB = Cible.AllEnemies;
             this.CibleCompetenceC = Cible.AllAllies;

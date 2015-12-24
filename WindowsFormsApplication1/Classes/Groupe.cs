@@ -21,7 +21,7 @@ namespace JRPG.Classes
         public Groupe()
         {
             Membres = new List<Aventurier.Aventurier>();
-            NbPiecesOr = 20;
+            NbPiecesOr = 50;
             Inventaire = new List<Item.Item>();
         }
         #endregion
@@ -35,8 +35,10 @@ namespace JRPG.Classes
             }
         }
 
-        public void RetirerAventurier()
+        public void RetirerAventurier(int indexAventurier)
         {
+            if (Membres.Count() > 0)
+                Membres.RemoveAt(indexAventurier);
 
         }
 

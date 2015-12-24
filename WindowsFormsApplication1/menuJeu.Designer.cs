@@ -217,6 +217,7 @@
             this.btnTaverne.TabIndex = 14;
             this.btnTaverne.Text = "Visiter la taverne";
             this.btnTaverne.UseVisualStyleBackColor = true;
+            this.btnTaverne.Click += new System.EventHandler(this.btnTaverne_Click);
             // 
             // txtLvl2
             // 

@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using JRPG.Classes;
 using JRPG.Classes.Aventurier;
-using JRPG.Exceptions;
 
 namespace JRPG
 {
@@ -17,9 +16,9 @@ namespace JRPG
     using li = ListeItem;
     using lc = ListeClasse;
 
-    public partial class CreationAventurier : Form
+    public partial class CreationAventurierTaverne : Form
     {
-        public CreationAventurier()
+        public CreationAventurierTaverne()
         {
             InitializeComponent();
             rboGuerrier.Checked = true;
@@ -72,7 +71,7 @@ namespace JRPG
             switch (classId)
             {
                 case lc.GUERRIER_ID:
-                    aventurierTempo = new Guerrier("",0,0);
+                    aventurierTempo = new Guerrier("", 0, 0);
                     break;
 
                 case lc.MAGE_ID:
@@ -109,91 +108,60 @@ namespace JRPG
         }
 
         //Fonction qui valide si le nom du personnage est valide
-        private void ValiderNom(string nom)
+        private bool ValiderNom(string nom)
         {
             if (string.IsNullOrEmpty(nom))
             {
-                throw new NomAventurierVideException();
+                MessageBox.Show("Vous devez saisir un nom de personnage!", "Nom du personnage invalide");
+                return false;
             }
             else if (!nom.All(char.IsLetter))
             {
-
-                throw new NomAventurierNonValideException();
+                MessageBox.Show("Votre nom de personnage doit contenir seulement des lettres!", "Nom du personnage invalide");
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
 
         private void btnAccepter_Click(object sender, EventArgs e)
         {
-            try
+            if (ValiderNom(txtNomPerso.Text))
             {
-                ValiderNom(txtNomPerso.Text);
-
-                Aventurier premierAventurier;
-                premierAventurier = new Guerrier(txtNomPerso.Text, 0, 1); // Par défaut un guerrier
+                Aventurier aventurierTaverne;
+                aventurierTaverne = new Guerrier(txtNomPerso.Text, 0, 1); // Par défaut un guerrier
 
                 if (rboGuerrier.Checked)
                 {
-                    premierAventurier = new Guerrier(txtNomPerso.Text, 0, 1);
+                    aventurierTaverne = new Guerrier(txtNomPerso.Text, 0, 1);
                 }
                 else if (rboMage.Checked)
                 {
-                    premierAventurier = new Mage(txtNomPerso.Text, 0, 1);
+                    aventurierTaverne = new Mage(txtNomPerso.Text, 0, 1);
                 }
                 else if (rboVoleur.Checked)
                 {
-                    premierAventurier = new Voleur(txtNomPerso.Text, 0, 1);
+                    aventurierTaverne = new Voleur(txtNomPerso.Text, 0, 1);
                 }
                 else if (rboPretre.Checked)
                 {
-                    premierAventurier = new Pretre(txtNomPerso.Text, 0, 1);
+                    aventurierTaverne = new Pretre(txtNomPerso.Text, 0, 1);
                 }
 
-                p.groupeAventurier.AjouterAventurier(premierAventurier);
+                p.groupeAventurier.AjouterAventurier(aventurierTaverne);
+                p.groupeAventurier.NbPiecesOr-= 20;
                 
-                p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_VIE_MINEURE_ID]);
-                p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_VIE_MINEURE_ID]);
-                p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_MANA_MINEURE_ID]);
-                p.groupeAventurier.AjouterItem(li.ListeConsommables[li.POTION_ENERGIE_MINEURE_ID]);
-                p.groupeAventurier.AjouterItem(li.ListeConsommables[li.FLASQUE_RAVIGORANTE_ID]);
-
-                //Création du stock de la boutique
-                for (var i = 0; i < 2; i++)
-                {
-                    p.Boutique.Add(li.ListeArmes[li.DAGUE_BRONZE_ID]);
-                    p.Boutique.Add(li.ListeArmes[li.EPEE_BRONZE_ID]);
-                    p.Boutique.Add(li.ListeArmes[li.BATON_ID]);
-                    p.Boutique.Add(li.ListeArmes[li.BATARDE_BRONZE_ID]);
-                    p.Boutique.Add(li.ListeArmures[li.ARMURE_CUIR_ID]);
-                    p.Boutique.Add(li.ListeArmures[li.ARMURE_BRONZE_ID]);
-                    p.Boutique.Add(li.ListeArmures[li.ROBE_ID]);
-                    p.Boutique.Add(li.ListeBoucliers[li.BOUCLIER_BOIS_ID]);
-                    p.Boutique.Add(li.ListeBoucliers[li.ECU_ACIER_ID]);
-                }
-
-                for (var i = 0; i < 10; i++)
-                {
-                    p.Boutique.Add(li.ListeConsommables[li.POTION_VIE_MINEURE_ID]);
-                    p.Boutique.Add(li.ListeConsommables[li.POTION_MANA_MINEURE_ID]);
-                    p.Boutique.Add(li.ListeConsommables[li.POTION_ENERGIE_MINEURE_ID]);
-                }
-
                 Hide();
-                MenuJeu menuJeu = new MenuJeu();
-                menuJeu.ShowDialog();
+                Taverne taverne = new Taverne();
+                taverne.ShowDialog();
             }
-            catch (NomAventurierVideException ex)
+            else
             {
-                MessageBox.Show(ex.Message, "Nom du personnage invalide");
-                txtNomPerso.Focus();
-            }
-            catch (NomAventurierNonValideException ex)
-            {
-                MessageBox.Show(ex.Message, "Nom du personnage invalide");
                 txtNomPerso.Focus();
             }
 
-            
-            
 
         }
 
