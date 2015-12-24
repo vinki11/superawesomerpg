@@ -111,32 +111,36 @@ namespace JRPG.Classes.Aventurier
 
             for (var i = 0; i < listeEnnemi.Count(); i++)
             {
-                chanceAttaque += this.Precisionactuel + this.Arme.Precision - listeEnnemi[i].Esquive;
-                chanceAttaque = chanceAttaque > 9 ? 9 : chanceAttaque;
-                chanceAttaque = chanceAttaque < 1 ? 1 : chanceAttaque;
-
-                Random rnd = new Random();
-                int chiffreAleatoire = rnd.Next(0, 10);
-
-                if (chiffreAleatoire < chanceAttaque)
+                if (listeEnnemi[i].Etat != Etat.Mort)
                 {
-                    degatAttaque = this.Forceactuel + this.Arme.Force - listeEnnemi[i].Defense - 5;
-                    degatAttaque = degatAttaque < 1 ? 1 : degatAttaque;
-                    listeEnnemi[i].PvActuel -= degatAttaque;
+                    chanceAttaque += this.Precisionactuel + this.Arme.Precision - listeEnnemi[i].Esquive;
+                    chanceAttaque = chanceAttaque > 9 ? 9 : chanceAttaque;
+                    chanceAttaque = chanceAttaque < 1 ? 1 : chanceAttaque;
 
-                    strAction += "\r\n" + listeEnnemi[i].Nom + " à été touché pour : " + degatAttaque + " points de dégats!";
-                    
-                    if (listeEnnemi[i].PvActuel <= 0)
+                    Random rnd = new Random();
+                    int chiffreAleatoire = rnd.Next(0, 10);
+
+                    if (chiffreAleatoire < chanceAttaque)
                     {
-                        listeEnnemi[i].Etat = Etat.Mort;
-                        strAction += "\r\n" + listeEnnemi[i].Nom + " est mort!";
+                        degatAttaque = this.Forceactuel + this.Arme.Force - listeEnnemi[i].Defense - 5;
+                        degatAttaque = degatAttaque < 1 ? 1 : degatAttaque;
+                        listeEnnemi[i].PvActuel -= degatAttaque;
+
+                        strAction += "\r\n" + listeEnnemi[i].Nom + " à été touché pour : " + degatAttaque + " points de dégats!";
+
+                        if (listeEnnemi[i].PvActuel <= 0)
+                        {
+                            listeEnnemi[i].Etat = Etat.Mort;
+                            strAction += "\r\n" + listeEnnemi[i].Nom + " est mort!";
+                        }
+                    }
+                    else
+                    {
+                        strAction += "\r\n" + listeEnnemi[i].Nom + " à évité l'attaque!";
+                        //MessageBox.Show(strAction);
                     }
                 }
-                else
-                {
-                    strAction += "\r\n" + listeEnnemi[i].Nom + " à évité l'attaque!";
-                    //MessageBox.Show(strAction);
-                }
+                
             }
 
 

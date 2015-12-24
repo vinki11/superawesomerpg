@@ -99,26 +99,29 @@ namespace JRPG.Classes.Aventurier
 
             for (var i = 0; i < listeEnnemi.Count(); i++)
             {
-                Random rnd = new Random();
-                int chiffreAleatoire = rnd.Next(0, 10);
-
-                if (chiffreAleatoire > 2)
+                if (listeEnnemi[i].Etat != Etat.Mort)
                 {
-                    degatAttaque = 6 + (this.Niveau * 3);
-                    listeEnnemi[i].PvActuel -= degatAttaque;
+                    Random rnd = new Random();
+                    int chiffreAleatoire = rnd.Next(0, 10);
 
-                    strAction += "\r\n" + listeEnnemi[i].Nom + " à été touché pour : " + degatAttaque + " points de dégats!";
-
-                    if (listeEnnemi[i].PvActuel <= 0)
+                    if (chiffreAleatoire > 2)
                     {
-                        listeEnnemi[i].Etat = Etat.Mort;
-                        strAction += "\r\n" + listeEnnemi[i].Nom + " est mort!";
+                        degatAttaque = 6 + (this.Niveau * 3);
+                        listeEnnemi[i].PvActuel -= degatAttaque;
+
+                        strAction += "\r\n" + listeEnnemi[i].Nom + " à été touché pour : " + degatAttaque + " points de dégats!";
+
+                        if (listeEnnemi[i].PvActuel <= 0)
+                        {
+                            listeEnnemi[i].Etat = Etat.Mort;
+                            strAction += "\r\n" + listeEnnemi[i].Nom + " est mort!";
+                        }
                     }
-                }
-                else
-                {
-                    strAction += "\r\n" + listeEnnemi[i].Nom + " à évité l'attaque!";
-                    //MessageBox.Show(strAction);
+                    else
+                    {
+                        strAction += "\r\n" + listeEnnemi[i].Nom + " à évité l'attaque!";
+                        //MessageBox.Show(strAction);
+                    }
                 }
             }
 
