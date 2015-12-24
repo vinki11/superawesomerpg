@@ -970,7 +970,7 @@ namespace JRPG
 
             if (p.groupeAventurier.Membres[persoActif.idPerso].ClassId == lc.GUERRIER_ID && p.groupeAventurier.Membres[persoActif.idPerso].PrecisionBuff)
             {
-                MessageBox.Show(p.groupeAventurier.Membres[persoActif.idPerso].NomAventurier + " a déja utilisé son cri de guerre pour ce combat");
+                MessageBox.Show("Un cri de guerre a déja été utilisé pour ce combat, la précision du groupe ne peut plus être amélioré");
             }
             else
             {

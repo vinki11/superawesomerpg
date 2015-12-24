@@ -534,7 +534,7 @@
             this.cboArmure.Location = new System.Drawing.Point(75, 252);
             this.cboArmure.Margin = new System.Windows.Forms.Padding(2);
             this.cboArmure.Name = "cboArmure";
-            this.cboArmure.Size = new System.Drawing.Size(154, 24);
+            this.cboArmure.Size = new System.Drawing.Size(195, 24);
             this.cboArmure.Sorted = true;
             this.cboArmure.TabIndex = 40;
             this.cboArmure.SelectedIndexChanged += new System.EventHandler(this.cboArmure_SelectedIndexChanged);
@@ -545,7 +545,7 @@
             this.cboBouclier.Location = new System.Drawing.Point(75, 274);
             this.cboBouclier.Margin = new System.Windows.Forms.Padding(2);
             this.cboBouclier.Name = "cboBouclier";
-            this.cboBouclier.Size = new System.Drawing.Size(154, 24);
+            this.cboBouclier.Size = new System.Drawing.Size(195, 24);
             this.cboBouclier.Sorted = true;
             this.cboBouclier.TabIndex = 39;
             this.cboBouclier.SelectedIndexChanged += new System.EventHandler(this.cboBouclier_SelectedIndexChanged);
@@ -566,7 +566,7 @@
             this.cboArme.Location = new System.Drawing.Point(75, 230);
             this.cboArme.Margin = new System.Windows.Forms.Padding(2);
             this.cboArme.Name = "cboArme";
-            this.cboArme.Size = new System.Drawing.Size(154, 24);
+            this.cboArme.Size = new System.Drawing.Size(195, 24);
             this.cboArme.Sorted = true;
             this.cboArme.TabIndex = 38;
             this.cboArme.SelectedIndexChanged += new System.EventHandler(this.cboArme_SelectedIndexChanged);

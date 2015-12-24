@@ -23,6 +23,8 @@ namespace JRPG
         public const int EPEE_BRONZE_ID = 1;
         public const int BATON_ID = 2;
         public const int BATARDE_BRONZE_ID = 3;
+        public const int EPEE_2MAINS_BRONZE_ID = 4;
+        public const int HACHE_2MAINS_BRONZE_ID = 5;
 
         //Constante Armure
         public const int ARMURE_CUIR_ID = 0;
@@ -47,10 +49,12 @@ namespace JRPG
         public static void creerItems()
         {
             //Armes
-            ListeArmes.Add(new Arme(DAGUE_BRONZE_ID, "Dague de bronze", 10, 5, 10, pUtilisableGuerrier:true, pUtilisableVoleur:true));
+            ListeArmes.Add(new Arme(DAGUE_BRONZE_ID, "Dague de bronze", 6, 5, 2, pUtilisableGuerrier:true, pUtilisableVoleur:true));
             ListeArmes.Add(new Arme(EPEE_BRONZE_ID, "Épée de bronze", 10, 10, 0, pUtilisableGuerrier:true));
             ListeArmes.Add(new Arme(BATON_ID, "Baton", 5, 2, 0, true, true, true, true,true));
-            ListeArmes.Add(new Arme(BATARDE_BRONZE_ID, "Épée batarde de bronze", 15, 15, 0, true, pUtilisableGuerrier:true));
+            ListeArmes.Add(new Arme(BATARDE_BRONZE_ID, "Épée batarde de bronze", 15, 12, 0, pUtilisableGuerrier:true));
+            ListeArmes.Add(new Arme(EPEE_2MAINS_BRONZE_ID, "Épée à 2 mains de bronze", 16, 14, 0, true, pUtilisableGuerrier: true));
+            ListeArmes.Add(new Arme(HACHE_2MAINS_BRONZE_ID, "Hache à 2 mains de bronze", 16, 16, -1, true, pUtilisableGuerrier: true));
 
             //Armure
             ListeArmures.Add(new Armure(ARMURE_CUIR_ID, "Armure de cuir", 10, 4,  pUtilisableGuerrier:true, pUtilisableVoleur:true));
@@ -58,8 +62,8 @@ namespace JRPG
             ListeArmures.Add(new Armure(ROBE_ID, "Robe", 5, 2, true, true, true, true));
 
             //Bouclier
-            ListeBoucliers.Add(new Bouclier(BOUCLIER_BOIS_ID, "Bouclier en bois", 10, 5, pUtilisableGuerrier:true));
-            ListeBoucliers.Add(new Bouclier(ECU_ACIER_ID, "Écu en acier", 15, 8, pUtilisableGuerrier:true));
+            ListeBoucliers.Add(new Bouclier(BOUCLIER_BOIS_ID, "Bouclier en bois", 10, 3, pUtilisableGuerrier:true));
+            ListeBoucliers.Add(new Bouclier(ECU_ACIER_ID, "Écu en acier", 15, 5, pUtilisableGuerrier:true));
 
             //
             ListeConsommables.Add(new Consommable(POTION_VIE_MINEURE_ID, "Potion de vie mineure", 2, 25));

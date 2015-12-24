@@ -163,6 +163,8 @@ namespace JRPG
                     p.Boutique.Add(li.ListeArmes[li.EPEE_BRONZE_ID]);
                     p.Boutique.Add(li.ListeArmes[li.BATON_ID]);
                     p.Boutique.Add(li.ListeArmes[li.BATARDE_BRONZE_ID]);
+                    p.Boutique.Add(li.ListeArmes[li.EPEE_2MAINS_BRONZE_ID]);
+                    p.Boutique.Add(li.ListeArmes[li.HACHE_2MAINS_BRONZE_ID]);
                     p.Boutique.Add(li.ListeArmures[li.ARMURE_CUIR_ID]);
                     p.Boutique.Add(li.ListeArmures[li.ARMURE_BRONZE_ID]);
                     p.Boutique.Add(li.ListeArmures[li.ROBE_ID]);
@@ -170,7 +172,7 @@ namespace JRPG
                     p.Boutique.Add(li.ListeBoucliers[li.ECU_ACIER_ID]);
                 }
 
-                for (var i = 0; i < 10; i++)
+                for (var i = 0; i < 20; i++)
                 {
                     p.Boutique.Add(li.ListeConsommables[li.POTION_VIE_MINEURE_ID]);
                     p.Boutique.Add(li.ListeConsommables[li.POTION_MANA_MINEURE_ID]);
